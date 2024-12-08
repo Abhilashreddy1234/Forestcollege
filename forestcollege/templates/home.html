@@ -1,0 +1,498 @@
+{% load sekizai_tags cms_tags %}
+{% load static %}
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}Forest College{% endblock %}</title>
+        <link rel="stylesheet" href="{% static 'css/main.css' %}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        {% render_block "css" %}
+    </head>
+    <body>
+        {% cms_toolbar %}
+        <header>
+            <div class="top-bar">
+                <div class="social-media">
+                    <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <nav class="navbar">
+                <div class="logo-section">
+                    <img src="{% static 'images\logo-images\forestlogo-01.webp' %}" alt="Logo" class="logo">
+                    <h1>Forest College</h1>
+                </div>
+                <ul class="nav-links">
+                    <li class="dropdown">
+                        <a href="#">About</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{% url 'vision' %}">Vision and  Mission</a></li>
+                            <li><a href="#mission">Mission & Vision</a></li>
+                            <li><a href="#team">Team</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Administration</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#principal">Principal</a></li>
+                            <li><a href="#faculty">Faculty</a></li>
+                            <li><a href="#staff">Staff</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Academics</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#programs">Programs</a></li>
+                            <li><a href="#departments">Departments</a></li>
+                            <li><a href="#research">Research</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Admissions</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#undergraduate">Undergraduate</a></li>
+                            <li><a href="#postgraduate">Postgraduate</a></li>
+                            <li><a href="#phd">Ph.D. Admissions</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Infrastructure</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#library">Library</a></li>
+                            <li><a href="#labs">Laboratories</a></li>
+                            <li><a href="#hostels">Hostels</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Services</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#transport">Transport</a></li>
+                            <li><a href="#health">Health Services</a></li>
+                            <li><a href="#counseling">Counseling</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Research</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#projects">Projects</a></li>
+                            <li><a href="#collaborations">Collaborations</a></li>
+                            <li><a href="#publications">Publications</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#media">In Media</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="mainp">
+          <video autoplay muted loop class="background-video">
+            <source src="{% static 'videous\19177703-hd_1920_1080_30fps.mp4' %}" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="content">
+            <!-- Add any overlay content here -->
+            <h1>Welcome to Forest College</h1>
+            <p>Explore our vibrant campus and exceptional programs.</p>
+          </div>
+        </div>
+         
+        <div class="container-wrapper">
+            <h2 class="container-heading">Professional Forest College in Telangana</h2>
+            <div class="container">
+              <div class="box">
+                <p class="count">200+  <span id="studentCount">Students</span></p>
+                <a href="{% static '' %}">Courses Offered</a>
+              </div>
+              <div class="box">
+                <div id="carouselCollege" class="carousel">
+                  <img src="{% static 'images\college-images\college-image2.jpg' %}">
+                  <img src="{% static 'images\college-images\collegeoimage1.jpeg' %}">
+                  <img src="{% static 'images\college-images\college-image3.jpg' %}">
+                  <img src="{% static 'images\college-images\college-image5.jpg' %}">
+                </div>
+              </div>
+              <div class="box">
+                <h1> Belief in yourself & all that are you</h1>
+                <h3>Vision and Mission</h3>
+                <a href="{% static 'links/vision.html' %}">Read More</a>
+              </div>
+              <div class="box">
+                <div id="carouselStudents" class="carousel">
+                  <img src="{% static 'images\student-images\student-image1.jpg' %}" alt="Student Image 1" />
+                  <img src="{% static 'images\student-images\student-image2.jpg' %}" alt="Student Image 2" />
+                  <img src="{% static 'images\student-images\student-image3.jpg' %}" alt="Student Image 3" />
+                </div>
+              </div>
+              <div class="box">
+                <h1>Narture Nature and Ensure Nature</h1>
+                <h3>Departments</h3>
+                <a href="{% static 'links/departments.html' %}">View Departments</a>
+              </div>
+              <div class="box">
+                <img src="{% static 'images\student-images\rank1-student=image.jpg' %}">
+              </div>
+            </div>
+          </div>          
+          <div class="admission-wrapper">
+            <h2 class="admission-heading">Admission Categories</h2>
+            <div class="admission-container">
+              <div class="admission-box">Undergraduate</div>
+              <div class="admission-box">Postgraduate</div>
+              <div class="admission-box">Diploma</div>
+              <div class="admission-box">Ph.D.</div>
+              <div class="admission-box">Short-term Courses</div>
+              <div class="admission-box">Online Learning</div>
+              <div class="admission-box">Certificate Courses</div>
+              <div class="admission-box">Special Programs</div>
+            </div>
+          </div>
+          <div class="notification-bar-wrapper">
+            <div class="notification-bar">
+              <div class="notification-content">
+                <span>* Admissions are open for the 2024 academic year. Apply now!</span>
+                <span>* Scheduled results for semester exams will be released on 15th December.</span>
+                <span>* Workshops on Sustainable Forestry start next week. Register soon!</span>
+                <span>* Stay updated with the latest news from Forest College!</span>
+              </div>
+            </div>
+          </div>
+          <div class="about-wrapper">
+            <div class="about-container">
+              <!-- Left Side: Content -->
+              <div class="about-content">
+                <h2>About</h2>
+                <h3>Welcome to FCRI</h3>
+                <p><strong>Professional Forestry Education for the First Time in Telangana State</strong></p>
+                <p>FCRI Hyderabad, the brainchild of our visionary Chief Minister, was established in the year 2016.</p>
+                
+                <h4>Curriculum Approach</h4>
+                <p><strong>forestry_course</strong></p>
+                <p>Curriculum includes professional forestry courses along with biological, environmental, social, and management sciences. It enables exposure to fundamental principles of multiple-use forestry and ecosystem management.</p>
+                
+                <h4>Council</h4>
+                <p><strong>council</strong></p>
+                <p>An integrated forestry syllabus in accordance with the Indian Council of Agricultural Research (ICAR) and Indian Council of Forestry Research and Education (ICFRE) at the national level to cater to the needs of both local and global stakeholders.</p>
+                
+                <h4>Gain Confidence</h4>
+                <p><strong>gain_confidence</strong></p>
+                <p>The balanced academic program unlocks the potential and hones the strengths and abilities of individuals, enabling them to gain confidence and push toward new horizons. The Mentorship program guides students to academic excellence.</p>
+              </div>
+              
+              <!-- Right Side: Image -->
+              <div class="about-image">
+                <img src="{% static 'images/student-images/student-image5.jpg' %}" alt="About FCRI">
+              </div>
+            </div>
+          </div>
+          <div class="courses-wrapper">
+            <h2 class="courses-heading">Courses Offered</h2>
+            <div class="courses-container">
+              <!-- B.Sc. Course -->
+              <div class="course-box">
+                <h3>B.Sc.</h3>
+                <p>BSc Forestry graduates can seek employment opportunities in various fields such as Research, Agriculture, Forest Services, Nursery, Educational Institutions, etc. </p>
+                <p>Forest Officer, Professor, Agri-Credit Manager, Nursing Manager, Conservationist, Ecologist, etc., are some popular BSc Forestry job profiles.</p>
+                <a href="{% static 'links/bsc.html' %}" class="course-link">Learn More</a>
+              </div>
+              <!-- M.Sc. Course -->
+              <div class="course-box">
+                <h3>M.Sc.</h3>
+                <p>Advanced studies in forestry management.</p>
+                <p>An MSc in Forensic Science is a two-year postgraduate degree that teaches students how to apply scientific methods to solve crimes. The program covers a range of scientific and technical disciplines, including:
+                  Collecting evidence from crime scenes
+                  Analyzing biological, chemical, and digital evidence
+                  Studying human anatomy
+                  Using forensic photography techniques
+                  Managing crime scenes</p> 
+                  
+                <a href="{% static 'links/msc.html' %}" class="course-link">Learn More</a>
+              </div>
+              <!-- Ph.D. Course -->
+              <div class="course-box">
+                <h3>Ph.D.</h3>
+                <p>Research-focused forestry education.</p>
+                <p>A PhD in forestry can be a good option for those who want to make significant contributions to knowledge in the field of forestry. Some topics that may be covered in a PhD in forestry program include: forest ecology, silviculture, tree improvement, forest wildlife ecology and management, and economics</p>
+                <a href="{% static 'links/phd.html' %}" class="course-link">Learn More</a>
+              </div>
+            </div>
+          </div>
+          <div class="student-life-wrapper">
+            <h2 class="student-life-heading">Student Life at FCRI</h2>
+            <div id="studentLifeCarousel" class="student-life-carousel">
+                <div class="student-life-slide">
+                    <img src="{% static 'images\icon-images\workshop-image.jpg' %}" alt="Activity 1">
+                    <p>Workshops</p>
+                </div>
+                <div class="student-life-slide">
+                    <img src="{% static 'images\icon-images\sport-image.jpg' %}" alt="Activity 2">
+                    <p> Sports Events</p>
+                </div>
+                <div class="student-life-slide">
+                    <img src="{% static 'images\icon-images\cultural-activity-image.jpg' %}" alt="Activity 3">
+                    <p> Cultural Festivals</p>
+                </div>
+                <button class="student-life-prev" onclick="prevStudentLifeSlide()">&#10094;</button>
+                <button class="student-life-next" onclick="nextStudentLifeSlide()">&#10095;</button>
+            </div>
+        </div>
+        <section class="services-section">
+  <h1>Services</h1>
+  <div class="services-container">
+    <!-- First Row: 3 Boxes -->
+    <div class="service-box">
+      <img src="{% static 'images/services-images/service-image1.jpg' %}" alt="Research and Development" class="service-image">
+      <h3>Research and Development</h3>
+      <p>Innovative solutions and sustainable forestry practices.</p>
+      <a href="#" class="read-more">Read More</a>
+    </div>
+    <div class="service-box">
+      <img src="{% static 'images/services-images/service-image2.webp' %}" alt="Eco-Tourism" class="service-image">
+      <h3>Eco-Tourism</h3>
+      <p>Guided tours to explore the beauty of nature.</p>
+      <a href="#" class="read-more">Read More</a>
+    </div>
+    <div class="service-box">
+      <img src="{% static 'images/services-images/service-image3.webp' %}" alt="Wildlife Conservation" class="service-image">
+      <h3>Wildlife Conservation</h3>
+      <p>Preserving habitats and promoting biodiversity.</p>
+      <a href="#" class="read-more">Read More</a>
+    </div>
+  </div>
+
+  <!-- Second Row: 3 Boxes -->
+  <div class="services-container">
+    <div class="service-box">
+      <img src="{% static 'images\services-images\services-image4.jpg' %}" alt="Educational Workshops" class="service-image">
+      <h3>Educational Workshops</h3>
+      <p>Hands-on training in forestry and environmental sciences.</p>
+      <a href="#" class="read-more">Read More</a>
+    </div>
+    <div class="service-box">
+      <img src="{% static 'images\services-images\services-immage5.jpg' %}" alt="Community Outreach" class="service-image">
+      <h3>Community Outreach</h3>
+      <p>Engaging local communities for sustainable development.</p>
+      <a href="#" class="read-more">Read More</a>
+    </div>
+    <div class="service-box">
+      <img src="{% static 'images\services-images\services-image6.jpg' %}" alt="Forest Resource Management" class="service-image">
+      <h3>Forest Resource Management</h3>
+      <p>Efficient use of forest resources for future generations.</p>
+      <a href="#" class="read-more">Read More</a>
+    </div>
+  </div>
+</section>
+<!-- administrationb section -->
+
+<div class="administration-section">
+  <h2 class="section-title">Meet Our Leadership Team</h2>
+  <p class="section-intro">
+    Our administration team is dedicated to fostering excellence and innovation in education.
+  </p>
+  <div class="admin-carousel-container">
+    <div class="admin-carousel carousel-track">
+      <!-- Dean -->
+      <div class="admin-carousel-item active">
+        <div class="admin-image">
+          <img src="{% static 'images/professor-images/chairman-image.jpg' %}" alt="Dean">
+        </div>
+        <div class="admin-info">
+          <h4>Dean</h4>
+          <p>Dr. S. J. Asha, IFS</p>
+          <p>The Forest College and Research Institute (FCRI) extends you a warm welcome.
+
+The professional forestry education is introduced for the first time in Telangana State under the visionary guidance of Hon`ble Chief Minister, Telangana.
+
+It is aimed at bringing out forestry professionals by introducing B.Sc(Hons.) Forestry, M.Sc. Forestry and PhD. Forestry programmes.
+
+The institution is also aimed at providing an outstanding learning environment, promoting research, management and outreach to the farmers.</p>
+          <a href="dean-details.html" class="read-more-btn">Read More</a>
+        </div>
+      </div>
+      <!-- Principal -->
+      <div class="admin-carousel-item">
+        <div class="admin-image">
+          <img src="{% static 'images/professor-images/chairman-image.jpg' %}" alt="Principal">
+        </div>
+        <div class="admin-info">
+          <h4>Principal</h4>
+          <p>Prof. Jane Smith, known for her innovative approach to education and research.</p>
+          <a href="principal-details.html" class="read-more-btn">Read More</a>
+        </div>
+      </div>
+      <!-- Chairman -->
+      <div class="admin-carousel-item">
+        <div class="admin-image">
+          <img src="{% static 'images/professor-images/chairman-image.jpg' %}" alt="Chairman">
+        </div>
+        <div class="admin-info">
+          <h4>Chairman</h4>
+          <p>Mr. Alan Brown, a visionary leader driving the college's growth and development.</p>
+          <a href="chairman-details.html" class="read-more-btn">Read More</a>
+        </div>
+      </div>
+      <!-- Director -->
+      <div class="admin-carousel-item">
+        <div class="admin-image">
+          <img src="{% static 'images/professor-images/director-image.jpg' %}" alt="Director">
+        </div>
+        <div class="admin-info">
+          <h4>Director</h4>
+          <p>Dr. Emily White, an expert in strategic planning and operational excellence.</p>
+          <a href="director-details.html" class="read-more-btn">Read More</a>
+        </div>
+      </div>
+    </div>
+    <!-- Navigation Buttons -->
+    <button class="admin-carousel-prev carousel-btn prev-btn">&#8249;</button>
+    <button class="admin-carousel-next carousel-btn next-btn">&#8250;</button>
+  </div>
+</div>
+           <!-- department section -->
+           <section class="departments-section">
+            <div class="departments-container">
+              <!-- Left: Carousel -->
+              <div class="department-carousel">
+                <div class="department-carousel-items">
+                  <!-- Carousel Item 1 -->
+                  <div class="department-carousel-item">
+                    <img src="{% static 'images\professor-images\chairman-image.jpg' %}" alt="Dr. Milkuri Chiranjeeva Reddy" class="professor-image">
+                    <h3>Dr. Milkuri Chiranjeeva Reddy</h3>
+                    <p>
+                      He has obtained Junior Research Fellowship from the Indian Council of Agricultural Research for the year 2010-2012.
+                    </p>
+                    <a href="dr-chiranjeeva-profile.html" class="read-more">READ MORE</a>
+                  </div>
+                  <!-- Add more items here for other professors -->
+                </div>
+                <button class="department-carousel-prev">Prev</button>
+                <button class="department-carousel-next">Next</button>
+              </div>
+          
+              <!-- Right: Departments Links -->
+              <div class="departments-links">
+                <h3>Departments</h3>
+                <ul>
+                  <li><a href="#silviculture">Silviculture and Agroforestry</a></li>
+                  <li><a href="#natural-resource">Natural Resource Management and Conservation</a></li>
+                  <li><a href="#wildlife">Wildlife and Habitat Management</a></li>
+                  <li><a href="#basic-sciences">Basic & Social Sciences</a></li>
+                  <li><a href="#forest-products">Forest Products & Utilization</a></li>
+                  <li><a href="#tree-breeding">Tree Breeding & Improvement</a></li>
+                  <li><a href="#forest-ecology">Forest Ecology & Climate Science</a></li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <!-- student testiminials-->
+           
+          <section class="student-testimonials">
+            <h2>What Our Students Say About FCRI</h2>
+            <div class="testimonials-container">
+              <!-- Student 1 -->
+              <div class="testimonial-box">
+                <div class="image-container">
+                  <img src="{% static 'images\student-images\student-image4.jpg' %}" alt="Student 1">
+                  <div class="hover-text">
+                    "FCRI has provided me with hands-on experience in forestry, preparing me for a successful career."
+                  </div>
+                </div>
+                <h3>John Doe</h3>
+              </div>
+          
+              <!-- Student 2 -->
+              <div class="testimonial-box">
+                <div class="image-container">
+                  <img src="{% static 'images\student-images\student-image5.jpg' %}" alt="Student 2">
+                  <div class="hover-text">
+                    "The faculty and resources at FCRI have been exceptional in shaping my knowledge and skills."
+                  </div>
+                </div>
+                <h3>Jane Smith</h3>
+              </div>
+          
+              <!-- Student 3 -->
+              <div class="testimonial-box">
+                <div class="image-container">
+                  <img src="{% static 'images\student-images\student-image3.jpg' %}" alt="Student 3">
+                  <div class="hover-text">
+                    "The collaborative environment at FCRI has been a transformative experience for me."
+                  </div>
+                </div>
+                <h3>Michael Brown</h3>
+              </div>
+            </div>
+          </section>          
+            <!-- footer section -->
+            <footer class="footer">
+              <div class="footer-container">
+                <!-- Footer Top Section -->
+                <div class="footer-top">
+                  <div class="footer-column">
+                    <img src="{% static 'images/logo-images/forestlogo-01.webp' %}" class="footer-img" alt="Forest Logo">
+                    <p><strong>Email us:</strong> <a href="mailto:tsfcri2021@gmail.com">tsfcri2021@gmail.com</a></p>
+                    <p><strong>Call us:</strong> <a href="tel:+918454211930">+91 8454211930</a>, <a href="tel:+918454211939">+91 8454211939</a></p>
+                  </div>
+                  <div class="footer-column">
+                    <h3>Subscribe</h3>
+                    <form action="#" class="subscribe-form">
+                      <input type="email" placeholder="Enter your email address" class="subscribe-input" required>
+                      <button type="submit" class="subscribe-button">Subscribe</button>
+                    </form>
+                  </div>
+                  <div class="footer-column">
+                    <h3>About</h3>
+                    <ul>
+                      <li><a href="#">Vision and Mission</a></li>
+                      <li><a href="#">Governing Board</a></li>
+                      <li><a href="#">Academic Council</a></li>
+                      <li><a href="#">Organogram</a></li>
+                    </ul>
+                  </div>
+                  <div class="footer-column">
+                    <h3>Admissions</h3>
+                    <ul>
+                      <li><a href="#">BSc Hons Forestry</a></li>
+                      <li><a href="#">MSc Forestry</a></li>
+                      <li><a href="#">PhD Forestry</a></li>
+                      <li><a href="#">Admission Process - UG</a></li>
+                      <li><a href="#">Admission Process - PG</a></li>
+                      <li><a href="#">FAQ’s</a></li>
+                    </ul>
+                  </div>
+                  <div class="footer-column">
+                    <h3>Academics</h3>
+                    <ul>
+                      <li><a href="#">List of Departments</a></li>
+                      <li><a href="#">Faculty</a></li>
+                      <li><a href="#">Laboratories</a></li>
+                      <li><a href="#">Rules & Regulation - UG</a></li>
+                      <li><a href="#">Rules & Regulation - PG</a></li>
+                    </ul>
+                  </div>
+                </div>
+            
+                <!-- Footer Bottom Section -->
+                <div class="footer-bottom">
+                  <p>© 2022 FCRI - All Rights Reserved.</p>
+            
+                  <!-- Social Media Links at the Bottom -->
+                  <div class="top-bar1">
+                    <div class="social-media1">
+                      <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                      <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                      <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                      <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </footer>
+            
+             
+        <script src="{% static 'js/main.js' %}"></script>
+        </body>
+        </html>
+        
