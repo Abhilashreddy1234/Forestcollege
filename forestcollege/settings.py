@@ -91,6 +91,7 @@ MIDDLEWARE = [
     'cms.middleware.user.CurrentUserMiddleware',
     'cms.middleware.page.CurrentPageMiddleware',
     'cms.middleware.toolbar.ToolbarMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware', 
     'django.middleware.locale.LocaleMiddleware',
     'cms.middleware.language.LanguageCookieMiddleware',
 ]
@@ -238,6 +239,7 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 STATICFILES_DIRS = [
     BASE_DIR / "forestcollege" / "static",
 ]
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 INTERNAL_IPS = [
     "127.0.0.1",
