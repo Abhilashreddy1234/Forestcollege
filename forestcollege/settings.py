@@ -31,7 +31,7 @@ SECRET_KEY = 'django-insecure-@)f!jjwjv2@o^tu766c(17fxj64*)lj0=n+y8nsu0v*5w%e^or
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['forestcollege.onrender.com']
+ALLOWED_HOSTS = ['forestcollege.onrender.com','127.0.0.1']
 
 
 # Application definition
@@ -234,6 +234,7 @@ DJANGOCMS_VERSIONING_ALLOW_DELETING_VERSIONS = True
 # Add project-wide static files directory
 # https://docs.djangoproject.com/en/5.1/ref/settings/#staticfiles-dirs
 
+STATIC_ROOT = BASE_DIR / "staticfiles" 
 STATICFILES_DIRS = [
     BASE_DIR / "forestcollege" / "static",
 ]
