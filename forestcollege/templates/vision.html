@@ -1,15 +1,201 @@
+{% load sekizai_tags cms_tags %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <title>Vision & Mission</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}Forest College{% endblock %}</title>
+        <link rel="stylesheet" href="{% static 'css/main1.css' %}">
         <link rel="stylesheet" href="{% static 'css/main.css' %}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        {% render_block "css" %}
     </head>
     <body>
-        <div class="vision-page">
-            <h1>welcome to vision and mission of FCRI</h1>
+        {% cms_toolbar %}
+        <header>
+            <div class="top-bar">
+                <div class="social-media">
+                    <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <nav class="navbar">
+                <div class="logo-section">
+                    <img src="{% static 'images\logo-images\forestlogo-01.webp' %}" alt="Logo" class="logo">
+                    <h1>Forest College</h1>
+                </div>
+                <div class="menu-toggle">&#9776;</div>
+                <ul class="nav-links">
+                    <li class="dropdown">
+                        <a href="#">About</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{% url 'vision' %}">Vision and  Mission</a></li>
+                            <li><a href="#mission">Mission & Vision</a></li>
+                            <li><a href="#team">Team</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Administration</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#principal">Principal</a></li>
+                            <li><a href="#faculty">Faculty</a></li>
+                            <li><a href="#staff">Staff</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Academics</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#programs">Programs</a></li>
+                            <li><a href="#departments">Departments</a></li>
+                            <li><a href="#research">Research</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Admissions</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#undergraduate">Undergraduate</a></li>
+                            <li><a href="#postgraduate">Postgraduate</a></li>
+                            <li><a href="#phd">Ph.D. Admissions</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Infrastructure</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#library">Library</a></li>
+                            <li><a href="#labs">Laboratories</a></li>
+                            <li><a href="#hostels">Hostels</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Services</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#transport">Transport</a></li>
+                            <li><a href="#health">Health Services</a></li>
+                            <li><a href="#counseling">Counseling</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Research</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#projects">Projects</a></li>
+                            <li><a href="#collaborations">Collaborations</a></li>
+                            <li><a href="#publications">Publications</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#media">In Media</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section>
+
+        </section>
+        <div class="content-container">
+            <section class="intro-section">
+                <div class="intro-container">
+                    <p>
+                        Welcome to FCRI Hyderabad<br>
+                        Professional Forestry Education for the First Time in Telangana State<br>
+                        FCRI Hyderabad, the brainchild of our visionary Chief Minister, was established in 2016.
+                        Located at Forest Research Centre Mulugu in Siddipet district, about 50 km from the city of Hyderabad,
+                        FCRI provides world-class facilities and opportunities to its students. At present, FCRI has 242 students
+                        pursuing M.Sc. Forestry and B.Sc. (Hons.) Forestry. Three batches from B.Sc. (Hons.) Forestry have passed out.
+                        FCRI Hyderabad received ICFRE accreditation with A* grade & ICAR accreditation within a span of 5 years since inception.
+                    </p>
+                </div>
+            </section>
+            <section class="vision-mission-section">
+                <div class="vision-mission-container">
+                    <div class="vision-box">
+                        <h2>Vision</h2>
+                        <p>
+                            Emerging as a World Class Institution for Forestry Education, Research, Management, and Outreach.
+                        </p>
+                    </div>
+                    <div class="mission-box">
+                        <h2>Mission</h2>
+                        <ul>
+                            <li>To establish a world-class institution in forestry education.</li>
+                            <li>To bring out qualified forestry professionals for conservation and sustainable management of forest resources.</li>
+                            <li>To develop appropriate methods through research for propagation of plantation crops to meet the demand from industry and domestic needs.</li>
+                            <li>Extension training to farmers.</li>
+                            <li>To network and partner with similar institutions to synergize learning.</li>
+                            <li>To develop Agroforestry models suitable for different agro-ecological situations in Telangana State, apart from conventional forestry operations to reduce pressure on natural stands, uplift farming communities economically, and enhance ecological conditions.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
         </div>
+        
+
+        <footer class="footer">
+            <div class="footer-container">
+              <!-- Footer Top Section -->
+              <div class="footer-top">
+                <div class="footer-column">
+                  <img src="{% static 'images/logo-images/forestlogo-01.webp' %}" class="footer-img" alt="Forest Logo">
+                  <p><strong>Email us:</strong> <a href="mailto:tsfcri2021@gmail.com">tsfcri2021@gmail.com</a></p>
+                  <p><strong>Call us:</strong> <a href="tel:+918454211930">+91 8454211930</a>, <a href="tel:+918454211939">+91 8454211939</a></p>
+                </div>
+                <div class="footer-column">
+                  <h3>Subscribe</h3>
+                  <form action="#" class="subscribe-form">
+                    <input type="email" placeholder="Enter your email address" class="subscribe-input" required>
+                    <button type="submit" class="subscribe-button">Subscribe</button>
+                  </form>
+                </div>
+                <div class="footer-column">
+                  <h3>About</h3>
+                  <ul>
+                    <li><a href="#">Vision and Mission</a></li>
+                    <li><a href="#">Governing Board</a></li>
+                    <li><a href="#">Academic Council</a></li>
+                    <li><a href="#">Organogram</a></li>
+                  </ul>
+                </div>
+                <div class="footer-column">
+                  <h3>Admissions</h3>
+                  <ul>
+                    <li><a href="#">BSc Hons Forestry</a></li>
+                    <li><a href="#">MSc Forestry</a></li>
+                    <li><a href="#">PhD Forestry</a></li>
+                    <li><a href="#">Admission Process - UG</a></li>
+                    <li><a href="#">Admission Process - PG</a></li>
+                    <li><a href="#">FAQ’s</a></li>
+                  </ul>
+                </div>
+                <div class="footer-column">
+                  <h3>Academics</h3>
+                  <ul>
+                    <li><a href="#">List of Departments</a></li>
+                    <li><a href="#">Faculty</a></li>
+                    <li><a href="#">Laboratories</a></li>
+                    <li><a href="#">Rules & Regulation - UG</a></li>
+                    <li><a href="#">Rules & Regulation - PG</a></li>
+                  </ul>
+                </div>
+              </div>
+          
+              <!-- Footer Bottom Section -->
+              <div class="footer-bottom">
+                <p>© 2022 FCRI - All Rights Reserved.</p>
+          
+                <!-- Social Media Links at the Bottom -->
+                <div class="top-bar1">
+                  <div class="social-media1">
+                    <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </footer>
+          
+           
+      <script src="{% static 'js/main.js' %}"></script>
     </body>
 </html>

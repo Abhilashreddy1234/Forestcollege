@@ -1,0 +1,51 @@
+.intro-section {
+    padding:70px;
+    text-align: center;
+    
+  }
+  
+  .intro-container p {
+    font-size: 18px;
+    margin: 0 auto;
+    max-width: 800px;
+  }
+  
+  /* Vision and Mission Section */
+  .vision-mission-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    background: #eef5f3;
+  }
+  
+  .vision-mission-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .vision-box, .mission-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    margin: 10px;
+  }
+  
+  .vision-box h2, .mission-box h2 {
+    color: #004d25;
+  }
+  
+  .mission-box ul {
+    list-style: disc;
+    padding-left: 20px;
+  }
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .vision-mission-section {
+        flex-direction: column;
+    }
+  }
+  
