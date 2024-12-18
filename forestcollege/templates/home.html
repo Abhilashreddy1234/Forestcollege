@@ -31,60 +31,84 @@
                     <li class="dropdown">
                         <a href="#">About</a>
                         <ul class="dropdown-menu">
-                            <li><a href="{% url 'vision' %}">Vision and  Mission</a></li>
-                            <li><a href="#mission">Governing Board</a></li>
-                            <li><a href="#team">Academic Council</a></li>
+                            <li><a href="{% url 'vision' %}">Vision and Mission</a></li>
+                            <li><a href="{% url 'Governing_Board' %}">Governing Board</a></li>
+                            <li><a href="{% url  'Governing_Board' %}">Academic Council</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
                         <a href="#">Administration</a>
                         <ul class="dropdown-menu">
-                            <li><a href="#principal">Principal</a></li>
-                            <li><a href="#faculty">Dean</a></li>
-                            <li><a href="#staff">Staff</a></li>
+                            <li><a href="{% url 'Dean' %}">Dean</a></li>
+                            <li><a href="{% url 'Joint_Director' %}">Joint-Director</a></li>
+                            <li><a href="{% url 'Deputy_Director' %}">Deputy-Director</a></li>
+                            <li><a href="{% url 'Organogram' %}">Organogram</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
                         <a href="#">Academics</a>
                         <ul class="dropdown-menu">
-                            <li><a href="#programs">Course</a></li>
-                            <li><a href="#departments">Departments</a></li>
-                            <li><a href="#research">Research</a></li>
+                            <li><a href="#">Course Structure</a></li>
+                            <li><a href="#">Departments</a></li>
+                            <li><a href="#">Rules and Regulations</a></li>
+                            <li><a href="#">Examinations & Evaluations</a></li>
+                            <li><a href="#">Student Achievements</a></li>
+                            <li><a href="#">Committees</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
                         <a href="#">Admissions</a>
                         <ul class="dropdown-menu">
-                            <li><a href="#undergraduate">Undergraduate</a></li>
-                            <li><a href="#postgraduate">Postgraduate</a></li>
-                            <li><a href="#phd">Ph.D. Admissions</a></li>
+                            <li><a href="#">Courses Offered</a></li>
+                            <li><a href="#">Admission Process</a></li>
+                            <li><a href="#">Prospectus</a></li>
+                            <li><a href="#">Brochure</a></li>
+                            <li><a href="#">Fee Payments</a></li>
+                            <li><a href="#">Fee Structure</a></li>
+                            <li><a href="#">Academic Schedule - 2024</a></li>
+                            <li><a href="#">Academic Notification - 2024</a></li>
+                            <li><a href="#">Admin Reports</a></li>
+                            <li><a href="#">New Selected List</a></li>
+                            <li><a href="#">B.Sc (Hons.) Forest List</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
                         <a href="#">Infrastructure</a>
                         <ul class="dropdown-menu">
-                            <li><a href="#library">Library</a></li>
-                            <li><a href="#labs">Laboratories</a></li>
-                            <li><a href="#hostels">Hostels</a></li>
+                            <li><a href="#">Forest Museum</a></li>
+                            <li><a href="#">Central Instrumentation Facility</a></li>
+                            <li><a href="#">Board Room</a></li>
+                            <li><a href="#">Auditorium</a></li>
+                            <li><a href="#">Seminar Hall</a></li>
+                            <li><a href="#">Library</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
                         <a href="#">Services</a>
                         <ul class="dropdown-menu">
-                            <li><a href="#transport">Transport</a></li>
-                            <li><a href="#health">Health Services</a></li>
-                            <li><a href="#counseling">Counseling</a></li>
+                            <li><a href="#">FCRI Careers</a></li>
+                            <li><a href="#">FCRI Study Circles</a></li>
+                            <li><a href="#">Central Instrumentation Facility CIF</a></li>
+                            <li><a href="#">Nursery</a></li>
+                            <li><a href="#">Wood Workshops</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
                         <a href="#">Research</a>
                         <ul class="dropdown-menu">
-                            <li><a href="#projects">Projects</a></li>
-                            <li><a href="#collaborations">Collaborations</a></li>
-                            <li><a href="#publications">Publications</a></li>
+                            <li><a href="#">Research Projects</a></li>
+                            <li><a href="#">MoU's</a></li>
+                            <li><a href="#">Publications</a></li>
+                            <li><a href="#">Awards & Publications</a></li>
                         </ul>
                     </li>
-                    <li><a href="#media">In Media</a></li>
+                    <li class="dropdown">
+                        <a href="#">Media</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Media Gallery</a></li>
+                            <li><a href="#">Video Gallery</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
         </header>
@@ -96,11 +120,26 @@
           <div class="content">
             <!-- Add any overlay content here -->
             <h1>Welcome to Forest College</h1>
-            <p>Explore our vibrant campus and exceptional programs.</p>
+            {% block content %}
+            {% placeholder "content" %}
+            {% endblock content %}
           </div>
         </div>
-         
-        <div class="container-wrapper">
+        <!-- chatbot button -->  
+  </head>
+  <body>
+     
+      <div id="chatbot-section">
+          <h4>Chat with Us</h4>
+          <div id="chatbox">
+              <!-- Chat messages will be appended here -->
+          </div>
+          <input type="text" id="user-input" placeholder="Type your message...">
+          <button id="send-button">Send</button>
+      </div>
+  
+          
+              <div class="container-wrapper">
             <h2 class="container-heading">Professional Forest College in Telangana</h2>
             <div class="container">
               <div class="box">
@@ -297,7 +336,7 @@
       <!-- Dean -->
       <div class="admin-carousel-item active">
         <div class="admin-image">
-          <img src="{% static 'images/professor-images/chairman-image.jpg' %}" alt="Dean">
+          <img src="{% static 'images\professor-images\fcri-Dean.png' %}" alt="Dean">
         </div>
         <div class="admin-info">
           <h4>Dean</h4>
@@ -326,7 +365,7 @@ The institution is also aimed at providing an outstanding learning environment, 
       <!-- Chairman -->
       <div class="admin-carousel-item">
         <div class="admin-image">
-          <img src="{% static 'images/professor-images/chairman-image.jpg' %}" alt="Chairman">
+          <img src="{% static 'images\professor-images\Venkateshwarlu-Deputy-director.jpg' %}" alt="Chairman">
         </div>
         <div class="admin-info">
           <h4>Chairman</h4>
@@ -359,7 +398,7 @@ The institution is also aimed at providing an outstanding learning environment, 
                 <div class="department-carousel-items">
                   <!-- Carousel Item 1 -->
                   <div class="department-carousel-item">
-                    <img src="{% static 'images\professor-images\chairman-image.jpg' %}" alt="Dr. Milkuri Chiranjeeva Reddy" class="professor-image">
+                    <img src="{% static 'images\professor-images\Venkateshwarlu-Deputy-director.jpg' %}" alt="Dr. Milkuri Chiranjeeva Reddy" class="professor-image">
                     <h3>Dr. Milkuri Chiranjeeva Reddy</h3>
                     <p>
                       He has obtained Junior Research Fellowship from the Indian Council of Agricultural Research for the year 2010-2012.

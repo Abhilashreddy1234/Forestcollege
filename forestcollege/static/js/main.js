@@ -182,3 +182,41 @@ document.addEventListener('DOMContentLoaded', function () {
       navLinks.classList.toggle('active');
   });
 });
+// chatbot logc for java script //
+
+          // Predefined chatbot responses
+          const responses = {
+              "hi": "Hello! How can I help you today?",
+              "admission": "Admissions are open. You can apply online through our portal.",
+              "courses": "We offer courses in Forestry, Environmental Science, and Wildlife Studies.",
+              "contact": "You can contact us at info@forestcollege.edu or call 123-456-7890."
+          };
+  
+          // Event listener for the send button
+          document.getElementById('send-button').addEventListener('click', function () {
+              const userInput = document.getElementById('user-input').value.trim().toLowerCase();
+              const chatbox = document.getElementById('chatbox');
+  
+              if (userInput === '') return; // Ignore empty input
+  
+              // Add user message to the chatbox
+              const userMessageDiv = document.createElement('div');
+              userMessageDiv.textContent = `You: ${userInput}`;
+              userMessageDiv.style.marginBottom = '5px';
+              chatbox.appendChild(userMessageDiv);
+  
+              // Get chatbot response or fallback response
+              const botResponse = responses[userInput] || "I'm sorry, I didn't understand that. Can you rephrase?";
+              const botMessageDiv = document.createElement('div');
+              botMessageDiv.textContent = `Bot: ${botResponse}`;
+              botMessageDiv.style.marginBottom = '5px';
+              botMessageDiv.style.color = 'blue';
+              chatbox.appendChild(botMessageDiv);
+  
+              // Clear the input field
+              document.getElementById('user-input').value = '';
+  
+              // Scroll to the bottom of the chatbox
+              chatbox.scrollTop = chatbox.scrollHeight;
+          });
+      

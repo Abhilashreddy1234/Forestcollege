@@ -1,19 +1,3 @@
-"""
-URL configuration for forestcollege project.
-
-The `urlpatterns` list routes URLs to views. For more information, please see:
-    https://docs.djangoproject.com/en/5.1/topics/http/urls/
-Examples:
-Function views:
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views:
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf:
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
@@ -24,10 +8,14 @@ from forestcollege import views
 urlpatterns = [
     path('jsi18n/', JavaScriptCatalog.as_view(), name='javascript-catalog'),
     path('admin/', admin.site.urls),
-    path('vision/',views.vision,name='vision'),  
-    path('filer/', include('filer.urls')),
+    path('vision/', views.vision, name='vision'),
+    path('Governing_Board/',views.Governing_Board,name='Governing_Board'),
+    path('Dean/',views.Dean,name='Dean'),
+    path('Joint_Director/',views.Joint_Director,name='Joint_Director'),
+    path('Deputy_Director/',views.Deputy_Director,name='Deputy_Director'),
+    path('Organogram/',views.Organogram,name='Organogram'),
     path('', include('cms.urls')),
 ]
-# Adding media files serving during development
+
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

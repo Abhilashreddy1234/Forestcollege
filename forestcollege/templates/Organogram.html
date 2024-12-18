@@ -1,0 +1,213 @@
+{% load sekizai_tags cms_tags %}
+{% load static %}
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}Forest College{% endblock %}</title>
+        <link rel="stylesheet" href="{% static 'css/main.css' %}">
+        <link rel="stylesheet" href="{% static 'css/main1.css' %}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        {% render_block "css" %}
+    </head>
+    <body>
+        {% cms_toolbar %}
+        <header>
+            <div class="top-bar">
+                <div class="social-media">
+                    <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <nav class="navbar">
+                <div class="logo-section">
+                    <img src="{% static 'images\logo-images\forestlogo-01.webp' %}" alt="Logo" class="logo">
+                    <h1>Forest College</h1>
+                </div>
+                <div class="menu-toggle">&#9776;</div>
+                <ul class="nav-links">
+                    <li class="dropdown">
+                        <a href="#">About</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{% url 'vision' %}">Vision and Mission</a></li>
+                            <li><a href="{% url 'Governing_Board' %}">Governing Board</a></li>
+                            <li><a href="#">Academic Council</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Administration</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{% url 'Dean' %}">Dean</a></li>
+                            <li><a href="{% url 'Joint_Director' %}">Joint-Director</a></li>
+                            <li><a href="{% url 'Deputy_Director' %}">Deputy-Director</a></li>
+                            <li><a href="#">Organogram</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Academics</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Course Structure</a></li>
+                            <li><a href="#">Departments</a></li>
+                            <li><a href="#">Rules and Regulations</a></li>
+                            <li><a href="#">Examinations & Evaluations</a></li>
+                            <li><a href="#">Student Achievements</a></li>
+                            <li><a href="#">Committees</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Admissions</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Courses Offered</a></li>
+                            <li><a href="#">Admission Process</a></li>
+                            <li><a href="#">Prospectus</a></li>
+                            <li><a href="#">Brochure</a></li>
+                            <li><a href="#">Fee Payments</a></li>
+                            <li><a href="#">Fee Structure</a></li>
+                            <li><a href="#">Academic Schedule - 2024</a></li>
+                            <li><a href="#">Academic Notification - 2024</a></li>
+                            <li><a href="#">Admin Reports</a></li>
+                            <li><a href="#">New Selected List</a></li>
+                            <li><a href="#">B.Sc (Hons.) Forest List</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Infrastructure</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Forest Museum</a></li>
+                            <li><a href="#">Central Instrumentation Facility</a></li>
+                            <li><a href="#">Board Room</a></li>
+                            <li><a href="#">Auditorium</a></li>
+                            <li><a href="#">Seminar Hall</a></li>
+                            <li><a href="#">Library</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Services</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">FCRI Careers</a></li>
+                            <li><a href="#">FCRI Study Circles</a></li>
+                            <li><a href="#">Central Instrumentation Facility CIF</a></li>
+                            <li><a href="#">Nursery</a></li>
+                            <li><a href="#">Wood Workshops</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Research</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Research Projects</a></li>
+                            <li><a href="#">MoU's</a></li>
+                            <li><a href="#">Publications</a></li>
+                            <li><a href="#">Awards & Publications</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Media</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Media Gallery</a></li>
+                            <li><a href="#">Video Gallery</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+      
+
+    <div class="Organogram">
+      <img src="{% static 'images\professor-images\FCRI_organogram-1-image.png' %}">
+          
+
+
+
+        <section class="contact-section">
+            <h1>
+                Emerging as a World Class Institution.
+            </h1>
+            <h2>Forestry Education, Research, Management, and Outreach.</h2>
+            <a href="/contact-us" class="contact-button">Contact Us</a>
+        </section>
+    </div>
+    <div class="vision-images">
+        <div class="vi">
+            <img src="{% static 'images\college-images\visionimage4.webp' %}">
+        </div>
+        <div class="vi">
+            <img src="{% static 'images\college-images\vision-image5.webp' %}">
+        </div>
+        <div class="vi">
+            <img src="{% static 'images\college-images\vision-image7.webp' %}">
+        </div>
+        <div class="vi">
+            <img src="{% static 'images\college-images\vision-image6.webp' %}">
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-container">
+          <!-- Footer Top Section -->
+          <div class="footer-top">
+            <div class="footer-column">
+              <img src="{% static 'images/logo-images/forestlogo-01.webp' %}" class="footer-img" alt="Forest Logo">
+              <p><strong>Email us:</strong> <a href="mailto:tsfcri2021@gmail.com">tsfcri2021@gmail.com</a></p>
+              <p><strong>Call us:</strong> <a href="tel:+918454211930">+91 8454211930</a>, <a href="tel:+918454211939">+91 8454211939</a></p>
+            </div>
+            <div class="footer-column">
+              <h3>Subscribe</h3>
+              <form action="#" class="subscribe-form">
+                <input type="email" placeholder="Enter your email address" class="subscribe-input" required>
+                <button type="submit" class="subscribe-button">Subscribe</button>
+              </form>
+            </div>
+            <div class="footer-column">
+              <h3>About</h3>
+              <ul>
+                <li><a href="#">Vision and Mission</a></li>
+                <li><a href="#">Governing Board</a></li>
+                <li><a href="#">Academic Council</a></li>
+                <li><a href="#">Organogram</a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h3>Admissions</h3>
+              <ul>
+                <li><a href="#">BSc Hons Forestry</a></li>
+                <li><a href="#">MSc Forestry</a></li>
+                <li><a href="#">PhD Forestry</a></li>
+                <li><a href="#">Admission Process - UG</a></li>
+                <li><a href="#">Admission Process - PG</a></li>
+                <li><a href="#">FAQ’s</a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h3>Academics</h3>
+              <ul>
+                <li><a href="#">List of Departments</a></li>
+                <li><a href="#">Faculty</a></li>
+                <li><a href="#">Laboratories</a></li>
+                <li><a href="#">Rules & Regulation - UG</a></li>
+                <li><a href="#">Rules & Regulation - PG</a></li>
+              </ul>
+            </div>
+          </div>
+      
+          <!-- Footer Bottom Section -->
+          <div class="footer-bottom">
+            <p>© 2022 FCRI - All Rights Reserved.</p>
+      
+            <!-- Social Media Links at the Bottom -->
+            <div class="top-bar1">
+              <div class="social-media1">
+                <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      
+       
+  <script src="{% static 'js/main.js' %}"></script>
+</body>

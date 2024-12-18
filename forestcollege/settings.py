@@ -204,7 +204,14 @@ CMS_TEMPLATES = (
     ("base.html", _("Standard")),
     ("home.html","home template"),
     ("bootstrap5.html","bootstrap template"),
-    ("vision.html","vision template")
+    ("vision.html","vision template"),
+    ("Governing_Board.html","GoverningBoard"),
+    ("Academic-Counsil.html","AcademicCouncil"),
+    ("Dean.html","Dean"),
+    ("Joint-Director.html","JointDirector"),
+    ("Deputy-Director.html","DeputyDirector"),
+    ("Organogram.html","Organogram"),
+    
     
 )
 
