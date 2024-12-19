@@ -11,25 +11,75 @@ body {
   margin-top: 120px;
 }
 
-/* Top Bar for Social Media Icons */
+/* top bar for  both notifications and social media icons */
+/* Top Bar Styling */
 .top-bar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
+  color: white;
+  display: flex;
+  justify-content: space-between; /* Space between notification bar and social icons */
+  align-items: center;
   padding: 10px 15px;
   z-index: 1000;
+}
+
+/* Notification Bar Styles */
+.notification-bar-wrapper {
+  flex: 1; /* Allow notification bar to take up available space */
+  overflow: hidden;
+}
+
+.notification-bar {
+  white-space: nowrap;
+  overflow: hidden;
+  animation: scroll 10s linear infinite; 
+}
+
+.notification-content span {
+  display: inline-block;
+  margin-right: 50px; /* Spacing between notifications */
+  font-size: 14px;
+}
+
+/* Social Media Icons Styling */
+.social-media {
   display: flex;
-  justify-content: flex-end;
+  gap: 15px; /* Space between icons */
 }
 
 .social-media a {
-  color: #fff;
-  margin-left: 15px;
+  color: white;
   text-decoration: none;
   font-size: 1.2em;
+  transition: color 0.3s;
 }
+
+.social-media a:hover {
+  color: #ffd700; /* Gold on hover */
+}
+
+/* Scrolling Animation */
+@keyframes scroll {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .top-bar {
+    flex-direction: column; /* Stack notification and social media vertically */
+    align-items: flex-start;
+  }
+
+  .social-media {
+    margin-top: 10px;
+  }
+}
+
 
 /* Navbar Styles */
 .navbar {
@@ -161,6 +211,11 @@ h1 {
       padding: 10px;
   }
 }
+/* For smaller devices (e.g., smartphones in portrait) */
+/* General Mobile Styles */
+
+
+
 /* chatbot section */
 
 #chatbot-section {
@@ -214,15 +269,15 @@ h1 {
   height: 530px;
   overflow: hidden;
 }
-.content h1,p{
-  color:black;
+.content h1{
+  color:lightgreen;
 }
 .background-video {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: auto;
+  height: 550px;
   object-fit: cover;
   z-index: 1;
 }
@@ -237,7 +292,6 @@ h1 {
 
 .content h1 {
   font-size: 48px;
-  margin-bottom: 20px;
 }
 
 .content p {
@@ -289,7 +343,7 @@ h1 {
 /* Carousel styling */
 .carousel {
   width: 100%;
-  height: 100%;
+  min-height:150px;
   position: relative;
   overflow: hidden;
 }
@@ -343,15 +397,29 @@ h1 {
 }
 
 /* Responsive design */
-@media (max-width: 768px) {
+/* Responsive design */
+@media (max-width: 468px) {
   .container {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* Stack items vertically */
   }
 
   .box {
-    height: auto; /* Ensures boxes adapt to smaller screens */
+    height: auto; /* Ensure boxes adapt their height based on content */
+    overflow: visible; /* Prevent content from being cut off */
+  }
+
+  .carousel {
+    width: 100%;
+    height: auto; /* Allow carousel height to adjust dynamically */
+  }
+
+  .carousel img {
+    object-fit: contain; /* Ensure images fit within the box without cropping */
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
   }
 }
+
 /* General admission section styling */
 .admission-wrapper {
   max-width: 1200px;
@@ -408,7 +476,7 @@ h1 {
 .notification-bar-wrapper {
   width: 100%;
   overflow: hidden;
-  background-color: blue;
+  background-color: black;
   border-bottom: 2px solid #0056b3;
   padding: 10px 0;
   position: relative;
@@ -1048,6 +1116,91 @@ h1 {
   transform: translateY(-5px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
+/* General breakpoints for responsive design */
+
+/* For tablets (768px and below) */
+@media (max-width: 768px) {
+  .departments-section {
+    flex-direction: column;
+    padding: 50px;
+    gap: 40px;
+  }
+
+  .departments-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .department-carousel {
+    margin-bottom: 20px;
+  }
+
+  .department-carousel-item h3 {
+    font-size: 18px;
+  }
+
+  .department-carousel-item p {
+    font-size: 14px;
+  }
+
+  .departments-links ul li a {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+/* For mobile devices (576px and below) */
+@media (max-width: 576px) {
+  .departments-section {
+    padding: 30px;
+    gap: 20px;
+  }
+
+  .department-carousel-item h3 {
+    font-size: 16px;
+  }
+
+  .department-carousel-item p {
+    font-size: 12px;
+  }
+
+  .professor-image {
+    height: 250px;
+  }
+
+  .departments-links ul li a {
+    font-size: 12px;
+    padding: 8px;
+  }
+}
+
+/* For extra-small devices (375px and below) */
+@media (max-width: 375px) {
+  .departments-section {
+    padding: 20px;
+    gap: 10px;
+  }
+
+  .department-carousel-prev,
+  .department-carousel-next {
+    padding: 8px;
+  }
+
+  .department-carousel-item h3 {
+    font-size: 14px;
+  }
+
+  .department-carousel-item p {
+    font-size: 10px;
+  }
+
+  .departments-links ul li a {
+    font-size: 10px;
+    padding: 6px;
+  }
+}
+
 /* student testimonials */
 /* Testimonials Section */
 .student-testimonials {
