@@ -1,0 +1,421 @@
+{% load sekizai_tags cms_tags %}
+{% load static %}
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}Forest College{% endblock %}</title>
+        <link rel="stylesheet" href="{% static 'css/main.css' %}">
+        <link rel="stylesheet" href="{% static 'css/main1.css' %}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+        {% render_block "css" %}
+    </head>
+    <body>
+        {% cms_toolbar %}
+        <header>
+            <nav class="navbar">
+                <div class="logo-section">
+                    <img src="{% static 'images\logo-images\forestlogo-01.webp' %}" alt="Logo" class="logo">
+                    <h1>Forest College</h1>
+                </div>
+                <div class="menu-toggle">&#9776;</div>
+                <ul class="nav-links">
+                    <li class="dropdown">
+                        <a href="#">About</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{% url 'vision' %}">Vision and Mission</a></li>
+                            <li><a href="{% url 'Governing_Board' %}">Governing Board</a></li>
+                            <li><a href="{% url  'Governing_Board' %}">Academic Council</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Administration</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{% url 'Dean' %}">Dean</a></li>
+                            <li><a href="{% url 'Joint_Director' %}">Joint-Director</a></li>
+                            <li><a href="{% url 'Deputy_Director' %}">Deputy-Director</a></li>
+                            <li><a href="{% url 'Organogram' %}">Organogram</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                      <a href="#">Academics</a>
+                      <ul class="dropdown-menu">
+                          <li class="dropdown">
+                              <a href="#">Course Structure</a>
+                              <ul class="dropdown-menu">
+                                  <li><a href="{% static 'doc\16.-Course-Structure-4-UG.pdf' %}">UG</a></li>
+                                  <li><a href="{% static 'doc\PG-Course-Structure-2-1.pdf' %}">PG</a></li>
+                              </ul>
+                          </li>
+                          <li class="dropdown">
+                              <a href="#">Departments</a>
+                              <ul class="dropdown-menu">
+                                  <li><a href="{% url 'Departments' %}">List of Department</a></li>
+                                  <li><a href="{% url 'Departments' %}">Department Head</a></li>
+                                  <li><a href="{% url 'Faculty' %}">Faculty</a></li>
+                                  <li><a href="{% url 'laboratory' %}">Laboratory</a></li>
+                              </ul>
+                          </li>
+                          <li class="dropdown">
+                              <a href="#">Rules and Regulations</a>
+                              <ul class="dropdown-menu">
+                                  <li><a href="{% static 'doc\8.-UG-regulations-1.pdf' %}">UG</a></li>
+                                  <li><a href="{% static 'doc\Regulations-PG-course.pdf' %}">PG</a></li>
+                              </ul>
+                          </li>
+                          <li class="dropdown">
+                              <a href="#">Examinations & Evaluations</a>
+                              <ul class="dropdown-menu">
+                                  <li><a href="{% static 'doc\Evaluation-of-student-for-UG-and-PG-programs-at-FCRI-2022.pdf' %}">Evaluation of Students for UG & PG</a></li>
+                                  <li><a href="{% static 'doc\revaluation-rescrutiny-application.pdf' %}">Revaluation, Rescrutiny & Application</a></li>
+                                  <li><a href="{% static 'doc\Thesis-submission-guidelines.pdf' %}">Thesis Submission Guidelines</a></li>
+                              </ul>
+                          </li>
+                          <li class="dropdown">
+                              <a href="#">Student Achievements</a>
+                              <ul class="dropdown-menu">
+                                  <li><a href="{% url 'StudentAchievements' %}">Year of 2016</a></li>
+                                  <li><a href="{% url 'StudentAchievements1' %}">Year of 2017</a></li>
+                              </ul>
+                          </li>
+                          <li class="dropdown">
+                              <a href="#">Committees</a>
+                              <ul class="dropdown-menu">
+                                  <li><a href="{% url 'womenprotection' %}">Women Protection Committee</a></li>
+                                  <li><a href="{% url 'Antiragging' %}">Anti-ragging Committee</a></li>
+                                  <li><a href="{% url 'AdmissionComitte' %}">Admission Committee</a></li>
+                                  <li><a href="{% url 'DisciplinaryComitte' %}">Disciplinary Committee</a></li>
+                              </ul>
+                          </li>
+                      </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a href="#">Admissions</a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown">
+                            <a href="#">Courses Offered</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="{% url 'admissions1' %}">Msc Hons Forestry</a></li>
+                                <li><a href="{% url 'admissions1' %}">Msc Forestry</a></li>
+                                <li><a href="{% url 'admissions1' %}">Phd</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">Admission Process</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="{% static 'doc\Admission-Process-2022-23-1-UG.pdf' %}">UG</a></li>
+                                <li><a href="{% static 'doc\PG-Prospects_2021admission.pdf' %}">PG</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">Prospectus</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="{% static 'PG-Prospects_2021admission.pdf' %}">UG Prospectus</a></li>
+                                <li><a href="{% static 'doc\PG-Prospects_2022-23-PG.pdf' %}">PG Prospectus</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="{% static 'doc\Broucher.pdf' %}">Brochure</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">Fee Payments</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="{% static 'doc\fee-structure-2023-UG.pdf' %}">Admissin Fee Payments</a></li>
+                                <li><a href="{% static 'doc\PG-M.Sc-Forestery-Fee-Structure=PG.pdf' %}">Semister Fee Payments</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">Fee Structure</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="{% static 'doc\fee-structure-2023-UG.pdf' %}">UG Fee Structure</a></li>
+                                <li><a href="{% static 'doc\PG-M.Sc-Forestery-Fee-Structure=PG.pdf' %}">PG Fee Structure</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">Academic Schedule - 2024</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="{% url 'AcademicSchedule' %}">UG Academic Schedule</a></li>
+                                <li><a href="{% static 'doc\PG-Admission-Schedule-2022 (1)AcademicSchedule.pdf' %}">PG Academic Schedule</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">Academic Notification - 2024</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="{% url 'AcademicNotification' %}">UG Notifications</a></li>
+                                <li><a href="{% static 'doc\Admission-Notification-for-PG-2022.pdf' %}">PG Notifications</a></li>
+                                <li><a href="{% static 'doc\Ph.D-Admission-Notification-English.pdf' %}">PhD Notifications</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">Admin Reports</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">New Selected List</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="{% static 'doc\selection list1.pdf' %}">B.Sc Hons Selected list</a></li>
+                                <li><a href="{% static 'doc\selected list2.pdf' %}">PB.Sc Hons  Selected List2</a></li>
+                                <li><a href="#">
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">B.Sc (Hons.) Forest List</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="{% static 'doc\B.sc hons selected list.pdf' %}">Biology Stream</a></li>
+                                <li><a href="{% static 'doc\mathematics stream.pdf' %}">Mathematics Stream</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                
+
+                    
+                    <li class="dropdown">
+                        <a href="#">Infrastructure</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{% url 'Forestmuseum' %}">Forest Museum</a></li>
+                            <li><a href="{% url 'Cif' %}">Central Instrumentation Facility</a></li>
+                            <li><a href="{% url 'Boardroom' %}">Board Room</a></li>
+                            <li><a href="{% url 'Auditorium' %}">Auditorium</a></li>
+                            <li><a href="{% url 'Seminarhall' %}">Seminar Hall</a></li>
+                            <li><a href="{% url 'Library' %}">Library</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Services</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{% url 'Fcri' %}">FCRI Careers</a></li>
+                            <li><a href="{% url 'Fcri' %}">FCRI Study Circles</a></li>
+                            <li><a href="{% url 'Cfi2' %}">Central Instrumentation Facility CIF</a></li>
+                            <li><a href="{% url 'Nursery' %}">Nursery</a></li>
+                            <li><a href="{% url 'Workshop' %}">Wood Workshops</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Research</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Research Projects</a></li>
+                            <li><a href="#">MoU's</a></li>
+                            <li><a href="#">Publications</a></li>
+                            <li><a href="#">Awards & Publications</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Media</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Media Gallery</a></li>
+                            <li><a href="#">Video Gallery</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div class="courses-wrapper">
+            <h2 class="courses-heading">Courses Offered</h2>
+            <div class="courses-container">
+              <!-- B.Sc. Course -->
+              <div class="course-box">
+                <h3>B.Sc.</h3>
+                <p>BSc Forestry graduates can seek employment opportunities in various fields such as Research, Agriculture, Forest Services, Nursery, Educational Institutions, etc. </p>
+                <p>Forest Officer, Professor, Agri-Credit Manager, Nursing Manager, Conservationist, Ecologist, etc., are some popular BSc Forestry job profiles.</p>
+            </div>
+              <!-- M.Sc. Course -->
+              <div class="course-box">
+                <h3>M.Sc.</h3>
+                <p>Advanced studies in forestry management.</p>
+                <p>An MSc in Forensic Science is a two-year postgraduate degree that teaches students how to apply scientific methods to solve crimes. The program covers a range of scientific and technical disciplines, including:
+                  Collecting evidence from crime scenes
+                  Analyzing biological, chemical, and digital evidence
+                  Studying human anatomy
+                  Using forensic photography techniques
+                  Managing crime scenes</p> 
+              </div>
+              <!-- Ph.D. Course -->
+              <div class="course-box">
+                <h3>Ph.D.</h3>
+                <p>Research-focused forestry education.</p>
+                <p>A PhD in forestry can be a good option for those who want to make significant contributions to knowledge in the field of forestry. Some topics that may be covered in a PhD in forestry program include: forest ecology, silviculture, tree improvement, forest wildlife ecology and management, and economics</p>
+              </div>
+            </div>
+          </div>
+          <section class="msc">
+            <div class="mscforestry">
+                <div class="mscleft">
+                    <img src="{% static 'images\student-images\mscimage.jpeg' %}">
+                </div>
+                <div class="mscright">
+                    <h2>B.Sc. (Hons.) Forestry</h2>
+                    <h3>Duration: 4 Years</h3>
+                    <p>B.Sc. (Hons.) Forestry curriculum contains an integrated forestry syllabus in accordance with ICAR guidelines. The 1st & 2nd semesters comprise of basic and fundamental courses, the 3rd & 4th semesters focus on principles, 5th & 6th semester deal with production systems, 7th and 8th semester aim at Skill and Entrepreneurship Development.</p>
+                    <p>B.Sc. (Hons.) Forestry, includes an innovative component called student READY (“Rural Entrepreneurship Awareness Development Yojana”) programme, an essential prerequisite for the award of degree to ensure hands on experience and practical training to students. The programme aims to reorient graduates of Forestry for ensuring and assuring employability and develop entrepreneurs for emerging knowledge in the field of Forestry.</p>
+                </div>
+            </div>
+        </section>
+        <div id="infoGraphicCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <!-- Carousel Item 1 -->
+                <div class="carousel-item active">
+                    <div class="row align-items-center">
+                        <div class="col-md-6 col-12 courseInfographicSec--imgCol">
+                            <img src="{% static 'images/department-images/BSc_Infographicimage.png' %}" class="img-fluid" alt="B.Sc. Forestry">
+                        </div>
+                        <div class="col-md-6 col-12 courseInfographicSec__contentCol cpContentCrsl-04 scroll">
+                            <h4>Forestry Work Experience (FoWE)</h4>
+                            <h6>This is a programme designed to provide the students...</h6>
+                            <ul>
+                                <li>Orientation</li>
+                                <li>Watershed Village attachment</li>
+                                <li>Urban Forestry attachment</li>
+                                <li>Forest Range attachment</li>
+                                <li>Wildlife attachment</li>
+                                <li>Industrial attachment</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Carousel Item 2 -->
+                <div class="carousel-item">
+                    <div class="row align-items-center">
+                        <div class="col-md-6 col-12 courseInfographicSec--imgCol">
+                            <img src="{% static 'images/department-images/BSc_Infographicimage.png' %}" class="img-fluid" alt="B.Sc. Forestry">
+                        </div>
+                        <div class="col-md-6 col-12 courseInfographicSec__contentCol cpContentCrsl-05">
+                            <h4>Field Visits</h4>
+                            <ul>
+                                <li>Institution visits to government / non-government organizations</li>
+                                <li>Forest visits</li>
+                                <li>Visit to sanctuaries</li>
+                                <li>National park</li>
+                                <li>Zoo</li>
+                                <li>Visit to different ecosystems / landscapes</li>
+                                <li>On-Farm interactions</li>
+                                <li>Wildlife Census</li>
+                                <li>Visits to forest-based industry</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Carousel Item 3 -->
+                <div class="carousel-item">
+                    <div class="row align-items-center">
+                        <div class="col-md-6 col-12 courseInfographicSec--imgCol">
+                            <img src="{% static 'images/department-images/BSc_Infographicimage.png' %}" class="img-fluid" alt="B.Sc. Forestry">
+                        </div>
+                        <div class="col-md-6 col-12 courseInfographicSec__contentCol cpContentCrsl-06">
+                            <h4>Study Tours</h4>
+                            <ul>
+                                <li>Telangana state</li>
+                                <li>South India</li>
+                                <li>All India</li>
+                                <li>Short visits to industrial units, farm lands, etc.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Carousel Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#infoGraphicCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#infoGraphicCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+        
+
+        <section class="contact-section">
+            <h1>
+                Emerging as a World Class Institution.
+            </h1>
+            <h2>Forestry Education, Research, Management, and Outreach.</h2>
+            <a href="/contact-us" class="contact-button">Contact Us</a>
+        </section>
+    </div>
+    <div class="vision-images">
+        <div class="vi">
+            <img src="{% static 'images\college-images\visionimage4.webp' %}">
+        </div>
+        <div class="vi">
+            <img src="{% static 'images\college-images\vision-image5.webp' %}">
+        </div>
+        <div class="vi">
+            <img src="{% static 'images\college-images\vision-image7.webp' %}">
+        </div>
+        <div class="vi">
+            <img src="{% static 'images\college-images\vision-image6.webp' %}">
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-container">
+          <!-- Footer Top Section -->
+          <div class="footer-top">
+            <div class="footer-column">
+              <img src="{% static 'images/logo-images/forestlogo-01.webp' %}" class="footer-img" alt="Forest Logo">
+              <p><strong>Email us:</strong> <a href="mailto:tsfcri2021@gmail.com">tsfcri2021@gmail.com</a></p>
+              <p><strong>Call us:</strong> <a href="tel:+918454211930">+91 8454211930</a>, <a href="tel:+918454211939">+91 8454211939</a></p>
+            </div>
+            <div class="footer-column">
+              <h3>Subscribe</h3>
+              <form action="#" class="subscribe-form">
+                <input type="email" placeholder="Enter your email address" class="subscribe-input" required>
+                <button type="submit" class="subscribe-button">Subscribe</button>
+              </form>
+            </div>
+            <div class="footer-column">
+              <h3>About</h3>
+              <ul>
+                <li><a href="#">Vision and Mission</a></li>
+                <li><a href="#">Governing Board</a></li>
+                <li><a href="#">Academic Council</a></li>
+                <li><a href="#">Organogram</a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h3>Admissions</h3>
+              <ul>
+                <li><a href="#">BSc Hons Forestry</a></li>
+                <li><a href="#">MSc Forestry</a></li>
+                <li><a href="#">PhD Forestry</a></li>
+                <li><a href="#">Admission Process - UG</a></li>
+                <li><a href="#">Admission Process - PG</a></li>
+                <li><a href="#">FAQ’s</a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h3>Academics</h3>
+              <ul>
+                <li><a href="#">List of Departments</a></li>
+                <li><a href="#">Faculty</a></li>
+                <li><a href="#">Laboratories</a></li>
+                <li><a href="#">Rules & Regulation - UG</a></li>
+                <li><a href="#">Rules & Regulation - PG</a></li>
+              </ul>
+            </div>
+          </div>
+      
+          <!-- Footer Bottom Section -->
+          <div class="footer-bottom">
+            <p>© 2022 FCRI - All Rights Reserved.</p>
+      
+            <!-- Social Media Links at the Bottom -->
+            <div class="top-bar1">
+              <div class="social-media1">
+                <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      
+       
+  <script src="{% static 'js/main.js' %}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>        

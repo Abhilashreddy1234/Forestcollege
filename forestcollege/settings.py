@@ -15,6 +15,9 @@ https://docs.django-cms.org/en/release-4.1.x/reference/configuration.html
 
 import os
 from pathlib import Path
+from dotenv import load_dotenv
+
+load_dotenv()
 
 from django.utils.translation import gettext_lazy as _
 
@@ -26,8 +29,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-@)f!jjwjv2@o^tu766c(17fxj64*)lj0=n+y8nsu0v*5w%e^or'
-
+SECRET_KEY = os.getenv("django_key")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 

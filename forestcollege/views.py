@@ -13,3 +13,47 @@ def Deputy_Director(request):
     return render(request,'Deputy-Director.html')
 def Organogram(request):
     return render(request,'Organogram.html')
+def Departments(request):
+    return render(request,'Departments.html')
+def Faculty(request):
+    return render(request,'faculty.html')
+def laboratory(request):
+    return render(request,'laboratory.html')
+def StudentAchievements(request):
+    return render(request,'StudentAchievements.html')
+def StudentAchievements1(request):
+    return render(request,'StudentAchievements1.html')
+def womenprotection(request):
+    return render(request,'womenprotection.html')
+def Antiragging(request):
+    return render(request,'womenprotection.html')
+def AdmissionComitte(request):
+    return render(request,'womenprotection.html')
+def DisciplinaryComitte(request):
+    return render(request,'womenprotection.html')
+def Admissions1(request):
+    return render(request,'admissions1.html')
+def AcademicSchedule(request):
+    return render(request,'AcadamicSchedule.html')
+def AcademicNotification(request):
+    return render(request,'AdmissionNotification.html')
+def Forestmuseum(request):
+    return render(request,'ForestMuseum.html')
+def Cif(request):
+    return render(request,'cif.html')
+def Boardroom(request):
+    return render(request,'Boardroom.html')
+def Auditorium(request):
+    return render(request,'auditorium.html')
+def Seminarhall(request):
+    return render(request,'seminarhall.html')
+def Library(request):
+    return render(request,'Library.html')
+def Fcri(request):
+    return render(request,'Fcri.html')
+def Cfi2(request):
+    return render(request,'cf1.html')
+def Nursery(request):
+    return render(request,'nursery.html')
+def Workshop(request):
+    return render(request,'Workshop.html')

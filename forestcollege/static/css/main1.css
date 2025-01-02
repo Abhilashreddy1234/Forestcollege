@@ -140,7 +140,7 @@
 }
 
 .contact-section {
-  padding: 20px;
+  padding: 60px;
   text-align: center;
   background-color: lightgreen;
   color: #fff;
@@ -317,3 +317,522 @@
    height: 700px;
    width:100%
 } 
+/* departments */
+/* General styling */
+#departments {
+  margin-top: 100px; /* Adjust spacing below the navbar */
+  display: flex;
+  gap: 20px;
+  padding: 40px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-department {
+  flex: 1;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-department h2 {
+  color: #2e7d32;
+}
+
+#department-info {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.department-image {
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.department-list {
+  flex: 1;
+  padding: 20px;
+  background-color: #f1f8e9;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.department-list h2 {
+  color: #388e3c;
+}
+
+.department-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.department-list button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  background-color: #4caf50;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.department-list button:hover {
+  background-color: #388e3c;
+}
+/* css for laboratories */
+/* Departments Section */
+#departments {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  margin: 20px auto;
+  gap: 20px;
+  position: relative; /* Ensures it doesn't go under the navbar */
+  top: 80px; /* Adjust this value if needed */
+}
+
+/* Left Side: Image and Description */
+.about-department {
+  flex: 1;
+  min-width: 350px;
+  margin-right: 20px;
+}
+
+.about-department img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+}
+
+.about-department h2 {
+  font-size: 24px;
+  color: #004d40;
+  margin-bottom: 10px;
+}
+
+#department-info {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Right Side: Department List */
+.department-list {
+  flex: 1;
+  min-width: 300px;
+}
+
+.department-list h2 {
+  font-size: 24px;
+  color: #004d40;
+  margin-bottom: 10px;
+}
+
+.department-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.department-list li {
+  margin-bottom: 10px;
+}
+
+.department-list button {
+  display: inline-block;
+  background-color: #00897b;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  text-align: left;
+}
+
+.department-list button:hover {
+  background-color: #00695c;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  #departments {
+    flex-direction: column;
+  }
+
+  .about-department {
+    margin-right: 0;
+  }
+}
+/* Student achievements */
+.student-achievements {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  margin-top: 180px;
+}
+
+.student-achievements h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.achievement {
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: chocolate;
+}
+
+.achievement h3 {
+  font-size: 18px;
+  color: black;
+  cursor: pointer;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  margin-top: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: brown;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+  background-color: brown;
+}
+
+table th {
+  background-color: #f0f0f0;
+}
+
+table td {
+  background-color: #ffffff;
+}
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .student-achievements h2 {
+      font-size: 20px;
+    }
+
+    .achievement h3 {
+      font-size: 16px;
+    }
+
+    table {
+      font-size: 14px;
+    }
+
+    table th, table td {
+      padding: 6px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .student-achievements h2 {
+      font-size: 18px;
+    }
+
+    .achievement {
+      padding: 8px;
+    }
+
+    table th, table td {
+      padding: 5px;
+      font-size: 12px;
+    }
+
+    table th {
+      white-space: nowrap;
+    }
+
+    table td {
+      white-space: pre-wrap;
+    }
+  }
+  /* admissions css */
+  .msc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.mscforestry {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    gap: 20px;
+}
+
+.mscleft {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mscleft img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.mscright {
+    flex: 2;
+    padding: 10px 20px;
+}
+
+.mscright h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.mscright h3 {
+    font-size: 1.5rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.mscright p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+/*  Admission carousal */ 
+
+.courseInfographicSec--imgCol img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.courseInfographicSec__contentCol {
+  padding: 20px;
+}
+
+.courseInfographicSec__contentCol h4 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.courseInfographicSec__contentCol h6 {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.courseInfographicSec__contentCol ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.courseInfographicSec__contentCol ul li {
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+/* forest museum */
+.forest-museum-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 50px;
+}
+
+.carousel-container {
+  flex: 1;
+  position: relative;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-image {
+  display: none;
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+}
+
+.carousel-image.active {
+  display: block;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.carousel-button.left {
+  left: 10px;
+}
+
+.carousel-button.right {
+  right: 10px;
+}
+
+.content-container {
+  flex: 1;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.content-container h2 {
+  margin-bottom: 15px;
+  color: #2e7d32;
+}
+
+.content-container p {
+  line-height: 1.6;
+  margin-bottom: 10px;
+  color: #333;
+}
+/* cif */
+.instrumentation-section {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  background-color: crimson;
+}
+
+.instrument-gallery {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.instrument-gallery img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.instrument-list {
+  flex: 1.5;
+}
+
+.instrument-list h2 {
+  margin-bottom: 15px;
+  color: #2e7d32;
+}
+
+.instrument-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.instrument-list ul li {
+  cursor: pointer;
+  padding: 10px;
+  margin-bottom: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  transition: background-color 0.3s;
+}
+
+.instrument-list ul li:hover {
+  background-color: green;
+}
+
+.instrument-details {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.instrument-details h3 {
+  margin-bottom: 10px;
+  color: #333;
+}
+/* boardroom */
+.board-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px;
+  background-color: floralwhite;
+}
+
+.Boardcontainer {
+  display: flex;
+  flex-direction: row; /* Change to row for side-by-side layout */
+  justify-content: space-between; /* Space between image and content */
+  gap: 20px; /* Adds space between image and content */
+  max-width: 1200px; /* Limit the overall container width */
+  width: 100%;
+}
+
+.board-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0; /* Prevent the image from shrinking */
+  width: 100%;
+}
+
+
+.contentboard h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.contentboard p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+  text-align: justify;
+}

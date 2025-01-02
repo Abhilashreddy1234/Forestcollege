@@ -11,8 +11,7 @@ body {
   margin-top: 120px;
 }
 
-/* top bar for  both notifications and social media icons */
-/* Top Bar Styling */
+
 .top-bar {
   position: fixed;
   top: 0;
@@ -27,7 +26,7 @@ body {
   z-index: 1000;
 }
 
-/* Notification Bar Styles */
+
 .notification-bar-wrapper {
   flex: 1; /* Allow notification bar to take up available space */
   overflow: hidden;
@@ -87,7 +86,7 @@ body {
   top: 40px;
   left: 0;
   width: 100%;
-  background-color: darkolivegreen;
+  background-color: forestgreen;
   padding: 15px 20px;
   display: flex;
   justify-content: space-between;
@@ -139,14 +138,15 @@ h1 {
 }
 
 /* Dropdown Menu */
-.dropdown:hover .dropdown-menu {
-  display: block;
+/* Dropdown Menu */
+.dropdown:hover > .dropdown-menu {
+  display: block; /* Show dropdown when hovering over a parent dropdown */
 }
 
 .dropdown-menu {
-  display: none;
+  display: none; /* Hide dropdown menus by default */
   position: absolute;
-  top: 100%;
+  top: 100%; /* Position below the parent menu */
   left: 0;
   background-color: rgba(0, 0, 0, 0.9);
   list-style: none;
@@ -157,6 +157,7 @@ h1 {
 }
 
 .dropdown-menu li {
+  position: relative; /* Ensure child dropdowns are positioned relative to their parent */
   margin: 0;
 }
 
@@ -170,7 +171,15 @@ h1 {
 }
 
 .dropdown-menu a:hover {
-  background-color: #aed581;
+  background-color: #aed581; /* Highlight on hover */
+}
+
+/* Nested Dropdown Menu */
+.dropdown-menu .dropdown:hover > .dropdown-menu {
+  display: block; /* Show nested dropdown when hovering over its parent */
+  position: absolute;
+  top: 0;
+  left: 100%; /* Position to the right of the parent menu */
 }
 
 /* Mobile-Specific Styles */
@@ -211,8 +220,6 @@ h1 {
       padding: 10px;
   }
 }
-/* For smaller devices (e.g., smartphones in portrait) */
-/* General Mobile Styles */
 
 
 
@@ -301,8 +308,6 @@ h1 {
 
     
   /*  caurosal css code */
-  /* General container styling */
-  /* General container styling */
   .container-wrapper {
     max-width: 1200px;
     margin: 0 auto;
@@ -362,7 +367,7 @@ h1 {
 
 .carousel img.active {
   opacity: 1;
-  z-index: 2;
+  z-index: 0;
 }
 .box img{
   width:100%;
@@ -476,8 +481,7 @@ h1 {
 .notification-bar-wrapper {
   width: 100%;
   overflow: hidden;
-  background-color: black;
-  border-bottom: 2px solid #0056b3;
+  background-color: olive ;
   padding: 10px 0;
   position: relative;
 }
@@ -596,7 +600,7 @@ h1 {
 /* Wrapper for Courses Section */
 .courses-wrapper {
   width: 100%;
-  padding: 40px 20px;
+  padding: 60px 20px;
   background-color: #f4f4f4;
   text-align: center;
 }

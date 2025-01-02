@@ -220,3 +220,110 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 });
+// Department data with descriptions and image paths
+const departmentDescriptions = {
+  "Silviculture and Agroforestry": "Telangana state is blessed with rich biodiversity and wildlife forms are an important part of it. For the protection and conservation of wildlife, various protected areas are established in the state. Habitat fragmentation and degradation are the major issues in the conservation of wildlife. Natural resources are facing enormous pressure, resulting in the decline of wildlife over the years, with many more species being threatened with extinction. Deep knowledge of the different components of the ecology of species and itsSilviculture is the practice of controlling the establishment, growth, composition, health, and quality of forests to meet diverse needs and values.",
+  "Natural Resource Management and Conservation": "Focuses on sustainable management and conservation of natural resources like soil, water, and biodiversity.",
+  "Wildlife and Habitat Management": "Involves the preservation and management of wildlife habitats and species.",
+  "Forest Products and Utilization": "Covers the development and management of forest-based products and their efficient utilization.",
+  "Tree Breeding and Improvement": "Aims to enhance the genetic potential and productivity of tree species.",
+  "Forest Ecology and Climate Science": "Studies the relationship between forests and climate, focusing on ecological conservation.",
+  "Basic and Social Sciences": "Explores the interplay between forestry, social sciences, and basic sciences for sustainable development."
+};
+
+function showDepartment(department, image) {
+  const info = departmentDescriptions[department] || "Information not available.";
+  document.getElementById("department-info").textContent = info;
+  document.getElementById("department-image").src = image;
+}
+// laboratories //
+const laboratoryDescriptions = {
+  "Chemistry Laboratory": "The Chemistry Laboratory is equipped with modern instruments and facilities for conducting research and experiments in organic, inorganic, and physical chemistry.",
+  "Physics Laboratory": "The Physics Laboratory focuses on advanced research in quantum mechanics, thermodynamics, and electromagnetism.",
+  "Biotechnology Laboratory": "The Biotechnology Laboratory supports experiments in genetic engineering, microbiology, and molecular biology.",
+  "Soil Testing Laboratory": "The Soil Testing Laboratory provides analysis and research on soil fertility and composition for sustainable agriculture."
+};
+
+function showLaboratory(laboratory, image) {
+  const info = laboratoryDescriptions[laboratory] || "Information not available.";
+  document.getElementById("laboratory-info").textContent = info;
+  document.getElementById("laboratory-image").src = image;
+}
+// studentAchievements table  //
+            document.querySelectorAll('.toggle-dropdown').forEach(header => {
+              header.addEventListener('click', () => {
+                const dropdown = header.nextElementSibling;
+                dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+              });
+            });
+// forest museum //
+let currentSlide = 0;
+
+function showSlide(index) {
+  const slides = document.querySelectorAll('.carousel-image');
+  slides.forEach((slide, idx) => {
+    slide.classList.toggle('active', idx === index);
+  });
+}
+
+function nextSlide() {
+  const slides = document.querySelectorAll('.carousel-image');
+  currentSlide = (currentSlide + 1) % slides.length;
+  showSlide(currentSlide);
+}
+
+function prevSlide() {
+  const slides = document.querySelectorAll('.carousel-image');
+  currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+  showSlide(currentSlide);
+}
+
+// Initialize the first slide
+showSlide(currentSlide);
+// cif //
+const instrumentData = {
+  hplc: {
+    image: "images\services-images\CIF1IMAGE.jpg",
+    details: `
+      <table>
+        <tr>
+          <th>Equipment Available</th>
+          <th>Charges for Govt Universities/Institutes</th>
+          <th>Charges for Private Industry/Institutes</th>
+        </tr>
+        <tr>
+          <td>High-Performance Liquid Chromatography</td>
+          <td>2000/- per sample + GST 18%</td>
+          <td>3000/- per sample + GST 18%</td>
+        </tr>
+      </table>
+    `
+  },
+  gc: {
+    image: "gc.jpg",
+    details: `
+      <table>
+        <tr>
+          <th>Equipment Available</th>
+          <th>Charges for Govt Universities/Institutes</th>
+          <th>Charges for Private Industry/Institutes</th>
+        </tr>
+        <tr>
+          <td>Gas Chromatograph with Flame Ionization Detector (Nexis 2030)</td>
+          <td>2000/- per sample + GST 18%</td>
+          <td>3000/- per sample + GST 18%</td>
+        </tr>
+      </table>
+    `
+  },
+  // Add more instruments following the same format...
+};
+
+function showInstrumentDetails(instrumentKey) {
+  const instrument = instrumentData[instrumentKey];
+  if (instrument) {
+    document.getElementById("instrument-image").src = instrument.image;
+    document.getElementById("instrument-details").innerHTML = instrument.details;
+  }
+}
+
