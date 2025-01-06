@@ -36,6 +36,11 @@ urlpatterns = [
     path('Cfi2/',views.Cfi2,name='Cfi2'),
     path('Nursery/',views.Nursery,name='Nursery'),
     path('Workshop/',views.Workshop,name='Workshop'),
+    path('ContactUs/',views.ContactUs,name='ContactUs'),
+    path('Resaarch/',views.ResearchProjects,name='ResearchProjects'),
+    path('Mou/',views.Mou,name='Mou'),
+    path('Publications/',views.Publications,name='Publications'),
+    path('Awards/',views.Awards,name='Awards'),
     path('', include('cms.urls')),
 ]
 

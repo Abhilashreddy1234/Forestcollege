@@ -57,3 +57,13 @@ def Nursery(request):
     return render(request,'nursery.html')
 def Workshop(request):
     return render(request,'Workshop.html')
+def ContactUs(request):
+    return render(request,'contactus.html')
+def ResearchProjects(request):
+    return render(request,'ResearchProject.html')
+def Mou(request):
+    return render(request,'mou.html')
+def Publications(request):
+    return render(request,'publications.html')
+def Awards(request):
+    return render(request,'awards.html')

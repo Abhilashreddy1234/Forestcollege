@@ -216,10 +216,10 @@
                     <li class="dropdown">
                         <a href="#">Research</a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Research Projects</a></li>
-                            <li><a href="#">MoU's</a></li>
-                            <li><a href="#">Publications</a></li>
-                            <li><a href="#">Awards & Publications</a></li>
+                            <li><a href="{% url 'ResearchProjects' %}">Research Projects</a></li>
+                            <li><a href="{% url 'Mou' %}">MoU's</a></li>
+                            <li><a href="{% url 'Publications' %}">Publications</a></li>
+                            <li><a href="{% url 'Awards' %}">Awards & Publications</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
@@ -407,19 +407,19 @@
       <img src="{% static 'images/services-images/service-image1.jpg' %}" alt="Research and Development" class="service-image">
       <h3>Research and Development</h3>
       <p>Innovative solutions and sustainable forestry practices.</p>
-      <a href="#" class="read-more">Read More</a>
+      <a href="{% url 'Fcri' %}" class="read-more">Read More</a>
     </div>
     <div class="service-box">
       <img src="{% static 'images/services-images/service-image2.webp' %}" alt="Eco-Tourism" class="service-image">
       <h3>Eco-Tourism</h3>
       <p>Guided tours to explore the beauty of nature.</p>
-      <a href="#" class="read-more">Read More</a>
+      <a href="{% url 'Cfi2' %}" class="read-more">Read More</a>
     </div>
     <div class="service-box">
       <img src="{% static 'images/services-images/service-image3.webp' %}" alt="Wildlife Conservation" class="service-image">
       <h3>Wildlife Conservation</h3>
       <p>Preserving habitats and promoting biodiversity.</p>
-      <a href="#" class="read-more">Read More</a>
+      <a href="{% url 'Departments' %}" class="read-more">Read More</a>
     </div>
   </div>
 
@@ -429,19 +429,19 @@
       <img src="{% static 'images\services-images\services-image4.jpg' %}" alt="Educational Workshops" class="service-image">
       <h3>Educational Workshops</h3>
       <p>Hands-on training in forestry and environmental sciences.</p>
-      <a href="#" class="read-more">Read More</a>
+      <a href="{% url 'Workshop' %}" class="read-more">Read More</a>
     </div>
     <div class="service-box">
       <img src="{% static 'images\services-images\services-immage5.jpg' %}" alt="Community Outreach" class="service-image">
       <h3>Community Outreach</h3>
       <p>Engaging local communities for sustainable development.</p>
-      <a href="#" class="read-more">Read More</a>
+      <a href="{% url 'Cfi2' %}" class="read-more">Read More</a>
     </div>
     <div class="service-box">
       <img src="{% static 'images\services-images\services-image6.jpg' %}" alt="Forest Resource Management" class="service-image">
       <h3>Forest Resource Management</h3>
       <p>Efficient use of forest resources for future generations.</p>
-      <a href="#" class="read-more">Read More</a>
+      <a href="{% url 'Nursery' %}" class="read-more">Read More</a>
     </div>
   </div>
 </section>
@@ -585,7 +585,14 @@ The institution is also aimed at providing an outstanding learning environment, 
                 <h3>Michael Brown</h3>
               </div>
             </div>
-          </section>          
+          </section>     
+          <section class="contact-section">
+            <h1>
+                Emerging as a World Class Institution.
+            </h1>
+            <h2>Forestry Education, Research, Management, and Outreach.</h2>
+            <a href="{% url 'ContactUs' %}" class="contact-button">Contact Us</a>
+        </section>     
             <!-- footer section -->
             <footer class="footer">
               <div class="footer-container">

@@ -219,19 +219,85 @@
             </nav>
         </header>
     </div>
-    <section class='board-section'>
-        <div class='Boardcontainer'>
-            <div class='board-image'>
-                <img src="{% static 'images\department-images\Library_1.jpg' %}">
-            </div>
-            <div class='contentboard'>
-                <h2>Library</h2>
-                <p>Libraries are the hub of academic life of the campus. The libraries are housed in spacious halls and well stacked with text books, technical journals, periodicals and reference material for advanced research and development work. Modern aids to education, including online digital libraries, Audio/Video records of renowned academicians are available in campus in different blocks of libraries. It remains open 14 hours a day from 8am to 10pm on all days, and up to 18 hours a day during examinations. The digital library and student study centre for general studies are available.</p> 
-            </div>
+    <section style="padding: 40px; font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
+        <!-- Awards Description -->
+        <div style="text-align: center; margin-bottom: 40px;">
+            <h2 style="color: #006400;">Awards @ FCRI</h2>
+            <p>
+                The following teaching and non-teaching staff were awarded certificates and cash prizes for their 
+                meritorious service by the Telangana State Forest Department on 15th Aug 2020 – 
+                Dr. Kapil Sihag, Assistant Professor, Department of Forest Products & Utilization; 
+                Ms. P. Nikitha, Assistant Professor, Department of Basic and Social Sciences; 
+                Mr. Raghu, FSO; Mr. Murali. Similarly, two other faculty members, 
+                Mrs. NS Srinidhi, Assistant Professor (Environmental sciences), Department of Forest Ecology and Climate Sciences, 
+                and Dr. B. Sreedhar, Associate Professor, Department of Basic and Social Science, 
+                have received meritorious certificates on the occasion of Republic Day, i.e., on January 26, 2021.
+            </p>
+        </div>
+    
+        <!-- Images Section -->
+        <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 40px; flex-wrap: wrap;">
+            <img src="{% static 'images\publications\Awards_at_FCRI1-image.jpg' %}" alt="Award Image 1" style="width: 200px; height: auto; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+            <img src="{% static 'images\publications\Awards_at_FCRI2-image.jpg' %}" alt="Award Image 2" style="width: 200px; height: auto; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+            <img src="{% static 'images\publications\Awards_at_FCRI3.jpg' %}" alt="Award Image 3" style="width: 200px; height: auto; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+        </div>
+    
+        <!-- Tabular Section -->
+        <div style="overflow-x: auto;">
+            <table style="width: 100%; border-collapse: collapse; margin-bottom: 40px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                <thead>
+                    <tr style="background-color: #006400; color: #fff; text-align: left;">
+                        <th style="padding: 10px; border: 1px solid #ddd;">S.No.</th>
+                        <th style="padding: 10px; border: 1px solid #ddd;">Faculty Name</th>
+                        <th style="padding: 10px; border: 1px solid #ddd;">Faculty Achievements/Recognitions/Awards</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #ddd;">1</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">Dr. B. Sreedhar</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">Received ICMR-Biomedical sciences award-2019.</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #ddd;">2</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">Mr. K. Srinivas</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">Received Certificate of appreciation for the meritorious services rendered, on the occasion of 73rd Independence Day on 15th August, 2019.</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #ddd;">3</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">Dr. Chiranjeeva Reddy</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">Received Certificate of appreciation for the meritorious services rendered, on the occasion of 73rd Independence Day on 15th August, 2019.</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #ddd;">4</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">Dr. Reeja, S</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">Received Certificate of appreciation for the meritorious services rendered, on the occasion of 73rd Independence Day on 15th August, 2019.</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #ddd;">5</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">Mrs. Sailaja, V</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">Received Certificate of appreciation for the meritorious services rendered, on the occasion of 73rd Independence Day on 15th August, 2019.</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #ddd;">6</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">Mrs. Sailaja, V</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">Invited as Resource speaker to deliver a lecture entitled “Integrated Pest Management on SoapUI Webbers” on 26 December, 2018 at Institute of Forest Biodiversity, Indian Council of Forestry Research and Education (ICFRE), Hyderabad.</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #ddd;">7</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">Mrs. Sailaja, V</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">Invited as guest speaker to deliver a lecture entitled “Wood boring insects of quarantine significance and their identification” to officers of State Agriculture University and officers from Department of Agriculture on 01 May, 2019 at National Institute of Plant Health Management, Hyderabad.</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px; border: 1px solid #ddd;">8</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">Mrs. Sailaja, V</td>
+                        <td style="padding: 10px; border: 1px solid #ddd;">Recipient of Best Photo Winner Award in “National Symposium on Entomology 2018: Advances and Challenges” held during 10-12 December, 2018, Hyderabad.</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </section>
-
-      
+    
 
     <section class="contact-section">
         <h1>

@@ -219,20 +219,159 @@
             </nav>
         </header>
     </div>
-    <section class='board-section'>
-        <div class='Boardcontainer'>
-            <div class='board-image'>
-                <img src="{% static 'images\department-images\Library_1.jpg' %}">
+    <section>
+        <section>
+            <!-- Professors Section -->
+            <div class="professors">
+                <h2>Professor Publications</h2>
+                <ul id="professor-list">
+                    <li data-description="Midhun Kumar Nasam, Venkateshwar Reddy Bheemareddyvalla...">Dr. B. Sridhar Reddy</li>
+                    <li data-description="Another professor description...">Dr. S. Kumar</li>
+                    <li data-description="Description for another professor...">Dr. R. Prakash</li>
+                    <li data-description="Description of the professor...">Dr. N. Srinivas</li>
+                    <li data-description="Short description...">Dr. P. Raghu</li>
+                    <li data-description="More details about this professor...">Dr. A. Suresh</li>
+                    <li data-description="Details of the research...">Dr. K. Murthy</li>
+                    <li data-description="Specific research description...">Dr. V. Harsha</li>
+                    <li data-description="Relevant publications...">Dr. G. Anil</li>
+                    <li data-description="Research details for this professor...">Dr. D. Suresh</li>
+                </ul>
+                <p id="professor-description" style="margin-top: 20px; font-size: 16px;"></p>
             </div>
-            <div class='contentboard'>
-                <h2>Library</h2>
-                <p>Libraries are the hub of academic life of the campus. The libraries are housed in spacious halls and well stacked with text books, technical journals, periodicals and reference material for advanced research and development work. Modern aids to education, including online digital libraries, Audio/Video records of renowned academicians are available in campus in different blocks of libraries. It remains open 14 hours a day from 8am to 10pm on all days, and up to 18 hours a day during examinations. The digital library and student study centre for general studies are available.</p> 
+        
+            <!-- Carousel Section -->
+            <div class="carousel" id="carousel">
+                <img src="{% static 'images/publications/FCRI_Publication1.jpg' %}" alt="Image 1" class="active">
+                <img src="{% static 'images/publications/FCRI_Publication2.jpg' %}" alt="Image 2">
+                <img src="{% static 'images/publications/FCRI_Publication3.jpg' %}" alt="Image 3">
+                <button class="arrow" id="prev">&#8249;</button>
+                <button class="arrow" id="next">&#8250;</button>
             </div>
-        </div>
-    </section>
-
-      
-
+        </section>
+        
+        <script>
+            // Carousel functionality
+            const images = document.querySelectorAll('.carousel img');
+            let currentIndex = 0;
+        
+            function updateCarousel(index) {
+                images.forEach((img, i) => {
+                    img.classList.toggle('active', i === index);
+                });
+            }
+        
+            document.getElementById('next').addEventListener('click', () => {
+                currentIndex = (currentIndex + 1) % images.length;
+                updateCarousel(currentIndex);
+            });
+        
+            document.getElementById('prev').addEventListener('click', () => {
+                currentIndex = (currentIndex - 1 + images.length) % images.length;
+                updateCarousel(currentIndex);
+            });
+        
+            // Professor list click functionality
+            const professorList = document.getElementById('professor-list');
+            const description = document.getElementById('professor-description');
+        
+            professorList.addEventListener('click', (e) => {
+                if (e.target.tagName === 'LI') {
+                    description.textContent = e.target.getAttribute('data-description');
+                }
+            });
+        </script>
+        
+        <style>
+            
+        
+            
+        
+            h2 {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+        
+            /* Professors Section */
+            .professors ul {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                list-style: none;
+                padding: 0;
+            }
+        
+            .professors ul li {
+                background-color: #f5f5f5;
+                border: 2px solid #ddd;
+                border-radius: 10px;
+                padding: 15px 20px;
+                margin: 10px;
+                text-align: center;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                width: calc(30% - 20px); /* Adjust width to fit nicely */
+                box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+            }
+        
+            .professors ul li:hover {
+                background-color: #e0f7fa;
+                transform: translateY(-5px);
+                box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2);
+            }
+        
+            #professor-description {
+                text-align: center;
+                font-size: 18px;
+                color: #555;
+                margin-top: 20px;
+            }
+        
+            /* Carousel Section */
+            .carousel {
+                position: relative;
+                width: 100%;
+                height:500px;
+                max-width: 800px;
+                margin: 40px auto 0;
+                overflow: hidden;
+                border-radius: 10px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            }
+        
+            .carousel img {
+                width: 100%;
+                height: 700px;
+                display: none;
+            }
+        
+            .carousel img.active {
+                display: block;
+            }
+        
+            .arrow {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                background-color: rgba(0, 0, 0, 0.5);
+                color: #fff;
+                border: none;
+                padding: 10px 15px;
+                cursor: pointer;
+                z-index: 100;
+                font-size: 18px;
+            }
+        
+            #prev {
+                left: 10px;
+            }
+        
+            #next {
+                right: 10px;
+            }
+        </style>
+        
+    
+    
     <section class="contact-section">
         <h1>
             Emerging as a World Class Institution.
