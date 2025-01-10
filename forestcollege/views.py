@@ -1,6 +1,7 @@
 from django.shortcuts import render
 # Render the chatbot HTML template
-
+def home(request):
+    return render(request, 'home.html') 
 def vision(request):
     return render(request, 'vision.html')
 def Governing_Board(request):

@@ -8,6 +8,7 @@ from forestcollege import views
 urlpatterns = [
     path('jsi18n/', JavaScriptCatalog.as_view(), name='javascript-catalog'),
     path('admin/', admin.site.urls),
+    path('home/',views.home,name='home'),
     path('vision/', views.vision, name='vision'),
     path('Governing_Board/',views.Governing_Board,name='Governing_Board'),
     path('Dean/',views.Dean,name='Dean'),
