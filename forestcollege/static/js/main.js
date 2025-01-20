@@ -186,7 +186,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
-// Chatbot logic
+
 document.addEventListener('DOMContentLoaded', function () {
   const responses = {
     "hi": "Hello! How can I help you today?",
