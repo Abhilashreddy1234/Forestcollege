@@ -117,559 +117,488 @@
                 </div>
             </div>
         </div>
-        <nav class="navbar navbar-expand-lg  navbar-light">
+        <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container-xxl">
-
+        
                 <div class="collapse navbar-collapse" id="fcri-menu">
-                                            <ul class="navbar-nav fcriNav__ActualMenuUl">
-                                                                        <li class="nav-item fcriNav__ActualMenuUl-icon">
-                                                <a class="nav-link" href="https://www.fcrihyd.in/">
-                                                    <i class="fa-solid fa-home" aria-hidden="true"></i>
-                                                </a>
-                                            </li>
-                                                                                                                    <li class="nav-item dropdown">
-                                                                                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">
-                                                    About </a>
-                                                                                        <ul class="dropdown-menu">
-                                                                                                        <li class="has-submenu"><a class="dropdown-item" href="https://www.fcrihyd.in/about/vision-and-mission/">
-                                                                Vision and Mission </a>
-                                                        
-                                                                                                                </li>
-                                                                                                            <li class="has-submenu"><a class="dropdown-item" href="https://www.fcrihyd.in/about/governing-board/">
-                                                                Governing Board </a>
-                                                        
-                                                                                                                </li>
-                                                                                                            <li class="has-submenu"><a class="dropdown-item" href="https://www.fcrihyd.in/about/academic-council/">
-                                                                Academic Council </a>
-                                                        
-                                                                                                                </li>
-                                                                                                </ul>
+                    <ul class="navbar-nav fcriNav__ActualMenuUl">
+        
+                        <!-- Home Icon -->
+                        <li class="nav-item fcriNav__ActualMenuUl-icon">
+                            <a class="nav-link" href="https://www.fcrihyd.in/">
+                                <i class="fa-solid fa-home" aria-hidden="true"></i>
+                            </a>
+                        </li>
+        
+                        <!-- About Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">About</a>
+                            <ul class="dropdown-menu">
+                                <li class="has-submenu">
+                                    <a class="dropdown-item" href="{% url 'vision' %}">Vision and Mission</a>
+                                </li>
+                                <li class="has-submenu">
+                                    <a class="dropdown-item" href="https:/about/governing-board/">Governing Board</a>
+                                </li>
+                                <li class="has-submenu">
+                                    <a class="dropdown-item" href="https://www.fcrihyd.in/about/academic-council/">Academic Council</a>
+                                </li>
+                            </ul>
+                        </li>
+        
+                        <!-- Administration Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Administration</a>
+                            <ul class="dropdown-menu">
+                                <li class="has-submenu">
+                                    <a class="dropdown-item" href="https://www.fcrihyd.in/administration/dean/">Dean</a>
+                                </li>
+                                <li class="has-submenu">
+                                    <a class="dropdown-item" href="https://www.fcrihyd.in/joint-director/">Joint Director</a>
+                                </li>
+                                <li class="has-submenu">
+                                    <a class="dropdown-item" href="https://www.fcrihyd.in/administration/dy-director/">Deputy Director</a>
+                                </li>
+                                <li class="has-submenu">
+                                    <a class="dropdown-item" href="https://www.fcrihyd.in/administration/organogram/">Organogram</a>
+                                </li>
+                            </ul>
+                        </li>
+        
+                        <!-- Academics Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Academics</a>
+                            <ul class="dropdown-menu">
+        
+                                <!-- Course Structure -->
+                                <li class="has-submenu">
+                                    <a class="dropdown-item" href="#">Course Structure</a>
+                                    <ul class="submenu dropdown-menu">
+                                        <li>
+                                            <a class="dropdown-item" href="https://fcrihyd.in/wp-content/uploads/2022/06/16.-Course-Structure-4.pdf" target="_blank">UG</a>
                                         </li>
-                                                                    <li class="nav-item dropdown">
-                                                                                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">
-                                                    Administration </a>
-                                                                                        <ul class="dropdown-menu">
-                                                                                                        <li class="has-submenu"><a class="dropdown-item" href="https://www.fcrihyd.in/administration/dean/">
-                                                                Dean </a>
-                                                        
-                                                                                                                </li>
-                                                                                                            <li class="has-submenu"><a class="dropdown-item" href="https://www.fcrihyd.in/joint-director/">
-                                                                Joint Director </a>
-                                                        
-                                                                                                                </li>
-                                                                                                            <li class="has-submenu"><a class="dropdown-item" href="https://www.fcrihyd.in/administration/dy-director/">
-                                                                Deputy    Director </a>
-                                                        
-                                                                                                                </li>
-                                                                                                            <li class="has-submenu"><a class="dropdown-item" href="https://www.fcrihyd.in/administration/organogram/">
-                                                                Organogram </a>
-                                                        
-                                                                                                                </li>
-                                                                                                </ul>
+                                        <li>
+                                            <a class="dropdown-item" href="https://fcrihyd.in/wp-content/uploads/2022/06/PG-Course-Structure-2-1.pdf" target="_blank">PG</a>
                                         </li>
-                                                                    <li class="nav-item dropdown">
-                                                                                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">
-                                                    Academics </a>
-                                                                                        <ul class="dropdown-menu">
-                                                                                                        <li class="has-submenu"><a class="dropdown-item" href="#">
-                                                                Course Structure </a>
-                                                        
-                                                                                                                    <!-- Sub Menu Dropdown -->
-                                                            <ul class="submenu dropdown-menu">
-                                                                
-                                                                        <li>
-                                                                            <a class="dropdown-item" href="https://fcrihyd.in/wp-content/uploads/2022/06/16.-Course-Structure-4.pdf" target="_blank">
-                                                                                UG                                                                            </a>
-                                                                        </li>
-                                                                                                                                    
-                                                                        <li>
-                                                                            <a class="dropdown-item" href="https://fcrihyd.in/wp-content/uploads/2022/06/PG-Course-Structure-2-1.pdf" target="_blank">
-                                                                                PG                                                                            </a>
-                                                                        </li>
-                                                                                                                                                                                                </ul>
-                                                                                                                </li>
-                                                                                                            <li class="has-submenu"><a class="dropdown-item" href="#">
-                                                                Departments </a>
-                                                        
-                                                                                                                    <!-- Sub Menu Dropdown -->
-                                                            <ul class="submenu dropdown-menu">
-                                                                                                                                        <li class="has-submenu2"><a class="dropdown-item" href="https://www.fcrihyd.in/academics/list-of-departments/">
-                                                                                List of Departments </a>
-                                                                                                                                                    </li>
-                                                                                                                                                                                                            <li class="has-submenu2"><a class="dropdown-item" href="https://www.fcrihyd.in/academics/department-head/">
-                                                                                Department Head </a>
-                                                                                                                                                    </li>
-                                                                                                                                                                                                            <li class="has-submenu2"><a class="dropdown-item" href="https://www.fcrihyd.in/academics/faculty/">
-                                                                                Faculty </a>
-                                                                                                                                                    </li>
-                                                                                                                                                                                                            <li class="has-submenu2"><a class="dropdown-item" href="https://www.fcrihyd.in/academics/laboratories/">
-                                                                                Laboratories </a>
-                                                                                                                                                    </li>
-                                                                                                                                                                                                </ul>
-                                                                                                                </li>
-                                                                                                            <li class="has-submenu"><a class="dropdown-item" href="#">
-                                                                Rules &amp; Regulations </a>
-                                                        
-                                                                                                                    <!-- Sub Menu Dropdown -->
-                                                            <ul class="submenu dropdown-menu">
-                                                                
-                                                                        <li>
-                                                                            <a class="dropdown-item" href="https://fcrihyd.in/wp-content/uploads/2022/05/8.-UG-regulations-1.pdf" target="_blank">
-                                                                                UG                                                                            </a>
-                                                                        </li>
-                                                                                                                                    
-                                                                        <li>
-                                                                            <a class="dropdown-item" href="https://fcrihyd.in/wp-content/uploads/2022/05/Regulations-PG-course.pdf" target="_blank">
-                                                                                PG                                                                            </a>
-                                                                        </li>
-                                                                                                                                                                                                </ul>
-                                                                                                                </li>
-                                                                                                            <li class="has-submenu"><a class="dropdown-item" href="#">
-                                                                Examination &amp; Evaluation </a>
-                                                        
-                                                                                                                    <!-- Sub Menu Dropdown -->
-                                                            <ul class="submenu dropdown-menu">
-                                                                
-                                                                        <li>
-                                                                            <a class="dropdown-item" href="https://fcrihyd.in/wp-content/uploads/2022/08/Evaluation-of-student-for-UG-and-PG-programs-at-FCRI-2022.pdf" target="_blank">
-                                                                                Evaluation of Student for UG &amp; PG                                                                            </a>
-                                                                        </li>
-                                                                                                                                    
-                                                                        <li>
-                                                                            <a class="dropdown-item" href="https://fcrihyd.in/wp-content/uploads/2022/08/revaluation-rescrutiny-application.pdf" target="_blank">
-                                                                                Revaluation Rescrutiny Application                                                                            </a>
-                                                                        </li>
-                                                                                                                                    
-                                                                        <li>
-                                                                            <a class="dropdown-item" href="https://fcrihyd.in/wp-content/uploads/2022/08/Thesis-submission-guidelines.pdf" target="_blank">
-                                                                                Thesis Submission Guidelines                                                                            </a>
-                                                                        </li>
-                                                                                                                                                                                                </ul>
-                                                                                                                </li>
-                                                                                                            <li class="has-submenu"><a class="dropdown-item" href="#">
-                                                                Student Achievements </a>
-                                                        
-                                                                                                                    <!-- Sub Menu Dropdown -->
-                                                            <ul class="submenu dropdown-menu">
-                                                                                                                                        <li class="has-submenu2"><a class="dropdown-item" href="https://www.fcrihyd.in/academics/student-achievements/year-of-2016/">
-                                                                                Year of 2016 </a>
-                                                                                                                                                    </li>
-                                                                                                                                                                                                            <li class="has-submenu2"><a class="dropdown-item" href="https://www.fcrihyd.in/academics/student-achievements/year-of-2017/">
-                                                                                Year of 2017 </a>
-                                                                                                                                                    </li>
-                                                                                                                                                                                                </ul>
-                                                                                                                </li>
-                                                                                                            <li class="has-submenu"><a class="dropdown-item" href="#">
-                                                                Committees </a>
-                                                        
-                                                                                                                    <!-- Sub Menu Dropdown -->
-                                                            <ul class="submenu dropdown-menu">
-                                                                                                                                        <li class="has-submenu2"><a class="dropdown-item" href="https://www.fcrihyd.in/committees/women-protection-cell/">
-                                                                                Women Protection Cell Committee </a>
-                                                                                                                                                    </li>
-                                                                                                                                                                                                            <li class="has-submenu2"><a class="dropdown-item" href="https://www.fcrihyd.in/committees/anti-ragging-committee/">
-                                                                                Anti Ragging Committee </a>
-                                                                                                                                                    </li>
-                                                                                                                                                                                                            <li class="has-submenu2"><a class="dropdown-item" href="https://www.fcrihyd.in/committees/redressal-of-grievance-committee/">
-                                                                                Redressal of Grievance Committee </a>
-                                                                                                                                                    </li>
-                                                                                                                                                                                                            <li class="has-submenu2"><a class="dropdown-item" href="https://www.fcrihyd.in/committees/institutional-ethics-committee/">
-                                                                                Institutional Ethics Committee </a>
-                                                                                                                                                    </li>
-                                                                                                                                                                                                            <li class="has-submenu2"><a class="dropdown-item" href="https://www.fcrihyd.in/committees/admissions-committee/">
-                                                                                Admissions Committee </a>
-                                                                                                                                                    </li>
-                                                                                                                                                                                                            <li class="has-submenu2"><a class="dropdown-item" href="https://www.fcrihyd.in/academics/disciplinary-committee/">
-                                                                                Disciplinary Committee </a>
-                                                                                                                                                    </li>
-                                                                                                                                                                                                </ul>
-                                                                                                                </li>
-                                                                                                </ul>
+                                    </ul>
+                                </li>
+        
+                                <!-- Departments -->
+                                <li class="has-submenu">
+                                    <a class="dropdown-item" href="#">Departments</a>
+                                    <ul class="submenu dropdown-menu">
+                                        <li>
+                                            <a class="dropdown-item" href="https://www.fcrihyd.in/academics/list-of-departments/">List of Departments</a>
                                         </li>
-                                                                    <li class="nav-item dropdown">
-                                                                                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">
-                                                    Admissions </a>
-                                                                                        <ul class="dropdown-menu">
-                                                                                                        <li class="has-submenu"><a class="dropdown-item" href="#">
-                                                                Courses Offered </a>
-                                                        
-                                                                                                                    <!-- Sub Menu Dropdown -->
-                                                            <ul class="submenu dropdown-menu">
-                                                                                                                                        <li class="has-submenu2"><a class="dropdown-item" href="https://www.fcrihyd.in/admissions/bsc-hons-forestry/">
-                                                                                BSC Hons Forestry </a>
-                                                                                                                                                    </li>
-                                                                                                                                                                                                            <li class="has-submenu2"><a class="dropdown-item" href="https://www.fcrihyd.in/admissions/msc-forestry/">
-                                                                                MSC Forestry </a>
-                                                                                                                                                    </li>
-                                                                                                                                                                                                            <li class="has-submenu2"><a class="dropdown-item" href="https://www.fcrihyd.in/admissions/phd-forestry/">
-                                                                                PhD Forestry </a>
-                                                                                                                                                    </li>
-                                                                                                                                                                                                </ul>
-                                                                                                                </li>
-                                                                                                            <li class="has-submenu"><a class="dropdown-item" href="#">
-                                                                Admission Process </a>
-                                                        
-                                                                                                                    <!-- Sub Menu Dropdown -->
-                                                            <ul class="submenu dropdown-menu">
-                                                                
-                                                                        <li>
-                                                                            <a class="dropdown-item" href="https://fcrihyd.in/wp-content/uploads/2022/09/Admission-Process-2022-23-1.pdf" target="_blank">
-                                                                                UG                                                                            </a>
-                                                                        </li>
-                                                                                                                                    
-                                                                        <li>
-                                                                            <a class="dropdown-item" href="https://fcrihyd.in/wp-content/uploads/2022/05/PG-Prospects_2021.pdf" target="_blank">
-                                                                                PG                                                                            </a>
-                                                                        </li>
-                                                                                                                                                                                                </ul>
-                                                                                                                </li>
-                                                                                                            <li class="has-submenu"><a class="dropdown-item" href="#">
-                                                                Prospectus </a>
-                                                        
-                                                                                                                    <!-- Sub Menu Dropdown -->
-                                                            <ul class="submenu dropdown-menu">
-                                                                                                                                        <li class="has-submenu2"><a class="dropdown-item" href="#">
-                                                                                UG </a>
-                                                                                                                                                            <!-- Sub of sub Menu Dropdown -->
-                                                                                <ul class="submenu2 dropdown-menu">
-                                                                                    
-                                                                                            <li>
-                                                                                                <a class="dropdown-item" href="https://fcrihyd.in/wp-content/uploads/2023/06/PROSPECTUS-FINAL.pdf" target="_blank">
-                                                                                                    Regular                                                                                                </a>
-                                                                                            </li>
-                                                                                                                                                                        
-                                                                                            <li>
-                                                                                                <a class="dropdown-item" href="https://fcrihyd.in/wp-content/uploads/2022/09/UG-PROSPECTUS-Payment-Quota-New-2022-23.pdf" target="_blank">
-                                                                                                    Payment Quota                                                                                                </a>
-                                                                                            </li>
-                                                                                                                                                                                                                                                        </ul>
-                                                                                                                                                    </li>
-                                                                                                                                    
-                                                                        <li>
-                                                                            <a class="dropdown-item" href="https://fcrihyd.in/wp-content/uploads/2022/11/PG-Prospects_2022-23.pdf" target="_blank">
-                                                                                PG                                                                            </a>
-                                                                        </li>
-                                                                                                                                                                                                </ul>
-                                                                                                                </li>
-                                                                                                            <li class="has-submenu"><a class="dropdown-item" href="https://www.fcrihyd.in/wp-content/uploads/2024/01/selection-list-of-Ph.d-Forestry-AY-2023-24.pdf" target="_blank">
-                                                                Brochure </a>
-                                                        
-                                                                                                                </li>
-                                                                                                            <li class="has-submenu"><a class="dropdown-item" href="#">
-                                                                Fee Structure </a>
-                                                        
-                                                                                                                    <!-- Sub Menu Dropdown -->
-                                                            <ul class="submenu dropdown-menu">
-                                                                                                                                        <li class="has-submenu2"><a class="dropdown-item" href="#">
-                                                                                UG </a>
-                                                                                                                                                            <!-- Sub of sub Menu Dropdown -->
-                                                                                <ul class="submenu2 dropdown-menu">
-                                                                                    
-                                                                                            <li>
-                                                                                                <a class="dropdown-item" href="https://fcrihyd.in/wp-content/uploads/2023/06/fee-structure-2023.pdf" target="_blank">
-                                                                                                    Regular                                                                                                </a>
-                                                                                            </li>
-                                                                                                                                                                        
-                                                                                            <li>
-                                                                                                <a class="dropdown-item" href="https://fcrihyd.in/wp-content/uploads/2023/07/payment-quota-fees-updated.pdf" target="_blank">
-                                                                                                    Payment Quota                                                                                                </a>
-                                                                                            </li>
-                                                                                                                                                                                                                                                        </ul>
-                                                                                                                                                    </li>
-                                                                                                                                    
-                                                                        <li>
-                                                                            <a class="dropdown-item" href="https://fcrihyd.in/wp-content/uploads/2022/05/PG-M.Sc-Forestery-Fee-Structure.pdf" target="_blank">
-                                                                                PG                                                                            </a>
-                                                                        </li>
-                                                                                                                                    
-                                                                        <li>
-                                                                            <a class="dropdown-item" href="https://fcrihyd.in/wp-content/uploads/2023/03/Fee-Structure-2022-23.pdf" target="_blank">
-                                                                                PhD                                                                            </a>
-                                                                        </li>
-                                                                                                                                                                                                </ul>
-                                                                                                                </li>
-                                                                                                            <li class="has-submenu"><a class="dropdown-item" href="#">
-                                                                Fee Payment </a>
-                                                        
-                                                                                                                    <!-- Sub Menu Dropdown -->
-                                                            <ul class="submenu dropdown-menu">
-                                                                
-                                                                        <li>
-                                                                            <a class="dropdown-item" href="https://www.payumoney.com/customer/users/paymentOptions/#/AD5E6C0E934EA65274B4BFC26A0C6390/forestcollege/216601" target="_blank">
-                                                                                Admission Fee Payment                                                                            </a>
-                                                                        </li>
-                                                                                                                                    
-                                                                        <li>
-                                                                            <a class="dropdown-item" href="https://www.payumoney.com/customer/users/paymentOptions/#/AD5E6C0E934EA65274B4BFC26A0C6390/Linkcreated/218235" target="_blank">
-                                                                                Semester Fee Payment                                                                            </a>
-                                                                        </li>
-                                                                                                                                                                                                </ul>
-                                                                                                                </li>
-                                                                                                            <li class="has-submenu"><a class="dropdown-item" href="#">
-                                                                Admissions Schedule - 2024 </a>
-                                                        
-                                                                                                                    <!-- Sub Menu Dropdown -->
-                                                            <ul class="submenu dropdown-menu">
-                                                                
-                                                                        <li>
-                                                                            <a class="dropdown-item" href="https://www.fcrihyd.in/wp-content/uploads/2024/06/revised-admission-schedule-2024.pdf" target="_blank">
-                                                                                UG                                                                            </a>
-                                                                        </li>
-                                                                                                                                    
-                                                                        <li>
-                                                                            <a class="dropdown-item" href="https://fcrihyd.in/wp-content/uploads/2022/11/PG-Admission-Schedule-2022.pdf" target="_blank">
-                                                                                PG                                                                            </a>
-                                                                        </li>
-                                                                                                                                                                                                </ul>
-                                                                                                                </li>
-                                                                                                            <li class="has-submenu"><a class="dropdown-item" href="#">
-                                                                Admission Notification - 2024 </a>
-                                                        
-                                                                                                                    <!-- Sub Menu Dropdown -->
-                                                            <ul class="submenu dropdown-menu">
-                                                                                                                                        <li class="has-submenu2"><a class="dropdown-item" href="#">
-                                                                                UG </a>
-                                                                                                                                                            <!-- Sub of sub Menu Dropdown -->
-                                                                                <ul class="submenu2 dropdown-menu">
-                                                                                    
-                                                                                            <li class="has-submenu3"><a class="dropdown-item" href="#">
-                                                                                                    Regular </a>
-
-
-                                                                                                                                                                                                    <ul class="submenu3 dropdown-menu">
-                                                                                                                                                                                                                    <li><a class="dropdown-item" href="https://www.fcrihyd.in/wp-content/uploads/2024/06/revised-admission-notification-2024.pdf" target="_blank">
-                                                                                                                    English </a>
-                                                                                                            </li>
-                                                                                                                                                                                                            </ul>
-                                                                                            </li>
-                                                                                                                                                                                                                                                                                                                                            </ul>
-                                                                                                                                                    </li>
-                                                                                                                                                                                                            <li class="has-submenu2"><a class="dropdown-item" href="#">
-                                                                                PG </a>
-                                                                                                                                                            <!-- Sub of sub Menu Dropdown -->
-                                                                                <ul class="submenu2 dropdown-menu">
-                                                                                    
-                                                                                            <li class="has-submenu3"><a class="dropdown-item" href="https://fcrihyd.in/wp-content/uploads/2022/11/English-Notification-for-PG-2022.pdf">
-                                                                                                    English </a>
-
-
-                                                                                                                                                                                                                                                                    
-                                                                                            <li class="has-submenu3"><a class="dropdown-item" href="https://fcrihyd.in/wp-content/uploads/2022/11/PG-Admission-Notification-2022-Telugu.pdf">
-                                                                                                    Telugu </a>
-
-
-                                                                                                                                                                                                                                                                                                                                                    </ul>
-                                                                                                                                                    </li>
-                                                                                                                                                                                                            <li class="has-submenu2"><a class="dropdown-item" href="#">
-                                                                                PhD </a>
-                                                                                                                                                            <!-- Sub of sub Menu Dropdown -->
-                                                                                <ul class="submenu2 dropdown-menu">
-                                                                                    
-                                                                                            <li class="has-submenu3"><a class="dropdown-item" href="https://fcrihyd.in/wp-content/uploads/2023/01/Ph.D-Admission-Notification-English.pdf">
-                                                                                                    English </a>
-
-
-                                                                                                                                                                                                                                                                    
-                                                                                            <li class="has-submenu3"><a class="dropdown-item" href="https://fcrihyd.in/wp-content/uploads/2023/01/Ph.D-Admission-Notification-Telugu.pdf">
-                                                                                                    Telugu </a>
-
-
-                                                                                                                                                                                                                                                                                                                                                    </ul>
-                                                                                                                                                    </li>
-                                                                                                                                                                                                </ul>
-                                                                                                                </li>
-                                                                                                            <li class="has-submenu"><a class="dropdown-item" href="https://fcrihyd.in/admin-dashboard/" target="_blank">
-                                                                Admin Reports </a>
-                                                        
-                                                                                                                </li>
-                                                                                                            <li class="has-submenu"><a class="dropdown-item" href="#">
-                                                                B.Sc.(Hons.)Forestry Merit List </a>
-                                                        
-                                                                                                                    <!-- Sub Menu Dropdown -->
-                                                            <ul class="submenu dropdown-menu">
-                                                                
-                                                                        <li>
-                                                                            <a class="dropdown-item" href="https://fcrihyd.in/wp-content/uploads/2023/08/List-of-Candidates-to-attend-the-original-certificate-verification-B.Sc_.Hons_.-Forestry-2023-Biology-Stream.pdf" target="_blank">
-                                                                                Biology Stream                                                                            </a>
-                                                                        </li>
-                                                                                                                                    
-                                                                        <li>
-                                                                            <a class="dropdown-item" href="https://fcrihyd.in/wp-content/uploads/2023/08/List-of-candidates-to-attend-the-original-certificate-Verification-B.Sc_.Hons_.-Forestry-2023-Mathematics-Stream.pdf" target="_blank">
-                                                                                Mathematics Stream                                                                            </a>
-                                                                        </li>
-                                                                                                                                                                                                </ul>
-                                                                                                                </li>
-                                                                                                            <li class="has-submenu"><a class="dropdown-item" href="#">
-                                                                New Selected List </a>
-                                                        
-                                                                                                                    <!-- Sub Menu Dropdown -->
-                                                            <ul class="submenu dropdown-menu">
-                                                                                                                                        <li class="has-submenu2"><a class="dropdown-item" href="https://fcrihyd.in/wp-content/uploads/2023/10/list-5-aong-with-instructions.pdf">
-                                                                                B.Sc.(Hons.) Forestry Selected List 5 </a>
-                                                                                                                                                    </li>
-                                                                                                                                                                                                            <li class="has-submenu2"><a class="dropdown-item" href="https://fcrihyd.in/wp-content/uploads/2023/10/Selection-list-4-along-with-instructions.pdf">
-                                                                                B.Sc.(Hons.) Forestry Selected List 4 </a>
-                                                                                                                                                    </li>
-                                                                                                                                    
-                                                                        <li>
-                                                                            <a class="dropdown-item" href="https://fcrihyd.in/wp-content/uploads/2023/09/Selection-list-3-along-with-instructions.pdf" target="_blank">
-                                                                                B.Sc Forestry Selected List 3                                                                            </a>
-                                                                        </li>
-                                                                                                                                    
-                                                                        <li>
-                                                                            <a class="dropdown-item" href="https://fcrihyd.in/wp-content/uploads/2023/09/Second-list-2-of-biology-and-maths-stream-along-with-instructions.pdf" target="_blank">
-                                                                                B.Sc.(Hons.) Forestry Selected List 2 (Regular)                                                                            </a>
-                                                                        </li>
-                                                                                                                                    
-                                                                        <li>
-                                                                            <a class="dropdown-item" href="https://fcrihyd.in/wp-content/uploads/2023/09/second-list-with-instructions-of-Mathematics-Stream.pdf" target="_blank">
-                                                                                B.Sc.(Hons.) Forestry Selected List 2 (Mathematics Stream)                                                                            </a>
-                                                                        </li>
-                                                                                                                                    
-                                                                        <li>
-                                                                            <a class="dropdown-item" href="https://fcrihyd.in/wp-content/uploads/2023/08/Selection-list-under-payment-quota-along-with-instructions-UG-2023.pdf" target="_blank">
-                                                                                B.Sc. (Hons.) Forestry Selected List (Payment Quota)                                                                            </a>
-                                                                        </li>
-                                                                                                                                    
-                                                                        <li>
-                                                                            <a class="dropdown-item" href="https://fcrihyd.in/wp-content/uploads/2023/08/special-category-list-2023-along-with-instructions.pdf" target="_blank">
-                                                                                B.Sc.(Hons.) Forestry Selected List (Special Category)                                                                            </a>
-                                                                        </li>
-                                                                                                                                    
-                                                                        <li>
-                                                                            <a class="dropdown-item" href="https://fcrihyd.in/wp-content/uploads/2023/08/selected-list-1-biology-stream.pdf" target="_blank">
-                                                                                B.SC.(HONS.) Forestry 2023 Selected List - Biology Stream                                                                            </a>
-                                                                        </li>
-                                                                                                                                    
-                                                                        <li>
-                                                                            <a class="dropdown-item" href="https://fcrihyd.in/wp-content/uploads/2023/08/selected-list-1-maths-stream.pdf" target="_blank">
-                                                                                B.SC.(HONS.) Forestry 2023 Selected List - Mathematics Stream                                                                            </a>
-                                                                        </li>
-                                                                                                                                                                                                </ul>
-                                                                                                                </li>
-                                                                                                </ul>
+                                        <li>
+                                            <a class="dropdown-item" href="https://www.fcrihyd.in/academics/department-head/">Department Head</a>
                                         </li>
-                                                                    <li class="nav-item dropdown">
-                                                                                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">
-                                                    Infrastructure </a>
-                                                                                        <ul class="dropdown-menu">
-                                                                                                        <li class="has-submenu"><a class="dropdown-item" href="https://www.fcrihyd.in/infrastructure/forest-museum/">
-                                                                Forest Museum </a>
-                                                        
-                                                                                                                </li>
-                                                                                                            <li class="has-submenu"><a class="dropdown-item" href="https://www.fcrihyd.in/central-instrumentation-facilitycif/">
-                                                                Central Instrumentation Facility(CIF) </a>
-                                                        
-                                                                                                                </li>
-                                                                                                            <li class="has-submenu"><a class="dropdown-item" href="https://www.fcrihyd.in/boardroom/">
-                                                                Boardroom </a>
-                                                        
-                                                                                                                </li>
-                                                                                                            <li class="has-submenu"><a class="dropdown-item" href="https://www.fcrihyd.in/auditorium/">
-                                                                Auditorium </a>
-                                                        
-                                                                                                                </li>
-                                                                                                            <li class="has-submenu"><a class="dropdown-item" href="https://www.fcrihyd.in/seminar-hall/">
-                                                                Seminar Hall </a>
-                                                        
-                                                                                                                </li>
-                                                                                                            <li class="has-submenu"><a class="dropdown-item" href="https://www.fcrihyd.in/infra-library/">
-                                                                Library </a>
-                                                        
-                                                                                                                </li>
-                                                                                                            <li class="has-submenu"><a class="dropdown-item" href="https://www.fcrihyd.in/hostel/">
-                                                                Hostel </a>
-                                                        
-                                                                                                                </li>
-                                                                                                            <li class="has-submenu"><a class="dropdown-item" href="https://www.fcrihyd.in/mess-canteen/">
-                                                                Mess/Canteen </a>
-                                                        
-                                                                                                                </li>
-                                                                                                </ul>
+                                        <li>
+                                            <a class="dropdown-item" href="https://www.fcrihyd.in/academics/faculty/">Faculty</a>
                                         </li>
-                                                                    <li class="nav-item dropdown">
-                                                                                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">
-                                                    Services </a>
-                                                                                        <ul class="dropdown-menu">
-                                                                                                        <li class="has-submenu"><a class="dropdown-item" href="https://www.fcrihyd.in/services/services-fcri-cares/">
-                                                                FCRI CARES </a>
-                                                        
-                                                                                                                </li>
-                                                                                                            <li class="has-submenu"><a class="dropdown-item" href="https://www.fcrihyd.in/services/fcri-study-circle/">
-                                                                FCRI Study Circle </a>
-                                                        
-                                                                                                                </li>
-                                                                                                            <li class="has-submenu"><a class="dropdown-item" href="https://www.fcrihyd.in/central-instrumentation-facility/">
-                                                                Central Instrumentation Facility (CIF) </a>
-                                                        
-                                                                                                                </li>
-                                                                                                            <li class="has-submenu"><a class="dropdown-item" href="https://www.fcrihyd.in/services/nursery/">
-                                                                Nursery </a>
-                                                        
-                                                                                                                </li>
-                                                                                                            <li class="has-submenu"><a class="dropdown-item" href="https://www.fcrihyd.in/services/woodworks-word-products/">
-                                                                Wood Workshop &#038; Wood Products </a>
-                                                        
-                                                                                                                </li>
-                                                                                                            <li class="has-submenu"><a class="dropdown-item" href="https://www.fcrihyd.in/services/wood-identification-tool-kit/">
-                                                                Wood Identification Tool Kit </a>
-                                                        
-                                                                                                                </li>
-                                                                                                </ul>
+                                        <li>
+                                            <a class="dropdown-item" href="https://www.fcrihyd.in/academics/laboratories/">Laboratories</a>
                                         </li>
-                                                                    <li class="nav-item dropdown">
-                                                                                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">
-                                                    Research </a>
-                                                                                        <ul class="dropdown-menu">
-                                                                                                        <li class="has-submenu"><a class="dropdown-item" href="https://www.fcrihyd.in/research/research-projects/">
-                                                                Research Projects </a>
-                                                        
-                                                                                                                </li>
-                                                                                                            <li class="has-submenu"><a class="dropdown-item" href="https://www.fcrihyd.in/research/mous/">
-                                                                MoU’s </a>
-                                                        
-                                                                                                                </li>
-                                                                                                            <li class="has-submenu"><a class="dropdown-item" href="https://www.fcrihyd.in/research/publications/">
-                                                                Publications </a>
-                                                        
-                                                                                                                </li>
-                                                                                                            <li class="has-submenu"><a class="dropdown-item" href="https://www.fcrihyd.in/research/awards-and-recognition/">
-                                                                Awards and Recognition </a>
-                                                        
-                                                                                                                </li>
-                                                                                                </ul>
+                                    </ul>
+                                </li>
+        
+                                <!-- Rules & Regulations -->
+                                <li class="has-submenu">
+                                    <a class="dropdown-item" href="#">Rules & Regulations</a>
+                                    <ul class="submenu dropdown-menu">
+                                        <li>
+                                            <a class="dropdown-item" href="https://fcrihyd.in/wp-content/uploads/2022/05/8.-UG-regulations-1.pdf" target="_blank">UG</a>
                                         </li>
-                                                                    <li class="nav-item dropdown">
-                                                                                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">
-                                                    In Media </a>
-                                                                                        <ul class="dropdown-menu">
-                                                                                                        <li class="has-submenu"><a class="dropdown-item" href="https://www.fcrihyd.in/blog/">
-                                                                Blog </a>
-                                                        
-                                                                                                                </li>
-                                                                                                            <li class="has-submenu"><a class="dropdown-item" href="https://www.fcrihyd.in/media/photo-gallery/">
-                                                                Photo Gallery </a>
-                                                        
-                                                                                                                </li>
-                                                                                                            <li class="has-submenu"><a class="dropdown-item" href="https://www.fcrihyd.in/media/press-release/">
-                                                                Press Release </a>
-                                                        
-                                                                                                                </li>
-                                                                                                            <li class="has-submenu"><a class="dropdown-item" href="https://www.fcrihyd.in/media/video-gallery/">
-                                                                Video Gallery </a>
-                                                        
-                                                                                                                </li>
-                                                                                                            <li class="has-submenu"><a class="dropdown-item" href="https://fcrihyd.in/media/latest-news/">
-                                                                FCRI in News </a>
-                                                        
-                                                                                                                </li>
-                                                                                                </ul>
+                                        <li>
+                                            <a class="dropdown-item" href="https://fcrihyd.in/wp-content/uploads/2022/05/Regulations-PG-course.pdf" target="_blank">PG</a> 
                                         </li>
-                                                    </ul>
-                                    </div>
+                                    </ul>
+                                </li>
+                                <!-- Sub Menu Dropdown -->
+<ul class="submenu dropdown-menu">
+    <li>
+        <a class="dropdown-item" href="https://fcrihyd.in/wp-content/uploads/2022/08/Evaluation-of-student-for-UG-and-PG-programs-at-FCRI-2022.pdf" target="_blank">
+            Evaluation of Student for UG &amp; PG
+        </a>
+    </li>
+    <li>
+        <a class="dropdown-item" href="https://fcrihyd.in/wp-content/uploads/2022/08/revaluation-rescrutiny-application.pdf" target="_blank">
+            Revaluation Rescrutiny Application
+        </a>
+    </li>
+    <li>
+        <a class="dropdown-item" href="https://fcrihyd.in/wp-content/uploads/2022/08/Thesis-submission-guidelines.pdf" target="_blank">
+            Thesis Submission Guidelines
+        </a>
+    </li>
+</ul>
+</li>
+<li class="has-submenu">
+    <a class="dropdown-item" href="#">Student Achievements</a>
+    <!-- Sub Menu Dropdown -->
+    <ul class="submenu dropdown-menu">
+        <li class="has-submenu2">
+            <a class="dropdown-item" href="https://www.fcrihyd.in/academics/student-achievements/year-of-2016/">
+                Year of 2016
+            </a>
+        </li>
+        <li class="has-submenu2">
+            <a class="dropdown-item" href="https://www.fcrihyd.in/academics/student-achievements/year-of-2017/">
+                Year of 2017
+            </a>
+        </li>
+    </ul>
+</li>
+<li class="has-submenu">
+    <a class="dropdown-item" href="#">Committees</a>
+    <!-- Sub Menu Dropdown -->
+    <ul class="submenu dropdown-menu">
+        <li class="has-submenu2">
+            <a class="dropdown-item" href="https://www.fcrihyd.in/committees/women-protection-cell/">
+                Women Protection Cell Committee
+            </a>
+        </li>
+        <li class="has-submenu2">
+            <a class="dropdown-item" href="https://www.fcrihyd.in/committees/anti-ragging-committee/">
+                Anti Ragging Committee
+            </a>
+        </li>
+        <li class="has-submenu2">
+            <a class="dropdown-item" href="https://www.fcrihyd.in/committees/redressal-of-grievance-committee/">
+                Redressal of Grievance Committee
+            </a>
+        </li>
+        <li class="has-submenu2">
+            <a class="dropdown-item" href="https://www.fcrihyd.in/committees/institutional-ethics-committee/">
+                Institutional Ethics Committee
+            </a>
+        </li>
+        <li class="has-submenu2">
+            <a class="dropdown-item" href="https://www.fcrihyd.in/committees/admissions-committee/">
+                Admissions Committee
+            </a>
+        </li>
+        <li class="has-submenu2">
+            <a class="dropdown-item" href="https://www.fcrihyd.in/academics/disciplinary-committee/">
+                Disciplinary Committee
+            </a>
+        </li>
+    </ul>
+</li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Admissions</a>
+    <ul class="dropdown-menu">
+        <li class="has-submenu">
+            <a class="dropdown-item" href="#">Courses Offered</a>
+            <!-- Sub Menu Dropdown -->
+            <ul class="submenu dropdown-menu">
+                <li class="has-submenu2">
+                    <a class="dropdown-item" href="https://www.fcrihyd.in/admissions/bsc-hons-forestry/">
+                        BSC Hons Forestry
+                    </a>
+                </li>
+                <li class="has-submenu2">
+                    <a class="dropdown-item" href="https://www.fcrihyd.in/admissions/msc-forestry/">
+                        MSC Forestry
+                    </a>
+                </li>
+                <li class="has-submenu2">
+                    <a class="dropdown-item" href="https://www.fcrihyd.in/admissions/phd-forestry/">
+                        PhD Forestry
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="has-submenu">
+            <a class="dropdown-item" href="#">Admission Process</a>
+            <!-- Sub Menu Dropdown -->
+            <ul class="submenu dropdown-menu">
+                <li>
+                    <a class="dropdown-item" href="https://fcrihyd.in/wp-content/uploads/2022/09/Admission-Process-2022-23-1.pdf" target="_blank">
+                        UG
+                    </a>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="https://fcrihyd.in/wp-content/uploads/2022/05/PG-Prospects_2021.pdf" target="_blank">
+                        PG
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="has-submenu">
+            <a class="dropdown-item" href="#">Prospectus</a>
+            <!-- Sub Menu Dropdown -->
+            <ul class="submenu dropdown-menu">
+                <li class="has-submenu2">
+                    <a class="dropdown-item" href="#">UG</a>
+                    <!-- Sub of sub Menu Dropdown -->
+                    <ul class="submenu2 dropdown-menu">
+                        <li>
+                            <a class="dropdown-item" href="https://fcrihyd.in/wp-content/uploads/2023/06/PROSPECTUS-FINAL.pdf" target="_blank">
+                                Regular
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="https://fcrihyd.in/wp-content/uploads/2022/09/UG-PROSPECTUS-Payment-Quota-New-2022-23.pdf" target="_blank">
+                                Payment Quota
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="https://fcrihyd.in/wp-content/uploads/2022/11/PG-Prospects_2022-23.pdf" target="_blank">
+                        PG
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="has-submenu">
+            <a class="dropdown-item" href="https://www.fcrihyd.in/wp-content/uploads/2024/01/selection-list-of-Ph.d-Forestry-AY-2023-24.pdf" target="_blank">
+                Brochure
+            </a>
+        </li>
+        <li class="has-submenu">
+            <a class="dropdown-item" href="#">Fee Structure</a>
+        </li>
+    </ul>
+</li>
+<li class="has-submenu">
+    <a class="dropdown-item" href="#">Examination &amp; Evaluation</a>
+
+    <!-- Sub Menu Dropdown -->
+    <ul class="submenu dropdown-menu">
+        <li class="has-submenu2">
+            <a class="dropdown-item" href="#">UG</a>
+
+            <!-- Sub of sub Menu Dropdown -->
+            <ul class="submenu2 dropdown-menu">
+                <li>
+                    <a class="dropdown-item" href="https://fcrihyd.in/wp-content/uploads/2023/06/fee-structure-2023.pdf" target="_blank">
+                        Regular
+                    </a>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="https://fcrihyd.in/wp-content/uploads/2023/07/payment-quota-fees-updated.pdf" target="_blank">
+                        Payment Quota
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a class="dropdown-item" href="https://fcrihyd.in/wp-content/uploads/2022/05/PG-M.Sc-Forestery-Fee-Structure.pdf" target="_blank">
+                PG
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="https://fcrihyd.in/wp-content/uploads/2023/03/Fee-Structure-2022-23.pdf" target="_blank">
+                PhD
+            </a>
+        </li>
+    </ul>
+</li>
+
+<li class="has-submenu">
+    <a class="dropdown-item" href="#">Fee Payment</a>
+
+    <!-- Sub Menu Dropdown -->
+    <ul class="submenu dropdown-menu">
+        <li>
+            <a class="dropdown-item" href="https://www.payumoney.com/customer/users/paymentOptions/#/AD5E6C0E934EA65274B4BFC26A0C6390/forestcollege/216601" target="_blank">
+                Admission Fee Payment
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="https://www.payumoney.com/customer/users/paymentOptions/#/AD5E6C0E934EA65274B4BFC26A0C6390/Linkcreated/218235" target="_blank">
+                Semester Fee Payment
+            </a>
+        </li>
+    </ul>
+</li>
+
+<li class="has-submenu">
+    <a class="dropdown-item" href="#">Admissions Schedule - 2024</a>
+
+    <!-- Sub Menu Dropdown -->
+    <ul class="submenu dropdown-menu">
+        <li>
+            <a class="dropdown-item" href="https://www.fcrihyd.in/wp-content/uploads/2024/06/revised-admission-schedule-2024.pdf" target="_blank">
+                UG
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="https://fcrihyd.in/wp-content/uploads/2022/11/PG-Admission-Schedule-2022.pdf" target="_blank">
+                PG
+            </a>
+        </li>
+    </ul>
+</li>
+
+<li class="has-submenu">
+    <a class="dropdown-item" href="#">Admission Notification - 2024</a>
+
+    <!-- Sub Menu Dropdown -->
+    <ul class="submenu dropdown-menu">
+        <li class="has-submenu2">
+            <a class="dropdown-item" href="#">UG</a>
+
+            <!-- Sub of sub Menu Dropdown -->
+            <ul class="submenu2 dropdown-menu">
+                <li class="has-submenu3">
+                    <a class="dropdown-item" href="#">Regular</a>
+                    <ul class="submenu3 dropdown-menu">
+                        <li>
+                            <a class="dropdown-item" href="https://www.fcrihyd.in/wp-content/uploads/2024/06/revised-admission-notification-2024.pdf" target="_blank">
+                                English
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+
+        <li class="has-submenu2">
+            <a class="dropdown-item" href="#">PG</a>
+
+            <!-- Sub of sub Menu Dropdown -->
+            <ul class="submenu2 dropdown-menu">
+                <li class="has-submenu3">
+                    <a class="dropdown-item" href="https://fcrihyd.in/wp-content/uploads/2022/11/English-Notification-for-PG-2022.pdf">
+                        English
+                    </a>
+                </li>
+                <li class="has-submenu3">
+                    <a class="dropdown-item" href="https://fcrihyd.in/wp-content/uploads/2022/11/PG-Admission-Notification-2022-Telugu.pdf">
+                        Telugu
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+        <li class="has-submenu2">
+            <a class="dropdown-item" href="#">PhD</a>
+
+            <!-- Sub of sub Menu Dropdown -->
+            <ul class="submenu2 dropdown-menu">
+                <li class="has-submenu3">
+                    <a class="dropdown-item" href="https://fcrihyd.in/wp-content/uploads/2023/01/Ph.D-Admission-Notification-English.pdf">
+                        English
+                    </a>
+                </li>
+                <li class="has-submenu3">
+                    <a class="dropdown-item" href="https://fcrihyd.in/wp-content/uploads/2023/01/Ph.D-Admission-Notification-Telugu.pdf">
+                        Telugu
+                    </a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</li>
+
+<li class="has-submenu">
+    <a class="dropdown-item" href="https://fcrihyd.in/admin-dashboard/" target="_blank">
+        Admin Reports
+    </a>
+</li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Admissions</a>
+                        <ul class="dropdown-menu">
+                            <li class="has-submenu">
+                                <a class="dropdown-item" href="#">B.Sc.(Hons.)Forestry Merit List</a>
+                                <ul class="submenu dropdown-menu">
+                                    <li>
+                                        <a class="dropdown-item" href="https://fcrihyd.in/wp-content/uploads/2023/08/List-of-Candidates-to-attend-the-original-certificate-verification-B.Sc_.Hons_.-Forestry-2023-Biology-Stream.pdf" target="_blank">Biology Stream</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="https://fcrihyd.in/wp-content/uploads/2023/08/List-of-candidates-to-attend-the-original-certificate-Verification-B.Sc_.Hons_.-Forestry-2023-Mathematics-Stream.pdf" target="_blank">Mathematics Stream</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="has-submenu">
+                                <a class="dropdown-item" href="#">New Selected List</a>
+                                <ul class="submenu dropdown-menu">
+                                    <li class="has-submenu2">
+                                        <a class="dropdown-item" href="https://fcrihyd.in/wp-content/uploads/2023/10/list-5-aong-with-instructions.pdf">B.Sc.(Hons.) Forestry Selected List 5</a>
+                                    </li>
+                                    <li class="has-submenu2">
+                                        <a class="dropdown-item" href="https://fcrihyd.in/wp-content/uploads/2023/10/Selection-list-4-along-with-instructions.pdf">B.Sc.(Hons.) Forestry Selected List 4</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="https://fcrihyd.in/wp-content/uploads/2023/09/Selection-list-3-along-with-instructions.pdf" target="_blank">B.Sc Forestry Selected List 3</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="https://fcrihyd.in/wp-content/uploads/2023/09/Second-list-2-of-biology-and-maths-stream-along-with-instructions.pdf" target="_blank">B.Sc.(Hons.) Forestry Selected List 2 (Regular)</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="https://fcrihyd.in/wp-content/uploads/2023/09/second-list-with-instructions-of-Mathematics-Stream.pdf" target="_blank">B.Sc.(Hons.) Forestry Selected List 2 (Mathematics Stream)</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="https://fcrihyd.in/wp-content/uploads/2023/08/Selection-list-under-payment-quota-along-with-instructions-UG-2023.pdf" target="_blank">B.Sc. (Hons.) Forestry Selected List (Payment Quota)</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="https://fcrihyd.in/wp-content/uploads/2023/08/special-category-list-2023-along-with-instructions.pdf" target="_blank">B.Sc.(Hons.) Forestry Selected List (Special Category)</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="https://fcrihyd.in/wp-content/uploads/2023/08/selected-list-1-biology-stream.pdf" target="_blank">B.SC.(HONS.) Forestry 2023 Selected List - Biology Stream</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="https://fcrihyd.in/wp-content/uploads/2023/08/selected-list-1-maths-stream.pdf" target="_blank">B.SC.(HONS.) Forestry 2023 Selected List - Mathematics Stream</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Infrastructure</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="https://www.fcrihyd.in/infrastructure/forest-museum/">Forest Museum</a></li>
+                            <li><a class="dropdown-item" href="https://www.fcrihyd.in/central-instrumentation-facilitycif/">Central Instrumentation Facility(CIF)</a></li>
+                            <li><a class="dropdown-item" href="https://www.fcrihyd.in/boardroom/">Boardroom</a></li>
+                            <li><a class="dropdown-item" href="https://www.fcrihyd.in/auditorium/">Auditorium</a></li>
+                            <li><a class="dropdown-item" href="https://www.fcrihyd.in/seminar-hall/">Seminar Hall</a></li>
+                            <li><a class="dropdown-item" href="https://www.fcrihyd.in/infra-library/">Library</a></li>
+                            <li><a class="dropdown-item" href="https://www.fcrihyd.in/hostel/">Hostel</a></li>
+                            <li><a class="dropdown-item" href="https://www.fcrihyd.in/mess-canteen/">Mess/Canteen</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Services</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="https://www.fcrihyd.in/services/services-fcri-cares/">FCRI CARES</a></li>
+                            <li><a class="dropdown-item" href="https://www.fcrihyd.in/services/fcri-study-circle/">FCRI Study Circle</a></li>
+                            <li><a class="dropdown-item" href="https://www.fcrihyd.in/central-instrumentation-facility/">Central Instrumentation Facility (CIF)</a></li>
+                            <li><a class="dropdown-item" href="https://www.fcrihyd.in/services/nursery/">Nursery</a></li>
+                            <li><a class="dropdown-item" href="https://www.fcrihyd.in/services/woodworks-word-products/">Wood Workshop &amp; Wood Products</a></li>
+                            <li><a class="dropdown-item" href="https://www.fcrihyd.in/services/wood-identification-tool-kit/">Wood Identification Tool Kit</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Research</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="https://www.fcrihyd.in/research/research-projects/">Research Projects</a></li>
+                            <li><a class="dropdown-item" href="https://www.fcrihyd.in/research/mous/">MoU’s</a></li>
+                            <li><a class="dropdown-item" href="https://www.fcrihyd.in/research/publications/">Publications</a></li>
+                            <li><a class="dropdown-item" href="https://www.fcrihyd.in/research/awards-and-recognition/">Awards and Recognition</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">In Media</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="https://www.fcrihyd.in/blog/">Blog</a></li>
+                            <li><a class="dropdown-item" href="https://www.fcrihyd.in/media/photo-gallery/">Photo Gallery</a></li>
+                            <li><a class="dropdown-item" href="https://www.fcrihyd.in/media/press-release/">Press Release</a></li>
+                            <li><a class="dropdown-item" href="https://www.fcrihyd.in/media/video-gallery/">Video Gallery</a></li>
+                            <li><a class="dropdown-item" href="https://fcrihyd.in/media/latest-news/">FCRI in News</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
-        </nav>
-    </header>
+        </div>
+    </nav>
+</header>
+
 <article id="post-2015" class="post-2015 page type-page status-publish hentry entry">
 
 	
