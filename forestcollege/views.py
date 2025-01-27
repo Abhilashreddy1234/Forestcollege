@@ -69,7 +69,7 @@ def Admissions1(request):
     return render(request, 'admissions1.html')
 
 def AcademicSchedule(request):
-    return render(request, 'AcadamicSchedule.html')
+    return render(request, 'AcdamicSchedule.html')
 
 def AcademicNotification(request):
     return render(request, 'AdmissionNotification.html')
