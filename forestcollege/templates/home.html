@@ -93,11 +93,11 @@
                         <button type="button" onclick="window.location.href='https://www.fcrihyd.in/downloads'" class="btn btn-sm btn-outline-light me-2" title="Downloads"><i class="fa fa-download" aria-hidden="true"></i></button>
                         <button type="button" onclick="window.location.href='https://www.fcrihyd.in/contact'" class="btn btn-sm btn-outline-light" title="Contact Us"><i class="fa fa-phone" aria-hidden="true"></i></button>
                         <div class="fcriHeader__social">
-                            <a class="fhSocial--link" href="https://www.facebook.com/FCRITS" target="_blank"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
-                            <a class="fhSocial--link" href="https://twitter.com/FCRIHyderabad" target="_blank"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
-                            <a class="fhSocial--link" href="https://www.youtube.com/channel/UCJzKbOhDFSIU71DUrMl3DMQ" target="_blank"><i class="fa-brands fa-youtube-play" aria-hidden="true"></i></a>
-                            <a class="fhSocial--link" href="https://www.instagram.com/fcri_hyd/" target="_blank"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
-                            <a class="fhSocial--link" href="https://www.linkedin.com/company/fcrits/" target="_blank"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+                            <a class="fhSocial--link" href="#" target="_blank"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+                            <a class="fhSocial--link" href="#" target="_blank"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+                            <a class="fhSocial--link" href="#" target="_blank"><i class="fa-brands fa-youtube-play" aria-hidden="true"></i></a>
+                            <a class="fhSocial--link" href="#" target="_blank"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                            <a class="fhSocial--link" href="#" target="_blank"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
                         </div>
                     </div>
                     <!-- <ul class="nav fcriNavIcons__ul justify-content-lg-end">
@@ -191,11 +191,7 @@
                                             <a class="dropdown-item" href="{% url 'Departments' %}">List of Departments</a>
                                         </li>
                                         <li>
-                                            <a class="dropdown-item" href="{% url 'Deputy_Director' %}">Department Head</a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item" href="{% url "Faculty" %}">Faculty</a>
-                                        </li>
+                                            <a class="dropdown-item" href="#">Department Head</a>
                                         <li>
                                             <a class="dropdown-item" href="{% url "laboratory" %}">Laboratories</a>
                                         </li>
@@ -406,9 +402,9 @@
       <li><a class="dropdown-item" href="#">Mess/Canteen</a></li>
     </ul>
   </li>
-  <li class="nav-item dropdoun">
-    <a class="nav-link dropdoun-item" href="#">Services</a></li>
-    <ul class="dropdoun-menu">
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">sERVICESS</a>
+    <ul class="dropdown-menu">
         <li><a class="dropdoun-item" href="{% url 'Fcri' %}">FCRI Careews</a></li>
         <li><a class="dropdoun-item" href="{% url 'Fcri' %}">FCRI Study circle</a></li>
         <li><a class="dropdoun-item" href="{% url 'Cfi2' %}">CFI</a></li>
@@ -420,10 +416,10 @@
   <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Research</a>
     <ul class="dropdown-menu">
-      <li><a class="dropdown-item" href="research/research-projects/index.htm">Research Projects</a></li>
-      <li><a class="dropdown-item" href="research/mous/index.htm">MoU’s</a></li>
-      <li><a class="dropdown-item" href="research/publications/index.htm">Publications</a></li>
-      <li><a class="dropdown-item" href="research/awards-and-recognition/index.htm">Awards and Recognition</a></li>
+      <li><a class="dropdown-item" href="{% url 'ResearchProjects' %}">Research Projects</a></li>
+      <li><a class="dropdown-item" href="{% url 'Mou' %}">MoU’s</a></li>
+      <li><a class="dropdown-item" href="{% url 'Publications' %}">Publications</a></li>
+      <li><a class="dropdown-item" href="{% url 'Awards' %}">Awards  and Recognition</a></li>
     </ul>
   </li>
   
@@ -459,7 +455,7 @@
             <div class="row g-0">
                <div class="col-12 col-md-4 homeThreeSplitSec__text hts--text01  wow fadeInUp" data-wow-delay="0.1s">
                   <h5>Believe in yourself &amp; All that you are</h5>
-                  <div class="d-inline"><button type="button" class="lineBtn "><a href="https://fcrihyd.in/about/vision-and-mission/" class="butlink"><span>Vision &amp; Mission</span></a></button></div>
+                  <div class="d-inline"><button type="button" class="lineBtn "><a href="{% url "vision" %}" class="butlink"><span>Vision &amp; Mission</span></a></button></div>
                </div>
                <!-- <div class="col-12 col-md-4 homeThreeSplitSec__img hts--img01 wow fadeInUp" data-wow-delay="0.2s">
                </div> -->
@@ -500,7 +496,7 @@
                <div class="col-12 col-md-4 homeThreeSplitSec__text hts--text02 wow fadeInUp" data-wow-delay="0.3s">
                   <img decoding="async" src="https://fcrihyd.in/wp-content/themes/fcri/assets/images/home-200.png" class="img-fluid">
                   <!-- <a href="#" class="">Courses Offered</a> -->
-                  <div class="d-inline"><button type="button" class="lineBtn "><a href="https://fcrihyd.in/admissions/bsc-hons-forestry/" class="butlink"><span>Courses Offered</span></a></button></div>
+                  <div class="d-inline"><button type="button" class="lineBtn "><a href="{% url 'admissions1' %}" class="butlink"><span>Courses Offered</span></a></button></div>
                </div>
                <div class="col-12 col-md-4 homeThreeSplitSec__img hts--img02  wow fadeInUp" data-wow-delay="0.1s"></div>
                <div class="col-12 col-md-4 homeThreeSplitSec__text hts--text03 wow fadeInUp" data-wow-delay="0.2s">
@@ -508,7 +504,7 @@
                      <h6>Research At FCRI</h6>
                      <h5>Nurture Nature Ensure Future</h5>
                   </div>
-                  <div class="d-inline"> <button type="button" class="lineBtn "><a href="https://fcrihyd.in/academics/list-of-departments/" class="butlink"><span>Departments</span></a></button></div>
+                  <div class="d-inline"> <button type="button" class="lineBtn "><a href="{% url "Departments" %}" class="butlink"><span>Departments</span></a></button></div>
                </div>
                <div class="col-12 col-md-4 homeThreeSplitSec__img hts--img03 wow fadeInUp" data-wow-delay="0.3s"></div>
             </div>
@@ -577,7 +573,7 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
           <div class="col-md col-6 homeflip-col-6 wow fadeInUp" data-wow-delay="0.3s">
             <div class="box-item">
               <div class="flip-box">
-			  			  <a href="https://fcrihyd.in/admissions/bsc-hons-forestry#bsc" class="flip-box-abs-link"></a>
+			  			  <a href="{% url 'admissions1' %}" class="flip-box-abs-link"></a>
                 <div class="flip-box-front text-center" style="background-image: url('https://fcrihyd.in/wp-content/uploads/2022/06/BSc_card-1.jpg');">
                   <div class="inner color-white">
                     <h3 class="flip-box-header">B.Sc.</h3>
@@ -587,7 +583,7 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
 
                 <div class="flip-box-back text-center" style="background-image: url('https://fcrihyd.in/wp-content/uploads/2022/06/BSc_card-1.jpg');">
                   <div class="inner color-white">
-				   <a href="https://fcrihyd.in/admissions/bsc-hons-forestry#bsc" class="flip-box-abs-link"></a>
+				   <a href="{% url 'admissions1' %}" class="flip-box-abs-link"></a>
                     <h3 class="flip-box-header">B.Sc.</h3>
                     <p class="flip-box-label">(Hons.) Forestry</p>
                     <p style="color: #fff;">B.Sc. (Hons.) Forestry curriculum contains an integrated forestry syllabus in accordance with ICAR guidelines, the 1st &amp; 2nd  semesters comprises of basic and fundamental courses.</p>
@@ -602,7 +598,7 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
           <div class="col-md col-6 homeflip-col-6 wow fadeInUp" data-wow-delay="0.2s">
             <div class="box-item">
               <div class="flip-box">
-			  			  <a href="https://fcrihyd.in/admissions/msc-forestry#msc" class="flip-box-abs-link"></a>
+			  			  <a href="{% url 'admissions1' %}" class="flip-box-abs-link"></a>
                 <div class="flip-box-front text-center" style="background-image: url('https://fcrihyd.in/wp-content/uploads/2022/06/MSc_card.jpg');">
                   <div class="inner color-white">
                     <h3 class="flip-box-header">M.Sc.</h3>
@@ -612,7 +608,7 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
 
                 <div class="flip-box-back text-center" style="background-image: url('https://fcrihyd.in/wp-content/uploads/2022/06/MSc_card.jpg');">
                   <div class="inner color-white">
-				  <a href="https://fcrihyd.in/admissions/msc-forestry#msc" class="flip-box-abs-link"></a>
+				  <a href="{% url 'admissions1' %}" class="flip-box-abs-link"></a>
                     <h3 class="flip-box-header">M.Sc.</h3>
                     <p class="flip-box-label">Forestry</p>
                     <p style="color: #fff;">Forest College and Research Institute, Hyderabad is established in 2016 with the objective of providing professional forestry education for the first time in the state of Telangana.</p>
@@ -757,7 +753,7 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
             <p>The professional forestry education is introduced for the first time in  Telangana State under the visionary guidance of Hon`ble Chief Minister,  Telangana Sri. K. CHANDRASHEKAR RAO.</p>
             <p>It is aimed at bringing out forestry professionals by introducing B.Sc(Hons.)  Forestry, M.Sc. Forestry and PhD. Forestry programmes.</p>
 			<p>The institution is also aimed at providing an outstanding learning environment,  promoting research, management and outreach to the farmers.</p>
-			<a href="https://fcrihyd.in/administration/dean/"><button type="button" class="btn btn-sm btn-outline-light">Read More</button></a>
+			<a href="{% url 'Dean' %}"><button type="button" class="btn btn-sm btn-outline-light">Read More</button></a>
           </div>
           
         </div>
@@ -788,7 +784,7 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
 											<h5 class="text-green"><em>Dr. Milkuri Chiranjeeva Reddy</em></h5>
 												<p><strong>Dr. Chiranjeeva</strong> is an Assistant Professor of Silviculture in the department of Silviculture and Agroforestry. He is having more than 2 years of research and teaching experience at Forest College and Research Institute, Mulugu. 
 												<br><br>He obtained his Doctorate in Forestry with specialization in Silviculture. He has got his master’s degree in forestry with specialization in Plantation technology..<br><br>
-												<a href="https://fcrihyd.in/faculty/" class="text-green">READ MORE</a>
+												<a href="{% url 'Faculty' %}" class="text-green">READ MORE</a>
 												</p>
 										</div>
 										</div>
@@ -805,7 +801,7 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
 												<p><strong>Dr. Shivaputra Bammanahalli</strong> is an Assistant Professor of Agroforestry in the Department of Silviculture and Agroforestry. He completed Master of Science in Forestry from University of Agricultural Science Dharwad, 
 												Karnataka and Doctoral Degree in Agroforestry form Dr. Y.S Parmar University of Horticulture and Forestry Nauni, Solan, Himachal Pradesh
 												<br><br>He received merit scholarship from UAS, Dharwad during Master’s. He was also recipient of INSPIRE fellowship from Government of India for a period of four years. .<br><br>
-												<a href="https://fcrihyd.in/faculty/" class="text-green">READ MORE</a>
+												<a href="{% url 'Faculty' %}" class="text-green">READ MORE</a>
 												</p>
 										</div>
 										</div>
@@ -825,7 +821,7 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
 												Thesis Award Presented by Society for Agriculture Innovation &#038; Development, Ranchi, for outstanding contribution in 
 												the field of Forestry. <br></br>
 												
-												<a href="https://fcrihyd.in/faculty/" class="text-green">READ MORE</a>
+												<a href="{% url 'Faculty' %}" class="text-green">READ MORE</a>
 												</p>
 											</p>
 										</div>
@@ -858,7 +854,7 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
 												<p><strong>Smt.Sailaja</strong> is an Assistant Professor in Entomology with 9 years of Research, Teaching and Extension experience in Indian Council of Agricultural Research Institutes and State Agricultural University.
 												<br><br>She worked with ICAR-Indian Institute of Rice Research (Directorate of Rice Research), Hyderabad in estimation of temperature thresholds and thermal constants for development and survival of rice leaf folder, rice plant hoppers (BPH &#038; WBPH) 
 												which could be used for development of phenology models for forecasting the pests.<br><br>
-												<a href="https://fcrihyd.in/faculty/" class="text-green">READ MORE</a>
+												<a href="{% url 'Faculty' %}" class="text-green">READ MORE</a>
 												</p>
 											</div>
 											</div>
@@ -876,7 +872,7 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
 												University of Agricultural Sciences, Dharwad, Karnataka where he worked on “Management of block rot of Cabbage caused by <em>Xanthomonas campestris pv. campestris”</em>. 
 												
 												<br><br>For his Doctoral degree, Jagadeesh joined in Gobind Ballabh Pant University of Agriculture and Technology where he worked on “Epidemiology and Management of downy mildew caused on Vegetable Pea caused by <em>Peronospora viciae f. sp. pisi”</em>.<br><br>
-												<a href="https://fcrihyd.in/faculty/" class="text-green">READ MORE</a>
+												<a href="{% url 'Faculty' %}" class="text-green">READ MORE</a>
 												</p>
 											</div>
 											</div>
@@ -910,7 +906,7 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
 												He specialised in wildlife science during post-graduation.
 												<br><br>He was worked on the impact of climate change on the montane specialised endemic birds of the Western Ghats, India during Ph. D programme. He has been awarded the KSCSTE 
 												Research Fellowship by the Kerala State Council for Science, Technology and Environment.<br><br>
-												<a href="https://fcrihyd.in/faculty/" class="text-green">READ MORE</a>
+												<a href="{% url 'Faculty' %}" class="text-green">READ MORE</a>
 												</p>
 											</div>
 											</div>
@@ -940,7 +936,7 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
 												in Research Experience. She completed her M.Sc. (Botany) and Ph.D. from Osmania University, Hyd. 
 												<br><br>She worked as Research Assistant in the Forest Department in Hyderabad and Research Associate in CSIR Project Dept. of Botany, Osmania University. 
 												She worked as a Lecturer in Botany in Dr. B.R. Ambedkar College, Hyderabad. <br><br>
-												<a href="https://fcrihyd.in/faculty/" class="text-green">READ MORE</a>
+												<a href="{% url 'Faculty' %}" class="text-green">READ MORE</a>
 												</p>
 												</p>
 											</div>
@@ -973,7 +969,7 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
 											<h5 class="text-green"><em>Ms. P. Nikitha</em></h5>
 											<p><strong>Ms. Perala Nikitha </strong> is an Assistant Professor of Agriculture Extension under the Department of Basic and Social Sciences at Forest College &#038; Research Institute. She has completed her M.Sc. in Agriculture Extension at Professor Jayashankar Telangana State Agricultural University (PJTSAU), Rajendranagar. <br></br>
 											Currently pursuing Ph D. in Agriculture Extension at PJTSAU, Hyderabad. She is specialized in Instructional Technology and has contributed in the development of learning style inventory for the farmers based on the suitability of extension teaching methods used by extension personnel which is of first of its kind. <br></br>
-											<a href="https://fcrihyd.in/faculty/" class="text-green">READ MORE</a>
+											<a href="{% url 'Faculty' %}" class="text-green">READ MORE</a>
 											</p>
 										</div>
 										</div>
