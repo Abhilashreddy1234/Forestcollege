@@ -1,4 +1,4 @@
-{% load sekizai_tags cms_tags %}
+{% load cms_tags menu_tags sekizai_tags %}
 {% load static %}
 
 <!DOCTYPE html>
@@ -71,9 +71,11 @@
     </script>
     <!-- Google Search Console Code -->
     <meta name="google-site-verification" content="UYNWkyHFvRsQghgwWMAZMU7T6_Y1VpBM_PGGbJReKmg">
+    {% render_block "css" %}
 </head>
 
 <body>
+  {% cms_toolbar %}
     <header class="fcriHeader fixed-top">
         <div class="container-xxl">
             <div class="row align-items-center">
@@ -441,6 +443,7 @@
         <!--<video src="https://fcrihyd.in/wp-content/themes/fcri/assets/images/FCRI_Campus.mp4" loop="" muted="" autoplay="">
         </video>-->
  <video src="https://fcrihyd.in/wp-content/themes/fcri/assets/images/FCRI_Campus_new.mp4" loop="" muted="" autoplay="">
+    
         </video>
         <div class="overlay">
         </div>
@@ -456,7 +459,8 @@
                <div class="col-12 col-md-4 homeThreeSplitSec__text hts--text01  wow fadeInUp" data-wow-delay="0.1s">
                   <h5>Believe in yourself &amp; All that you are</h5>
                   <div class="d-inline"><button type="button" class="lineBtn "><a href="{% url "vision" %}" class="butlink"><span>Vision &amp; Mission</span></a></button></div>
-               </div>
+                  
+              </div>
                <!-- <div class="col-12 col-md-4 homeThreeSplitSec__img hts--img01 wow fadeInUp" data-wow-delay="0.2s">
                </div> -->
                <div class="col-12 col-md-4 homeThreeSplitSec__img  homeThreeSplitCard02 wow fadeInUp" data-wow-delay="0.2s">
@@ -509,6 +513,9 @@
                <div class="col-12 col-md-4 homeThreeSplitSec__img hts--img03 wow fadeInUp" data-wow-delay="0.3s"></div>
             </div>
          </div>
+         {% block content %}
+      {% placeholder "content" %}
+      {% endblock content %}
       </section>
 
 
