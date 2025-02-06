@@ -23,23 +23,26 @@
         <meta name="twitter:image:src" content="https://www.fcrihyd.in/wp-content/themes/fcri/assets/images/header-logo-01.webp" size="144x144 ">
         <meta name="twitter:card" content="summary_large_image">
          <!-- OWL CAROUSEL CSS -->
+         <meta name="viewport" content="width=device-width, initial-scale=1">
+         <!-- responsible for main header nav styling carousal and images -->
+         <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">   
+         <!-- fade in out effect for nav and header -->
+         <link rel="stylesheet" href="https://www.fcrihyd.in/wp-content/themes/fcri/assets/css/stylesheet.css">
+         <!-- responsible for dropdoun items -->
+         <link href="https://www.fcrihyd.in/wp-content/themes/fcri/assets/css/responsive-styles.css" rel="stylesheet">
+               
+         
+         <script src="{% static 'js/jquery.js' %}"></script>
+         <script src="{% static 'js/slick.min.js' %}"></script>
+         <!-- responsible for slider  carousal with button option  -->
+         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
+         <!--<link rel="stylesheet" href="https://www.fcrihyd.in/wp-content/themes/fcri/assets/css/fontawesome.min.css" />-->
+         
   
-        <link rel="stylesheet" href="{% static 'css/mainpage1.css' %}">        
-        <link rel="stylesheet" href="{% static 'css/mainpage.css' %}">
-        <link rel="stylesheet" href="{% static 'css/allpages2.css' %}">
-        <link rel="stylesheet" href="{% static 'css/slickslider.css' %}">
-        <link rel="stylesheet" href="{% static 'css/slick-themes.css' %}">
-        <link rel="stylesheet" href="{% static 'css/mediaqueries.css' %}">
-        <link rel="stylesheet" href="{% static 'css/sweetalert2.css' %}">
-        <link rel="stylesheet" href="{% static 'css/bootstrap-datepicker.min.css' %}">
-        <link rel="stylesheet" href="{% static 'css/animate.min.css' %}">   
-        <link rel="stylesheet" href="{% static 'css/themify-icons.css' %}">
-        <link rel="stylesheet" href="{% static 'css/fontawoseme.min.css' %}"> 
-        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">                                           
-        <link rel="stylesheet" href="{% static 'css/all.min.css' %}">    
         
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
        
     
         <script>
@@ -379,10 +382,10 @@
     <ul class="dropdown-menu">
       <li><a class="dropdown-item" href="{% url 'Forestmuseum' %}">Forest Museum</a></li>
       <li><a class="dropdown-item" href="{% url 'Cif' %}">Central Instrumentation Facility(CIF)</a></li>
-      <li><a class="dropdown-item" href="{% url "Boardroom" %}">Boardroom</a></li>
-      <li><a class="dropdown-item" href="{% url "Auditorium" %}">Auditorium</a></li>
-      <li><a class="dropdown-item" href="{% url "Seminarhall" %}">Seminar Hall</a></li>
-      <li><a class="dropdown-item" href="{% url "Library" %}">Library</a></li>
+      <li><a class="dropdown-item" href="{% url 'Boardroom' %}">Boardroom</a></li>
+      <li><a class="dropdown-item" href="{% url 'Auditorium' %}">Auditorium</a></li>
+      <li><a class="dropdown-item" href="{% url 'Seminarhall' %}">Seminar Hall</a></li>
+      <li><a class="dropdown-item" href="{% url 'Library' %}">Library</a></li>
       <li><a class="dropdown-item" href="#">Hostel</a></li>
       <li><a class="dropdown-item" href="#">Mess/Canteen</a></li>
     </ul>
