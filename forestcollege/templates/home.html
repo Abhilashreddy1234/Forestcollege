@@ -26,8 +26,10 @@
          <meta name="viewport" content="width=device-width, initial-scale=1">
          <!-- responsible for main header nav styling carousal and images -->
          <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">   
+         <link rel="stylesheet" href="{% static 'css/stylesheet.css' %}">
+         <linnk rel="stylesheet" href="{% static 'css/slick.min.css' %}">
          <!-- fade in out effect for nav and header -->
-         <link rel="stylesheet" href="https://www.fcrihyd.in/wp-content/themes/fcri/assets/css/stylesheet.css">
+
          <!-- responsible for dropdoun items -->
          <link href="https://www.fcrihyd.in/wp-content/themes/fcri/assets/css/responsive-styles.css" rel="stylesheet">
                
@@ -36,6 +38,8 @@
          <script src="{% static 'js/slick.min.js' %}"></script>
          <!-- responsible for slider  carousal with button option  -->
          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
 
          <!--<link rel="stylesheet" href="https://www.fcrihyd.in/wp-content/themes/fcri/assets/css/fontawesome.min.css" />-->
          
@@ -567,7 +571,7 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
             <div class="box-item">
               <div class="flip-box">
 			  			  <a href="{% url 'admissions1' %}" class="flip-box-abs-link"></a>
-                <div class="flip-box-front text-center" style="background-image: url('https://fcrihyd.in/wp-content/uploads/2022/06/BSc_card-1.jpg');">
+                <div class="flip-box-front text-center" style="background-image: url('../images/department-images/naturalResource-image.jpg');">
                   <div class="inner color-white">
                     <h3 class="flip-box-header">B.Sc.</h3>
                     <p class="flip-box-label">(Hons.) Forestry</p>
@@ -576,7 +580,7 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
 
                 <div class="flip-box-back text-center" style="background-image: url('https://fcrihyd.in/wp-content/uploads/2022/06/BSc_card-1.jpg');">
                   <div class="inner color-white">
-				   <a href="{% url 'admissions1' %}" class="flip-box-abs-link"></a>
+				        <a href="{% url 'admissions1' %}" class="flip-box-abs-link"></a>
                     <h3 class="flip-box-header">B.Sc.</h3>
                     <p class="flip-box-label">(Hons.) Forestry</p>
                     <p style="color: #fff;">B.Sc. (Hons.) Forestry curriculum contains an integrated forestry syllabus in accordance with ICAR guidelines, the 1st &amp; 2nd  semesters comprises of basic and fundamental courses.</p>
@@ -737,7 +741,7 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
   
         <div class="row g-0 align-items-center">
 			<div class="col-lg-4  col-md-5 col-xl-3 col-8 mx-auto homeDean__Img ">
-				<img decoding="async"  src="https://fcrihyd.in/wp-content/themes/fcri/assets/images/h-dean.jpg" class="img-fluid">
+				<img decoding="async"  src="{% static 'images/professor-images/fcri-Dean.png' %}" class="img-fluid">
 			  </div>
           <div class="col-lg-8 col-md-7 homeDean__Text wow fadeInUp" data-wow-delay="0.1s">
             <h4 class="">Smt Priyankaa Varghese, IFS</h4>
@@ -1302,7 +1306,7 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
                         <div class="carousel-item active">
                            <h3 class="homeGoverning--Title">Hon&#8217;ble Chief Minister of Telangana</h3>
                            <div class="homeGoverning--Icon">
-                              <img decoding="async" src="https://fcrihyd.in/wp-content/themes/fcri/assets/images/cm.png" class="img-fluid">
+                              <img decoding="async" src="{% static 'images/college-images/kcr.webp' %}" class="img-fluid">
                            </div>
                            <div class="homeGoverning--Text">
                               <h5>Sri K. Chandrashekar Rao,​ </h5>

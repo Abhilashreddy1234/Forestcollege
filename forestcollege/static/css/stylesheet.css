@@ -630,13 +630,13 @@
     background-repeat: no-repeat;
   }
   .homeThreeSplitSec__img.hts--img01:before {
-    background-image: url(../images/homesplit-01.webp);
+    background-image: url(../images/college-images/vision-1image.jpg);
   }
   .homeThreeSplitSec__img.hts--img02:before {
-    background-image: url(../images/fcri_plantation.webp);
+    background-image: url(../images/college-images/Forest_Museum_3.jpg);
   }
   .homeThreeSplitSec__img.hts--img03:before {
-    background-image: url(../images/students.webp);
+    background-image: url(../images/college-images/vision-image5.webp);
   }
   .homeThreeSplitCard02:before,
   .homeThreeSplitCard04:before,
@@ -672,46 +672,46 @@
     background-repeat: no-repeat;
   }
   .homeThreeSplitCard02 .carousel-inner > .carousel-item:nth-child(1):before {
-    background-image: url(../images/fcrits_launch1.webp);
+    background-image: url(../images/college-images/vision-image6.webp);
   }
   .homeThreeSplitCard02 .carousel-inner > .carousel-item:nth-child(2):before {
-    background-image: url(../images/fcrits_launch2.webp);
+    background-image: url(../images/college-imagesForest_Museum_image1.jpg);
   }
   .homeThreeSplitCard02 .carousel-inner > .carousel-item:nth-child(3):before {
-    background-image: url(../images/fcrits_launch3.webp);
+    background-image: url(../images/college-images/vision2-image.jpg);
   }
   .homeThreeSplitCard02 .carousel-inner > .carousel-item:nth-child(4):before {
-    background-image: url(../images/fcrits_launch4.webp);
+    background-image: url(../images/department-images/Auditorium_4.jpg);
   }
   .homeThreeSplitCard02 .carousel-inner > .carousel-item:nth-child(5):before {
-    background-image: url(../images/kraju.webp);
+    background-image: url(../images/department-images/Boardroom_2g.jpg);
   }
   .homeThreeSplitCard02 .carousel-inner>.carousel-item:nth-child(6):before {
-    background-image: url(../images/fcri_new1_2022.webp);
+    background-image: url(../images/department-images/Seminar_Hall_1.jpg);
   }
   .homeThreeSplitCard02 .carousel-inner>.carousel-item:nth-child(7):before {
-    background-image: url(../images/fcri_new2_2022.webp);
+    background-image: url(../);
   }
   .homeThreeSplitCard02 .carousel-inner>.carousel-item:nth-child(8):before {
-    background-image: url(../images/image-1.webp);
+    background-image: url(../);
   }
   .homeThreeSplitCard02 .carousel-inner>.carousel-item:nth-child(9):before {
-    background-image: url(../images/image-3.webp);
+    background-image: url(../);
   }
   
   
   .homeThreeSplitCard04 .carousel-inner>.carousel-item:nth-child(1):before {
-    background-image: url(../images/fcri-udaan4.webp);
+    background-image: url(..);
   }
   .homeThreeSplitCard04 .carousel-inner>.carousel-item:nth-child(2):before {
-    background-image: url(../images/fcri-udaan8.webp);
+    background-image: url(..);
   }
   .homeThreeSplitCard04 .carousel-inner>.carousel-item:nth-child(3):before {
-    background-image: url(../images/image-4.webp);
+    background-image: url(../);
   }
   
   .homeThreeSplitCard04 .carousel-inner>.carousel-item:nth-child(4):before {
-    background-image: url(../images/image-6.webp);
+    background-image: url(..);
   }
   
   .homeThreeSplitCard04 .carousel-inner>.carousel-item:nth-child(5):before {
@@ -970,7 +970,7 @@
     right: 0;
     width: 100%;
     height: 100%;
-    background-image: url(../images/abtUniversity.webp);
+    background-image: url(../images/college-images/abtUniversity.webp);
     background-size: cover;
     /* background-position-y: 20%; */
     z-index: -1;
@@ -1025,7 +1025,7 @@
     right: 0;
     width: 100%;
     height: 100%;
-    background-image: url(../images/course_bg.webp);
+    background-image: url(../images/college-images/course_bgbackground.webp);
     background-size: cover;
     background-position-y: 20%;
     z-index: -1;
@@ -1186,11 +1186,22 @@
     padding: 4px 0;
     text-transform: capitalize;
   }
+  
+
+  /* External CSS for background image */
+.flip-box-front {
+    background-image: url(../images/department-images/PHd_card.webp);
+    
+}
+
+
+
+
   /*-------------------------------------homeflipCardSec  end--------------------------*/
   /*-------------------------------------homeStudentlifeSec  start--------------------------*/
   .homeStudentlifeSec {
     padding: 100px 0;
-    background-image: url(../images/graduates_bg.webp);
+    background-image: url(../images/icon-images/graduates_bg.webp);
     background-size: cover;
     background-attachment: fixed;
     position: relative;
@@ -1341,7 +1352,7 @@
   /*-------------------------------------homeDeanSec  start--------------------------*/
   .homeDeanSec {
     padding: 50px 0;
-    background-image: url(../images/dean_bg.webp);
+    background-image: url(../images/professor-images/dean_bg.webp);
     background-size: cover;
     background-position: bottom;
     background-repeat: no-repeat;
@@ -1434,7 +1445,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-image: url(../images/department_bg.webp);
+    background-image: url(../images/professor-images/department_bg.webp);
     width: 100%;
     height: 100%;
     background-size: cover;
@@ -1528,7 +1539,7 @@
   /*-------------------------------------homeGoverningSec  Start--------------------------*/
   .homeGoverningSec {
     padding: 50px 0 100px;
-    background-image: url(../images/governing_bg.webp);
+    background-image: url(../images/college-images/governing_bg.webp);
     background-size: cover;
     background-attachment: fixed;
     position: relative;
@@ -1582,6 +1593,14 @@
   .column_infra {
     padding-bottom: 40px;
     text-align: justify;
+  }
+  .homeGoverning--Text h5,h6,p {
+    font-size: 18px;
+    color: #fff;
+    opacity: 0.75;
+    font-weight: 400;
+
+
   }
   /*-------------------------------------homeGoverningSec  end--------------------------*/
   /*------------------------------------- homeStdntReviewsSec  start--------------------------*/
@@ -3312,7 +3331,7 @@
     bottom: 0;
     left: 15px;
     right: 15px;
-    background-image: url(../images/department_bg.webp);
+    background-image: url(../images/professor-images/department_bg.webp);
     /* width: 100%;
     height: 100%; */
     background-size: cover;
@@ -3480,7 +3499,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-image: url(../images/department_bg.webp);
+    background-image: url(../images/professor-images/department_bg.webp);
     width: 100%;
     height: 100%;
     background-size: cover;
