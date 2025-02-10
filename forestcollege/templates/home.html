@@ -24,10 +24,14 @@
         <meta name="twitter:card" content="summary_large_image">
          <!-- OWL CAROUSEL CSS -->
          <meta name="viewport" content="width=device-width, initial-scale=1">
+         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
          <!-- responsible for main header nav styling carousal and images -->
          <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">   
          <link rel="stylesheet" href="{% static 'css/stylesheet.css' %}">
-         <linnk rel="stylesheet" href="{% static 'css/slick.min.css' %}">
+         <link rel="stylesheet" href="{% static 'css/slick.min.css' %}">
+
          <!-- fade in out effect for nav and header -->
 
          <!-- responsible for dropdoun items -->
@@ -571,14 +575,14 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
             <div class="box-item">
               <div class="flip-box">
 			  			  <a href="{% url 'admissions1' %}" class="flip-box-abs-link"></a>
-                <div class="flip-box-front text-center" style="background-image: url('../images/department-images/naturalResource-image.jpg');">
+                <div class="flip-box-front text-center" style="background-image: url('/static/images/department-images/naturalResource-image.jpg');">
                   <div class="inner color-white">
                     <h3 class="flip-box-header">B.Sc.</h3>
                     <p class="flip-box-label">(Hons.) Forestry</p>
                   </div>
                 </div>
 
-                <div class="flip-box-back text-center" style="background-image: url('https://fcrihyd.in/wp-content/uploads/2022/06/BSc_card-1.jpg');">
+                <div class="flip-box-back text-center" style="background-image: url('/static/images/department-images/PHd_card.webp');">
                   <div class="inner color-white">
 				        <a href="{% url 'admissions1' %}" class="flip-box-abs-link"></a>
                     <h3 class="flip-box-header">B.Sc.</h3>
@@ -596,14 +600,14 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
             <div class="box-item">
               <div class="flip-box">
 			  			  <a href="{% url 'admissions1' %}" class="flip-box-abs-link"></a>
-                <div class="flip-box-front text-center" style="background-image: url('https://fcrihyd.in/wp-content/uploads/2022/06/MSc_card.jpg');">
+                <div class="flip-box-front text-center" style="background-image: url('/static/images/department-images/PHd_card.webp');">
                   <div class="inner color-white">
                     <h3 class="flip-box-header">M.Sc.</h3>
                     <p class="flip-box-label">Forestry</p>
                   </div>
                 </div>
 
-                <div class="flip-box-back text-center" style="background-image: url('https://fcrihyd.in/wp-content/uploads/2022/06/MSc_card.jpg');">
+                <div class="flip-box-back text-center" style="background-image: url('/static/images/department-images/PHd_card.webp');">
                   <div class="inner color-white">
 				  <a href="{% url 'admissions1' %}" class="flip-box-abs-link"></a>
                     <h3 class="flip-box-header">M.Sc.</h3>
@@ -621,14 +625,14 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
             <div class="box-item">
               <div class="flip-box">
 			  <a href="https://fcrihyd.in/admissions/phd-forestry#phd" class="flip-box-abs-link"></a>
-                <div class="flip-box-front text-center" style="background-image: url('https://fcrihyd.in/wp-content/uploads/2022/06/PHd_card.jpg');">
+                <div class="flip-box-front text-center" style="background-image: url('/static/images/department-images/PHd_card.webp');">
                   <div class="inner color-white">
                     <h3 class="flip-box-header">Ph.D.</h3>
                     <p class="flip-box-label">Forestry</p>
                   </div>
                 </div>
 
-                <div class="flip-box-back text-center" style="background-image: url('https://fcrihyd.in/wp-content/uploads/2022/06/PHd_card.jpg');">
+                <div class="flip-box-back text-center" style="background-image: url('/static/images/department-images/PHd_card.webp');">
                   <div class="inner color-white">
 				   <a href="https://fcrihyd.in/admissions/phd-forestry#phd" class="flip-box-abs-link"></a>
                     <h3 class="flip-box-header">Ph.D.</h3>
@@ -671,7 +675,7 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
   <div class="carousel-inner">
     <div class="carousel-item active">
       <div class="homeStudentlife--Icon">
-        <img decoding="async" src="https://fcrihyd.in/wp-content/uploads/2022/05/student_life1.png" class="img-fluid">
+        <img decoding="async" src="{% static 'images/icon-images/student_life2-image1.webp' %}" class="img-fluid">
       </div>
       <div class="homeStudentlife--Text">
         <h5>Learning Resource Centre</h5>
@@ -681,7 +685,7 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
     </div>
     <div class="carousel-item">
       <div class="homeStudentlife--Icon">
-        <img decoding="async" src="https://fcrihyd.in/wp-content/uploads/2022/05/student_life2.png" class="img-fluid">
+        <img decoding="async" src="{% static 'images/icon-images/student_life3-image2.webp' %}" class="img-fluid">
       </div>
       <div class="homeStudentlife--Text">
         <h5>Study Tours</h5>
@@ -692,7 +696,7 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
     <div class="carousel-item">
       <div class="homeStudentlife--Icon">
 	  
-        <img decoding="async" src="https://fcrihyd.in/wp-content/uploads/2022/05/student_life3.png" class="img-fluid">
+        <img decoding="async" src="{% static 'images/icon-images/student_life4-image3.webp' %}" class="img-fluid">
       </div>
       <div class="homeStudentlife--Text">
         <h5>Student Ready Program</h5>
@@ -703,7 +707,7 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
 	<div class="carousel-item">
       <div class="homeStudentlife--Icon">
 	  
-        <img decoding="async" src="https://fcrihyd.in/wp-content/uploads/2022/05/student_life4.png" class="img-fluid">
+        <img decoding="async" src="{% static '' %}" class="img-fluid">
       </div>
       <div class="homeStudentlife--Text">
         <h5>Field Visits</h5>
@@ -1317,9 +1321,9 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
                            </div>
                         </div>
                         <div class="carousel-item"> 
-<h3 class="homeGoverning--Title">Hon’ble Minister For EFS &amp; T</h3>
+<h3 class="homeGoverning--Title">Dean FCRI &amp; T</h3>
                            <div class="homeGoverning--Icon">
-                              <img decoding="async" src="https://fcrihyd.in/wp-content/themes/fcri/assets/images/fm.png" class="img-fluid">
+                              <img decoding="async" src="{% static 'images/professor-images/fcri-Dean.png' %}" class="img-fluid">
                            </div>
                            <div class="homeGoverning--Text">
                               <h5>Sri Allola Indra Karan Reddy, </h5>
@@ -1395,7 +1399,7 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
 			<div class="col-12 col-md-12 col-xl-9 mx-auto">
 				<div class="row">
 					<div class="col-12 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-						<figure class="homeStdRviewsCard"><img decoding="async" src="https://fcrihyd.in/wp-content/uploads/2022/06/Chutturi_Mahesh.jpg" alt="student_1">
+						<figure class="homeStdRviewsCard"><img decoding="async" src="{% static 'images/student-images/student-image5.jpg' %}" alt="student_1">
 							<figcaption>
 							  <h3 class="title1">FCRI provides you a curriculum that not just bounds to four walls, but makes you much more aware of real-time situations in a practical approach.</h3>
 							  <h3 class="title2">Chutturi Mahesh</h3>
@@ -1403,7 +1407,7 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
 						  </figure>
 					</div>
 					<div class="col-12 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.2s">
-						<figure class="homeStdRviewsCard"><img decoding="async" src="https://fcrihyd.in/wp-content/uploads/2022/06/Munagala_Pavithra.jpg" alt="student_2">
+						<figure class="homeStdRviewsCard"><img decoding="async" src="{% static 'images/student-images/student-image1.webp' %}" alt="student_2">
 							<figcaption>
 							  <h3 class="title1">It gave me a wider platform to become who I am now. This college has moulded me into a different version of myself and has given me a strong foundation in both curriculum and extracurricular activities.</h3>
 							  <h3 class="title2">Munagala Pavithra</h3>
@@ -1411,7 +1415,7 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
 						  </figure>
 					</div>
 					<div class="col-12 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-						<figure class="homeStdRviewsCard"><img decoding="async" src="https://fcrihyd.in/wp-content/uploads/2022/06/student_3.jpg" alt="student_3">
+						<figure class="homeStdRviewsCard"><img decoding="async" src="{% static 'images/student-images/fcri-image2.webp' %}" alt="student_3">
 							<figcaption>
 							  <h3 class="title1">The primary objective of our learning resource centre is to provide information and knowledge to its students and staff.</h3>
 							  <h3 class="title2">Sravan Surya</h3>

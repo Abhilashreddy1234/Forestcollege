@@ -1,12 +1,13 @@
-{% load sekizai_tags cms_tags %}
+{% load cms_tags menu_tags sekizai_tags %}
 {% load static %}
+
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <!-- META TITLE AND DESCRIPTION  -->
-        <title>FCRI  </title>
+        <title>Home page</title>
             <meta name="description" content="FCRI is the best forestry college in Telangana offering BSc and MSc degree programs. Discover the best education institute for forestry studies.">    <meta charset="UTF-8">
         <link rel="icon" href="#" type="image/png" sizes="16x16">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,26 +16,46 @@
         <meta property="og:type" content="website">
         <meta property="og:description" content=" FCRI is the best forestry college in Telangana offering BSc and MSc degree programs. Discover the best education institute for forestry studies.">
         <meta property="og:url" content="https://www.fcrihyd.in/">
-        <meta property="og:image" content="https://www.fcrihyd.in/wp-content/themes/fcri/assets/images/header-logo-01.webp">
+        <meta property="og:image" content="#">
 
         <meta name="twitter:title" content="FCRI Hyderabad | Best Forestry College in Telangana ">
         <meta name="twiter:url" content="https://www.fcrihyd.in/">
         <meta name="twitter:description" content="FCRI is the best forestry college in Telangana offering BSc and MSc degree programs. Discover the best education institute for forestry studies. ">
         <meta name="twitter:image:src" content="https://www.fcrihyd.in/wp-content/themes/fcri/assets/images/header-logo-01.webp" size="144x144 ">
         <meta name="twitter:card" content="summary_large_image">
+         <!-- OWL CAROUSEL CSS -->
+         <meta name="viewport" content="width=device-width, initial-scale=1">
+         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+         <!-- responsible for main header nav styling carousal and images -->
+         <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">   
+         <link rel="stylesheet" href="{% static 'css/stylesheet.css' %}">
+         <link rel="stylesheet" href="{% static 'css/slick.min.css' %}">
+         <link rel="stylesheet" href="{% static 'css/main.css' %}">
+         <link rel="stylesheet" href="{% static 'css/main1.css'  %}">
+         <!-- fade in out effect for nav and header -->
+
+         <!-- responsible for dropdoun items -->
+         <link href="https://www.fcrihyd.in/wp-content/themes/fcri/assets/css/responsive-styles.css" rel="stylesheet">
+               
+         
+         <script src="{% static 'js/jquery.js' %}"></script>
+         <script src="{% static 'js/slick.min.js' %}"></script>
+         <!-- responsible for slider  carousal with button option  -->
+         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
 
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+         <!--<link rel="stylesheet" href="https://www.fcrihyd.in/wp-content/themes/fcri/assets/css/fontawesome.min.css" />-->
+         
+  
+        
+
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+       
     
-    <!-- multiselect dropdown css/js -->
-    
-    <link rel="stylesheet" href="{% static 'css/main.css' %}">
-    <link rel="stylesheet" href="{% static 'css/main1.css' %}">
-    
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DC94F6YNNM"></script>
-    <script>
+        <script>
         window.dataLayer = window.dataLayer || [];
 
         function gtag() {
@@ -46,9 +67,11 @@
     </script>
     <!-- Google Search Console Code -->
     <meta name="google-site-verification" content="UYNWkyHFvRsQghgwWMAZMU7T6_Y1VpBM_PGGbJReKmg">
+    {% render_block "css" %}
 </head>
 
 <body>
+  {% cms_toolbar %}
     <header class="fcriHeader fixed-top">
         <div class="container-xxl">
             <div class="row align-items-center">
@@ -68,11 +91,11 @@
                         <button type="button" onclick="window.location.href='https://www.fcrihyd.in/downloads'" class="btn btn-sm btn-outline-light me-2" title="Downloads"><i class="fa fa-download" aria-hidden="true"></i></button>
                         <button type="button" onclick="window.location.href='https://www.fcrihyd.in/contact'" class="btn btn-sm btn-outline-light" title="Contact Us"><i class="fa fa-phone" aria-hidden="true"></i></button>
                         <div class="fcriHeader__social">
-                            <a class="fhSocial--link" href="https://www.facebook.com/FCRITS" target="_blank"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
-                            <a class="fhSocial--link" href="https://twitter.com/FCRIHyderabad" target="_blank"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
-                            <a class="fhSocial--link" href="https://www.youtube.com/channel/UCJzKbOhDFSIU71DUrMl3DMQ" target="_blank"><i class="fa-brands fa-youtube-play" aria-hidden="true"></i></a>
-                            <a class="fhSocial--link" href="https://www.instagram.com/fcri_hyd/" target="_blank"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
-                            <a class="fhSocial--link" href="https://www.linkedin.com/company/fcrits/" target="_blank"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+                            <a class="fhSocial--link" href="#" target="_blank"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+                            <a class="fhSocial--link" href="#" target="_blank"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+                            <a class="fhSocial--link" href="#" target="_blank"><i class="fa-brands fa-youtube-play" aria-hidden="true"></i></a>
+                            <a class="fhSocial--link" href="#" target="_blank"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                            <a class="fhSocial--link" href="#" target="_blank"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
                         </div>
                     </div>
                     <!-- <ul class="nav fcriNavIcons__ul justify-content-lg-end">
@@ -150,7 +173,7 @@
                                     <a class="dropdown-item" href="#">Course Structure</a>
                                     <ul class="submenu dropdown-menu">
                                         <li>
-                                            <a class="dropdown-item" href="{% static 'doc\8.-UG-regulations-1.pdf' %}" target="_blank">UG</a>
+                                            <a class="dropdown-item" href="" target="_blank">UG</a>
                                         </li>
                                         <li>
                                             <a class="dropdown-item" href="{% static 'doc\8.-UG-regulations-1.pdf' %}" target="_blank">PG</a>
@@ -166,11 +189,7 @@
                                             <a class="dropdown-item" href="{% url 'Departments' %}">List of Departments</a>
                                         </li>
                                         <li>
-                                            <a class="dropdown-item" href="{% url 'Faculty' %}">Department Head</a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item" href="{% url "Faculty" %}">Faculty</a>
-                                        </li>
+                                            <a class="dropdown-item" href="#">Department Head</a>
                                         <li>
                                             <a class="dropdown-item" href="{% url "laboratory" %}">Laboratories</a>
                                         </li>
@@ -281,7 +300,7 @@
         </ul>
       </li>
       <li>
-        <a class="dropdown-item" href="{% static 'doc\8.-UG-regulations-1.pdf' %}">Prospectus</a>
+        <a class="dropdown-item" href="#">Prospectus</a>
         <ul class="submenu dropdown-menu">
           <li>
             <a class="dropdown-item" href="#">UG</a>
@@ -373,19 +392,21 @@
     <ul class="dropdown-menu">
       <li><a class="dropdown-item" href="{% url 'Forestmuseum' %}">Forest Museum</a></li>
       <li><a class="dropdown-item" href="{% url 'Cif' %}">Central Instrumentation Facility(CIF)</a></li>
-      <li><a class="dropdown-item" href="{% url "Boardroom" %}">Boardroom</a></li>
-      <li><a class="dropdown-item" href="{% url "Auditorium" %}">Auditorium</a></li>
-      <li><a class="dropdown-item" href="{% url "Seminarhall" %}">Seminar Hall</a></li>
-      <li><a class="dropdown-item" href="{% url "Library" %}">Library</a></li>
+      <li><a class="dropdown-item" href="{% url 'Boardroom' %}">Boardroom</a></li>
+      <li><a class="dropdown-item" href="{% url 'Auditorium' %}">Auditorium</a></li>
+      <li><a class="dropdown-item" href="{% url 'Seminarhall' %}">Seminar Hall</a></li>
+      <li><a class="dropdown-item" href="{% url 'Library' %}">Library</a></li>
+      <li><a class="dropdown-item" href="#">Hostel</a></li>
+      <li><a class="dropdown-item" href="#">Mess/Canteen</a></li>
     </ul>
   </li>
-  <li class="nav-item dropdoun">
-    <a class="nav-link dropdoun-item" href="#">Services</a></li>
-    <ul class="dropdoun-menu">
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">sERVICESS</a>
+    <ul class="dropdown-menu">
         <li><a class="dropdoun-item" href="{% url 'Fcri' %}">FCRI Careews</a></li>
         <li><a class="dropdoun-item" href="{% url 'Fcri' %}">FCRI Study circle</a></li>
         <li><a class="dropdoun-item" href="{% url 'Cfi2' %}">CFI</a></li>
-        <li><a class="dropdoun-item" href="{% url 'laboratory' %}">Laborator</a></li>
+        <li><a class="dropdoun-item" href="{% url 'laboratory' %}"Laborator</li>
         <li><a class="dropdoun-item" href="{% url 'Nursery' %}">Nursery</a></li>
         <li><a calss="dropdoun-item" href="{% url 'Workshop' %}">Workshop</a></li>
     </ul>
@@ -396,7 +417,7 @@
       <li><a class="dropdown-item" href="{% url 'ResearchProjects' %}">Research Projects</a></li>
       <li><a class="dropdown-item" href="{% url 'Mou' %}">MoU’s</a></li>
       <li><a class="dropdown-item" href="{% url 'Publications' %}">Publications</a></li>
-      <li><a class="dropdown-item" href="{% url 'Awards' %}">Awards and Recognition</a></li>
+      <li><a class="dropdown-item" href="{% url 'Awards' %}">Awards  and Recognitio</a></li>
     </ul>
   </li>
   
@@ -404,5 +425,7 @@
                 
     </nav>
 </header>
+
+   
 </body>
 </html>
