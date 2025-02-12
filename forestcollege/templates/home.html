@@ -79,8 +79,8 @@
             <div class="row align-items-center">
                 <div class="col-md-12 col-lg mb-3 mb-lg-0">
                     <div class="fcriHeaderLogo">
-                        <div class="fcriHeaderLogo--img01"><a href="https://www.fcrihyd.in"><img src="https://www.fcrihyd.in/wp-content/themes/fcri/assets/images/header-logo-01.webp" class="img-fluid" alt="logo"></a></div>
-                        <div class="fcriHeaderLogo--img02"><a href="https://www.fcrihyd.in"><img src="https://www.fcrihyd.in/wp-content/themes/fcri/assets/images/header-logo-03.webp" class="img-fluid" alt="logo"></a></div>
+                        <div class="fcriHeaderLogo--img01"><a href="{% url 'home' %}"><img src="{% static 'images/logo-images/forestlogo-01.webp' %}" class="img-fluid" alt="logo"></a></div>
+                        <div class="fcriHeaderLogo--img02"><a href="{% url 'home' %}"><img src="{% static 'images/logo-images/header-logo-03-image.webp' %}" class="img-fluid" alt="logo"></a></div>
                     </div>
 
                     <!-- <img src="images/fcri-logo-light.webp" class="img-fluid"/> -->
@@ -1534,8 +1534,8 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
                     <li class="nav-item">
                         <a class="nav-link phone-no text-cursor" href="tel:+918454211930">Call us</a><br>
                         <p style="font-size:12px;line-height: 0em;">
-                            <a href="tel:+917702187843" class="text-white">+91 7702187843. ,</a>
-                            <a href="tel:+917702187843" class="text-white">+91 7702187843.</a>
+                            <a href="#" class="text-white">+91 7702187842. ,</a>
+                            <a href="#" class="text-white">+91 7702187845.</a>
                         </p>
                     </li>
                 </ul>
@@ -1554,71 +1554,42 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
                     <div class="result_msg"></div>
                 </div>
             </div>
-            <div class="col-lg-7 col-md-12 ">
-                <div class="row">
-                                                                                <div class="col-md-4 col-sm-6">
-                                        <h5>About</h5>
-                                        <ul>
-                                                                                            <li class="nav-item">
-                                                                                                            <a class="nav-link text-cursor" href="#">Vision and Mission                                                        </a>
-                                                                                                    </li>
-                                                                                            <li class="nav-item">
-                                                                                                            <a class="nav-link text-cursor" href="#">Governing Board                                                        </a>
-                                                                                                    </li>
-                                                                                            <li class="nav-item">
-                                                                                                            <a class="nav-link text-cursor" href="#">Academic Council                                                        </a>
-                                                                                                    </li>
-                                                                                            <li class="nav-item">
-                                                                                                            <a class="nav-link text-cursor" href="#">Organogram                                                        </a>
-                                                                                                    </li>
-                                                                                    </ul>
-                                    </div>
-                                                                    <div class="col-md-4 col-sm-6">
-                                        <h5>Admissions</h5>
-                                        <ul>
-                                                                                            <li class="nav-item">
-                                                                                                            <a class="nav-link text-cursor" href="#">BSC Hons Forestry                                                        </a>
-                                                                                                    </li>
-                                                                                            <li class="nav-item">
-                                                                                                            <a class="nav-link text-cursor" href="#">MSC Forestry                                                        </a>
-                                                                                                    </li>
-                                                                                            <li class="nav-item">
-                                                                                                            <a class="nav-link text-cursor" href="#">PhD Forestry                                                        </a>
-                                                                                                    </li>
-                                                                                            <li class="nav-item">
-                                                                                                            <a class="nav-link text-cursor" href="#" target="_blank">Admission Process - UG </a>
-                                                                                                    </li>
-                                                                                            <li class="nav-item">
-                                                                                                            <a class="nav-link text-cursor" href="#" target="_blank">Admission Process - PG </a>
-                                                                                                    </li>
-                                                                                            <li class="nav-item">
-                                                                                                            <a class="nav-link text-cursor" hrEF="#">FAQ’s                                                        </a>
-                                                                                                    </li>
-                                                                                    </ul>
-                                    </div>
-                                                                    <div class="col-md-4 col-sm-6">
-                                        <h5>Academics</h5>
-                                        <ul>
-                                                                                            <li class="nav-item">
-                                                                                                            <a class="nav-link text-cursor" href="#">List of Departments                                                        </a>
-                                                                                                    </li>
-                                                                                            <li class="nav-item">
-                                                                                                            <a class="nav-link text-cursor" href="#">Faculty                                                        </a>
-                                                                                                    </li>
-                                                                                            <li class="nav-item">
-                                                                                                            <a class="nav-link text-cursor" href="#">Laboratories                                                        </a>
-                                                                                                    </li>
-                                                                                            <li class="nav-item">
-                                                                                                            <a class="nav-link text-cursor" href="#" target="_blank">Rules &amp; Regulation - UG </a>
-                                                                                                    </li>
-                                                                                            <li class="nav-item">
-                                                                                                            <a class="nav-link text-cursor" href="#" target="_blank">Rules &amp; Regulation - PG </a>
-                                                                                                    </li>
-                                                                                    </ul>
-                                    </div>
-                                
-                </div>
-                <div class="row">
+            <div class="col-lg-7 col-md-12">
+              <div class="row">
+                  <div class="col-md-4 col-sm-6">
+                      <h5>About</h5>
+                      <ul class="list-unstyled">
+                          <li><a class="nav-link text-cursor" href="#">Vision and Mission</a></li>
+                          <li><a class="nav-link text-cursor" href="#">Governing Board</a></li>
+                          <li><a class="nav-link text-cursor" href="#">Academic Council</a></li>
+                          <li><a class="nav-link text-cursor" href="#">Organogram</a></li>
+                      </ul>
+                  </div>
+                  <div class="col-md-4 col-sm-6">
+                      <h5>Admissions</h5>
+                      <ul class="list-unstyled">
+                          <li><a class="nav-link text-cursor" href="#">BSC Hons Forestry</a></li>
+                          <li><a class="nav-link text-cursor" href="#">MSC Forestry</a></li>
+                          <li><a class="nav-link text-cursor" href="#">PhD Forestry</a></li>
+                          <li><a class="nav-link text-cursor" href="#" target="_blank">Admission Process - UG</a></li>
+                          <li><a class="nav-link text-cursor" href="#" target="_blank">Admission Process - PG</a></li>
+                          <li><a class="nav-link text-cursor" href="#">FAQ’s</a></li>
+                      </ul>
+                  </div>
+                  <div class="col-md-4 col-sm-6">
+                      <h5>Academics</h5>
+                      <ul class="list-unstyled">
+                          <li><a class="nav-link text-cursor" href="#">List of Departments</a></li>
+                          <li><a class="nav-link text-cursor" href="#">Faculty</a></li>
+                          <li><a class="nav-link text-cursor" href="#">Laboratories</a></li>
+                          <li><a class="nav-link text-cursor" href="#" target="_blank">Rules &amp; Regulation - UG</a></li>
+                          <li><a class="nav-link text-cursor" href="#" target="_blank">Rules &amp; Regulation - PG</a></li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+          
+                            <div class="row">
                     <div class="col-12 text-lg-end pamtenFooterLogo">
                         <a href="#" target="_blank">
                             <img src='#' class="img-fluid" alt="pamten-logo"></a>
@@ -1814,25 +1785,7 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
                                     );
             var trafficScript = document.createElement('script'); trafficScript.src = 'https://img1.wsimg.com/signals/js/clients/scc-c2/scc-c2.min.js'; window.document.head.appendChild(trafficScript);</script>
 		<script>window.addEventListener('click', function (elem) { var _elem$target, _elem$target$dataset, _window, _window$_trfq; return (elem === null || elem === void 0 ? void 0 : (_elem$target = elem.target) === null || _elem$target === void 0 ? void 0 : (_elem$target$dataset = _elem$target.dataset) === null || _elem$target$dataset === void 0 ? void 0 : _elem$target$dataset.eid) && ((_window = window) === null || _window === void 0 ? void 0 : (_window$_trfq = _window._trfq) === null || _window$_trfq === void 0 ? void 0 : _window$_trfq.push(["cmdLogEvent", "click", elem.target.dataset.eid]));});</script>
-		<script src='https://img1.wsimg.com/traffic-assets/js/tccl-tti.min.js' onload="window.tti.calculateTTI()"></script>
-		<script src="https://www.fcrihyd.in/wp-content/themes/fcri/assets/js/jquery.form.min.js"></script>
-<script src="https://www.fcrihyd.in/wp-content/themes/fcri/assets/js/jquery.validate.min.js"></script>
-<script src="https://www.fcrihyd.in/wp-content/themes/fcri/assets/js/validatecontact.js"></script>
-<link rel='stylesheet' id='nag-photobox-css-css' href='https://www.fcrihyd.in/wp-content/plugins/new-album-gallery/assets/lightbox/photobox/photobox.css?ver=5.9.3' media='all'>
-<!--<link rel='stylesheet' id='nag-bootstrap-css-css'  href='https://www.fcrihyd.in/wp-content/plugins/new-album-gallery/assets/css/bootstrap-front.css?ver=5.9.3' media='all' />-->
-<link rel='stylesheet' id='nag-animate-css-css' href='https://www.fcrihyd.in/wp-content/plugins/new-album-gallery/assets/css/awl-animate.css?ver=5.9.3' media='all'>
-<link rel='stylesheet' id='nag-hover-stack-style-css-css' href='https://www.fcrihyd.in/wp-content/plugins/new-album-gallery/assets/css/awl-hover-stack-style.css?ver=5.9.3' media='all'>
-<link rel='stylesheet' id='nag-hover-overlay-effects-css-css' href='https://www.fcrihyd.in/wp-content/plugins/new-album-gallery/assets/css/awl-hover-overlay-effects.css?ver=5.9.3' media='all'>
-<link rel='stylesheet' id='nag-hover-overlay-effects-style-css-css' href='https://www.fcrihyd.in/wp-content/plugins/new-album-gallery/assets/css/awl-hover-overlay-effects-style.css?ver=5.9.3' media='all'>
-<script src='https://www.fcrihyd.in/wp-content/plugins/new-album-gallery/assets/js/isotope.pkgd.js?ver=5.9.3' id='nag-isotope-js-js'></script>
-<script src='https://www.fcrihyd.in/wp-content/plugins/new-album-gallery/assets/js/imagesloaded.pkgd.js?ver=5.9.3' id='nag-imagesloaded-js-js'></script>
-<script src='https://www.fcrihyd.in/wp-content/plugins/new-album-gallery/assets/lightbox/photobox/jquery.photobox.js?ver=2.2.1' id='nag-photobox-js-js'></script>
-<!-- OWL CAROSEL SCRIPT -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha256-pTxD+DSzIwmwhOqTFN+DB+nHjO4iAsbgfyFq5K5bcE0=" crossorigin="anonymous"></script>
-
-<link rel="stylesheet" type="text/css" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		
 <script>
     $(function() {
         $('#DegreeYOP').datepicker({
