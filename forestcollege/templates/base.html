@@ -1,7 +1,6 @@
 {% load cms_tags menu_tags sekizai_tags %}
 {% load static %}
 
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,27 +24,30 @@
         <meta name="twitter:card" content="summary_large_image">
          <!-- OWL CAROUSEL CSS -->
          <meta name="viewport" content="width=device-width, initial-scale=1">
-         
+         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
          <!-- responsible for main header nav styling carousal and images -->
          <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">   
          <link rel="stylesheet" href="{% static 'css/stylesheet.css' %}">
          <link rel="stylesheet" href="{% static 'css/slick.min.css' %}">
-         <link rel="stylesheet" href="{% static 'css/main.css' %}">
-         <link rel="stylesheet" href="{% static 'css/main1.css'  %}">
+         <link rel="stylesheet" href="{% static 'css/main1.css' %}">
+         <link rel="stylesheet" href="{% static 'css/responsive-style.css' %}">
+         <link rel="stylesheet" href="{% static 'css/chat.css' %}">
          <!-- fade in out effect for nav and header -->
 
          <!-- responsible for dropdoun items -->
-         <link href="https://www.fcrihyd.in/wp-content/themes/fcri/assets/css/responsive-styles.css" rel="stylesheet">
+         
                
          
          <script src="{% static 'js/jquery.js' %}"></script>
          <script src="{% static 'js/slick.min.js' %}"></script>
+         <script src="{% static 'js/chat.js' %}"></script>
+         <script src="{% static 'js/main.js' %}"></script>
          <!-- responsible for slider  carousal with button option  -->
          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
          <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-
+         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
          <!--<link rel="stylesheet" href="https://www.fcrihyd.in/wp-content/themes/fcri/assets/css/fontawesome.min.css" />-->
          
@@ -67,7 +69,7 @@
     </script>
     <!-- Google Search Console Code -->
     <meta name="google-site-verification" content="UYNWkyHFvRsQghgwWMAZMU7T6_Y1VpBM_PGGbJReKmg">
-    
+    {% render_block "css" %}
 </head>
 
 <body>
@@ -77,8 +79,8 @@
             <div class="row align-items-center">
                 <div class="col-md-12 col-lg mb-3 mb-lg-0">
                     <div class="fcriHeaderLogo">
-                      <div class="fcriHeaderLogo--img01"><a href="{% url 'home' %}"><img src="{% static 'images/logo-images/forestlogo-01.webp' %}" class="img-fluid" alt="logo"></a></div>
-                      <div class="fcriHeaderLogo--img02"><a href="{% url 'home' %}"><img src="{% static 'images/logo-images/header-logo-03-image.webp' %}" class="img-fluid" alt="logo"></a></div>
+                        <div class="fcriHeaderLogo--img01"><a href="{% url 'home' %}"><img src="{% static 'images/logo-images/forestlogo-01.webp' %}" class="img-fluid" alt="logo"></a></div>
+                        <div class="fcriHeaderLogo--img02"><a href="{% url 'home' %}"><img src="{% static 'images/logo-images/header-logo-03-image.webp' %}" class="img-fluid" alt="logo"></a></div>
                     </div>
 
                     <!-- <img src="images/fcri-logo-light.webp" class="img-fluid"/> -->
@@ -417,7 +419,7 @@
       <li><a class="dropdown-item" href="{% url 'ResearchProjects' %}">Research Projects</a></li>
       <li><a class="dropdown-item" href="{% url 'Mou' %}">MoU’s</a></li>
       <li><a class="dropdown-item" href="{% url 'Publications' %}">Publications</a></li>
-      <li><a class="dropdown-item" href="{% url 'Awards' %}">Awards  and Recognitio</a></li>
+      <li><a class="dropdown-item" href="{% url 'Awards' %}">Awards  and Recognition</a></li>
     </ul>
   </li>
   
@@ -425,10 +427,71 @@
                 
     </nav>
 </header>
+<article id="post-2015" class="post-2015 page type-page status-publish hentry entry">
 
- <script src="{% static 'js/chat.js' %}"></script> 
- <script src="{% static 'js/jquery.js' %}"></script>
- <script src="{% static 'js/slick.min.js' %}"></script>
+	
+	<div class="entry-content">
 
-</body>
-</html>
+
+       <!-- Floating Chatbot Button -->
+<button id="chatbot-btn">💬 Chat with AI</button>
+
+<!-- Chatbot Window -->
+<div id="chatbot-container">
+    <div id="chatbot-header">AI Chatbot <span id="close-chat">✖</span></div>
+</div>
+ 
+
+
+
+
+
+<script>
+    jQuery(document).ready(function($) {
+        const pathArray = window.location.pathname.split("/");
+        const segment_2 = pathArray[1];
+        if (segment_2 == "") {
+            $(window).scroll(function() {
+                var scroll = $(window).scrollTop();
+                if (scroll >= 50) {
+                    $(".fcriHeader").addClass("scrolledHeader");
+                } else {
+                    $(".fcriHeader").removeClass("scrolledHeader");
+                }
+            });
+        } else {
+            $(".fcriHeader").addClass("scrolledHeader");
+        }
+    });
+</script>
+<script>
+    $(document).ready(function() {
+
+
+        slideShow();
+
+        function slideShow() {
+            var current = $('#slider .show');
+            var next = current.next().length ?
+                current.next() :
+                current.siblings().first();
+            current.hide().removeClass('show');
+            next.fadeIn("slow").addClass('show');
+            setTimeout(slideShow, 3000);
+        };
+        slideShow1();
+
+        function slideShow1() {
+            var current = $('#slider1 .show');
+            var next = current.next().length ?
+                current.next() :
+                current.siblings().first();
+            current.hide().removeClass('show');
+            next.fadeIn("slow").addClass('show');
+            setTimeout(slideShow1, 4000);
+        };
+
+
+    });
+</script>
+

@@ -2,6 +2,7 @@
 {% include 'base.html' %}
 {% include 'breadcrumbs.html' %}
 
+
         <div class="content-container">
             <!-- Intro Section -->
             <section class="intro-section">
@@ -17,7 +18,7 @@
                             FCRI Hyderabad, the brainchild of our visionary Chief Minister, was established in 2016.
                             Located at Forest Research Centre Mulugu in Siddipet district, about 50 km from the city of Hyderabad,
                             FCRI provides world-class facilities and opportunities to its students. At present, FCRI has 242 students
-                            pursuing M.Sc. Forestry and B.Sc. (Hons.) Forestry. Three batches from B.Sc. (Hons.) Forestry have passed out.
+         a                   pursuing M.Sc. Forestry and B.Sc. (Hons.) Forestry. Three batches from B.Sc. (Hons.) Forestry have passed out.
                             FCRI Hyderabad received ICFRE accreditation with A* grade & ICAR accreditation within a span of 5 years since inception.
                         </p>
                         <img src="{% static 'images\college-images\vision3-image.jpg' %}" class="intro-bottom-img">
@@ -51,15 +52,7 @@
             </section>
         
             <!-- Contact Section -->
-            <section class="deanCTASec">
-              <div class="container">
-      
-                  <h1><strong style="align-items: center;" > as a World Class Institution for</strong> </h1>
-                  <h2>Forestry Education, Research, Management and Outreach.</h2>
-                  <button class="btn px-md-4 conlink" onclick="window.location.href='https://www.fcrihyd.in/contact'" style="color: #fff; align-items: center;">Contact Us</button>
-              </div>
-      
-          </section>
+            {% include 'contact.html' %}
         </div>
         <div class="vision-images">
             <div class="vi">
@@ -79,5 +72,4 @@
           
            
       <script src="{% static 'js/main.js' %}"></script>
-    </body>
-</html>
+    

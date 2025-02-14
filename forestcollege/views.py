@@ -17,56 +17,144 @@ def about(request):
 def vision(request):
     breadcrumbs = [
         {"name": "Home", "url": "/"},
-        {"name": "About", "url": "/about/"},
-        {"name": "Vision and Mission", "url": "/about/vision-and-mission/"},
+        {"name": "About"},
+        {"name": "vision"},
     ]
     return render(request, "vision.html", {"breadcrumbs": breadcrumbs})
 
 # Other views
 def Governing_Board(request):
-    return render(request, 'Governing_Board.html')
+    breadcrumbs = [
+        {"name": "Home", "url": "/"},
+        {"name": "About", "url": "/about/"},
+        {"name": "Vision and Mission", "url": "/about/vision/Governing_Board/"},
+    ]
+    return render(request, 'Governing_Board.html', {"breadcrumbs": breadcrumbs})
 
 def Dean(request):
-    return render(request, 'Dean.html')
+    breadcrumbs = [
+        {"name": "Home", "url": "/"},
+        {"name":"Administration",},
+        {"name":"Dean"},
+    ]
+    return render(request, 'Dean.html',{"breadcrumbs": breadcrumbs})
 
 def Joint_Director(request):
-    return render(request, 'Joint-Director.html')
+    breadcrumbs = [
+        {"name": "Home", "url":"/"},
+        {"name":"Administraation"},
+        {"name":"Joint Director"},
+    ]
+    return render(request, 'joint-Director.html',{"breadcrumbs": breadcrumbs})
 
 def Deputy_Director(request):
-    return render(request, 'Deputy-Director.html')
+    breadcrumbs = [
+        {"name": "Home", "url":"/"},
+        {"name":"Administraation"},
+        {"name":"Deputy Director"},
+    ]
+
+    return render(request, 'Deputy-Director.html',{"breadcrumbs": breadcrumbs})
 
 def Organogram(request):
-    return render(request, 'Organogram.html')
+    breadcrumbs = [
+        {"name":"Home","url":"/"},
+        {"name":"Administration"},
+        {"name":"Organogram"},
+    ]
+    return render(request, 'Organogram.html',{"breadcrumbs":breadcrumbs})
 
 def Departments(request):
-    return render(request, 'Departments.html')
+    breadcrumbs = [
+        {"name":"Home","url":"/"},
+        {"name":"Academics"},
+        {"name":"Departments"},
+        {"name":"List of Departments"},
+    ]
+    return render(request, 'Departments.html',{"breadcrumbs":breadcrumbs})
 
 def Faculty(request):
-    return render(request, 'faculty.html')
+    breadcrumbs = [
+        {"name":"Home","url":"/"},
+        {"name":"Academics"},
+        {"name":"Departments"},
+        {"name":"Faculty"},
+    ]
+    
+    return render(request, 'faculty.html',{"breadcrumbs":breadcrumbs})
 
 def laboratory(request):
-    return render(request, 'laboratory.html')
+    breadcrumbs = [
+        {"name":"Home","url":"/"},
+        {"name":"Academics"},
+        {"name":"Departments"},
+        {"name":"Laboratory"},
+    ]
+    return render(request, 'laboratory.html',{"breadcrumbs":breadcrumbs})
 
 def StudentAchievements(request):
-    return render(request, 'StudentAchievements.html')
+    breadcrumbs = [
+        {"name":"Home","url":"/"},
+        {"name":"StudentAchievements"},
+        {"name":"year of 2016"},
+        
+    ]
+    return render(request, 'StudentAchievements.html',{"breadcrumbs":breadcrumbs})
 
 def StudentAchievements1(request):
-    return render(request, 'StudentAchievements1.html')
+    breadcrumbs = [
+        {"name":"Home","url":"/"},
+        {"name":"StudentAchievements"},
+        {"name":"year of 2017"},
+        
+    ]
+    return render(request, 'StudentAchievements1.html',{"breadcrumbs":breadcrumbs})
 
 def womenprotection(request):
-    return render(request, 'womenprotection.html')
+    breadcrumbs = [
+        {"name":"Home","url":"/"},
+        {"name":"Academics"},
+        {"name":"Committes"},
+        {"name":"WomenProtectionCommitee"},
+    ]
+    return render(request, 'womenprotection.html',{"breadcrumbs":breadcrumbs})
 
 def Antiragging(request):
-    return render(request, 'womenprotection.html')
+    breadcrumbs = [
+        {"name":"Home","url":"/"},
+        {"name":"Academics"},
+        {"name":"Committes"},
+        {"name":"AntiraggingCommitee"},
+    ]
+    return render(request, 'womenprotection.html',{"breadcrumbs":breadcrumbs})
 
 def AdmissionComitte(request):
-    return render(request, 'womenprotection.html')
+    breadcrumbs = [
+        {"name":"Home","url":"/"},
+        {"name":"Academics"},
+        {"name":"Committes"},
+        {"name":"AdmissionComitte"},
+    ]
+    return render(request, 'womenprotection.html',{"breadcrumbs":breadcrumbs})
 
 def DisciplinaryComitte(request):
+    breadcrumbs = [
+        {"name":"Home","url":"/"},
+        {"name":"Academics"},
+        {"name":"Committes"},
+        {"name":"DisciplinaryComitte"},
+    ]
+    
     return render(request, 'womenprotection.html')
 
 def Admissions1(request):
-    return render(request, 'admissions1.html')
+    breadcrumbs = [
+        {"name":"Home","url":'/'},
+        {"name":"Admissions"},
+        {"name":"Courses Offered"},
+         {"name":"B.sc Hons Foresty"},
+    ]
+    return render(request, 'admissions1.html',{"breadcrumbs":breadcrumbs})
 
 def AcademicSchedule(request):
     return render(request, 'AcdamicSchedule.html')
@@ -75,46 +163,117 @@ def AcademicNotification(request):
     return render(request, 'AdmissionNotification.html')
 
 def Forestmuseum(request):
-    return render(request, 'ForestMuseum.html')
+    breadcrumbs = [
+        {"name":"Home","url":"/"},
+        {"name":"Infrastructure"},
+        {"name":"ForestMuseum"},
+    ]
+    return render(request, 'ForestMuseum.html',{"breadcrumbs":breadcrumbs})
 
 def Cif(request):
-    return render(request, 'cif.html')
+    breadcrumbs = [
+        {"name":"Home","url":"/"},
+        {"name":"Infrastructure"},
+        {"name":"CentralInstrumentationFaculty"},
+    ]
+    return render(request, 'cif.html',{"breadcrumbs":breadcrumbs})
 
 def Boardroom(request):
-    return render(request, 'Boardroom.html')
+    breadcrumbs = [
+        {"name":"Home","url":"/"},
+        {"name":"Infrastructure"},
+        {"name":"Boardroom"},
+    ]
+    return render(request, 'Boardroom.html',{"breadcrumbs":breadcrumbs})
 
 def Auditorium(request):
-    return render(request, 'auditorium.html')
+    breadcrumbs = [
+        {"name":"Home","url":"/"},
+        {"name":"Infrastructure"},
+        {"name":"Auditorium"},
+    ]
+    return render(request, 'auditorium.html',{"breadcrumbs":breadcrumbs})
 
 def Seminarhall(request):
-    return render(request, 'seminarhall.html')
+    breadcrumbs = [
+        {"name":"Home","url":"/"},
+        {"name":"Infrastructure"},
+        {"name":"SeminarHall"},
+    ]
+    return render(request, 'seminarhall.html',{"breadcrumbs":breadcrumbs})
 
 def Library(request):
-    return render(request, 'Library.html')
+    breadcrumbs = [
+        {"name":"Home","url":"/"},
+        {"name":"Infrastructure"},
+        {"name":"library"},
+    ]
+    return render(request, 'Library.html',{"breadcrumbs":breadcrumbs})
 
 def Fcri(request):
-    return render(request, 'Fcri.html')
+    breadcrumbs = [
+        {"name":"Home","url":"/"},
+        {"name":"Services"},
+        {"name":"FCRI Careers"},
+    ]
+    return render(request, 'Fcri.html',{"breadcrumbs":breadcrumbs})
 
 def Cfi2(request):
-    return render(request, 'cf1.html')
+    breadcrumbs = [
+        {"name":"Home","url":"/"},
+        {"name":"Services"},
+        {"name":"CFI"},
+    ]
+
+    return render(request, 'cf1.html',{"breadcrumbs":breadcrumbs})
 
 def Nursery(request):
-    return render(request, 'nursery.html')
+    breadcrumbs = [
+        {"name":"Home","url":"/"},
+        {"name":"Services"},
+        {"name":"Nursery"},
+    ]
+    return render(request, 'nursery.html',{"breadcrumbs":breadcrumbs})
 
 def Workshop(request):
-    return render(request, 'Workshop.html')
-
+    breadcrumbs = [
+        {"name":"Home","url":"/"},
+        {"name":"Services"},
+        {"name":"Workshop"},
+    ]
+    return render(request, 'Workshop.html',{"breadcrumbs":breadcrumbs})
+ 
 def ContactUs(request):
     return render(request, 'contactus.html')
 
 def ResearchProjects(request):
-    return render(request, 'ResearchProject.html')
+    breadcrumbs = [
+        {"name":"Home","url":"/"},
+        {"name":"Research"},
+        {"name":"Research Projects"},
+    ]
+    return render(request, 'ResearchProject.html',{"breadcrumbs":breadcrumbs})
 
 def Mou(request):
-    return render(request, 'mou.html')
+    breadcrumbs = [
+        {"name":"Home","url":"/"},
+        {"name":"Research"},
+        {"name":"Mou"},
+    ]
+    return render(request, 'mou.html',{"breadcrumbs":breadcrumbs})
 
 def Publications(request):
-    return render(request, 'publications.html')
+    breadcrumbs = [
+        {"name":"Home","url":"/"},
+        {"name":"Research"},
+        {"name":"Publications"},
+    ]
+    return render(request, 'publications.html',{"breadcrumbs":breadcrumbs})
 
 def Awards(request):
-    return render(request, 'awards.html')
+    breadcrumbs = [
+        {"name":"Home","url":"/"},
+        {"name":"Research"},
+        {"name":"Awards"},
+    ]    
+    return render(request, 'awards.html',{"breadcrumbs":breadcrumbs})

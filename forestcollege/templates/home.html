@@ -124,11 +124,7 @@
                     <ul class="navbar-nav fcriNav__ActualMenuUl">
         
                         <!-- Home Icon -->
-                        <li class="nav-item fcriNav__ActualMenuUl-icon">
-                            <a class="nav-link" href="https://www.fcrihyd.in/">
-                                <i class="fa-solid fa-home" aria-hidden="true"></i>
-                            </a>
-                        </li>
+                        
         
                         <!-- About Dropdown -->
                         <li class="nav-item dropdown">
@@ -191,9 +187,9 @@
                                             <a class="dropdown-item" href="{% url 'Departments' %}">List of Departments</a>
                                         </li>
                                         <li>
-                                            <a class="dropdown-item" href="#">Department Head</a>
+                                            <a class="dropdown-item" href="{% url 'Faculty' %}">Department Head</a>
                                         <li>
-                                            <a class="dropdown-item" href="{% url "laboratory" %}">Laboratories</a>
+                                            <a class="dropdown-item" href="{% url 'laboratory' %}">Laboratories</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -625,7 +621,7 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
                     <h3 class="flip-box-header">M.Sc.</h3>
                     <p class="flip-box-label">Forestry</p>
                     <p style="color: #fff;">Forest College and Research Institute, Hyderabad is established in 2016 with the objective of providing professional forestry education for the first time in the state of Telangana.</p>
-                    <button class="flip-box-button" type="button"> <a href="https://fcrihyd.in/admissions/msc-forestry#msc" class="coureseFilpBox-button">Know More</a></button>
+                    <button class="flip-box-button" type="button"> <a href="{% url 'admissions1' %}" class="coureseFilpBox-button">Know More</a></button>
                   </div>
 
                 </div>
@@ -636,7 +632,7 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
           <div class="col-md col-6 homeflip-col-6 wow fadeInUp" data-wow-delay="0.1s">
             <div class="box-item">
               <div class="flip-box">
-			  <a href="https://fcrihyd.in/admissions/phd-forestry#phd" class="flip-box-abs-link"></a>
+			  <a href="{% url 'admissions1' %}" class="flip-box-abs-link"></a>
                 <div class="flip-box-front text-center" style="background-image: url('/static/images/department-images/PHd_card.webp');">
                   <div class="inner color-white">
                     <h3 class="flip-box-header">Ph.D.</h3>
@@ -646,11 +642,11 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
 
                 <div class="flip-box-back text-center" style="background-image: url('/static/images/department-images/PHd_card.webp');">
                   <div class="inner color-white">
-				   <a href="https://fcrihyd.in/admissions/phd-forestry#phd" class="flip-box-abs-link"></a>
+				   <a href="{% url 'admissions1' %}" class="flip-box-abs-link"></a>
                     <h3 class="flip-box-header">Ph.D.</h3>
                     <p class="flip-box-label">Forestry</p>
                     <p style="color: #fff;">The course will commence from year 2023.</p>
-                    <button class="flip-box-button" type="button"> <a href="https://fcrihyd.in/admissions/phd-forestry#phd" class="coureseFilpBox-button">Know More</a></button>
+                    <button class="flip-box-button" type="button"> <a href="{% url 'admissions1' %}" class="coureseFilpBox-button">Know More</a></button>
                   </div>
 
                 </div>
