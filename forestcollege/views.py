@@ -27,7 +27,7 @@ def Governing_Board(request):
     breadcrumbs = [
         {"name": "Home", "url": "/"},
         {"name": "About", "url": "/about/"},
-        {"name": "Vision and Mission", "url": "/about/vision/Governing_Board/"},
+        {"name": "Governing Board", "url": "/about/vision/Governing_Board/"},
     ]
     return render(request, 'Governing_Board.html', {"breadcrumbs": breadcrumbs})
 
@@ -72,7 +72,15 @@ def Departments(request):
         {"name":"List of Departments"},
     ]
     return render(request, 'Departments.html',{"breadcrumbs":breadcrumbs})
-
+def DepartmentHead(request):
+    breadcrumbs = [
+        {"name":"Home","url":"/"},
+        {"name":"Academics"},
+        {"name":"Departments"},
+        {"name":"DepartmentHead"},
+        
+    ]
+    return render(request,'DepartmentHead.html',{"breadcrumbs":breadcrumbs})
 def Faculty(request):
     breadcrumbs = [
         {"name":"Home","url":"/"},

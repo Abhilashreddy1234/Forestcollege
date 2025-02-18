@@ -34,7 +34,7 @@
 
 .intro-right h1 {
   font-size: 24px;
-  color: #005f2f;
+  color: violet;
   margin-bottom: 10px;
 }
 
@@ -48,12 +48,69 @@
   width: 100%;
   border-radius: 8px;
 }
+@media (max-width: 768px) {
+  .intro-section {
+    padding: 40px;
+    flex-direction: column;
+  }
+
+  .intro-container {
+    flex-direction: column;
+  }
+
+  .intro-left,
+  .intro-right {
+    flex: none;
+    width: 100%;
+  }
+
+  .intro-left img {
+    width: 100%;
+  }
+
+  .intro-right h1 {
+    font-size: 20px;
+  }
+
+  .intro-right p {
+    font-size: 14px;
+  }
+
+  .intro-bottom-img {
+    margin-top: 20px;
+    width: 100%;
+  }
+}
+
+/* For mobile screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .intro-section {
+    padding: 20px;
+  }
+
+  .intro-right h1 {
+    font-size: 18px;
+  }
+
+  .intro-right p {
+    font-size: 14px;
+  }
+
+  .intro-left img {
+    width: 100%;
+  }
+
+  .intro-bottom-img {
+    width: 100%;
+    margin-top: 15px;
+  }
+}
 /* Dean css */
 .dean-section {
   display: flex;
   align-items: flex-start;
   padding: 60px;
-  background-color: white;
+  background-color: lightgoldenrodyellow;
   gap: 20px;
   border: 2px solid #ccc; /* Adds a border around the section */
   border-radius: 8px;     /* Rounds the corners for a smoother look */
@@ -105,7 +162,7 @@
   color: #444;
 }
 .vision-mission-section {
-  background-image: url('../images/college-images/visionimage4.webp');
+  background-image: url('../images/college-images/governing_bg.webp');
   padding: 40px 20px;
   background-size: cover;
   background-position: center;
@@ -116,7 +173,7 @@
 .vision-mission-text {
   max-width: 800px;
   margin: 0 auto;
-  background-color: green;
+  background-color: violet;
   padding: 20px;
   align-items: right;
   border-radius: 8px;
@@ -140,6 +197,107 @@
 .mission-box ul {
   list-style: disc;
   padding-left: 20px;
+}
+@media (max-width: 768px) {
+  .dean-section {
+    flex-direction: column;
+    padding: 30px;
+  }
+
+  .dean-left,
+  .dean-right {
+    width: 100%;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .profile-image {
+    height: 250px;
+  }
+
+  .dean-right h2 {
+    font-size: 1.6rem;
+  }
+
+  .dean-right h3 {
+    font-size: 1.1rem;
+  }
+
+  .dean-right p {
+    font-size: 14px;
+  }
+
+  .vision-mission-section {
+    padding: 30px 15px;
+  }
+
+  .vision-mission-text {
+    max-width: 90%;
+    background-color: violet;
+    padding: 15px;
+  }
+
+  .vision-box h2, .mission-box h2 {
+    font-size: 20px;
+  }
+
+  .vision-box p, .mission-box ul {
+    font-size: 14px;
+  }
+
+  .mission-box ul {
+    padding-left: 15px;
+  }
+}
+
+/* For mobile screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .dean-section {
+    padding: 20px;
+  }
+
+  .dean-left {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .profile-image {
+    height: 200px;
+  }
+
+  .dean-right h2 {
+    font-size: 1.4rem;
+  }
+
+  .dean-right h3 {
+    font-size: 1rem;
+  }
+
+  .dean-right p {
+    font-size: 13px;
+  }
+
+  .vision-mission-section {
+    padding: 20px 10px;
+  }
+
+  .vision-mission-text {
+    max-width: 100%;
+    background-color: violet;
+    padding: 10px;
+  }
+
+  .vision-box h2, .mission-box h2 {
+    font-size: 18px;
+  }
+
+  .vision-box p, .mission-box ul {
+    font-size: 13px;
+  }
+
+  .mission-box ul {
+    padding-left: 10px;
+  }
 }
 
 .contact-section {
@@ -330,6 +488,72 @@
 .profile-content a:hover {
   text-decoration: underline;
 }
+/* For tablets and smaller screens (max-width: 768px) */
+@media (max-width: 768px) {
+  .profiles-section {
+    padding: 30px;
+  }
+
+  .profile-box {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .profile-image {
+    flex: 0 0 120px;
+  }
+
+  .profile-image img {
+    height: 120px;
+    width: 120px;
+  }
+
+  .profile-content h2 {
+    font-size: 1.4rem;
+  }
+
+  .profile-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .profile-content p {
+    font-size: 14px;
+  }
+}
+
+/* For mobile screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .profiles-section {
+    padding: 20px;
+  }
+
+  .profile-box {
+    flex-direction: column;
+    padding: 8px;
+  }
+
+  .profile-image {
+    flex: 0 0 100px;
+  }
+
+  .profile-image img {
+    height: 100px;
+    width: 100px;
+  }
+
+  .profile-content h2 {
+    font-size: 1.2rem;
+  }
+
+  .profile-content h3 {
+    font-size: 1rem;
+  }
+
+  .profile-content p {
+    font-size: 13px;
+  }
+}
+
 /* organogram */
 .Organogram {
   padding:60px;

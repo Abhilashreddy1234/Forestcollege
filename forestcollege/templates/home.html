@@ -34,8 +34,9 @@
          <link rel="stylesheet" href="{% static 'css/main1.css' %}">
          <link rel="stylesheet" href="{% static 'css/responsive-style.css' %}">
          <link rel="stylesheet" href="{% static 'css/chat.css' %}">
+         <link rel="stylesheet" href="{% static 'css/fontawsome.min.css1' %}">
          <!-- fade in out effect for nav and header -->
-
+ 
          <!-- responsible for dropdoun items -->
          
                
@@ -90,8 +91,7 @@
                         <button type="button" class="btn btn-sm btn-outline-light me-2">Student Corner</button>
                         <button type="button" class="btn btn-sm btn-outline-light me-2">Faculty Corner</button>
                                                 <!-- <button type="button" class="btn btn-sm btn-outline-light me-2" title="Downloads" onclick='window.location.href="http://ezysubscribe.com/QA/fcriqa/downloads/"'><i class="fa fa-download" aria-hidden="true"></i></button> -->
-                        <button type="button" onclick="window.location.href='https://www.fcrihyd.in/downloads'" class="btn btn-sm btn-outline-light me-2" title="Downloads"><i class="fa fa-download" aria-hidden="true"></i></button>
-                        <button type="button" onclick="window.location.href='https://www.fcrihyd.in/contact'" class="btn btn-sm btn-outline-light" title="Contact Us"><i class="fa fa-phone" aria-hidden="true"></i></button>
+                        
                         <div class="fcriHeader__social">
                             <a class="fhSocial--link" href="#" target="_blank"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
                             <a class="fhSocial--link" href="#" target="_blank"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
@@ -187,7 +187,7 @@
                                             <a class="dropdown-item" href="{% url 'Departments' %}">List of Departments</a>
                                         </li>
                                         <li>
-                                            <a class="dropdown-item" href="{% url 'Faculty' %}">Department Head</a>
+                                            <a class="dropdown-item" href="{% url 'DepartmentHead' %}">Department Head</a>
                                         <li>
                                             <a class="dropdown-item" href="{% url 'laboratory' %}">Laboratories</a>
                                         </li>
@@ -445,14 +445,138 @@
       </div>
     </section>
 
-       <!-- Floating Chatbot Button -->
-<button id="chatbot-btn">💬 Chat with AI</button>
+ 
+       <!-- Chatbot Icon -->
+<div class="chatbot-icon" id="chatbotIcon" onclick="toggleChatbot()">
+  💬
+</div>
 
 <!-- Chatbot Window -->
-<div id="chatbot-container">
-    <div id="chatbot-header">AI Chatbot <span id="close-chat">✖</span></div>
+<div class="chatbot-container" id="chatbot">
+  <div class="chatbot-header">
+      <span>Chat with Me</span>
+      <button class="close-btn" onclick="toggleChatbot()">✖</button>
+  </div>
+  <div class="chatbot-body" id="chatbotBody">
+      <p>Welcome to <strong>Abhilash Reddy Portfolio</strong> 👋</p>
+      <p>What would you like to know?</p>
+      <button class="chatbot-btn" onclick="redirectTo('#experience')">Experience</button>
+      <button class="chatbot-btn" onclick="redirectTo('#education')">Education</button>
+      <button class="chatbot-btn" onclick="redirectTo('#skills')">Skills</button>
+      <button class="chatbot-btn" onclick="redirectTo('#projects')">Projects</button>
+      <button class="chatbot-btn" onclick="redirectTo('#contact')">Contact Us</button>
+  </div>
 </div>
- 
+<style>
+  .chatbot-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #4CAF50;
+  color: white;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  z-index: 10000; /* Add a high z-index */
+}
+
+
+.chatbot-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Chatbot Container */
+.chatbot-container {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 320px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  display: none;
+  z-index: 1000;
+}
+
+/* Chatbot Header */
+.chatbot-header {
+  background: #4CAF50;
+  color: white;
+  padding: 12px 16px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Close Button */
+.close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Chatbot Body */
+.chatbot-body {
+  padding: 16px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Chatbot Buttons */
+.chatbot-btn {
+  display: block;
+  width: 100%;
+  margin: 8px 0;
+  padding: 10px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.chatbot-btn:hover {
+  background: #45a049;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .chatbot-container {
+      width: 90%;
+      bottom: 100px;
+      right: 5%;
+  }
+}
+
+</style>
+<script>
+   window.toggleChatbot = function() {
+        const chatbot = document.getElementById('chatbot');
+        // Toggle display of the chatbot
+        chatbot.style.display = chatbot.style.display === 'block' ? 'none' : 'block';
+    };
+
+    // Navigate to Section
+    window.redirectTo = function(sectionId) {
+        toggleChatbot(); // Close chatbot
+        window.location.hash = sectionId; // Redirect to section
+    };
+    window.toggleChatbot = function() {
+        const chatbot = document.getElementById('chatbot');
+        console.log(chatbot.style.display); // Check the current display value
+        chatbot.style.display = chatbot.style.display === 'block' ? 'none' : 'block';
+    };
+
+</script>
+
 
 
 <section class="homeThreeSplitSec">
@@ -500,7 +624,7 @@
 				</div>
                </div>
                <div class="col-12 col-md-4 homeThreeSplitSec__text hts--text02 wow fadeInUp" data-wow-delay="0.3s">
-                  <img decoding="async" src="https://fcrihyd.in/wp-content/themes/fcri/assets/images/home-200.png" class="img-fluid">
+                  <img decoding="async" src="{% static 'images/icon-images/200+image.webp' %}" class="img-fluid">
                   <!-- <a href="#" class="">Courses Offered</a> -->
                   <div class="d-inline"><button type="button" class="lineBtn "><a href="{% url 'admissions1' %}" class="butlink"><span>Courses Offered</span></a></button></div>
                </div>
@@ -538,7 +662,7 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
 <h3 class="abtUniversity-h3">Curriculum Approach</h3></div>
         <div class="abtUniversity__IconBlock  wow fadeInUp" data-wow-delay="0.1s">
           <div class="abtUniversity--IconImg">
-            <img decoding="async" src="https://fcrihyd.in/wp-content/uploads/2022/05/forestry_course.png" class="img-fluid">
+            <img decoding="async" src="{% static 'images/icon-images/curriculam-icon1.webp' %}" class="img-fluid">
           </div>
           <div class="abtUniversity--IconText">
 
@@ -547,7 +671,7 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
         </div>
         <div class="abtUniversity__IconBlock wow fadeInUp" data-wow-delay="0.2s">
           <div class="abtUniversity--IconImg">
-            <img decoding="async" src="https://fcrihyd.in/wp-content/uploads/2022/06/icon3.png" class="img-fluid">
+            <img decoding="async" src="{% static 'images/icon-images/ca-icon3.webp' %}" class="img-fluid">
           </div>
           <div class="abtUniversity--IconText">
           
@@ -556,7 +680,7 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
         </div>
         <div class="abtUniversity__IconBlock wow fadeInUp" data-wow-delay="0.3s">
           <div class="abtUniversity--IconImg">
-            <img decoding="async" src="https://fcrihyd.in/wp-content/uploads/2022/05/confidence.png" class="img-fluid">
+            <img decoding="async" src="{% static 'images/icon-images/ca-icon3.webp' %}" class="img-fluid">
           </div>
           <div class="abtUniversity--IconText">
 
@@ -793,7 +917,7 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
 											<h5 class="text-green"><em>Dr. Milkuri Chiranjeeva Reddy</em></h5>
 												<p><strong>Dr. Chiranjeeva</strong> is an Assistant Professor of Silviculture in the department of Silviculture and Agroforestry. He is having more than 2 years of research and teaching experience at Forest College and Research Institute, Mulugu. 
 												<br><br>He obtained his Doctorate in Forestry with specialization in Silviculture. He has got his master’s degree in forestry with specialization in Plantation technology..<br><br>
-												<a href="{% url 'Faculty' %}" class="text-green">READ MORE</a>
+												<a href="{% url 'DepartmentHead' %}" class="text-green">READ MORE</a>
 												</p>
 										</div>
 										</div>
@@ -803,14 +927,14 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
 									
 									<div class="faculty-content row">
 										<div class="col-md-auto col-8 mx-auto text-center text-md-left faculty-content-col1">
-											<img decoding="async" src="https://fcrihyd.in/wp-content/uploads/2022/05/Shivaputra.png" class="img-fluid shadow rounded-circle"/>
+											<img decoding="async" src="{% static 'images/professor-images/Director-image.jpg' %}" class="img-fluid shadow rounded-circle"/>
 										</div>
 										<div class="col-12 col-md text-md-left text-center faculty-content-col2">
 											<h5 class="text-green"><em>Dr.Shivaputra Bammanahalli</em></h5>
 												<p><strong>Dr. Shivaputra Bammanahalli</strong> is an Assistant Professor of Agroforestry in the Department of Silviculture and Agroforestry. He completed Master of Science in Forestry from University of Agricultural Science Dharwad, 
 												Karnataka and Doctoral Degree in Agroforestry form Dr. Y.S Parmar University of Horticulture and Forestry Nauni, Solan, Himachal Pradesh
 												<br><br>He received merit scholarship from UAS, Dharwad during Master’s. He was also recipient of INSPIRE fellowship from Government of India for a period of four years. .<br><br>
-												<a href="{% url 'Faculty' %}" class="text-green">READ MORE</a>
+												<a href="{% url 'DepartmentHead' %}" class="text-green">READ MORE</a>
 												</p>
 										</div>
 										</div>
@@ -820,7 +944,7 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
 									
 									<div class="faculty-content row">
 										<div class="col-md-auto col-8 mx-auto text-center text-md-left faculty-content-col1">
-											<img decoding="async" src="https://fcrihyd.in/wp-content/uploads/2022/05/Harish.png" class="img-fluid shadow rounded-circle"/>
+											<img decoding="async" src="{% static 'images/professor-images/joint-director-pic.jpeg' %}" class="img-fluid shadow rounded-circle"/>
 										</div>
 										<div class="col-12 col-md text-md-left text-center faculty-content-col2">
 											<h5 class="text-green"><em>Dr. B. Harish Babu</em></h5>
@@ -830,7 +954,7 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
 												Thesis Award Presented by Society for Agriculture Innovation &#038; Development, Ranchi, for outstanding contribution in 
 												the field of Forestry. <br></br>
 												
-												<a href="{% url 'Faculty' %}" class="text-green">READ MORE</a>
+												<a href="{% url 'DepartmentHead' %}" class="text-green">READ MORE</a>
 												</p>
 											</p>
 										</div>
@@ -856,14 +980,14 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
 										
 										<div class="faculty-content row">
 											<div class="col-md-auto col-8 mx-auto text-center text-md-left faculty-content-col1">
-												<img decoding="async" src="https://fcrihyd.in/wp-content/uploads/2022/05/Sailaja.png" class="img-fluid shadow rounded-circle"/>
+												<img decoding="async" src="{% static 'images/professor-images/fcri-Dean.png' %}" class="img-fluid shadow rounded-circle"/>
 											</div>
 											<div class="col-12 col-md text-md-left text-center faculty-content-col2">
 												<h5 class="text-green"><em>Smt. Sailaja.V</em></h5>
 												<p><strong>Smt.Sailaja</strong> is an Assistant Professor in Entomology with 9 years of Research, Teaching and Extension experience in Indian Council of Agricultural Research Institutes and State Agricultural University.
 												<br><br>She worked with ICAR-Indian Institute of Rice Research (Directorate of Rice Research), Hyderabad in estimation of temperature thresholds and thermal constants for development and survival of rice leaf folder, rice plant hoppers (BPH &#038; WBPH) 
 												which could be used for development of phenology models for forecasting the pests.<br><br>
-												<a href="{% url 'Faculty' %}" class="text-green">READ MORE</a>
+												<a href="{% url 'DepartmentHead' %}" class="text-green">READ MORE</a>
 												</p>
 											</div>
 											</div>
@@ -873,7 +997,7 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
 										
 										<div class="faculty-content row">
 											<div class="col-md-auto col-8 mx-auto text-center text-md-left faculty-content-col1">
-											   <img decoding="async" src="https://fcrihyd.in/wp-content/uploads/2022/05/Jagadeesh.png" class="img-fluid shadow rounded-circle"/>
+											   <img decoding="async" src="#" class="img-fluid shadow rounded-circle"/>
 											</div>
 											<div class="col-12 col-md text-md-left text-center faculty-content-col2">
 												<h5 class="text-green"><em>Mr. Jagadeesh Bathula</em></h5>
@@ -881,7 +1005,7 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
 												University of Agricultural Sciences, Dharwad, Karnataka where he worked on “Management of block rot of Cabbage caused by <em>Xanthomonas campestris pv. campestris”</em>. 
 												
 												<br><br>For his Doctoral degree, Jagadeesh joined in Gobind Ballabh Pant University of Agriculture and Technology where he worked on “Epidemiology and Management of downy mildew caused on Vegetable Pea caused by <em>Peronospora viciae f. sp. pisi”</em>.<br><br>
-												<a href="{% url 'Faculty' %}" class="text-green">READ MORE</a>
+												<a href="{% url 'DepartmentHead' %}" class="text-green">READ MORE</a>
 												</p>
 											</div>
 											</div>
@@ -907,7 +1031,7 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
 									
 										<div class="faculty-content row">
 											<div class="col-md-auto col-8 mx-auto text-center text-md-left faculty-content-col1">
-												<img decoding="async" src="https://fcrihyd.in/wp-content/uploads/2022/05/Sreekumar.png" class="img-fluid shadow rounded-circle"/>
+												<img decoding="async" src="#" class="img-fluid shadow rounded-circle"/>
 											</div>
 											<div class="col-12 col-md text-md-left text-center faculty-content-col2">
 												<h5 class="text-green"><em>Dr. Sreekumar E R</em></h5>
@@ -915,7 +1039,7 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
 												He specialised in wildlife science during post-graduation.
 												<br><br>He was worked on the impact of climate change on the montane specialised endemic birds of the Western Ghats, India during Ph. D programme. He has been awarded the KSCSTE 
 												Research Fellowship by the Kerala State Council for Science, Technology and Environment.<br><br>
-												<a href="{% url 'Faculty' %}" class="text-green">READ MORE</a>
+												<a href="{% url 'DepartmentHead' %}" class="text-green">READ MORE</a>
 												</p>
 											</div>
 											</div>
@@ -936,7 +1060,7 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
 								
 										<div class="faculty-content row">
 											<div class="col-md-auto col-8 mx-auto text-center text-md-left faculty-content-col1">
-												<img decoding="async" src="https://fcrihyd.in/wp-content/uploads/2022/05/Mamatha.png" class="img-fluid shadow rounded-circle"/>
+												<img decoding="async" src="#" class="img-fluid shadow rounded-circle"/>
 											</div>
 											<div class="col-12 col-md text-md-left text-center faculty-content-col2">
 												<h5 class="text-green"><em>Dr. M. Mamatha </em></h5>
@@ -945,7 +1069,7 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
 												in Research Experience. She completed her M.Sc. (Botany) and Ph.D. from Osmania University, Hyd. 
 												<br><br>She worked as Research Assistant in the Forest Department in Hyderabad and Research Associate in CSIR Project Dept. of Botany, Osmania University. 
 												She worked as a Lecturer in Botany in Dr. B.R. Ambedkar College, Hyderabad. <br><br>
-												<a href="{% url 'Faculty' %}" class="text-green">READ MORE</a>
+												<a href="{% url 'DepartmentHead' %}" class="text-green">READ MORE</a>
 												</p>
 												</p>
 											</div>
@@ -956,13 +1080,13 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
 									
 									<div class="faculty-content row">
 										<div class="col-md-auto col-8 mx-auto text-center text-md-left faculty-content-col1">
-											<img decoding="async" src="https://fcrihyd.in/wp-content/uploads/2022/05/Sreedhar.png" class="img-fluid shadow rounded-circle"/>
+											<img decoding="async" src="#" class="img-fluid shadow rounded-circle"/>
 										</div>
 										<div class="col-12 col-md text-md-left text-center faculty-content-col2">
 											<h5 class="text-green"><em>Dr. Sreedhar Bodiga</em></h5>
 											<p><strong>Dr. Sreedhar</strong> is an Associate Professor of Biochemistry with more than 10 years of research and teaching experience in various universities/research institutes in India and abroad. Prior to joining FCRI, he worked as UGC-Assistant Professor under the Faculty Recharge Program) at the Department of Biochemistry, Kakatiya University, Warangal
 											<br><br>He has taught Enzymology, Immunology, Plant and Animal Biotechnology, Bioinformatics and Biostatistics courses for M.Sc. Biochemistry students, besides active research in the area of cardiovascularbiology.<br><br>
-											<a href="https://fcrihyd.in/faculty/" class="text-green">READ MORE</a>
+											<a href="#" class="text-green">READ MORE</a>
 											</p>
 										</div>
 										</div>
@@ -972,13 +1096,13 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
 									
 									<div class="faculty-content row">
 										<div class="col-md-auto col-8 mx-auto text-center text-md-left faculty-content-col1">
-											<img decoding="async" src="https://fcrihyd.in/wp-content/uploads/2022/05/Nikitha.png"  class="img-fluid shadow rounded-circle"/>
+											<img decoding="async" src="#"  class="img-fluid shadow rounded-circle"/>
 										</div>
 										<div class="col-12 col-md text-md-left text-center faculty-content-col2">
 											<h5 class="text-green"><em>Ms. P. Nikitha</em></h5>
 											<p><strong>Ms. Perala Nikitha </strong> is an Assistant Professor of Agriculture Extension under the Department of Basic and Social Sciences at Forest College &#038; Research Institute. She has completed her M.Sc. in Agriculture Extension at Professor Jayashankar Telangana State Agricultural University (PJTSAU), Rajendranagar. <br></br>
 											Currently pursuing Ph D. in Agriculture Extension at PJTSAU, Hyderabad. She is specialized in Instructional Technology and has contributed in the development of learning style inventory for the farmers based on the suitability of extension teaching methods used by extension personnel which is of first of its kind. <br></br>
-											<a href="{% url 'Faculty' %}" class="text-green">READ MORE</a>
+											<a href="{% url 'DepartmentHead' %}" class="text-green">READ MORE</a>
 											</p>
 										</div>
 										</div>
@@ -988,14 +1112,14 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
 									
 									<div class="faculty-content row">
 										<div class="col-md-auto col-8 mx-auto text-center text-md-left faculty-content-col1">
-											<img decoding="async" src="https://fcrihyd.in/wp-content/uploads/2022/05/Sai_Krishna.png" class="img-fluid shadow rounded-circle"/>
+											<img decoding="async" src="#" class="img-fluid shadow rounded-circle"/>
 										</div>
 										<div class="col-12 col-md text-md-left text-center faculty-content-col2">
 											<h5 class="text-green"><em>Mr. M. Sai Krishna Murthy</em></h5>
 											<p><strong>Mr. Sai Krishna</strong> working as an Assistant Professor in Information and Communication Technology (ICT), FCRI, Hyderabad @ Mulugu. He has 9 years of teaching and industry experience.<br></br>
 											He has Masters in Technology (M.Tech.) with GATE qualified in CSE from CVSR, Engineering and Bachelors in Technology (B.Tech) in C.S.E. from TKR Engineering College. He is an expert in C, ICT, Networks, Mysql, Oracle, Windows XP, LINUX, Windows 8, Windows 10, HTML. 
 											He is well trained professional in PC hardware and Software applications.  <br></br>
-											<a href="https://fcrihyd.in/faculty/" class="text-green">READ MORE</a>
+											<a href="#" class="text-green">READ MORE</a>
 											</p>
 										</div>
 										</div>
@@ -1020,13 +1144,13 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
 									
 										<div class="faculty-content row">
 											<div class="col-md-auto col-8 mx-auto text-center text-md-left faculty-content-col1">
-												<img decoding="async" src="https://fcrihyd.in/wp-content/uploads/2022/05/Kapil.png" class="img-fluid shadow rounded-circle"/>
+												<img decoding="async" src="#" class="img-fluid shadow rounded-circle"/>
 											</div>
 											<div class="col-12 col-md text-md-left text-center faculty-content-col2">
 												<h5 class="text-green"><em>Dr. Kapil Sihag</em></h5>
 												<p><strong>Dr. Kapil</strong> is an Assistant Professor of Wood Science and Technology with more than 3 years of research and teaching experience in various universities/research institutes in India. 
 												<br><br>He possesses meritorious academic record in field of Wood Science and Technology.Prior to joining forest college and research institute, he worked as Assistant Professor in college of agricultural sciences, Uttaranchal University, Dehradun.<br><br>
-												<a href="https://fcrihyd.in/faculty/" class="text-green">READ MORE</a>
+												<a href="#" class="text-green">READ MORE</a>
 												</p>
 											</div>
 											</div>
@@ -1036,7 +1160,7 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
 									
 											<div class="faculty-content row">
 												<div class="col-md-auto col-8 mx-auto text-center text-md-left faculty-content-col1">
-													<img decoding="async" src="https://fcrihyd.in/wp-content/uploads/2022/05/Sumit.png" class="img-fluid shadow rounded-circle"/>
+													<img decoding="async" src="#" class="img-fluid shadow rounded-circle"/>
 												</div>
 												<div class="col-12 col-md text-md-left text-center faculty-content-col2">
 													<h5 class="text-green"><em>Dr. Sumit Manohar Yadav</em></h5>
@@ -1044,7 +1168,7 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
 													is an Assistant professor of Wood Science and Technology with more than 3 years of research and teaching experience in various universities in India and abroad. 
 													<br><br>He received his Bachelor of Science (Forestry) from College of Forestry, Dapoli, Maharashtra and Master of Science (Wood Science and Technology) from Forest Research Institute, Dehradun
 													He received his Ph.D. from University Malaysia Pahang, Malaysia. <br><br>
-													<a href="https://fcrihyd.in/faculty/" class="text-green">READ MORE</a>
+													<a href="#" class="text-green">READ MORE</a>
 													</p>
 												</div>
 											</div>
@@ -1070,7 +1194,7 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
 										
 											<div class="faculty-content row">
 												<div class="col-md-auto col-8 mx-auto text-center text-md-left faculty-content-col1">
-													<img decoding="async" src="https://fcrihyd.in/wp-content/uploads/2022/05/Reeja.png" class="img-fluid shadow rounded-circle"/>
+													<img decoding="async" src="#" class="img-fluid shadow rounded-circle"/>
 												</div>
 												<div class="col-12 col-md text-md-left text-center faculty-content-col2">
 													<h5 class="text-green"><em>Dr. Reeja Sundaram</em></h5>
@@ -1087,14 +1211,14 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
 									
 											<div class="faculty-content row">
 												<div class="col-md-auto col-8 mx-auto text-center text-md-left faculty-content-col1">
-												  <img decoding="async" src="https://fcrihyd.in/wp-content/uploads/2022/05/Shalini.png" class="img-fluid shadow rounded-circle"/>
+												  <img decoding="async" src="#" class="img-fluid shadow rounded-circle"/>
 												</div>
 												<div class="col-12 col-md text-md-left text-center faculty-content-col2">
 													<h5 class="text-green"><em>Dr. Shalini Mudalkar</em></h5>
 													<p><strong>Dr. Shalini </strong> 
 													 is an Assistant Professor in the department of Tree Breeding and Improvement, Forest College and Research Institute, Hyderabad at Mulugu. She worked extensively on physiological, bio-chemical and molecular responses of potential biofuel plant <em>Jatropha curcasto</em> salt, drought and metal stress conditions
 													<br><br>Her research work provides insights into detoxification of reactive carbonyl (methylglyoxal) and metals where she was successful in functional characterization of key genes including aldo-ketoreductase, glyoxalases and metallothionein.  <br><br>
-													<a href="https://fcrihyd.in/faculty/" class="text-green">READ MORE</a>
+													<a href="#" class="text-green">READ MORE</a>
 													</p>
 												</div>
 											</div>
@@ -1104,7 +1228,7 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
 									
 											<div class="faculty-content row">
 												<div class="col-md-auto col-8 mx-auto text-center text-md-left faculty-content-col1">
-													<img decoding="async" src="https://fcrihyd.in/wp-content/uploads/2022/05/Arjun.png" class="img-fluid shadow rounded-circle"/>
+													<img decoding="async" src="#" class="img-fluid shadow rounded-circle"/>
 												</div>
 												<div class="col-12 col-md text-md-left text-center faculty-content-col2">
 													<h5 class="text-green"><em>Dr. Arjun Ramachandran</em></h5>
@@ -1112,7 +1236,7 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
 													 has completed his BSc (Hons.) Forestry from Kerala Agricultural University, MSc (Forestry) in Forest Genetic Resources from University of Agricultural Sciences – Dharwad (Sirsi) and PhD (Forestry) Forest Biology and Tree Improvement from Kerala Agricultural University. 
 													<br><br>Her research work provides insights into detoxification of reactive carbonyl (methylglyoxal) and metals where she was 
 													A gold medalist in the Masters’ programme, he has been awarded the coveted INSPIRE Junior Research Fellowship by the Department of Science and Technology, Government of India.<br><br>
-													<a href="https://fcrihyd.in/faculty/" class="text-green">READ MORE</a>
+													<a href="#" class="text-green">READ MORE</a>
 													</p>
 												</div>
 											</div>
@@ -1138,7 +1262,7 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
 										
 											<div class="faculty-content row">
 												<div class="col-md-auto col-8 mx-auto text-center text-md-left faculty-content-col1">
-												  <img decoding="async" src="https://fcrihyd.in/wp-content/uploads/2022/05/Priya.png" class="img-fluid shadow rounded-circle"/>
+												  <img decoding="async" src="#" class="img-fluid shadow rounded-circle"/>
 												</div>
 												<div class="col-12 col-md text-md-left text-center faculty-content-col2">
 													<h5 class="text-green"><em>Dr. Priya R M</em></h5>
@@ -1147,7 +1271,7 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
 													and Ph.D. thesis work was on “Growth, regeneration and propagation studies of <em>Olea glandulifera</em>.  <br></br>
 													She received merit scholarship for her master’s research as well as DST INSPIRE fellowship for her doctoral research. 
 													She has more than 15 national and international publications. She has co-authored one book.  <br><br>
-													<a href="https://fcrihyd.in/faculty/" class="text-green">READ MORE</a>
+													<a href="#" class="text-green">READ MORE</a>
 													</p>
 												</div>
 											</div>
@@ -1157,14 +1281,14 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
 										
 											<div class="faculty-content row">
 												<div class="col-md-auto col-8 mx-auto text-center text-md-left faculty-content-col1">
-													<img decoding="async" src="https://fcrihyd.in/wp-content/uploads/2022/05/Srinidhi.png" class="img-fluid shadow rounded-circle"/>
+													<img decoding="async" src="https://f" class="img-fluid shadow rounded-circle"/>
 												</div>
 												<div class="col-12 col-md text-md-left text-center faculty-content-col2">
 													<h5 class="text-green"><em>Mrs. N. S. Srinidhi</em></h5>
 													<p><strong>Mrs. N. S. Srinidhi </strong> 
 													 is an Assistant Professor of Forest Ecology in the department of Forest Ecology and Climate Science. She completed her Post Graduation in Environmental Science from the Osmania University, Hyderabad. Presently she is pursuing her Ph.D. from Jawaharlal Nehru Technological University, Hyderabad. 
 													<br><br>She ranked second in her M.Sc. Examination at the University level. She has more than three years of teaching experience as an Assistant Professor at Vidya Jyothi Institute of Science and Technology, where she taught Environmental Studies and Disaster Management. <br><br>
-													<a href="https://fcrihyd.in/faculty/" class="text-green">READ MORE</a>
+													<a href="#" class="text-green">READ MORE</a>
 													</p>
 												</div>
 											</div>	
@@ -1189,14 +1313,14 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
 									
 											<div class="faculty-content row">
 												<div class="col-md-auto col-8 mx-auto text-center text-md-left faculty-content-col1">
-													<img decoding="async" src="https://fcrihyd.in/wp-content/uploads/2022/05/Sampath.png" class="img-fluid shadow rounded-circle"/>
+													<img decoding="async" src="#" class="img-fluid shadow rounded-circle"/>
 												</div>
 												<div class="col-12 col-md text-md-left text-center faculty-content-col2">
 													<h5 class="text-green"><em>Mr. Sampath Kumar</em></h5>
 													<p><strong>Mr. Sampath Kumar </strong> is working as a Librarian at Forest College and Research Institute, Mulugu. He has more than 3 years of experience as an Information Assistant. 
 													He had earlier worked as Information assistant at IIT Madras, Chennai and R.V.M. Medical College, Mulugu, Telangana State.
 													<br><br>He received his Masters of Library and Information Science from Kakatiya University and Postgraduate Diploma in Library Automation and Networking (P.G.D.L.A.N) from University of Hyderabad.  <br><br>
-													<a href="https://fcrihyd.in/faculty/" class="text-green">READ MORE</a>
+													<a href="#" class="text-green">READ MORE</a>
 													</p>
 												</div>
 											</div>
@@ -1216,14 +1340,14 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
 									
 											<div class="faculty-content row">
 												<div class="col-md-auto col-8 mx-auto text-center text-md-left faculty-content-col1">
-													<img decoding="async" src="https://fcrihyd.in/wp-content/uploads/2022/05/Prabhu.png" class="img-fluid shadow rounded-circle"/>
+													<img decoding="async" src="#" class="img-fluid shadow rounded-circle"/>
 												</div>
 												<div class="col-12 col-md text-md-left text-center faculty-content-col2">
 													<h5 class="text-green"><em>Dr. K. Prabhu</em></h5>
 													<p><strong>Dr.K. Prabhu </strong> working as a Physical Director / Sports Officer FCRI, Hyderabad @ Mulugu. 
 													He has 12 years in Schools, 24 years in Junior/ Degree &#038; PG Colleges experience. Organising Secretary – SGFI-19 period (2008-2009). <br></br>
 													Manager- SGFI A.P. and O U teams Member – Panel Inspection team for TSWRS &#038; TWRS schools and Colleges – 2019-20.  <br><br>
-													<a href="https://fcrihyd.in/faculty/" class="text-green">READ MORE</a>
+													<a href="#" class="text-green">READ MORE</a>
 													</p>
 												</div>
 											</div>
@@ -1468,28 +1592,26 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
 		</div>
 	</div>
 </section> -->
-    <section class="deanCTASec">
-        <div class="container">
-
-            <h1><strong>Emerging as a World Class Institution for</strong></h1>
-            <h2>Forestry Education, Research, Management and Outreach.</h2>
-            <button class="btn px-md-4 conlink" onclick="window.location.href='https://www.fcrihyd.in/contact'" style="color: #fff;">Contact Us</button>
-        </div>
-
-    </section>
+<section class="contact-section">
+  <h1>
+      Emerging as a World Class Institution.
+  </h1>
+  <h2>Forestry Education, Research, Management, and Outreach.</h2>
+  <a href="{% url 'ContactUs' %}" class="contact-button">Contact Us</a>
+</section>
 <section class="fcri-footer-gallery">
     <div class="d-flex align-items-center">
         <div class="flex-fill">
-            <a href="https://www.fcrihyd.in/media/photo-gallery/"> <img src="https://www.fcrihyd.in/wp-content/uploads/2022/04/footer_gallery1.webp" class="img-fluid" alt="footer-img"></a>
+            <a href="#"> <img src="{% static 'images/college-images/vision-1image.jpg' %}" class="img-fluid" alt="footer-img"></a>
         </div>
         <div class="flex-fill">
-            <a href="https://www.fcrihyd.in/media/photo-gallery/"> <img src="https://www.fcrihyd.in/wp-content/uploads/2022/04/footer_gallery2.webp" class="img-fluid" alt="footer-img"></a>
+            <a href="#"> <img src="{% static 'images/college-images/vision-image5.webp' %}" class="img-fluid" alt="footer-img"></a>
         </div>
         <div class="flex-fill">
-            <a href="https://www.fcrihyd.in/media/photo-gallery/"> <img src="https://www.fcrihyd.in/wp-content/uploads/2022/04/footer_gallery3.webp" class="img-fluid" alt="footer-img"></a>
+            <a href="#"> <img src="{% static 'images/college-images/vision-image7.webp' %}" class="img-fluid" alt="footer-img"></a>
         </div>
         <div class="flex-fill">
-            <a href="https://www.fcrihyd.in/media/photo-gallery/"> <img src="https://www.fcrihyd.in/wp-content/uploads/2022/04/footer_gallery4.webp" class="img-fluid" alt="footer-img"></a>
+            <a href="#"> <img src="{% static 'images/college-images/vision-image6.webp' %}" class="img-fluid" alt="footer-img"></a>
         </div>
     </div>
 </section>

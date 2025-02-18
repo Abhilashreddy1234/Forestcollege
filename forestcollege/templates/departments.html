@@ -1,61 +1,294 @@
 {% load static %}
 {% include 'base.html' %}
 {% include 'breadcrumbs.html' %}          
-<section id="departments">
-  <!-- Left Side: About Department -->
-  <div class="about-department">
-    <h2>About the Department</h2>
-    <p id="department-info">
-      Silviculture and Agroforestry is the practice of controlling the establishment, growth, composition, health, and quality of forests to meet diverse needs and values. The main aim of silviculture is regeneration of forest stands.
-      Telangana state is blessed with rich biodiversity and wildlife forms are an important part of it. For the protection and conservation of wildlife, various protected areas are established in the state. Habitat fragmentation and degradation are the major issues in the conservation of wildlife. Natural resources are facing enormous pressure, resulting in the decline of wildlife over t
-    </p>
-    <!-- Correcting the img tag to properly use the static path -->
-    <img src="{% static 'images\department-images\wildlife and habitat.jpg' %}" alt="Department Image" class="department-image">
-  </div>
 
-  <!-- Right Side: Department List -->
-  <div class="department-list">
-    <h2>Departments</h2>
-    <ul>
-      <li>
-        <button onclick="showDepartment('Silviculture and Agroforestry', '{% static "images/department-images/silvicultureimage.jpg" %}')">
-          Silviculture and Agroforestry
-        </button>
-      </li>
-      <li>
-        <button onclick="showDepartment('Natural Resource Management and Conservation', '{% static "images/department-images/natural_resources.jpg" %}')">
-          Natural Resource Management and Conservation
-        </button>
-      </li>
-      <li>
-        <button onclick="showDepartment('Wildlife and Habitat Management', '{% static "images/department-images/wildlife.jpg" %}')">
-          Wildlife and Habitat Management
-        </button>
-      </li>
-      <li>
-        <button onclick="showDepartment('Forest Products and Utilization', '{% static "images/department-images/forest_products.jpg" %}')">
-          Forest Products and Utilization
-        </button>
-      </li>
-      <li>
-        <button onclick="showDepartment('Tree Breeding and Improvement', '{% static "images/department-images/tree_breeding.jpg" %}')">
-          Tree Breeding and Improvement
-        </button>
-      </li>
-      <li>
-        <button onclick="showDepartment('Forest Ecology and Climate Science', '{% static "images/department-images/forest_ecology.jpg" %}')">
-          Forest Ecology and Climate Science
-        </button>
-      </li>
-      <li>
-        <button onclick="showDepartment('Basic and Social Sciences', '{% static "images/department-images/basic_social_sciences.jpg" %}')">
-          Basic and Social Sciences
-        </button>
-      </li>
-    </ul>
-  </div>
+<section class="dept-details">
+    <div class="container-xl container-xxl">
+        <div class="row colm secdepdetailFCRI__row">
+            <div class="col-md">
+                <div class="tab-content" style="text-align: justify;">
+                    <div id="silviculture" class="tab-pane active">
+                        <!-- <div class="deptTitleCard">
+                            <h2 class=" playfair-family">Silviculture and Agroforestry</h2>
+                        </div> -->
+                        <h3>Silviculture and Agroforestry</h3>
+                        <img src="{% static 'images/department-images/sivicultureimage.jpg' %}" class="img-fluid">
+                        <p>Silviculture is the practice of controlling the establishment, growth, composition, health,
+                            and quality of forests to meet diverse needs and values. The main aim of silviculture is
+                            regeneration of forest stands. The study of silviculture enables the foresters to know the
+                            whole course of natural succession on a given site and also the manner and the speed of
+                            existing crop being replaced or altered. Agroforestry is the intentional integration of
+                            trees and shrubs into crop and animal farming systems to create sustainable land use
+                            management system which is environmentally sound, economically feasible and socially
+                            acceptable in farming society.</p>
+                        <p>Realizing the importance of forestry education the Forest College and Research Institute,
+                            Mulugu started Department of Silviculture and Agroforestry on 3rd August, 2016 and
+                            introduced undergraduate and postgraduate forestry courses with a prime objective of
+                            promoting education, research and extension in the field of Silviculture and Agroforestry.
+                        </p>
+                        <p>The department of Silviculture and Agroforestry is a principal department in the Forest
+                            College and Research Institute. The department imparts excellent facilities in Teaching,
+                            Research and Extension in the field of Silviculture and Agroforestry. The department is well
+                            equipped with laboratories, highly qualified faculty and has coordination with local and
+                            national research institutes and State Forest Department. Over the years the department has
+                            thrived to attain excellence in the art and science of raising forest stands and developing
+                            productive Agroforestry models. Our vision is to provide world-class knowledge and
+                            leadership in the field of forestry. The fundamental researches in interlinked areas are
+                            nursery technology, plantation forestry, forest regeneration, forest management, forest
+                            productivity, quantitative silviculture, agroforestry management and rangeland science.</p>
+                        <p><strong>Thrust Areas</strong></p>
+                        <ol type="1">
+                            <li>To assist in developing sustainable, low cost and innovative technologies for the
+                                benefit of farmers through advance research programmes in the field of forestry,
+                                agroforestry and natural resource management.</li>
+                            <li>To develop Agroforestry models for wasteland development, Medicinal agroforestry system,
+                                Bamboo based agroforestry, Mass multiplication of multipurpose tree species, Elite
+                                seedling production, genetic variability assessment and yield improvement of different
+                                tree species.</li>
+                            <li>To improve nursery practices for multipurpose forest and fruit trees species.</li>
+                        </ol>
+                    </div>
+                    <div id="natural-resource" class="tab-pane fade">
+                        <h3>Natural Resource Management and Conservation </h3>
+                        <img src="../../wp-content/uploads/2022/05/department_profile2.webp" class="img-fluid">
+                        <p>Natural Resource Management and Conservation department aims to educate the students with
+                            knowledge, ability and Excellence to conserve and manage natural resources for sustainable
+                            future. Our curriculum teaches the students to conserve & protect natural resources for the
+                            future. Beyond world class system of classrooms, our students have ample opportunities for
+                            Experiential learning, hands on training, internships, student projects that prepare them
+                            for exciting and rewarding careers.</p>
+                        <p>The Department is also conducting basic and strategic research to develop location specific,
+                            cost effective, eco-friendly technologies for conservation, management and sustainable
+                            utilization of natural resources with higher input use efficiency, forest productivity,
+                            profitability ensuring environmental security.</p>
+                        <p><strong>Prioritized themes of research of the Department are</strong></p>
+                        <ul>
+                            <li>Development of Natural Resources Conservation Technologies.</li>
+                            <li>Integrated Pest Management in Forest Ecosystems.</li>
+                            <li>Integrated Disease Management in Forest Ecosystems.</li>
+                            <li>Integrated Weed Management in Forest Ecosystems.</li>
+                            <li>Integrated Soil Water Nutrient Management.</li>
+                            <li>Fire management in Forest Ecosystems.</li>
+                            <li>Watershed Management.</li>
+                        </ul>
+                    </div>
+                    <div id="wildlife" class="tab-pane fade">
+                        <h3>Wildlife and Habitat Management</h3>
+                        <img src="../../wp-content/uploads/2022/06/department_profile3.webp" class="img-fluid">
+                        <p><strong>Vision:</strong></p>
+                        <p>To provide scientific solutions to wildlife conservation problems through research</p>
+                        <p><strong>Objective:</strong></p>
+                        <p>To produce quality human resources in the field of Wildlife protection and conservation</p>
+                        <p><strong>Mission:</strong></p>
+                        <p>Telangana state is blessed with rich biodiversity and wildlife forms are an important part of it.
+                            For the protection and conservation of wildlife, various protected areas are established in
+                            the state. Habitat fragmentation and degradation are the major issues in the conservation of
+                            wildlife. Natural resources are facing enormous pressure, resulting in the
+                            decline of wildlife over the years, with many more species being threatened with extinction. Deep
+                            knowledge of the different components of the ecology of species and its habitat is needed to
+                            address conservation issues. So, the department of Wildlife is established with a view to
+                            provide appropriate human resources, who can assist the State forest department in conservation and management of
+                            wildlife. Research is focused on animal population
+                            ecology, behavioural ecology, community ecology, trophic interactions, conservation
+                            genetics, methods for monitoring animal populations, systematic, prey density analysis,
+                            biodiversity studies and wildlife – human interface issues etc.</p>
+                    </div>
+                    <div id="forest-products" class="tab-pane fade">
+                        <h3>Forest Products and Utilization </h3>
+                        <img src="../../wp-content/uploads/2022/05/department_profile4.webp" class="img-fluid">
+                        <p>Forest products include timber and non-timber produce as major resources for economic
+                            contribution to the society, with greater emphasis on their conservation and sustainable use.
+                            The department is created for assessment, evaluation and utilization of the forest products and towards
+                            fulfiling the future demand of the society. It deals with different subjects like non-timber forest produce, wood anatomy, wood products and utilization, wood science & technology, tree harvesting etc.</p>
+                        <p><strong>Mandate:</strong></p>
+                        <p>The department is actively involved in the teaching, research and extension activities in the field
+                            of forest products and their utilization.</p>
+                        <p><strong>Teaching:</strong></p>
+                        <p>It conducts the classes for students about non-timber forest produce and chemical, physical,
+                            mechanical properties of wood, wood identification, composite wood, wood preservation, wood
+                            seasoning, wood products etc. and hands-on-training in the area of value added products from forest
+                            produce and marketing of the products.</p>
+                        <p><strong>Research:</strong></p>
+                        <ol type="1">
+                            <li>To identify the non-timber forest produce and timber species for improving the livelihood of farmers and industrial purpose.</li>
+                            <li>Processing, value added products and marketing of important forest produce.</li>
+                            <li>To prepare the identification tool kit for important timber species of Telangana.</li>
+                            <li>To provide the treatment measures for increasing the life of plantation timber.</li>
+                            <li>To provide the chemical, physical and mechanical properties of important timber species.
+                            </li>
+                        </ol>
+                        <p><strong>Laboratory facilities :</strong></p>
+
+                        <ol type="1">
+                            <li>Non timber forest products</li>
+                            <ul style="list-style-type: disc">
+                                <li>Identification and extraction methods of NTFP’s.</li>
+                                <li>Value addition and marketing of forest produce.</li>
+                            </ul>
+                            <li>Wood science and technology</li>
+                            <ul style="list-style-type: disc">
+                                <li>Wood properties.</li>
+                                <li>Wood identification.</li>
+                                <li>Wood preservation.</li>
+                                <li>Wood seasoning.</li>
+                            </ul>
+                        </ol>
+                    </div>
+                    <div id="tree-breeding" class="tab-pane fade">
+                        <h3>Tree Breeding and Improvement</h3>
+                        <img src="../../wp-content/uploads/2022/05/department_profile5.webp" class="img-fluid">
+                        <p><strong>Vision:</strong></p>
+                        <p>To emerge as Centre of excellence in tropical Tree Improvement.</p>
+                        <p><strong>Mission:</strong></p>
+                        <p>The Department of Tree Breeding and Improvement in FC&RI aims to achieve excellence in the
+                            field of forest genetics and tree improvement through the use of integrated
+                            interdisciplinary approaches involving classical Tree breeding techniques and modern
+                            biotechnological tools for improving the productivity as well as developing need based
+                            Superior genotypes for commercial production, sustainable utilization and genetic
+                            conservation.</p>
+                        <p><strong>Teaching:</strong></p>
+                        <ol type="1">
+                            <li>To conduct effective theoretical and practical teaching on the related courses for the
+                                UG and PG students and familiarising them with concepts and principles.</li>
+                            <li>To provide hands-on training in handling Biotechnological tools and equipments</li>
+                            <li>To provide hands-on-experience in plant tissue culture</li>
+                            <li>To conduct skill training in the production of Bio-fertilizers</li>
+                            <li>To provide experiential training on quality seedling production</li>
+                        </ol>
+                        <p><strong>Research :</strong></p>
+                        <ol type="1">
+                            <li>To conduct basic, applied and strategic research on phenology and reproductive biology,
+                                genetic improvement and conservation aspects of forest trees for generating knowledge
+                                and dissemination of the same.</li>
+                            <li>To Inventorize, Prioiritize and domesticate indigenous wild species based on their
+                                utility for commercial and sustainable production.</li>
+                            <li>Breeding and Improvement of identified tree species and thereby development of need
+                                based high yielding short rotation Superior genotypes using biotechnological approaches
+                                to meet the short term and long term goals of various stakeholders.</li>
+                            <li>To standardize the Micropropagation protocols of important forest species for industrial
+                                application and commercial production.</li>
+                            <li>To enhance the productivity through isolation, production and application of
+                                Bio-fertilizersat nurseries and at large scale in forestry.</li>
+                            <li>Molecular characterization, Breeding and Conservation of Endemic, Rare, Endangered and
+                                threatened species and development of field resource banks and laboratory gene banks.
+                            </li>
+                            <li>Production of quality planting material through establishment of seed orchards.</li>
+                            <li>Use of the existing provenance and progeny trials at FRC for further improvement and
+                                advanced genomic studies in the species.</li>
+                        </ol>
+                        <p><strong>Extension:</strong></p>
+                        <ol type="1">
+                            <li>To conduct frontline demonstrations in the farmers field along with extension
+                                functionaries to demonstrate the performance, potentiality and popularization of the
+                                improved technologies to the end user agencies.</li>
+                            <li>To conduct on farm testing and trials of the identified forest practices to solve the
+                                location specific problems.</li>
+                            <li>To conduct meetings and workshops with different stake holders to create awareness and
+                                to popularize the techniques developed.</li>
+                            <li>To conduct seminars and conferences with scientific bodies for knowledge dissipation and
+                                transfer.</li>
+                            <li>To popularize the use of Bio-fertilizers at the nursery level and in different forests
+                                by conducting frontline demonstrations.</li>
+                        </ol>
+                        <p><strong>Laboratory facilities available:</strong>
+                        <p>
+                        <ol type="1">
+                            <li>Modern Biotechnology laboratory</li>
+                            <li>Tissue culture laboratory</li>
+                            <li>Advanced Microbiology laboratory</li>
+                        </ol>
+                    </div>
+                    <div id="forest-ecology" class="tab-pane fade">
+                        <h3>Forest Ecology and Climate Science </h3>
+                        <img src="../../wp-content/uploads/2022/05/department_profile6.webp" class="img-fluid">
+                        <p>Department of Forest Ecology and Climate Science consist of two faculty members, with
+                            specialization in Forest Ecology and Environmental Science respectively.</p>
+                        <p><strong>Vision:</strong></p>
+                        <p>To become a recognizable institute in the field of research in Ecology and Climate Science at
+                            Global level</p>
+                        <p><strong>Objective:</strong></p>
+                        <p>The major objective of this Department is to provide high quality education to students in
+                            order to strengthen and deepen their understanding of ecological and environmental problems.
+                            Ecology and environment is a wide field that encompasses all life forms and its surroundings
+                            on the Earth. It provides useful evidence on the interdependence between people and the natural
+                            world, as well as the consequences of human activity on the environment. The activities
+                            under the department include regular classes on various topics, field vists to various
+                            ecosystem, projects to students, hands on training, research etc. The research projects
+                            under department of Forest ecology and climate science are based on topics which are of utmost
+                            important in the current scenario such as climate resilient species,
+                            ecology, aquatic ecology phyto-remediation, ecosystem services, urbanization impact,
+                             biodiversity conservation, documentation etc. Ecology occupies an
+                            increasingly important space both in the scientific and socioeconomic sphere, taking into
+                            account the great challenges that arise regarding the sustainable management of natural
+                            resources and the conservation and protection of natural systems. So the aim of the
+                            department is to grow the sense of ecological balance through sustainable management and
+                            imapct of imbalance on environment and human among students through the well designed
+                            syllabus for different courses under the department.</p>
+                    </div>
+                    <div id="social-sciences" class="tab-pane fade">
+                        <h3>Basic and Social Sciences</h3>
+                        <img src="../../wp-content/uploads/2022/05/department_profile7.webp" class="img-fluid">
+                        <p>Over the years, the visibility of Basic and Social Sciences in forestry curricula has
+                            decreased. The Basic and Social Sciences, a dynamic department, strives to provide a
+                            backbone to Forestry Education and to enhance the student's potentialities and make their
+                            base firm for forestry and their bright future.</p>
+                        <p>The department effectively supports other departments by providing quality education and
+                            training in basic and social sciences. Our department is committed to prepare the future
+                            forestry professionals with advanced understanding, problem solving skills, civic
+                            responsibilities and communication skills.</p>
+                        <p>The Department of Basic and Social Sciences (B & SS) conducts all the core courses of basic
+                            and applied sciences, including Information and Communication Technology, Communication
+                            Skills and Personality Development, Plant Biochemistry, Forest Botany/Basic Mathematics,
+                            Physical Education, NCC/NSS, Statistical Methods & Experimental Design, Forest Tribology &
+                            Anthropology, Forest Extension & Community Forestry, Entrepreneurship Development & Business
+                            Management, Forest Economics and Marketing, Agricultural Informatics, which appear in the
+                            4-year B.Sc. (Honours) and M.Sc. Forestry programmes. Extensively proficient faculty members
+                            of B & SS also engage in research and extension work, besides the teaching activity.</p>
+                        <p>Broad areas of research are in the interdisciplinary fields of Biochemistry, computational
+                            biology, Nanotechnology and Geomatics, which are supported by modern state-of-the-art
+                            laboratories. The department also participates in action/applied research apart from basic
+                            research which includes Technology Assessment & Refinement at field level, imparting
+                            extension training to farmers and other stakeholders using modern communication tools.</p>
+                        <p>Biochemistry is the branch of science that explores the chemical processes within and related to living organisms. Biochemistry focuses on processes happening at a molecular level. It focuses on what’s happening inside our cells, studying components like proteins, lipids and organelles. It also looks at how cells communicate with each other, for example during growth or fighting illness. Biochemists need to understand how the structure of a molecule relates to its function, allowing them to predict how molecules will interact.It is a laboratory based science that brings together biology and chemistry. By using chemical knowledge and techniques. Biochemistry Laboratory is part of Basic and Social Sciences Department. Major activities in the lab include isolation and identification of various phytochemicals, mechanistic studies of plant metabolites and phytochemicals to understand their medicinal properties  
+The lab is well equipped with extraction, purification related tools and techniques, along with other analytical equipment including Spectrophotometer, protein electrophoresis unit.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md secdepdetailFCRI__col2 h-50">
+                <h6 class="text-dgreen">Departments</h6>
+                <ul class="nav nav-pills flex-column" role="tablist">
+
+                    <li class="nav-item">
+                        <a class="nav-link active" data-bs-toggle="pill" href="#silviculture">Silviculture and
+                            Agroforestry</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="pill" href="#natural-resource">Natural Resource Management
+                            and Conservation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="pill" href="#wildlife">Wildlife and Habitat Management</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="pill" href="#forest-products">Forest Products and
+                            Utilization</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="pill" href="#tree-breeding">Tree Breeding and
+                            Improvement</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="pill" href="#forest-ecology">Forest Ecology and Climate
+                            Science</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="pill" href="#social-sciences">Basic and Social Sciences</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </section>
-
         
 <section class="contact-section">
   <h1>
@@ -82,71 +315,8 @@
             <img src="{% static 'images\college-images\vision-image6.webp' %}">
         </div>
     </div>
-    <footer class="footer">
-        <div class="footer-container">
-          <!-- Footer Top Section -->
-          <div class="footer-top">
-            <div class="footer-column">
-              <img src="{% static 'images/logo-images/forestlogo-01.webp' %}" class="footer-img" alt="Forest Logo">
-              <p><strong>Email us:</strong> <a href="mailto:tsfcri2021@gmail.com">tsfcri2021@gmail.com</a></p>
-              <p><strong>Call us:</strong> <a href="tel:+918454211930">+91 8454211930</a>, <a href="tel:+918454211939">+91 8454211939</a></p>
-            </div>
-            <div class="footer-column">
-              <h3>Subscribe</h3>
-              <form action="#" class="subscribe-form">
-                <input type="email" placeholder="Enter your email address" class="subscribe-input" required>
-                <button type="submit" class="subscribe-button">Subscribe</button>
-              </form>
-            </div>
-            <div class="footer-column">
-              <h3>About</h3>
-              <ul>
-                <li><a href="#">Vision and Mission</a></li>
-                <li><a href="#">Governing Board</a></li>
-                <li><a href="#">Academic Council</a></li>
-                <li><a href="#">Organogram</a></li>
-              </ul>
-            </div>
-            <div class="footer-column">
-              <h3>Admissions</h3>
-              <ul>
-                <li><a href="#">BSc Hons Forestry</a></li>
-                <li><a href="#">MSc Forestry</a></li>
-                <li><a href="#">PhD Forestry</a></li>
-                <li><a href="#">Admission Process - UG</a></li>
-                <li><a href="#">Admission Process - PG</a></li>
-                <li><a href="#">FAQ’s</a></li>
-              </ul>
-            </div>
-            <div class="footer-column">
-              <h3>Academics</h3>
-              <ul>
-                <li><a href="#">List of Departments</a></li>
-                <li><a href="#">Faculty</a></li>
-                <li><a href="#">Laboratories</a></li>
-                <li><a href="#">Rules & Regulation - UG</a></li>
-                <li><a href="#">Rules & Regulation - PG</a></li>
-              </ul>
-            </div>
-          </div>
-      
-          <!-- Footer Bottom Section -->
-          <div class="footer-bottom">
-            <p>© 2022 FCRI - All Rights Reserved.</p>
-      
-            <!-- Social Media Links at the Bottom -->
-            <div class="top-bar1">
-              <div class="social-media1">
-                <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
-      
+    {% include 'footer1.html' %}
        
   <script src="{% static 'js/main.js' %}"></script>
+</html>
 </body>

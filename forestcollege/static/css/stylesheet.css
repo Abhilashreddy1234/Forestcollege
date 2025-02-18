@@ -1596,7 +1596,7 @@ a.flip-box-abs-link {
 }
 .homeGoverning--Text h5,h6,p {
   font-size: 18px;
-  color: #fff;
+  color: #000;
   opacity: 0.75;
   font-weight: 400;
 
@@ -2623,7 +2623,7 @@ a.flip-box-abs-link {
   bottom: 0;
   left: 15px;
   right: 15px;
-  background-image: url(../images/department_bg.webp);
+  background-image: url(../images/professor-images/department_bg.webp);
   /* width: 100%;
   height: 100%; */
   background-size: cover;
