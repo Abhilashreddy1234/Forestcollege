@@ -1,0 +1,1916 @@
+/*======================================================================
+navbar and footer media queries start
+======================================================================*/
+
+@media only screen and (min-width: 992px) {
+    /*clckable mobile menu start*/
+    .fcriHeader .navbar-light .dropdown-menu.show {
+      display: none;
+    }
+    .fcriHeader li:hover > ul {
+      display: block;
+      position: absolute;
+    }
+    /*clckable mobile menu end*/
+  } /* min-width: 992px*/
+  @media only screen and (min-width: 1200px) {
+    .pamtenFooterLogo {
+      margin-top: -20px;
+    }
+  } /* min-width: 1200px*/
+  @media only screen and (max-width: 1399px) {
+    .fcriHeader .navbar-light .navbar-nav .nav-link {
+      padding: 3px 10px;
+    }
+  }
+  @media only screen and (max-width: 1199px) {
+    .fcriHeaderLogo--img01 {
+      max-width: 100px;
+    }
+    .fcriHeaderLogo--img02 img {
+      max-width: 360px;
+    }
+    .fcriNav__ActualMenuUl {
+      padding-left: 100px;
+      margin-top: -11px;
+    }
+    .fcriHeader .navbar-light .navbar-nav .nav-link,
+    .fcriHeader.scrolledHeader .navbar-light .navbar-nav .nav-link {
+      font-size: 15px;
+    }
+    .fcriHeader .navbar-light .navbar-nav .nav-link {
+      padding: 3px 6px;
+    }
+  }
+  /*max-width 1199px*/
+  /* Strict TABLET */
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .fcriNav__ActualMenuUl {
+      justify-content: space-between;
+      width: 100%;
+    }
+    .fcriHeader .navbar-dark .fcriNav__ActualMenuUl .nav-link {
+      padding-left: 4px;
+      padding-right: 4px;
+    }
+  }
+  
+  /*min-width:992px //max-width 1199px*/
+  /* TABLETS PORTRAIT */
+  @media only screen and (max-width: 991px) {
+    .fcriHeader {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0;
+      z-index: 1020;
+      background-color: #342c27;
+      padding-top: 15px;
+    }
+    .fcriHeader.fcriHeaderForInnerPages {
+      padding-top: 10px;
+    }
+    .fcriHeader {
+      background-color: #342c27;
+    }
+    .fcriHeader .navbar.navbar-light {
+      background-color: #ebf9c6;
+      padding-top: 2px;
+      padding-bottom: 2px;
+      margin-top: 10px;
+    }
+    .fcriNav__ActualMenuUl-icon {
+      /* display: none; */
+      align-self: flex-start;
+      padding-top: 10px;
+    }
+    /*clckable mobile menu start*/
+    .fcriHeader
+      .navbar-light
+      .navbar-nav
+      .nav-item:hover
+      .nav-link[aria-expanded="false"] {
+      background-color: #ebf9c6;
+    }
+    /* .fcriHeader
+      .navbar-light
+      .navbar-nav
+      .nav-item.dropdown
+      li.has-submenu:hover
+      .submenu {
+      position: static; margin: 0  30px;
+    } */
+    /* method 01*/
+    .fcriHeader
+      .navbar-light
+      .navbar-nav
+      .nav-item.dropdown
+      li.has-submenu:hover
+      .submenu {
+      display: inline-block;
+    }
+    .fcriHeader .dropdown-menu.show {
+      display: inline-block;
+    }
+    /* method 01 end here*/
+  
+    /* method 02*/
+    /*
+    .fcriNav__ActualMenuUl .dropdown-menu,
+    .fcriNav__ActualMenuUl .dropdown-menu.show {
+      display: none !important;
+    }
+    .fcriNav__ActualMenuUl li.nav-item:hover > .dropdown-menu,
+    .fcriNav__ActualMenuUl
+      li.nav-item:hover
+      > .dropdown-menu
+      > li.has-submenu:hover
+      > .submenu,
+    .fcriNav__ActualMenuUl
+      li.nav-item:hover
+      > .dropdown-menu
+      > li.has-submenu:hover
+      > .submenu
+      li.has-submenu2:hover
+      > .submenu2 {
+      display: inline-block !important;
+    } method 02  end here*/
+  
+    /*clckable mobile menu end*/
+  
+    .fcriHeader .navbar-light .navbar-nav .nav-link {
+      color: #262f1c;
+    }
+    .fcriHeader.scrolledHeader .navbar-light {
+      padding-top: 2px;
+      padding-bottom: 2px;
+    }
+    .fcriNav--resBtn {
+      color: #ebf9c6;
+      font-size: 28px;
+      padding: 0;
+    }
+    .fcriNav--resBtn:focus {
+      outline: none;
+      box-shadow: none;
+    }
+    .fcriHeader .bg-dark {
+      padding-top: 0px;
+      padding-bottom: 5px;
+    }
+    /* .fcriHeader   .navbar-collapse.collapse:not(.show) li:hover > ul { display: none;} */
+    /* .fcriHeader img{ max-width: 450px;} */
+    .fcriHeaderLogo {
+      align-items: center;
+    }
+    .fcriHeaderLogo--img01 {
+      margin-bottom: 0;
+    }
+    .fcriNav__ActualMenuUl,
+    .fcriHeader.scrolledHeader .fcriNav__ActualMenuUl {
+      padding-left: 0;
+    }
+    .fcriNav__ActualMenuUl {
+      margin-top: 0px;
+    }
+    .top-footer .email-call {
+      margin-left: 75px;
+    }
+    .top-footer .email-subscription {
+      margin-left: 75px;
+      margin-bottom: 30px;
+    }
+    .bottom-footer .social-links .nav {
+      justify-content: right !important;
+    }
+  } /*max-width 991px*/
+  /* SMARTPHONES LANDSCAPE */
+  @media only screen and (max-width: 767px) {
+    .fcriHeaderLogo--img01,
+    .fcriHeader.scrolledHeader .fcriHeaderLogo--img01 {
+      max-width: 55px;
+    }
+    .fcriHeaderLogo--img02 img,
+    .fcriHeader.scrolledHeader .fcriHeaderLogo--img02 img {
+      max-width: 235px;
+    }
+    .logo-section .w-25 {
+      width: 70px !important;
+    }
+    .top-footer .email-subscription {
+      /* max-width: 70%; */
+      margin-bottom: 30px;
+    }
+    .bottom-footer .social-links .nav {
+      justify-content: left !important;
+    }
+    .top-footer ul .nav-item {
+      padding: 0;
+    }
+  } /*max-width 761px*/
+  /* SMARTPHONES PORTRAIT */
+  
+  @media only screen and (max-width: 575px) {
+    .fcriHeader__social {
+      display: none;
+    }
+    .fcriHeader .fcriNav__ActualMenuUl .nav-item.dropdown li .dropdown-item {
+      white-space: unset;
+    }
+    /*academics  start*/
+    .fcriNav__ActualMenuUl
+      li.nav-item:nth-child(4)
+      li:last-child:hover
+      .submenu.dropdown-menu {
+      min-width: 12rem;
+      white-space: nowrap;
+    }
+    /*academics  end*/
+    /*Admissions  start*/
+    .fcriNav__ActualMenuUl
+      li.nav-item:nth-child(5)
+      li.has-submenu:nth-child(1):hover
+      .submenu
+      .dropdown-item,
+    .fcriNav__ActualMenuUl
+      li.nav-item:nth-child(5)
+      li.has-submenu:hover
+      .submenu2
+      .dropdown-item {
+      white-space: nowrap;
+    }
+    .fcriNav__ActualMenuUl li.nav-item:nth-child(5) .dropdown-menu {
+      min-width: 4rem;
+    }
+    /*Admissions  end*/
+    .top-footer .email-call {
+      margin-left: 15px;
+    }
+    .top-footer .email-subscription {
+      margin-left: 15px;
+      max-width: calc(360px + 75px);
+    }
+  }
+  @media only screen and (max-width: 479px) {
+    .fcriHeader .navbar-light .navbar-nav .nav-item.dropdown li .dropdown-item {
+      font-size: 13px;
+    }
+    .fcriNav__ActualMenuUl .dropdown-menu .dropdown-item {
+      padding: 5px 5px;
+    }
+    /* .fcriHeader img {  max-width: 73%;} */
+    .fcriHeader .fcriNavIcons__ul li.nav-item a:before {
+      display: none;
+    }
+    .fcriHeader ul.nav.fcriNavIcons__ul li.nav-item,
+    .fcriHeader ul.nav.fcriNavIcons__ul li.nav-item a {
+      padding: 0 0;
+    }
+    .fcriHeader ul.nav.fcriNavIcons__ul li:first-child {
+      padding-right: 15px;
+      padding-left: 0;
+    }
+    .fcriHeader ul.nav.fcriNavIcons__ul li:last-child {
+      border-left: 2px solid #2e9f5e;
+      padding-left: 15px;
+      padding-right: 0;
+    }
+    .top-footer .email-subscription {
+      max-width: 100%;
+      margin-bottom: 30px;
+    }
+  } /*max-width 479px*/
+  @media only screen and (max-width: 430px) {
+    .fcriNav__ActualMenuUl
+      li.nav-item:nth-child(4)
+      li:last-child:hover
+      .submenu.dropdown-menu {
+      min-width: 12rem;
+      white-space: unset;
+    }
+  } /*max-width 430px*/
+  @media only screen and (max-width: 375px) {
+    .fcriNav__ActualMenuUl
+      li.nav-item:nth-child(4)
+      li:last-child:hover
+      .submenu.dropdown-menu {
+      min-width: 10rem;
+    }
+  } /*max-width 375px */
+  @media only screen and (max-width: 340px) {
+    /*academics  start*/
+    .fcriNav__ActualMenuUl li.nav-item:nth-child(4) > .dropdown-menu {
+      min-width: 4rem;
+      max-width: 8rem;
+    }
+    .fcriNav__ActualMenuUl
+      li.nav-item:nth-child(4)
+      li:last-child:hover
+      .submenu.dropdown-menu {
+      min-width: 9rem;
+    }
+    /*academics  end*/
+  }
+  /*max-width 340px */
+  /*======================================================================
+      navbar and footer  media queries end
+      ======================================================================*/
+  /*======================================================================
+      home page  media queries start
+      ======================================================================*/
+  @media only screen and (min-width: 768px) {
+    .faculty-content-col2 {
+      text-align: left !important;
+    }
+    .secStaffFCRI__col2 {
+      padding: 30px;
+      max-width: 330px;
+    }
+    .homeStdRviewsCard {
+      margin-bottom: 0;
+    }
+  } /*min-width:768px*/
+  @media only screen and (min-width: 992px) {
+    .secStaffFCRI__col2 {
+      max-width: 435px;
+    }
+  } /*min-width:992px*/
+  @media only screen and (min-width: 1200px) {
+    .flip-box-front,
+    .flip-box-back {
+      min-height: 400px;
+    }
+    .flip-box-header {
+      font-size: 34px;
+    }
+    .flip-box-label {
+      font-size: 20px;
+    }
+    .flip-box-label p:not(.flip-box-label),
+    .flip-box-button {
+      font-size: 16px;
+    }
+  } /*min-width 1200px*/
+  
+  @media only screen and (min-width: 1600px) {
+    .secStaffFCRI__col1 h5.text-center.playfair-family {
+      font-size: 18px;
+    }
+    .secStaffFCRI__col2 {
+      max-width: 435px;
+    }
+    .abtUniversitySec {
+      padding: 120px 0;
+    }
+    .abtUniversity__heading h3,
+    .abtUniversity-h3 {
+      font-size: 24px;
+    }
+    .abtUniversity__heading h4 {
+      font-size: 34px;
+    }
+    .abtUniversity--p {
+      font-size: 19px;
+    }
+    .flip-box-front,
+    .flip-box-back {
+      min-height: 480px;
+    }
+    .flip-box-header {
+      font-size: 48px;
+    }
+    .flip-box-label {
+      font-size: 24px;
+    }
+    .flip-box p:not(.coureseFilpBox-label),
+    .flip-box-button {
+      font-size: 20px;
+    }
+    .homeStudentlife--Text h5 {
+      font-size: 24px;
+    }
+    .homeStudentlife--Text p,
+    .homeDean__Text p {
+      font-size: 18px;
+    }
+    .homeStdRviewsCard {
+      height: 380px;
+    }
+    .homeStdRviewsCard .title2 {
+      font-size: 26px;
+    }
+    .homeStdRviewsCard h3 {
+      font-size: 19px;
+    }
+  } /*max-width*/
+  @media only screen and (min-width: 1400px) and (max-width: 1520px) {
+    .abtUniversitySec {
+      padding: 120px 0;
+    }
+  }
+  /* Strict TABLET */
+  @media only screen and (max-width: 1199px) {
+    .fcri-staff.secStaffFCRI .faculty-content-col2 {
+      text-align: center !important;
+    }
+    .fcri-staff.secStaffFCRI .carousel-control-prev {
+      right: calc(50% + 10px) !important;
+    }
+    .fcri-staff.secStaffFCRI .carousel-control-next {
+      right: calc(50% - 40px) !important;
+    }
+    .fcri-staff.secStaffFCRI .carousel-control-next,
+    .fcri-staff.secStaffFCRI .carousel-control-prev {
+      bottom: -30px;
+    }
+    .secStaffFCRI .faculty-content {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .flip-box-button {
+      margin-top: 0px;
+    }
+    .secStaffFCRI img {
+      margin: 15px;
+    }
+    .abtUniversitySec:before {
+      background-position-x: 50%;
+    }
+  } /*max-width 1199px*/
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .secStaffFCRI .carousel-control-next,
+    .secStaffFCRI .carousel-control-prev {
+      bottom: -60px;
+    }
+  } /*min-width:992px //max-width 1199px*/
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .homeStdRviewsCard h3 {
+      font-size: 14px;
+      line-height: 1.4;
+    }
+    .footerTwoSplitLogo {
+      display: flex;
+      align-items: center;
+    }
+  } /*min-width:992px //max-width 1199px*/
+  /* TABLETS PORTRAIT */
+  @media only screen and (max-width: 991px) {
+    .abtUniversity__heading {
+      padding-top: 35px !important;
+    }
+    .homeGoverningSec .carousel-item {
+      min-height: 625px;
+    }
+    .homeStudentlifeSec .carousel-item {
+      min-height: 350px;
+    }
+    .homeVidSec .bg-video-wrap {
+      height: unset;
+    }
+    .homeVidSec video {
+      min-width: unset;
+      min-height: unset;
+      z-index: 1;
+      width: 100vw;
+    }
+    .homeThreeSplitSec__text {
+      padding: 30px;
+    }
+    .abtUniversitySec:before {
+      background-position-x: 68%;
+    }
+    .flip-box p:not(.flip-box-label) {
+      font-size: 14px;
+      margin-top: 15px;
+    }
+    a.flip-box-abs-link {
+      display: none;
+    }
+    .secStaffFCRI .carousel-control-next,
+    .secStaffFCRI .carousel-control-prev {
+      bottom: -57px;
+    }
+    .homeStdRviewsCard {
+      height: 280px;
+    }
+  } /*max-width 991px*/
+  /* SMARTPHONES LANDSCAPE */
+  @media only screen and (max-width: 767px) {
+    .homeGoverningSec .carousel-item {
+      min-height: 490px;
+    }
+    .homeStudentlifeSec .carousel-item {
+      min-height: 305px;
+    }
+    .homeNotifications__left {
+      font-size: 15px;
+    }
+    .homeNotifications__right {
+      padding: 8px 6px 8px 0;
+      font-size: 14px;
+    }
+    .homeNotifications__right ul > li {
+      padding-left: 30px;
+      padding-right: 30px;
+      margin-right: 0 !important;
+    }
+  
+    .homeNotifications__left {
+      padding: 12px 6px;
+    }
+    .fcri-staff.secStaffFCRI .carousel-control-prev {
+      right: calc(100% - 40px) !important;
+    }
+    .fcri-staff.secStaffFCRI .carousel-control-next {
+      right: calc(100% - 100px) !important;
+    }
+    .fcri-staff.secStaffFCRI .faculty-content-col2 {
+      text-align: left !important;
+    }
+    .fcri-staff.secStaffFCRI .faculty-content-col1 {
+      text-align: left !important;
+      width: 100%;
+    }
+    .h .homeThreeSplitSec__text.hts--text01 {
+      background-color: #7cb06d;
+    }
+    .homeThreeSplitSec__text {
+      min-height: auto;
+    }
+    .homeThreeSplitSec__img {
+      min-height: 250px;
+    }
+    .abtUniversitySec:before {
+      background-position-x: 0;
+    }
+    .homeStudentlifeSec:before {
+      right: 0;
+    }
+    .homeGoverningSec:before {
+      right: 0;
+    }
+    .secStaffFCRI__col1 {
+      order: 2;
+    }
+    .secStaffFCRI__col1 {
+      order: 1;
+    }
+    .secStaffFCRI .nav {
+      text-align: left;
+      margin-bottom: 30px;
+    }
+    .secStaffFCRI img {
+      max-width: 90px;
+    }
+    .homeStudentlife__Carousel .carousel-indicators {
+      justify-content: center;
+      margin-bottom: -30px;
+    }
+    .homeStudentlifeSec .carousel-item {
+      text-align: center;
+    }
+    
+    .homeStudentlifeSec--Title {
+      text-align: center;
+    }
+    .homeStdRviewsThreeColSec:before {
+      top: 0;
+      background-color: #dbd9b6;
+      background-image: linear-gradient(to top, #dbd9b6 0%, #ffffff 100%);
+    }
+    .homeThreeSplitSec__container:before {
+      content: none;
+    }
+    .secStaffFCRI .carousel-control-next,
+    .secStaffFCRI .carousel-control-prev {
+      bottom: -30px;
+    }
+    .abtUniversitySec {
+      padding: 50px 0 0;
+    }
+    .abtUniversitySec:before {
+      /* background-image: url(../images/HomePage/wave1.png); */
+      background-image: linear-gradient(to top, #fbdeb6 0%, #ffffff 100%);
+    }
+    .abtUniversity__girlImgMob {
+      max-width: 330px;
+    }
+  } /*max-width 761px*/
+  /* SMARTPHONES PORTRAIT */
+  @media only screen and (max-width: 575px) {
+      .home-popup .modal-content{
+          width: calc(100% - 30px);
+      }
+    .homeGoverningSec .carousel-item {
+      min-height: 525px;
+    }
+    .homeStudentlifeSec .carousel-item {
+      min-height: 330px;
+    }
+    .homeVidSec h1 {
+      font-size: 19px;
+      width: 75%;
+    }
+    .homeThreeSplitSec__container {
+      margin-top: -80px;
+    }
+    .homeThreeSplitSec__text :is(h5, h6) {
+      font-size: 24px;
+    }
+    .homeThreeSplitSec__text.hts--text02 img {
+      max-width: 120px;
+    }
+    .homeThreeSplitSec .lineBtn {
+      letter-spacing: 1px;
+    }
+    .homeflip-card-row {
+      flex-direction: column;
+    }
+    .homeflip-col-6 {
+      width: 65%;
+      margin: auto;
+    }
+    .homeThreeSplitSec__text {
+      padding: 20px;
+    }
+    .flip-box p:not(.flip-box-label) {
+      font-size: 14px;
+      margin-top: 15px;
+    }
+    .flip-box-button {
+      margin-top: 10px;
+    }
+    .abtUniversitySec:before {
+      background-position-x: 39%;
+    }
+    .homeDean__Text p {
+      text-align: left;
+      margin-bottom: 10px;
+    }
+    .homeDean__Text {
+      padding: 30px 15px;
+    }
+    .homeDean__Text h5 {
+      margin-bottom: 15px;
+    }
+    .homeDean__Text h4 {
+      font-size: 22px;
+    }
+    .homeStdRviewsCard {
+      height: 420px;
+      max-width: 90%;
+      margin: 0 auto 30px;
+    }
+    .homeStdRviewsCard .title2 {
+      font-size: 22px;
+    }
+    .homeStdRviewsCard h3 {
+      font-size: 18px;
+    }
+  } /*max-width 575pxpx*/
+  @media only screen and (max-width: 479px) {
+      
+    .homeStdRviewsCard h3 {
+      font-size: 16px;
+    }
+    .homeStdRviewsCard h3 {
+      font-size: 18px;
+    }
+    .homeNotifications__left {
+      padding: 12px 12px;
+    }
+    .homeNotifications .col-auto {
+      width: 40px;
+    }
+    .homeNotifications .col {
+      width: calc(100% - 40px);
+    }
+    .homeNotifications__left span {
+      display: none;
+    }
+    .homeStdRviewsCard {
+      height: 380px;
+    }
+    .fcri-staff.secStaffFCRI .faculty-content {
+      min-height: 90vh;
+    }
+    .homeGoverningSec .carousel-item {
+      min-height: 570px;
+    }
+    .homeStudentlifeSec .carousel-item {
+      min-height: 365px;
+    }
+  } /*max-width 479px*/
+  @media only screen and (max-width: 399px) {
+    .homeThreeSplitSec__text :is(h5, h6) {
+      font-size: 22px;
+    }
+  } /*max-width 399pxpx*/
+  @media only screen and (max-width: 374px) {
+    .homeStdRviewsCard .homeStdRviewsCard__back {
+      padding: 18px;
+    }
+    .homeStdRviewsCard h3 {
+      font-size: 15px;
+    }
+    .homeStdRviewsCard {
+      height: 308px;
+    }
+    .homeGoverningSec .carousel-item {
+      min-height: 730px;
+    }
+    .homeStudentlifeSec .carousel-item {
+      min-height: 440px;
+    }
+  } /*max-width 399pxpx*/
+  /*======================================================================
+      home page media  queries end
+      ======================================================================*/
+  /*======================================================================
+      Course page  media queries start
+      ======================================================================*/
+  
+  @media only screen and (min-width: 1200px) {
+    .coureseFilpBox-front,
+    .coureseFilpBox-back {
+      min-height: 400px;
+    }
+    .coureseFilpBox-header {
+      font-size: 34px;
+    }
+    .coureseFilpBox-label {
+      font-size: 20px;
+    }
+    .coureseFilpBox p:not(.coureseFilpBox-label),
+    .coureseFilpBox-button {
+      font-size: 16px;
+    }
+  } /*min-width 1200px*/
+  @media only screen and (min-width: 1600px) {
+    .courseContentSec {
+      padding: 100px 0;
+      font-size: 18px;
+    }
+    .courseContentSec--Title {
+      font-size: 38px;
+    }
+    .courseContentSec--Label {
+      font-size: 26px;
+    }
+    .coureseFilpBox-front,
+    .coureseFilpBox-back {
+      min-height: 480px;
+    }
+    .coureseFilpBox-header {
+      font-size: 48px;
+    }
+    .coureseFilpBox-label {
+      font-size: 24px;
+    }
+    .coureseFilpBox p:not(.coureseFilpBox-label),
+    .coureseFilpBox-button {
+      font-size: 20px;
+    }
+  } /*min-width 1600px*/
+  /* TABLETS PORTRAIT */
+  @media only screen and (max-width: 1199px) {
+    .courseInfographicSec .carousel-control-prev {
+      left: 0%;
+    }
+    .courseInfographicSec .carousel-control-next {
+      right: 0%;
+    }
+    .courseContentSec:before {
+      background-position: 75%, 50%;
+    }
+  } /*max-width 1199px*/
+  @media only screen and (max-width: 991px) {
+    .courseContentSec:before {
+      right: calc(58.3% + 15px);
+      background-position: 66%, 50%;
+    }
+    .courseInfographicSec__contentCol {
+      padding: 30px 15px;
+    }
+    .courseInfographicSec__contentCol ul > li:not(:last-child) {
+      margin-bottom: 10px;
+    }
+    .courseInfographicSec__contentCol h4 {
+      font-size: 21px;
+    }
+    .courseInfographicSec__contentCol h6 {
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+    .inner-banner {
+      margin-top: 0% !important;
+    }
+    .courseflipCardSec .box-item {
+      max-width: 260px;
+      margin: 0 auto 35px;
+    }
+    .coureseFilpBox .inner {
+      bottom: 20px;
+      left: 20px;
+      right: 20px;
+    }
+    .coureseFilpBox p:not(.coureseFilpBox-label) {
+      font-size: 14px;
+      margin-top: 15px;
+    }
+    .courseInfographicSec .carousel-control-prev,
+    .courseInfographicSec .carousel-control-next {
+      top: calc(50% - 20px);
+      bottom: calc(50% - 20px);
+      width: 40px;
+    }
+    .courseInfographicSec .carousel-control-prev {
+      left: -7.5%;
+    }
+    .courseInfographicSec .carousel-control-next {
+      right: -7.5%;
+    }
+  } /*max-width 991px*/
+  /* SMARTPHONES LANDSCAPE */
+  @media only screen and (max-width: 767px) {
+    .courseflipCardSec .box-item {
+      max-width: 260px;
+      margin: 0 auto 25px;
+    }
+    .courseflipCardSec {
+      padding: 30px 0 0;
+    }
+    .courseContentSec,
+    .phdCoursePage .courseContentSec {
+      padding: 30px 0;
+    }
+    .courseContentSec:before {
+      content: none;
+    }
+    .courseContentSec--Title {
+      margin-top: 30px;
+    }
+    .courseInfographicSec__contentCol {
+      padding: 30px 30px;
+    }
+    .courseInfographicSec .carousel-indicators {
+      justify-content: center;
+      margin-bottom: -30px;
+    }
+    .courseInfographicSec .carousel-control-prev,
+    .courseInfographicSec .carousel-control-next {
+      top: calc(45% - 25px);
+      bottom: calc(55% - 25px);
+    }
+    .inner-banner {
+      margin-top: 0% !important;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    .inner-banner h1 {
+      text-align: center;
+    }
+    .inner-banner .breadcrumb {
+      text-align: center;
+      justify-content: center;
+    }
+    .courseInfographicSec .carousel-control-prev,
+    .courseInfographicSec .carousel-control-next {
+      top: calc(40% - 20px);
+      bottom: calc(60% - 20px);
+      width: 40px;
+    }
+    .courseInfographicSec .carousel-control-prev {
+      left: -0%;
+    }
+    .courseInfographicSec .carousel-control-next {
+      right: -0%;
+    }
+  } /*max-width 761px*/
+  @media only screen and (max-width: 575px) {
+    .courseInfographicSec .carousel-control-prev,
+    .courseInfographicSec .carousel-control-next {
+      top: calc(33% - 20px);
+      bottom: calc(67% - 20px);
+    }
+  } /*max-width 575px*/
+  /*======================================================================
+      Course page media  queries end
+      ======================================================================*/
+  
+  /*======================================================================
+  missionVissionPage  media queries start
+  ======================================================================*/
+  @media only screen and (min-width: 1600px) {
+    .mvpageWelcomeContent h3 {
+      font-size: 34px;
+    }
+    .mvpageWelcomeContent h6 {
+      font-size: 26px;
+    }
+    .mvpageContentCol h4 {
+      font-size: 30px;
+    }
+    .mvpageWelcomeContent p,
+    .mvpageContentCol p,
+    .mvpageContentCol ul > li {
+      font-size: 20px;
+      line-height: 1.5;
+    }
+  } /* min-width 1600px*/
+  /* SMARTPHONES LANDSCAPE */
+  @media only screen and (max-width: 1199px) {
+    .mvpageContentCol {
+      background-color: rgba(49, 35, 49, 0.95);
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .mvpageWelcomeContent p {
+      line-height: 1.5;
+    }
+    .mvpageWelcomeImgBlock.mvpwImg-03 {
+      margin-left: -80px;
+    }
+  } /* max-width 1199px*/
+  @media only screen and (max-width: 991px) {
+    .mvpageWelcomeContent p {
+      line-height: 1.5;
+    }
+    .mvpageWelcomeImgBlock.mvpwImg-03 {
+      margin-left: -150px;
+    }
+    .mvpageWelcomeContent h3 {
+      font-size: 24px;
+    }
+    .mvpageWelcomeContent h6 {
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+  } /* max-width 991px*/
+  
+  @media only screen and (max-width: 767px) {
+    .mvpageWelcomeCol01 {
+      order: 2;
+    }
+    .mvpageWelcomeCol02 {
+      order: 1;
+    }
+    .mvpageWelcomeImgBlock:before {
+      content: none;
+    }
+    .mvpageWelcomeImgBlock.mvpwImg-03 {
+      margin-left: 0px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+  } /*max-width 767px*/
+  /* SMARTPHONES PORTRAIT */
+  /*======================================================================
+  missionVissionPage media  queries end
+  ======================================================================*/
+  /*======================================================================
+  list-of-departments page media queries start
+  ======================================================================*/
+  @media only screen and (min-width: 768px) {
+    .secdepdetailFCRI__col2 {
+      padding: 30px;
+      max-width: 330px;
+      /* position: -webkit-sticky;
+      position: sticky;
+      top: 135px; */
+    }
+    .vertical-center {
+      margin-top: 50px;
+    }
+  } /*min-width 768px*/
+  @media only screen and (min-width: 992px) {
+    .secdepdetailFCRI__col2 {
+      max-width: 435px;
+    }
+  } /*min-width 992px*/
+  @media only screen and (min-width: 1600px) {
+    .secdepdetailFCRI__col2 {
+      max-width: 440px;
+    }
+    .dept-details {
+      font-size: 18px;
+    }
+  } /*min-width 1600px*/
+  @media only screen and (max-width: 767px) {
+    .dept-details h3 {
+      margin-top: 30px;
+    }
+    .secdepdetailFCRI__row {
+      flex-direction: column-reverse;
+    }
+    .secdepdetailFCRI__col2 {
+      padding: 30px 15px;
+    }
+    .secdepdetailFCRI__col2:before {
+      left: 0;
+      right: 0;
+    }
+    .dept-details .secdepdetailFCRI__col2 h6,
+    .dept-details .nav {
+      text-align: left;
+    }
+  } /*max-width 991px*/
+  
+  /*======================================================================
+  list-of-departments page media  queries end
+  ======================================================================*/
+  /*======================================================================
+  laboratories page media queries start
+  ======================================================================*/
+  @media only screen and (min-width: 768px) {
+    .seclaboriesFCRI__col2 {
+      padding: 30px;
+      max-width: 330px;
+      /* position: -webkit-sticky;
+      position: sticky;
+      top: 135px; */
+    }
+  } /*min-width 768px*/
+  @media only screen and (min-width: 992px) {
+    .seclaboriesFCRI__col2 {
+      max-width: 435px;
+    }
+  } /*min-width 992px*/
+  @media only screen and (min-width: 1600px) {
+    .seclaboriesFCRI__col2 {
+      max-width: 440px;
+    }
+    .dept-laboratories {
+      font-size: 18px;
+    }
+  } /*min-width 1600px*/
+  @media only screen and (max-width: 767px) {
+    .dept-laboratories h3 {
+      margin-top: 30px;
+    }
+    .seclaboriesFCRI__row {
+      flex-direction: column-reverse;
+    }
+    .seclaboriesFCRI__col2 {
+      padding: 30px 15px;
+    }
+  
+    .seclaboriesFCRI__col2:before {
+      left: 0;
+      right: 0;
+    }
+    .dept-laboratories .seclaboriesFCRI__col2 h6,
+    .dept-laboratories .nav {
+      text-align: left;
+    }
+  } /*max-width 991px*/
+  
+  /*======================================================================
+  laboratories page media  queries end
+  ======================================================================*/
+  /*======================================================================
+  central-instrumentation-facilitycif page media  queries start
+  ======================================================================*/
+  @media only screen and (min-width: 1600px) {
+    .infrastructure-caf1 {
+      font-size: 18px;
+    }
+  } /*min-width 1600px*/
+  
+  @media only screen and (max-width: 767px) {
+    .infrastructure-caf1 .seclaboriesFCRI__col1 {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+    .infrastructure-caf1 .seclaboriesFCRI__col2 h6,
+    .infrastructure-caf1 .nav {
+      text-align: left;
+    }
+  } /*max-width 767px*/
+  /*======================================================================
+  central-instrumentation-facilitycif page media  queries end
+  ======================================================================*/
+  /*======================================================================
+  Department Head page media  queries start
+  ======================================================================*/
+  @media only screen and (min-width: 768px) {
+    .secfacultyFCRI__col2 {
+      padding: 30px 45px;
+      max-width: 360px;
+    }
+  } /*min-width 768px*/
+  @media only screen and (min-width: 992px) {
+    .secfacultyFCRI__col2 {
+      max-width: 465px;
+    }
+  } /*min-width 992px*/
+  @media only screen and (min-width: 1200px) {
+    .dept-head .faculty-content img {
+      max-width: 100%;
+      margin: 0 auto;
+      margin-right: auto;
+    }
+  } /*min-width 1200px*/
+  @media only screen and (min-width: 1600px) {
+    .secfacultyFCRI__col2 {
+      max-width: 468px;
+    }
+    .dept-head {
+      font-size: 18px;
+    }
+  } /*min-width 1600px*/
+  @media only screen and (min-width: 1200px) and (max-width: 1400px) {
+    .dept-head .faculty-content__colimg {
+      margin-right: 0px;
+    }
+    .dept-head .faculty-content img {
+      max-width: 227px;
+    }
+  } /*min-width:1200px //max-width 1400px*/
+  @media only screen and (max-width: 1199px) {
+    .dept-head .faculty-content img {
+      margin: 0 0 30px;
+      max-width: 125px;
+    }
+    .dept-head .faculty-content {
+      flex-direction: column;
+      align-items: start;
+      text-align: left;
+    }
+  } /*maxwidth: 1199px*/
+  
+  @media only screen and (max-width: 991px) {
+    .dept-head .deptCommonTitle {
+      padding: 10px 20px;
+      font-size: 20px;
+    }
+  } /*maxwidth: 991px*/
+  @media only screen and (max-width: 767px) {
+    .deptCommonRow {
+      flex-direction: column-reverse;
+    }
+    .deptCommonRow_Col2:before {
+      left: 0;
+      right: 0;
+    }
+    .secfacultyFCRI__col2 {
+      padding: 30px 15px;
+    }
+    .dept-head .secfacultyFCRI__col2 h6,
+    .dept-head .nav {
+      text-align: left;
+    }
+    .deptCommonRow_Col1 {
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+    .deptCommonRow_Col2 .nav {
+      margin-bottom: 0;
+    }
+  } /*max-width 767px*/
+  @media only screen and (max-width: 575px) {
+    .dept-head .faculty-content .faculty-content__colimg {
+      text-align: center;
+      margin: 0 auto;
+    }
+    .dept-head .faculty-content img {
+      margin: 0 auto 30px;
+    }
+  } /*max-width 575px*/
+  /*======================================================================
+  Department Head page media  queries end
+  ======================================================================*/
+  /*======================================================================
+  faculty page media  queries start
+  ======================================================================*/
+  
+  @media only screen and (min-width: 1200px) {
+    .faculty-content__colimg {
+      margin-right: 30px;
+    }
+    .dept-staff .faculty-content img {
+      max-width: 100%;
+      margin: 0 auto;
+      margin-right: auto;
+    }
+  } /*min-width 1200px*/
+  @media only screen and (min-width: 1600px) {
+    .dept-staff {
+      font-size: 18px;
+    }
+    .dept-staff .carousel {
+      min-height: 420px;
+    }
+  } /*min-width 1600px*/
+  @media only screen and (min-width: 1200px) and (max-width: 1400px) {
+    .dept-staff .faculty-content__colimg {
+      margin-right: 0px;
+    }
+    .dept-staff .carousel {
+      min-height: 390px;
+    }
+    .dept-staff .faculty-content img {
+      max-width: 227px;
+    }
+  } /*min-width:1200px //max-width 1400px*/
+  @media only screen and (max-width: 1199px) {
+    .dept-staff .faculty-content img {
+      margin: 0 0 30px;
+      max-width: 125px;
+    }
+    .dept-staff .faculty-content {
+      flex-direction: column;
+      align-items: start;
+      text-align: left;
+    }
+    .dept-staff .carousel-control-next {
+      right: calc(50% - 40px) !important;
+    }
+    .dept-staff .carousel-control-prev {
+      right: calc(50% + 10px) !important;
+    }
+  } /*maxwidth: 1199px*/
+  @media only screen and (max-width: 991px) {
+    .dept-staff .deptCommonTitle {
+      padding: 10px 20px;
+      font-size: 20px;
+    }
+    .dept-head-bio .modal-body > .row {
+      flex-direction: column;
+    }
+    .dept-head-bio .modal-body > .row .col-md-4,
+    .dept-head-bio .modal-body > .row .col-md-8 {
+      width: 100%;
+    }
+    .dept-head-bio .modal-body > .row .col-md-4 img {
+      max-width: 160px;
+      margin: 0 0 30px !important;
+    }
+    .dept-head-info ul.nav {
+      display: block;
+    }
+    .dept-head-info .nav-link {
+      padding: 0.5rem 1rem 0.5rem 0;
+    }
+    .dept-head-info ul.nav li.nav-item a.phone-no:before {
+      padding: 6px 10px;
+    }
+  } /*maxwidth: 991px*/
+  @media only screen and (max-width: 767px) {
+    .dept-staff .deptCommonRow_Col1 {
+      margin-top: 30px;
+      margin-bottom: 60px;
+    }
+    .dept-staff .secfacultyFCRI__col2 h6,
+    .dept-staff .nav {
+      text-align: left;
+    }
+    .dept-staff .carousel-control-next,
+    .dept-staff .carousel-control-prev {
+      bottom: -40px;
+    }
+  } /*max-width 767px*/
+  @media only screen and (max-width: 575px) {
+    .dept-staff .faculty-content .faculty-content__colimg {
+      text-align: center;
+      margin: 0 auto;
+    }
+    .dept-staff .faculty-content img {
+      margin: 0 auto 30px;
+    }
+  } /*max-width 575px*/
+  /*======================================================================
+  faculty page media  queries end
+  ======================================================================*/
+  /*======================================================================
+  infrastructure page media queries start
+  ======================================================================*/
+  @media only screen and (min-width: 1600px) {
+    .infrastructure-museum,
+    .infrastructure-broadroom,
+    .infrastructure-auditorium,
+    .infrastructure-seminarhall,
+    .infrastructure-library,
+    .infrastructure-hostel,
+    .infrastructure-canteen {
+      font-size: 18px;
+    }
+  } /*min-width 1600px*/
+  @media only screen and (min-width: 1200px) {
+    .infrastructure-museum .conn_infra,
+    .infrastructure-broadroom .conn_infra,
+    .infrastructure-auditorium .conn_infra,
+    .infrastructure-seminarhall .conn_infra,
+    .infrastructure-library .conn_infra,
+    .infrastructure-hostel .conn_infra,
+    .infrastructure-canteen .conn_infra {
+      padding: 20px;
+    }
+  } /*min-width 1200px*/
+  @media only screen and (max-width: 991px) {
+    /* .infrastructure-row-mobile {
+      flex-direction: column;
+    } */
+    .col-padding {
+      padding-top: 15px;
+    }
+    .infrastructure-caf1 .tabledata {
+      padding: 30px 0 0px 0;
+    }
+    /* .infrastructure-cif-row-mobile {
+      flex-direction: column-reverse;
+    } */
+  } /*max-width 991px*/
+  /* SMARTPHONES LANDSCAPE */
+  @media only screen and (max-width: 767px) {
+    /* .infrastructure-row-mobile {
+      flex-direction: column;
+    } */
+    .col-padding {
+      padding-top: 30px;
+    }
+    .infrastructure-caf1 .tabledata {
+      padding: 15px 0 0px 0;
+    }
+    .infrastructure-cif-row-mobile {
+      flex-direction: column-reverse;
+    }
+  } /*max-width 761px*/
+  /*======================================================================
+  infrastructure page media  queries end
+  ======================================================================*/
+  /*======================================================================
+  deputyDirectorPage  media queries start
+  ======================================================================*/
+  @media only screen and (min-width: 768px) {
+    .deputyDirPageCollpseA__CardImg {
+      max-width: 260px;
+      margin-bottom: 30px;
+    }
+    .deputyDirPageCollpseA__CardContent h4 {
+      font-size: 24px;
+    }
+    .deputyDirPageCollpseA__CardContent h5 {
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+    .deputyDirPageCollpseA__CardContent p {
+      line-height: 1.5;
+    }
+    .deputyDirPageCollpseA__CardContent ul > li > a {
+      font-size: 18px;
+    }
+  } /*min-width: 768px*/
+  @media only screen and (min-width: 992px) {
+    .deputyDirPageCollpseA__CardImg {
+      max-width: 295px;
+    }
+  } /*min-width: 992px*/
+  @media only screen and (min-width: 1200px) {
+    .deputyDirPageCollpseA__CardImg {
+      max-width: 260px;
+    }
+  } /*min-width: 1200px*/
+  
+  @media only screen and (min-width: 1600px) {
+    .deputyDirPageCollpseA__CardContent p,
+    .deputyDirPageCollpseA__Card + p,
+    .deputyDirPageCollpseBSec p {
+      font-size: 18px;
+    }
+    .deputyDirPageCollpseA__CardContent ul > li > a {
+      font-size: 20px;
+    }
+    .deputyDirPageCollpseBSec h6 {
+      font-size: 40px;
+    }
+    .deputyDirPageCollpseA__CardContent h4 {
+      font-size: 30px;
+    }
+    .deputyDirPageCollpseA__CardContent h5 {
+      font-size: 24px;
+    }
+  }
+  /*max-width 1600px*/
+  /* Strict TABLET */
+  @media only screen and (max-width: 1199px) {
+  } /*max-width 1199px*/
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+  } /*min-width:992px //max-width 1199px*/
+  /* TABLETS PORTRAIT */
+  @media only screen and (max-width: 991px) {
+  } /*max-width 991px*/
+  /* SMARTPHONES LANDSCAPE */
+  @media only screen and (max-width: 767px) {
+    .deputyDirPageCollpseA__CardContent ul {
+      margin-bottom: 30px;
+    }
+    .deputyDirPageCollpseA__Card {
+      text-align: center;
+    }
+    .deputyDirPageCollpseA__CardImg {
+      margin-bottom: 30px;
+    }
+    .deputyDirPageCollpseA__CardContent h5 {
+      margin-bottom: 15px;
+    }
+    .deputyDirPageCollpseA__Card + p,
+    .deputyDirPageCollpseA__CardContent p,
+    .deputyDirPageCollpseBSec p {
+      line-height: 1.5;
+    }
+  } /*max-width 761px*/
+  /* SMARTPHONES PORTRAIT */
+  @media only screen and (max-width: 575px) {
+    .deputyDirPageCollpseA__CardContent ul > li {
+      display: block;
+      text-align: left;
+    }
+  } /*max-width 575pxpx*/
+  /*======================================================================
+    deputyDirectorPage media  queries end
+    ======================================================================*/
+  
+  /*======================================================================
+    downloadsPage media  queries start
+    ======================================================================*/
+  @media only screen and (max-width: 991px) {
+    /* .downloadsPageNav .nav-link {
+      min-height: 65px;
+    } */
+  } /*max-width 991px*/
+  @media only screen and (max-width: 767px) {
+    .fcriHeader .navbar-light .navbar-nav .nav-item.dropdown li.has-submenu:hover .submenu {left: auto;}
+    .downloadsPageNav {
+      flex-direction: row;
+    }
+    .downloadsPageNav .nav-link {
+      min-height: unset;
+      text-align: left;
+    }
+  } /*max-width 761px*/
+  /*======================================================================
+    downloadsPage media  queries end
+    ======================================================================*/
+  
+  /*======================================================================
+    DeanPage media  queries start
+    ======================================================================*/
+  @media only screen and (min-width: 1600px) {
+    .deanMessage__Text p,
+    .deanMessageUL > li > a,
+    .deanContentDarkSec p,
+    .deanContentLightSec p {
+      font-size: 18px;
+    }
+    .deanMessage__Text h4 {
+      font-size: 32px;
+    }
+    .deanMessage__Text h5 {
+      font-size: 20px;
+    }
+    .deanContentLightSec h6 {
+      font-size: 40px;
+    }
+    .deanCTASec h1 {
+      font-size: 34px;
+    }
+    .deanCTASec h2 {
+      font-size: 28px;
+    }
+  }
+  /*max-width 1600px*/
+  @media only screen and (max-width: 1199px) {
+    .deanMessage__Text h5 {
+      margin-bottom: 15px;
+    }
+  } /*max-width 1199px*/
+  @media only screen and (max-width: 767px) {
+    .deanContentLightSec p,
+    .deanContentDarkSec p {
+      line-height: 1.5;
+    }
+    .deanContentLightSec h6 {
+      font-size: 24px;
+    }
+    .deanMessageUL {
+      margin-top: 0;
+    }
+  } /*max-width 767px*/
+  /*======================================================================
+    DeanPage media  queries end
+    ======================================================================*/
+  
+  /*======================================================================
+      governing-board-page  queries start
+  ======================================================================*/
+  @media only screen and (min-width: 1600px) {
+    .governing-board-page .table.table-color {
+      font-size: 18px;
+    }
+  } /* min-width 1600px*/
+  @media only screen and (max-width: 991px) {
+    .governing-board-page .table.table-color {
+      font-size: 14px;
+    }
+  } /*max-width 991px*/
+  /*======================================================================
+      governing-board-page  queries end
+    ======================================================================*/
+  /*======================================================================
+      contact us page   queries start
+  ======================================================================*/
+  @media only screen and (min-width: 1600px) {
+    .contact-section,
+    .contact-section .form-section .btn-success,
+    .contact-section .form-section .form-control {
+      font-size: 18px;
+    }
+  } /* min-width 1600px*/
+  @media only screen and (max-width: 991px) {
+  } /*max-width 991px*/
+  /*======================================================================
+     contact us page  queries end
+    ======================================================================*/
+  /*======================================================================
+      Press Release page  queries Start
+    ======================================================================*/
+  @media only screen and (min-width: 575px) and (max-width: 767px) {
+    .pressReleaseGallerySec .masonry {
+      column-count: 2;
+    }
+  }
+  /*======================================================================
+      Press Release page  queries end
+    ======================================================================*/
+  /*======================================================================
+     latest news page  queries Start
+    ======================================================================*/
+  @media only screen and (min-width: 1400px) {
+    .latest-news .neswsScrollNav {
+      height: 662px;
+    }
+  } /*min-width:1400px*/
+  @media only screen and (max-width: 767px) {
+    .latest-news .neswsScrollNav {
+      height: 405px;
+      margin-bottom: 30px;
+    }
+  } /*max-width:767px*/
+  @media only screen and (max-width: 574px) {
+    .latest-news .left-main-news,
+    .latest-news .bot-left-news,
+    .latest-news .bot-right-news,
+    .latest-news .main-right-top,
+    .latest-news .main-right-bot {
+      text-align: center;
+    }
+    .latest-news .main-news-text {
+      width: 70%;
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+    }
+  } /*max-width:574px*/
+  /*======================================================================
+     latest news page  queries end
+    ======================================================================*/
+  /*======================================================================
+   others page  queries start
+    ======================================================================*/
+  @media only screen and (min-width: 1600px) {
+    .faqSection,
+    .stdClubSection,
+    .sportsClubSection {
+      font-size: 18px;
+    }
+  } /*min-width:1600px*/
+  @media only screen and (max-width: 1199px) {
+    .plublications .owl-next {
+      right: 0px;
+    }
+    .plublications .owl-prev {
+      margin-left: 0px;
+    }
+  } /*min-width:1600px*/
+  
+  /*======================================================================
+   others page  queries end
+    ======================================================================*/
+  /*======================================================================
+    Template  media queries start
+    ======================================================================*/
+  /* Strict TABLET */
+  /* Strict TABLET */
+  @media only screen and (max-width: 1199px) {
+  } /*max-width 1199px*/
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+  } /*min-width:992px //max-width 1199px*/
+  /* TABLETS PORTRAIT */
+  @media only screen and (max-width: 991px) {
+  } /*max-width 991px*/
+  /* SMARTPHONES LANDSCAPE */
+  @media only screen and (max-width: 767px) {
+  } /*max-width 761px*/
+  /* SMARTPHONES PORTRAIT */
+  @media only screen and (max-width: 575px) {
+  } /*max-width 575pxpx*/
+  /*======================================================================
+    Template media  queries end
+    ======================================================================*/
+  
+  /*====================================================================================
+      Initial Registration  Start
+   *======================================================================================*/
+  /*----#Start#---------FCRIOTPSection --------------------*/
+  @media only screen and (min-width: 768px) {
+    .FCRIOTPSection .FCRIOTPSectionCol {
+      max-width: 430px;
+    }
+  } /*min-width 768px*/
+  @media only screen and (max-width: 767px) {
+    .FCRIRegistrationCard__Header {
+      padding: 15px;
+    }
+    .FCRIRegistrationCard__HeaderFirstPart h2 {
+      font-size: 20px;
+    }
+    .FCRIRegistrationCard__HeaderFirstPart h5 {
+      font-size: 15px;
+    }
+    .FCRIRegistrationCard__HeaderFirstPart p {
+      font-size: 14px;
+    }
+    .FCRIRegistrationCard__HeaderSecondPart h3 {
+      font-size: 18px;
+    }
+    .FCRIRegistrationCard__HeaderSecondPart h4 {
+      font-size: 18px;
+    }
+    .FRC-form-group .FRC-radio-ul.d-flex {
+      flex-wrap: wrap;
+      justify-content: start !important;
+    }
+    .FRC-form-group .FRC-radio-ul.d-flex > li {
+      margin-right: 15px;
+      margin-bottom: 5px;
+    }
+    .FCRIRegistrationCard__BodyHeader small.text-yellow {
+      font-size: 12px;
+    }
+    .FRC-CertificateUpload .input-group .btn {
+      width: 100px;
+    }
+  } /*max-width 768px*/
+  
+  /*----#End#-----------FCRIOTPSection------------------*/
+  /*====================================================================================
+      Initial Registration  End
+   *======================================================================================*/
+  /*====================================================================================
+      Registration page  start
+   *======================================================================================*/
+  @media only screen and (max-width: 991px) {
+    .FRC-CertificateUpload .input-group input {
+      text-align: center;
+    }
+    .FRC-CertificateUpload .input-group-btn {
+      width: calc(100% - 177px);
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    .FRC-CertificateUpload .input-group input {
+      text-align: left;
+    }
+    .FRC-CertificateUpload .input-group-btn {
+      width: calc(100% - 340px);
+    }
+  }
+  @media only screen and (max-width: 575px) {
+    .FRC-CertificateUpload .input-group input {
+      text-align: center;
+    }
+    .FRC-CertificateUpload .input-group-btn {
+      width: calc(100% - 167px);
+    }
+    .totalMarksInputGroup #BoardMaxMarks{max-width:100px;}
+    .academicTable thead th {
+      min-width: 100px;
+      
+    }
+    
+    .academicTable thead th:nth-child(1) {
+      max-width: 43px;
+      min-width: 43px;
+    }
+    .academicTable thead th:nth-child(2) {
+      min-width: 95px;
+      max-width: 95px;
+      width: 95px;
+    }
+    .academicTable thead th:nth-child(3) {
+      min-width: 177px;
+      max-width: 177px;
+      width: 177px;
+    }
+    .academicTable thead th:nth-child(4){
+         min-width: 400px;
+      max-width: 400px;
+      width: 400px;
+    }
+    .academicTable thead th:nth-child(5),
+    .academicTable thead th:nth-child(6) {
+      min-width: 203px;
+      max-width: 203px;
+      width: 203px;
+    }
+    .marksObtainedTable thead th {
+      min-width: 100px;
+    }
+    .marksObtainedTable thead th:nth-child(1) {
+      min-width: 150px;
+      max-width: 150px;
+      width: 150px;
+    }
+    .marksObtainedTable thead th:nth-child(2) {
+      min-width: 158px;
+      max-width: 158px;
+      width: 158px;
+    }
+    .marksObtainedTable thead th:nth-child(3) {
+      min-width: 238px;
+      max-width: 238px;
+      width: 238px;
+    }
+    .defenceTable thead th {
+      min-width: 170px;
+    }
+  }
+  /*====================================================================================
+      Registration page  end
+   *======================================================================================*/
+  /*----#Start#------homeRegisterLinks-----*/
+  @media only screen and (min-width: 768px) {
+    .homeRegisterLinks__Title {
+      max-width: 100%;
+    }
+  }
+  @media only screen and (min-width: 1200px) {
+    .homeRegisterLinks__Title {
+      max-width: 230px;
+    }
+  }
+  @media only screen and (min-width: 1570px) {
+    .homeRegisterLinks__Title {
+      max-width: 330px;
+    }
+  }
+  @media only screen and (max-width: 991px) {
+    .homeRegisterLinksUL > li > a {
+      font-size: 14px;
+    }
+    /* .homeRegisterLinksUL li {
+      flex: 1 0 100%;
+       max-width: calc(25% - 10px); 
+      margin-bottom: 10px;
+  } */
+  .homeRegisterLinksUL {
+      flex-wrap: wrap;
+  }
+  }
+  @media only screen and (max-width: 767px){
+      .homeRegisterLinksUL {
+      justify-content: start;   
+  }
+  /* .homeRegisterLinksUL li {
+      
+  max-width: calc(33% - 10px);}  */
+  .homeRegisterLinks__Title {
+      
+      max-width: 100%;
+  }
+      
+  }
+  @media only screen and (max-width: 575px) {
+    .homeRegisterLinksUL > li > a {
+      min-height: 85px;
+    }
+    .homeRegisterLinksUL li {
+      flex: 1 0 100%;
+      margin-bottom: 10px;
+  }
+  }
+  @media only screen and (max-width: 500px) {
+    .homeRegisterLinksUL {
+      flex-wrap: wrap;
+    }
+    .homeRegisterLinksUL li:not(:last-child) {
+      margin-right:10px;
+    }
+    .homeRegisterLinksUL li {
+      flex: 0 0 100%;
+      margin-bottom: 15px;
+      max-width: calc(90% - 6px);
+      margin: 0 auto 15px;
+    }
+    .homeRegisterLinksUL li > a {
+      min-height: 50px;
+      /* min-height: 120px; */
+      min-height: 100px;
+      font-size: 16px !important;
+    }
+  }
+  @media only screen and (max-width: 340px) {
+    .homeRegisterLinksUL li > a {
+      min-height: 66px;
+    }
+  }
+  /*----#End#------homeRegisterLinks-----*/
+  
+  /*====================================================================================
+   Admin Login  Start
+   *======================================================================================*/
+  /*----#Start#---------adminLoginSection --------------------*/
+  @media only screen and (min-width: 768px) {
+    .adminLoginSection .adminLoginCol {
+      max-width: 430px;
+    }
+  } /*max-width 768px*/
+  
+  /*----#End#-----------adminLoginSection------------------*/
+  /*====================================================================================
+      Admin Login  End
+   *======================================================================================*/
+  /*====================================================================================
+  
+      Admin Dashboard  Start
+  
+   *======================================================================================*/
+  
+  @media only screen and (max-width: 992px) {
+  
+    .capsulesUl > li {
+  
+      max-width: 24%;
+  
+    }
+  
+  }
+  
+  @media only screen and (max-width: 575px) {
+  
+    .capsulesUl > li {
+  
+      max-width: 32%;
+  
+    }
+  
+  }
+  @media screen and (max-width: 640px) {
+  
+    .dataTables_wrapper {
+  
+      overflow-x: auto;
+  
+    }
+  
+  .dt-buttons {
+  
+      float: left !important;
+  
+      display: inline-flex;
+      position: sticky !important;
+      left: 0;
+  
+  }
+  
+  .dataTables_wrapper .dataTables_filter {
+  
+      /* display: flex; */
+  
+      /* justify-content: flex-end; */
+  
+      /* justify-self: flex-end; */
+  
+      position: sticky !important;
+      left: 150px;
+      float: right !important;
+  
+  }
+  
+  .dataTables_wrapper .dataTables_filter input {
+      border: 1px solid #ced4da;
+  }
+  
+  .dataTables_wrapper .dataTables_info, .dataTables_wrapper .dataTables_paginate {
+      position: sticky !important;
+      left: 0;
+  }
+  
+  }
+  
+  /*====================================================================================
+  
+      Admin Dashboard  End
+  
+   *======================================================================================*/
+  

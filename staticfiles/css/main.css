@@ -1,273 +1,48 @@
-/* General Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body */
 body {
   font-family: Arial, sans-serif;
   margin-top: 120px;
 }
-
-
 .top-bar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
-  color: white;
+  background-color: black; 
   display: flex;
   justify-content: space-between; /* Space between notification bar and social icons */
   align-items: center;
   padding: 10px 15px;
-  z-index: 1000;
-}
-
-
-.notification-bar-wrapper {
-  flex: 1; /* Allow notification bar to take up available space */
-  overflow: hidden;
-}
-
-.notification-bar {
-  white-space: nowrap;
-  overflow: hidden;
-  animation: scroll 10s linear infinite; 
-}
-
-.notification-content span {
-  display: inline-block;
-  margin-right: 50px; /* Spacing between notifications */
-  font-size: 14px;
-}
-
-/* Social Media Icons Styling */
-.social-media {
-  display: flex;
-  gap: 15px; /* Space between icons */
-}
-
-.social-media a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.2em;
-  transition: color 0.3s;
-}
-
-.social-media a:hover {
-  color: #ffd700; /* Gold on hover */
-}
-
-/* Scrolling Animation */
-@keyframes scroll {
-  0% { transform: translateX(100%); }
-  100% { transform: translateX(-100%); }
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .top-bar {
-    flex-direction: column; /* Stack notification and social media vertically */
-    align-items: flex-start;
-  }
-
-  .social-media {
-    margin-top: 10px;
-  }
-}
-
-
-/* Navbar Styles */
-.navbar {
-  position: fixed;
-  top: 40px;
-  left: 0;
-  width: 100%;
-  background-color: forestgreen;
-  padding: 15px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   z-index: 999;
-}
-
-.logo-section {
-  display: flex;
-  align-items: center;
-}
-
-.logo {
-  width: 100px;
-  height: 100px;
-  margin-right: 10px;
-}
-
-.navbar h1 {
-  color: black;
-}
-
-h1 {
-  font-size: 1.8em;
-  font-weight: bold;
-  color: white;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-}
-
-.nav-links li {
-  margin-left: 20px;
-  position: relative;
-}
-
-.nav-links a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1em;
-  padding: 10px;
-  transition: color 0.3s;
-}
-
-.nav-links a:hover {
-  color: #aed581;
-}
-
-/* Dropdown Menu */
-/* Dropdown Menu */
-.dropdown:hover > .dropdown-menu {
-  display: block; /* Show dropdown when hovering over a parent dropdown */
-}
-
-.dropdown-menu {
-  display: none; /* Hide dropdown menus by default */
-  position: absolute;
-  top: 100%; /* Position below the parent menu */
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.9);
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  min-width: 200px;
-  z-index: 1000;
-}
-
-.dropdown-menu li {
-  position: relative; /* Ensure child dropdowns are positioned relative to their parent */
-  margin: 0;
-}
-
-.dropdown-menu a {
-  display: block;
-  color: #fff;
-  text-decoration: none;
-  padding: 10px 15px;
-  font-size: 0.9em;
-  transition: background-color 0.3s;
-}
-
-.dropdown-menu a:hover {
-  background-color: #aed581; /* Highlight on hover */
-}
-
-/* Nested Dropdown Menu */
-.dropdown-menu .dropdown:hover > .dropdown-menu {
-  display: block; /* Show nested dropdown when hovering over its parent */
-  position: absolute;
-  top: 0;
-  left: 100%; /* Position to the right of the parent menu */
-}
-
-/* Mobile-Specific Styles */
-@media (max-width: 768px) {
-  .navbar {
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 10px;
-  }
-
-  .menu-toggle {
-      display: block;
-      cursor: pointer;
-      color: white;
-      font-size: 1.5em;
-      margin-left: auto;
-  }
-
-  .nav-links {
-      display: none;
-      flex-direction: column;
-      width: 100%;
-      padding: 10px 0;
-  }
-
-  .nav-links.active {
-      display: flex;
-  }
-
-  .nav-links li {
-      margin-left: 0;
-      text-align: center;
-  }
-
-  .nav-links a {
-      font-size: 1.2em;
-      margin: 5px 0;
-      padding: 10px;
-  }
-}
-
-
-
-/* chatbot section */
-
-#chatbot-section {
-  position: fixed; /* Ensures the chatbot stays fixed on the screen */
-  bottom: 20px;
-  right: 20px;
-  width: 300px;
-  background: #f9f9f9;
-  border: 1px solid #ddd;
   border-radius: 10px;
-  padding: 10px;
-  z-index: 9999; /* Sets a high z-index to make the chatbot appear above other elements */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a shadow for better visibility */
 }
-
-#chatbox {
-  height: 100px;
-  overflow-y: auto;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  padding: 5px;
-  background: #fff;
-  border-radius: 5px;
+/* custom.css */
+.breadcrumb {
+  background-color: black;
+  background-image: url('../images/college-images/governing_bg.webp');
+  border-radius: 0.25rem;
+  padding: 0.75rem 1rem;
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  margin-top: 130px;
+  height: 32vh; /* Adjust height if needed to fully center within the viewport or parent container */
+  margin: -30 1; /* Ensures it's centered within a parent container */
+  text-align: center; /* Aligns text content in the center */
 }
-
-#user-input {
-  width: 70%;
-  padding: 5px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-#send-button {
-  width: 25%;
-  padding: 5px;
-  background-color: #007bff;
+.breadcrumb-item a {
   color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
 }
 
-#send-button:hover {
-  background-color: #0056b3;
+.breadcrumb-item.active {
+  color: white;
 }
+
 
 /* Main Section */
 .mainp {
@@ -336,7 +111,7 @@ h1 {
   background-color: lightgreen;
   border: 1px solid #ccc;
   border-radius: 8px;
-  padding: 10px;
+  padding: 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -348,6 +123,7 @@ h1 {
 /* Carousel styling */
 .carousel {
   width: 100%;
+  height:100%;
   min-height:150px;
   position: relative;
   overflow: hidden;
@@ -371,6 +147,7 @@ h1 {
 }
 .box img{
   width:100%;
+  height:100%;
 }
 
 /* Vision and Mission and Departments boxes */
@@ -419,13 +196,12 @@ h1 {
   }
 
   .carousel img {
-    object-fit: contain; /* Ensure images fit within the box without cropping */
+    object-fit: contain; 
     width: 100%;
-    height: auto; /* Maintain aspect ratio */
+    height: auto; 
   }
 }
 
-/* General admission section styling */
 .admission-wrapper {
   max-width: 1200px;
   margin: 0 auto;
@@ -437,9 +213,9 @@ h1 {
   font-size: 24px;
   margin-bottom: 20px;
   color: #333;
+  text-decoration:none;
 }
 
-/* Admission container for boxes */
 .admission-container {
   display: flex;
   flex-wrap: wrap; /* Ensures wrapping if screen size is small */
@@ -463,6 +239,7 @@ h1 {
   justify-content: center;
   transition: transform 0.3s ease, background-color 0.3s ease;
   cursor: pointer;
+  text-decoration: none;
 }
 
 /* Hover effect for admission boxes */
@@ -481,7 +258,7 @@ h1 {
 .notification-bar-wrapper {
   width: 100%;
   overflow: hidden;
-  background-color: olive ;
+  background-color: black ;
   padding: 10px 0;
   position: relative;
 }
@@ -499,7 +276,7 @@ h1 {
   display: inline-flex;
   animation: scroll-left 20s linear infinite; /* Animation for scrolling */
   gap: 50px; /* Space between messages */
-  color: #fff;
+  color: white;
   font-size: 16px;
   font-weight: bold;
 }

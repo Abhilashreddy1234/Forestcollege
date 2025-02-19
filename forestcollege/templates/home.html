@@ -95,7 +95,7 @@
                         <div class="fcriHeader__social">
                             <a class="fhSocial--link" href="#" target="_blank"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
                             <a class="fhSocial--link" href="#" target="_blank"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
-                            <a class="fhSocial--link" href="#" target="_blank"><i class="fa-brands fa-youtube-play" aria-hidden="true"></i></a>
+          
                             <a class="fhSocial--link" href="#" target="_blank"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
                             <a class="fhSocial--link" href="#" target="_blank"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
                         </div>
@@ -436,7 +436,7 @@
         </video> -->
         <!--<video src="https://fcrihyd.in/wp-content/themes/fcri/assets/images/FCRI_Campus.mp4" loop="" muted="" autoplay="">
         </video>-->
- <video src="https://fcrihyd.in/wp-content/themes/fcri/assets/images/FCRI_Campus_new.mp4" loop="" muted="" autoplay="">
+ <video src="{% static 'videous/19177703-hd_1920_1080_30fps.mp4' %}" loop="" muted="" autoplay="">
     
         </video>
         <div class="overlay">
@@ -458,13 +458,12 @@
       <button class="close-btn" onclick="toggleChatbot()">✖</button>
   </div>
   <div class="chatbot-body" id="chatbotBody">
-      <p>Welcome to <strong>Abhilash Reddy Portfolio</strong> 👋</p>
+      <p>Welcome to <strong>Forest college Research Institute </strong> -Hyderabad👋</p>
       <p>What would you like to know?</p>
-      <button class="chatbot-btn" onclick="redirectTo('#experience')">Experience</button>
-      <button class="chatbot-btn" onclick="redirectTo('#education')">Education</button>
-      <button class="chatbot-btn" onclick="redirectTo('#skills')">Skills</button>
-      <button class="chatbot-btn" onclick="redirectTo('#projects')">Projects</button>
-      <button class="chatbot-btn" onclick="redirectTo('#contact')">Contact Us</button>
+      <a class="chatbot-btn" href="{% static 'doc/Admission-Notification-for-PG-2022.pdf' %}">Admissions</a>
+      <a class="chatbot-btn" href="{% url 'admissions1' %}">Courses Offred</a>
+      <a class="chatbot-btn" href="{% url 'vision' %}">Vision</a>
+      <a class="chatbot-btn" href="{% url 'Departments' %}">Departments</a>
   </div>
 </div>
 <style>
@@ -1710,7 +1709,7 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
                             <div class="row">
                     <div class="col-12 text-lg-end pamtenFooterLogo">
                         <a href="#" target="_blank">
-                            <img src='#' class="img-fluid" alt="pamten-logo"></a>
+                            <img src='#' class="img-fluid" alt=""></a>
                     </div>
                 </div>
             </div>
@@ -1734,9 +1733,7 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
                     <!-- <li class="nav-item">
                         <a class="nav-link" href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
                     </li> -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" target="_blank"><i class="fa-brands fa-youtube-play" aria-hidden="true"></i></a>
-                    </li>
+                    
                     <li class="nav-item">
                         <a class="nav-link" href="#" target="_blank"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
                     </li>
