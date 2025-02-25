@@ -80,14 +80,14 @@
                         <div class="fcriHeaderLogo--img02"><a href="{% url 'home' %}"><img src="{% static 'images/logo-images/header-logo-03-image.webp' %}" class="img-fluid" alt="logo"></a></div>
                     </div>
 
-                    <!-- <img src="images/fcri-logo-light.webp" class="img-fluid"/> -->
+                   
                 </div>
                 <div class="col col-lg-auto ">
                     <div class="d-flex justify-content-lg-end fcriHeader__btngrp">
                         <button type="button" class="btn btn-sm btn-outline-light me-2">Student Corner</button>
                         <button type="button" class="btn btn-sm btn-outline-light me-2">Faculty Corner</button>
                                                 <!-- <button type="button" class="btn btn-sm btn-outline-light me-2" title="Downloads" onclick='window.location.href="http://ezysubscribe.com/QA/fcriqa/downloads/"'><i class="fa fa-download" aria-hidden="true"></i></button> -->
-                        <button type="button" onclick="window.location.href='https://www.fcrihyd.in/downloads'" class="btn btn-sm btn-outline-light me-2" title="Downloads"><i class="fa fa-download" aria-hidden="true"></i></button>
+                        
                         <button type="button" onclick="window.location.href='https://www.fcrihyd.in/contact'" class="btn btn-sm btn-outline-light" title="Contact Us"><i class="fa fa-phone" aria-hidden="true"></i></button>
                         <div class="fcriHeader__social">
                             <a class="fhSocial--link" href="#" target="_blank"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
@@ -283,109 +283,104 @@
 <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Admissions</a>
     <ul class="dropdown-menu">
-      <li>
+      <li class="has-submenu">
         <a class="dropdown-item" href="#">Courses Offered</a>
         <ul class="submenu dropdown-menu">
-          <li><a class="dropdown-item" href="{% url "admissions1" %}">BSC Hons Forestry</a></li>
-          <li><a class="dropdown-item" href="{% url "admissions1" %}">MSC Forestry</a></li>
-          <li><a class="dropdown-item" href="{% url "admissions1" %}">PhD Forestry</a></li>
+          <li><a class="dropdown-item" href="admissions/bsc-hons-forestry/index.htm">BSC Hons Forestry</a></li>
+          <li><a class="dropdown-item" href="admissions/msc-forestry/index.htm">MSC Forestry</a></li>
+          <li><a class="dropdown-item" href="admissions/phd-forestry/index.htm">PhD Forestry</a></li>
         </ul>
       </li>
-      <li>
+      <li class="has-submenu">
         <a class="dropdown-item" href="#">Admission Process</a>
         <ul class="submenu dropdown-menu">
-          <li><a class="dropdown-item" href="{% static 'doc\8.-UG-regulations-1.pdf' %}"target="_blank">UG</a></li>
-          <li><a class="dropdown-item" href="{% static 'doc\8.-UG-regulations-1.pdf' %}" target="_blank">PG</a></li>
+          <li><a class="dropdown-item" href="wp-content/uploads/2022/09/Admission-Process-2022-23-1.pdf" target="_blank">UG</a></li>
+          <li><a class="dropdown-item" href="wp-content/uploads/2022/05/PG-Prospects_2021.pdf" target="_blank">PG</a></li>
         </ul>
       </li>
-      <li>
+      <li class="has-submenu">
         <a class="dropdown-item" href="#">Prospectus</a>
         <ul class="submenu dropdown-menu">
-          <li>
+          <li class="has-submenu2">
             <a class="dropdown-item" href="#">UG</a>
             <ul class="submenu2 dropdown-menu">
-              <li><a class="dropdown-item" href="{% static 'doc\8.-UG-regulations-1.pdf' %}" target="_blank">Regular</a></li>
-              <li><a class="dropdown-item" href="{% static 'doc\8.-UG-regulations-1.pdf' %}" target="_blank">Payment Quota</a></li>
+              <li><a class="dropdown-item" href="wp-content/uploads/2023/06/PROSPECTUS-FINAL.pdf" target="_blank">Regular</a></li>
+              <li><a class="dropdown-item" href="wp-content/uploads/2022/09/UG-PROSPECTUS-Payment-Quota-New-2022-23.pdf" target="_blank">Payment Quota</a></li>
             </ul>
           </li>
-          <li><a class="dropdown-item" href="{% static 'doc\8.-UG-regulations-1.pdf' %}" target="_blank">PG</a></li>
+          <li><a class="dropdown-item" href="wp-content/uploads/2022/11/PG-Prospects_2022-23.pdf" target="_blank">PG</a></li>
         </ul>
       </li>
-      <li><a class="dropdown-item" href="{% static 'doc\8.-UG-regulations-1.pdf' %}" target="_blank">Brochure</a></li>
-      <li>
+      <li><a class="dropdown-item" href="wp-content/uploads/2022/09/FCRI-Brochure.pdf" target="_blank">Brochure</a></li>
+      <li class="has-submenu">
         <a class="dropdown-item" href="#">Fee Structure</a>
         <ul class="submenu dropdown-menu">
-          <li>
+          <li class="has-submenu2">
             <a class="dropdown-item" href="#">UG</a>
             <ul class="submenu2 dropdown-menu">
-              <li><a class="dropdown-item" href="{% static 'doc\8.-UG-regulations-1.pdf' %}" target="_blank">Regular</a></li>
-              <li><a class="dropdown-item" href="{% static 'doc\8.-UG-regulations-1.pdf' %}" target="_blank">Payment Quota</a></li>
+              <li><a class="dropdown-item" href="wp-content/uploads/2023/06/fee-structure-2023.pdf" target="_blank">Regular</a></li>
+              <li><a class="dropdown-item" href="wp-content/uploads/2023/07/payment-quota-fees-updated.pdf" target="_blank">Payment Quota</a></li>
             </ul>
           </li>
-          <li><a class="dropdown-item" href="{% static 'doc\8.-UG-regulations-1.pdf' %}" target="_blank">PG</a></li>
-          <li><a class="dropdown-item" href="{% static 'doc\8.-UG-regulations-1.pdf' %}" target="_blank">PhD</a></li>
+          <li><a class="dropdown-item" href="wp-content/uploads/2022/05/PG-M.Sc-Forestery-Fee-Structure.pdf" target="_blank">PG</a></li>
+          <li><a class="dropdown-item" href="wp-content/uploads/2023/03/Fee-Structure-2022-23.pdf" target="_blank">PhD</a></li>
         </ul>
       </li>
-      <li>
+      <li class="has-submenu">
         <a class="dropdown-item" href="#">Fee Payment</a>
         <ul class="submenu dropdown-menu">
-          <li><a class="dropdown-item" href="#" target="_blank">Admission Fee Payment</a></li>
-          <li><a class="dropdown-item" href="#" target="_blank">Semester Fee Payment</a></li>
+          <li><a class="dropdown-item" href="https://www.payumoney.com/customer/users/paymentOptions/#/AD5E6C0E934EA65274B4BFC26A0C6390/forestcollege/216601" target="_blank">Admission Fee Payment</a></li>
+          <li><a class="dropdown-item" href="https://www.payumoney.com/customer/users/paymentOptions/#/AD5E6C0E934EA65274B4BFC26A0C6390/Linkcreated/218235" target="_blank">Semester Fee Payment</a></li>
         </ul>
       </li>
-      <li>
+      <li class="has-submenu">
         <a class="dropdown-item" href="#">Admissions Schedule - 2023</a>
         <ul class="submenu dropdown-menu">
-          <li><a class="dropdown-item" href="{% static 'doc\8.-UG-regulations-1.pdf' %}" target="_blank">UG</a></li>
-          <li><a class="dropdown-item" href="{% static 'doc\8.-UG-regulations-1.pdf' %}" target="_blank">PG</a></li>
+          <li><a class="dropdown-item" href="wp-content/uploads/2023/07/Admission-Schedule-2023.pdf" target="_blank">UG</a></li>
+          <li><a class="dropdown-item" href="wp-content/uploads/2022/11/PG-Admission-Schedule-2022.pdf" target="_blank">PG</a></li>
         </ul>
       </li>
-      <li>
+      <li class="has-submenu">
         <a class="dropdown-item" href="#">Admission Notification - 2023</a>
         <ul class="submenu dropdown-menu">
-          <li>
+          <li class="has-submenu2">
             <a class="dropdown-item" href="#">UG</a>
             <ul class="submenu2 dropdown-menu">
-              <li>
+              <li class="has-submenu3">
                 <a class="dropdown-item" href="#">Regular</a>
                 <ul class="submenu3 dropdown-menu">
-                  <li><a class="dropdown-item" href="{% static 'doc\8.-UG-regulations-1.pdf' %}" target="_blank">English</a></li>
-                  <li><a class="dropdown-item" href="{% static 'doc\8.-UG-regulations-1.pdf' %}" target="_blank">Telugu</a></li>
+                  <li><a class="dropdown-item" href="wp-content/uploads/2023/06/Admission-English-Notification-2023.pdf" target="_blank">English</a></li>
+                  <li><a class="dropdown-item" href="wp-content/uploads/2023/06/Admission-Telugu-Notification-2023.pdf" target="_blank">Telugu</a></li>
                 </ul>
               </li>
-              <li>
+              <li class="has-submenu3">
                 <a class="dropdown-item" href="#">Payment Quota</a>
                 <ul class="submenu3 dropdown-menu">
-                  <li><a class="dropdown-item" href="{% static 'doc\8.-UG-regulations-1.pdf' %}" target="_blank">English</a></li>
-                  <li><a class="dropdown-item" href="{% static 'doc\8.-UG-regulations-1.pdf' %}" target="_blank">Telugu</a></li>
+                  <li><a class="dropdown-item" href="wp-content/uploads/2023/07/notification-revised-UG-2023.pdf" target="_blank">English</a></li>
+                  <li><a class="dropdown-item" href="wp-content/uploads/2023/07/revised-telugu-notification-pq-2023.pdf" target="_blank">Telugu</a></li>
                 </ul>
               </li>
             </ul>
           </li>
-          <li>
+          <li class="has-submenu2">
             <a class="dropdown-item" href="#">PG</a>
             <ul class="submenu2 dropdown-menu">
-              <li><a class="dropdown-item" href="{% static 'doc\8.-UG-regulations-1.pdf' %}">English</a></li>
-              <li><a class="dropdown-item" href="{% static 'doc\8.-UG-regulations-1.pdf' %}">Telugu</a></li>
+              <li><a class="dropdown-item" href="wp-content/uploads/2022/11/English-Notification-for-PG-2022.pdf" target="_blank">English</a></li>
+              <li><a class="dropdown-item" href="wp-content/uploads/2022/11/PG-Admission-Notification-2022-Telugu.pdf" target="_blank">Telugu</a></li>
             </ul>
           </li>
-          <li>
+          <li class="has-submenu2">
             <a class="dropdown-item" href="#">PhD</a>
             <ul class="submenu2 dropdown-menu">
-              <li><a class="dropdown-item" href="{% static 'doc\8.-UG-regulations-1.pdf' %}">English</a></li>
-              <li><a class="dropdown-item" href="{% static 'doc\8.-UG-regulations-1.pdf' %}">Telugu</a></li>
+              <li><a class="dropdown-item" href="wp-content/uploads/2023/01/Ph.D-Admission-Notification-English.pdf" target="_blank">English</a></li>
+              <li><a class="dropdown-item" href="wp-content/uploads/2023/01/Ph.D-Admission-Notification-Telugu.pdf" target="_blank">Telugu</a></li>
             </ul>
           </li>
-        </ul>
-      </li>
-      <li>
-        <a class="dropdown-item" href="#">Admissions Schedule - 2024</a>
-        <ul class="submenu dropdown-menu">
-          <li><a class="dropdown-item" href="{% static 'doc\8.-UG-regulations-1.pdf' %}" target="_blank">PhD</a></li>
         </ul>
       </li>
     </ul>
   </li>
+  
   <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Infrastructure</a>
     <ul class="dropdown-menu">
