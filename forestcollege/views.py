@@ -91,15 +91,6 @@ def Faculty(request):
     
     return render(request, 'faculty.html',{"breadcrumbs":breadcrumbs})
 
-def laboratory(request):
-    breadcrumbs = [
-        {"name":"Home","url":"/"},
-        {"name":"Academics"},
-        {"name":"Departments"},
-        {"name":"Laboratory"},
-    ]
-    return render(request, 'laboratory.html',{"breadcrumbs":breadcrumbs})
-
 def StudentAchievements(request):
     breadcrumbs = [
         {"name":"Home","url":"/"},

@@ -17,7 +17,6 @@ urlpatterns = [
     path('Organogram/',views.Organogram,name='Organogram'),
     path('Departments/',views.Departments,name="Departments"),
     path('DepartmentHead/',views.DepartmentHead,name="DepartmentHead"),
-    path('laboratory/',views.laboratory,name='laboratory'),
     path('StudentAchievements/',views.StudentAchievements,name="StudentAchievements"),
     path('StudentAchievements1/',views.StudentAchievements1,name="StudentAchievements1"),
     path('womenprotection/',views.womenprotection,name='womenprotection'),

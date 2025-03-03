@@ -100,7 +100,9 @@
                     <ul class="navbar-nav fcriNav__ActualMenuUl">
         
                         <!-- Home Icon -->
-                        
+                        <a class="nav-link" href="{% url 'home' %}">
+                          <i class="fa-solid fa-home" aria-hidden="true"></i>
+                        </a>
         
                         <!-- About Dropdown -->
                         <li class="nav-item dropdown">
@@ -165,7 +167,7 @@
                                         <li>
                                             <a class="dropdown-item" href="{% url 'DepartmentHead' %}">Department Head</a>
                                         <li>
-                                            <a class="dropdown-item" href="{% url 'laboratory' %}">Laboratories</a>
+                                            <a class="dropdown-item" href="#">Laboratories</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -380,7 +382,6 @@
         <li><a class="dropdoun-item" href="{% url 'Fcri' %}">FCRI Careews</a></li>
         <li><a class="dropdoun-item" href="{% url 'Fcri' %}">FCRI Study circle</a></li>
         <li><a class="dropdoun-item" href="{% url 'Cfi2' %}">CFI</a></li>
-        <li><a class="dropdoun-item" href="{% url 'laboratory' %}"Laborator</li>
         <li><a class="dropdoun-item" href="{% url 'Nursery' %}">Nursery</a></li>
         <li><a calss="dropdoun-item" href="{% url 'Workshop' %}">Workshop</a></li>
     </ul>

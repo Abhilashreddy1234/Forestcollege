@@ -20,6 +20,12 @@ from dotenv import load_dotenv
 load_dotenv()
 
 from django.utils.translation import gettext_lazy as _
+from django.middleware.security import SecurityMiddleware
+
+class CustomSecurityMiddleware(SecurityMiddleware):
+    def process_response(self, request, response):
+        response["Strict-Transport-Security"] = "max-age=31536000; includeSubDomains; preload"
+        return response
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -96,6 +102,8 @@ MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware', 
     'django.middleware.locale.LocaleMiddleware',
     'cms.middleware.language.LanguageCookieMiddleware',
+    
+    
 ]
 
 ROOT_URLCONF = 'forestcollege.urls'
@@ -260,3 +268,11 @@ INTERNAL_IPS = [
 
 MEDIA_URL = "media/"
 MEDIA_ROOT = str(BASE_DIR.parent / "media")
+# Force HTTPS for all connections  
+SECURE_SSL_REDIRECT = True  
+
+SECURE_HSTS_SECONDS = 31536000   
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True  
+SECURE_HSTS_PRELOAD = True  
+SESSION_COOKIE_SECURE = True  
+CSRF_COOKIE_SECURE = True  
