@@ -20,15 +20,15 @@
             <div class="col-lg-5 col-md-10">
                 <div class="logo-section pb-3">
                     <ul class="footerTwoSplitLogo list-inline">
-                        <li class="footerTwoSplitLogo--img-01"> <a href="https://www.fcrihyd.in"><img src="https://www.fcrihyd.in/wp-content/themes/fcri/assets/images/header-logo-01.webp" class="img-fluid" alt="footer-img"></a></li>
-                        <li class="footerTwoSplitLogo--img-02"> <a href="https://www.fcrihyd.in"><img src="https://www.fcrihyd.in/wp-content/themes/fcri/assets/images/header-logo-03.webp" class="img-fluid" alt="footer-img"></a></li>
+                        <li class="footerTwoSplitLogo--img-01"> <a href="#"><img src="{% static 'images/logo-images/forestlogo-01.webp' %}" class="img-fluid" alt="footer-img"></a></li>
+                        <li class="footerTwoSplitLogo--img-02"> <a href="#"><img src="{% static 'images/logo-images/header-logo-03-image.webp' %}" class="img-fluid" alt="footer-img"></a></li>
                     </ul>
                     <!--<h5 class="text-dgreen">forest college and research institution</h5>
 					<p><small>(Accredited by icfre with a* grade)</small></p>-->
                 </div>
                 <ul class="email-call ">
                     <li class="nav-item">
-                        <a class="nav-link envolope text-cursor" href="/cdn-cgi/l/email-protection#8bfff8ede8f9e2b9bbb9bacbece6eae2e7a5e8e4e6">Email us <br><span class="text-white"><span class="__cf_email__" data-cfemail="403433262332297270727100272d21292c6e232f2d">[email&#160;protected]</span></span></a>
+                        <a class="nav-link envolope text-cursor" href="#">Email us <br><span class="text-white"><span class="__cf_email__" data-cfemail="403433262332297270727100272d21292c6e232f2d">[email&#160;protected]</span></span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link phone-no text-cursor" href="tel:+918454211930">Call us</a><br>
@@ -40,18 +40,46 @@
                 </ul>
                 
                 <div class="email-subscription mt-lg-4">
-                    <h5>Subscribe</h5>
-                    <form id="applicant-form" action="#" method="post">
-                        <div class="input-group rounded-pill">
-                            <input type="text" name="email" id="email" class="form-control" placeholder="Enter your email address">
-                            <input type="hidden" name="action" value="create_applicant">
-                            <button class="input-group-text rounded-pill" type="submit" id="form-submit-newlet">
-                                Subscribe
-                            </button>
-                        </div>
-                    </form>
-                    <div class="result_msg"></div>
-                </div>
+    <h5>Subscribe</h5>
+    <form id="applicant-form" action="{% url 'home1' %}" method="post">
+        {% csrf_token %}
+        <div class="input-group rounded-pill">
+            {{ form.email }}  
+            <button class="input-group-text rounded-pill" type="submit" id="form-submit-newsletter">
+                Subscribe
+            </button>
+        </div>
+    </form>
+    <div class="result_msg"></div>
+</div>
+<script>
+    document.getElementById("applicant-form").addEventListener("submit", function(event) {
+        event.preventDefault();  
+        let formData = new FormData(this);
+    
+        fetch("{% url 'home1' %}", {
+            method: "POST",
+            body: formData,
+            headers: {
+                "X-Requested-With": "XMLHttpRequest"
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            let resultDiv = document.querySelector(".result_msg");
+            if (data.message) {
+                resultDiv.innerHTML = `<p style="color: green;">${data.message}</p>`; 
+            } else if (data.error) {
+                resultDiv.innerHTML = `<p style="color: red;">${data.error}</p>`; 
+            }
+        })
+        .catch(error => {
+            console.error("Error:", error);
+            document.querySelector(".result_msg").innerHTML = `<p style="color: red;">Something went wrong. Try again.</p>`;
+        });
+    });
+    </script>
+    
             </div>
             <div class="col-lg-7 col-md-12">
               <div class="row">

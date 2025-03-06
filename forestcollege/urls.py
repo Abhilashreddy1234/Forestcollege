@@ -4,6 +4,8 @@ from django.contrib import admin
 from django.urls import include, path
 from django.views.i18n import JavaScriptCatalog
 from forestcollege import views
+from .views import home1
+from .views import contact_view
 
 urlpatterns = [
     path('jsi18n/', JavaScriptCatalog.as_view(), name='javascript-catalog'),
@@ -41,7 +43,9 @@ urlpatterns = [
     path('Mou/',views.Mou,name='Mou'),
     path('Publications/',views.Publications,name='Publications'),
     path('Awards/',views.Awards,name='Awards'),
+    path("", home1, name="home1"),
     path('', include('cms.urls')),
+    path('', contact_view, name='contact1'),
 ]
 
 if settings.DEBUG:

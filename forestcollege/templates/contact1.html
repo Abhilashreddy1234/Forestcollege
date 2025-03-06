@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .success {
+            color: green;
+        }
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    {% if messages %}
+        <div>
+            {% for message in messages %}
+                <p class="{% if message.tags == 'success' %}success{% else %}error{% endif %}">
+                    {{ message }}
+                </p>
+            {% endfor %}
+        </div>
+    {% endif %}
+</body>
+</html>

@@ -1,4 +1,54 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
+from django.http import JsonResponse
+from .forms import EmailSubscriptionForm
+import requests
+from django.conf import settings
+
+from django.contrib import messages
+def home1(request):
+    form = EmailSubscriptionForm()
+    
+    if request.method == "POST":
+        form = EmailSubscriptionForm(request.POST)
+        if form.is_valid():
+            email = form.cleaned_data['email']
+            # Save email to database (uncomment if using a model)
+            # Subscription.objects.create(email=email)
+
+            return JsonResponse({"message": "Subscription successful!"}, status=200)  
+        else:
+            return JsonResponse({"error": "Invalid email address"}, status=400)
+
+    return render(request, "home.html", {"form": form})
+
+
+def contact_view(request):
+    if request.method == "POST":
+        recaptcha_response = request.POST.get("g-recaptcha-response")
+        data = {
+            "secret": settings.RECAPTCHA_SECRET_KEY,
+            "response": recaptcha_response,
+        }
+        r = requests.post("https://www.google.com/recaptcha/api/siteverify", data=data)
+        result = r.json()
+
+        if result["success"]:
+            # Process the form data and send email
+            name = request.POST.get("name")
+            email = request.POST.get("email")
+            phone = request.POST.get("phone")
+            message = request.POST.get("message")
+
+            # Example: Save to database or send email
+            # Contact.objects.create(name=name, email=email, phone=phone, message=message)
+
+            messages.success(request, "Your message has been sent successfully!")
+            return redirect("contact")
+        else:
+            messages.error(request, "Invalid reCAPTCHA. Please try again.")
+
+    return render(request, "contact1.html")
+
 
 # Home page view with breadcrumb
 def home(request):
