@@ -52,67 +52,83 @@ def contact_view(request):
 
 # Home page view with breadcrumb
 def home(request):
+    form = EmailSubscriptionForm()
     breadcrumbs = [
         {"name": "Home", "url": "/"},
     ]
-    return render(request, "home.html", {"breadcrumbs": breadcrumbs})
+    return render(request, "home.html", {"breadcrumbs": breadcrumbs,"form":form})
 
 def about(request):
+    form = EmailSubscriptionForm()
     breadcrumbs = [
         {"name": "Home", "url": "/"},
         {"name": "About", "url": "/about/"},
     ]
-    return render(request, "about.html", {"breadcrumbs": breadcrumbs})
+    return render(request, "about.html", {"breadcrumbs": breadcrumbs,"form":form})
 
 def vision(request):
+    form = EmailSubscriptionForm()
     breadcrumbs = [
         {"name": "Home", "url": "/"},
-        {"name": "About"},
-        {"name": "vision"},
+        {"name": "About", "url": "/about/"},
+        {"name": "Vision", "url": "/vision/"},
     ]
-    return render(request, "vision.html", {"breadcrumbs": breadcrumbs})
+    return render(request, "vision.html", {"breadcrumbs": breadcrumbs,"form":form})
 
 # Other views
 def Governing_Board(request):
+    form = EmailSubscriptionForm()
     breadcrumbs = [
         {"name": "Home", "url": "/"},
         {"name": "About", "url": "/about/"},
         {"name": "Governing Board", "url": "/about/vision/Governing_Board/"},
     ]
-    return render(request, 'Governing_Board.html', {"breadcrumbs": breadcrumbs})
+    return render(request, 'Governing_Board.html', {"breadcrumbs": breadcrumbs,"form":form})
+def Academic_counsil(request):
+    form = EmailSubscriptionForm()
+    breadcrumbs = [
+        {"name": "Home", "url": "/"},
+        {"name": "About", "url": "/about/"},
+        {"name": "Governing Board", "url": "/about/vision/Academic_counsil/"},
 
+    ]
+    return render(request, 'Academic_counsil.html', {"breadcrumbs": breadcrumbs,"form":form})
 def Dean(request):
+    form = EmailSubscriptionForm()
     breadcrumbs = [
         {"name": "Home", "url": "/"},
         {"name":"Administration",},
         {"name":"Dean"},
     ]
-    return render(request, 'Dean.html',{"breadcrumbs": breadcrumbs})
+    return render(request, 'Dean.html',{"breadcrumbs": breadcrumbs,"form":form})
 
 def Joint_Director(request):
+    form = EmailSubscriptionForm()
     breadcrumbs = [
         {"name": "Home", "url":"/"},
         {"name":"Administraation"},
         {"name":"Joint Director"},
     ]
-    return render(request, 'joint-Director.html',{"breadcrumbs": breadcrumbs})
+    return render(request, 'joint-Director.html',{"breadcrumbs": breadcrumbs,"form":form})
 
 def Deputy_Director(request):
+    form = EmailSubscriptionForm()
     breadcrumbs = [
         {"name": "Home", "url":"/"},
         {"name":"Administraation"},
         {"name":"Deputy Director"},
     ]
 
-    return render(request, 'Deputy-Director.html',{"breadcrumbs": breadcrumbs})
+    return render(request, 'Deputy-Director.html',{"breadcrumbs": breadcrumbs,"form":form})
 
 def Organogram(request):
+    form = EmailSubscriptionForm()
     breadcrumbs = [
         {"name":"Home","url":"/"},
         {"name":"Administration"},
         {"name":"Organogram"},
     ]
-    return render(request, 'Organogram.html',{"breadcrumbs":breadcrumbs})
+    return render(request, 'Organogram.html',{"breadcrumbs":breadcrumbs,"form":form})
 
 def Departments(request):
     breadcrumbs = [
