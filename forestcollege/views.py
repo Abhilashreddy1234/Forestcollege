@@ -131,14 +131,16 @@ def Organogram(request):
     return render(request, 'Organogram.html',{"breadcrumbs":breadcrumbs,"form":form})
 
 def Departments(request):
+    form = EmailSubscriptionForm()
     breadcrumbs = [
         {"name":"Home","url":"/"},
         {"name":"Academics"},
         {"name":"Departments"},
         {"name":"List of Departments"},
     ]
-    return render(request, 'Departments.html',{"breadcrumbs":breadcrumbs})
+    return render(request, 'Departments.html',{"breadcrumbs":breadcrumbs,"form":form})
 def DepartmentHead(request):
+    form = EmailSubscriptionForm()
     breadcrumbs = [
         {"name":"Home","url":"/"},
         {"name":"Academics"},
@@ -146,8 +148,9 @@ def DepartmentHead(request):
         {"name":"DepartmentHead"},
         
     ]
-    return render(request,'DepartmentHead.html',{"breadcrumbs":breadcrumbs})
+    return render(request,'DepartmentHead.html',{"breadcrumbs":breadcrumbs,"form":form})
 def Faculty(request):
+    form = EmailSubscriptionForm()
     breadcrumbs = [
         {"name":"Home","url":"/"},
         {"name":"Academics"},
@@ -156,7 +159,16 @@ def Faculty(request):
     ]
     
     return render(request, 'faculty.html',{"breadcrumbs":breadcrumbs})
-
+def laboratories(request):
+    form = EmailSubscriptionForm()
+    breadcrumbs = [
+        {"name":"Home","url":"/"},
+        {"name":"Academics"},
+        {"name":"Departments"},
+        {"name":"laboratories"},
+    ]
+    
+    return render(request, 'laboratories.html',{"breadcrumbs":breadcrumbs,"form":form})
 def StudentAchievements(request):
     breadcrumbs = [
         {"name":"Home","url":"/"},
@@ -176,33 +188,37 @@ def StudentAchievements1(request):
     return render(request, 'StudentAchievements1.html',{"breadcrumbs":breadcrumbs})
 
 def womenprotection(request):
+    form = EmailSubscriptionForm()
     breadcrumbs = [
         {"name":"Home","url":"/"},
         {"name":"Academics"},
         {"name":"Committes"},
         {"name":"WomenProtectionCommitee"},
     ]
-    return render(request, 'womenprotection.html',{"breadcrumbs":breadcrumbs})
+    return render(request, 'womenprotection.html',{"breadcrumbs":breadcrumbs,"form":form})
 
 def Antiragging(request):
+    form = EmailSubscriptionForm()
     breadcrumbs = [
         {"name":"Home","url":"/"},
         {"name":"Academics"},
         {"name":"Committes"},
         {"name":"AntiraggingCommitee"},
     ]
-    return render(request, 'womenprotection.html',{"breadcrumbs":breadcrumbs})
+    return render(request, 'womenprotection.html',{"breadcrumbs":breadcrumbs,"form":form})
 
 def AdmissionComitte(request):
+    form = EmailSubscriptionForm()    
     breadcrumbs = [
         {"name":"Home","url":"/"},
         {"name":"Academics"},
         {"name":"Committes"},
         {"name":"AdmissionComitte"},
     ]
-    return render(request, 'womenprotection.html',{"breadcrumbs":breadcrumbs})
+    return render(request, 'womenprotection.html',{"breadcrumbs":breadcrumbs,"form":form})
 
 def DisciplinaryComitte(request):
+    form = EmailSubscriptionForm() 
     breadcrumbs = [
         {"name":"Home","url":"/"},
         {"name":"Academics"},
@@ -210,17 +226,35 @@ def DisciplinaryComitte(request):
         {"name":"DisciplinaryComitte"},
     ]
     
-    return render(request, 'womenprotection.html')
+    return render(request, 'womenprotection.html',{"breadcrumbs":breadcrumbs,"form":form})
 
 def Admissions1(request):
+    form = EmailSubscriptionForm()
     breadcrumbs = [
         {"name":"Home","url":'/'},
         {"name":"Admissions"},
         {"name":"Courses Offered"},
-         {"name":"B.sc Hons Foresty"},
+         {"name":"M.sc Forestry"},
     ]
-    return render(request, 'admissions1.html',{"breadcrumbs":breadcrumbs})
-
+    return render(request, 'admissions1.html',{"breadcrumbs":breadcrumbs,"form":form})
+def Mscforestry(request):
+    form = EmailSubscriptionForm()
+    breadcrumbs = [
+        {"name":"Home","url":'/'},
+        {"name":"Admissions"},
+        {"name":"Courses Offered"},
+         {"name":"M.sc Forestry"},
+    ]
+    return render(request, 'mscforestry.html',{"breadcrumbs":breadcrumbs,"form":form})
+def Phdforestry(request):
+    form = EmailSubscriptionForm()
+    breadcrumbs = [
+        {"name":"Home","url":'/'},
+        {"name":"Admissions"},
+        {"name":"Courses Offered"},
+         {"name":"P.hd Forestry"},
+    ]
+    return render(request, 'phdforestry.html',{"breadcrumbs":breadcrumbs,"form":form})
 def AcademicSchedule(request):
     return render(request, 'AcdamicSchedule.html')
 
@@ -228,77 +262,104 @@ def AcademicNotification(request):
     return render(request, 'AdmissionNotification.html')
 
 def Forestmuseum(request):
+    form = EmailSubscriptionForm()
     breadcrumbs = [
         {"name":"Home","url":"/"},
         {"name":"Infrastructure"},
         {"name":"ForestMuseum"},
     ]
-    return render(request, 'ForestMuseum.html',{"breadcrumbs":breadcrumbs})
+    return render(request, 'ForestMuseum.html',{"breadcrumbs":breadcrumbs,"form":form})
 
 def Cif(request):
+    form = EmailSubscriptionForm()
     breadcrumbs = [
         {"name":"Home","url":"/"},
         {"name":"Infrastructure"},
         {"name":"CentralInstrumentationFaculty"},
     ]
-    return render(request, 'cif.html',{"breadcrumbs":breadcrumbs})
+    return render(request, 'cif.html',{"breadcrumbs":breadcrumbs,"form":form})
 
 def Boardroom(request):
+    form = EmailSubscriptionForm()
     breadcrumbs = [
         {"name":"Home","url":"/"},
         {"name":"Infrastructure"},
         {"name":"Boardroom"},
     ]
-    return render(request, 'Boardroom.html',{"breadcrumbs":breadcrumbs})
+    return render(request, 'Boardroom.html',{"breadcrumbs":breadcrumbs,"form":form})
 
 def Auditorium(request):
+    form = EmailSubscriptionForm()
     breadcrumbs = [
         {"name":"Home","url":"/"},
         {"name":"Infrastructure"},
         {"name":"Auditorium"},
     ]
-    return render(request, 'auditorium.html',{"breadcrumbs":breadcrumbs})
+    return render(request, 'auditorium.html',{"breadcrumbs":breadcrumbs,"form":form})
 
 def Seminarhall(request):
+    form = EmailSubscriptionForm()
     breadcrumbs = [
         {"name":"Home","url":"/"},
         {"name":"Infrastructure"},
         {"name":"SeminarHall"},
     ]
-    return render(request, 'seminarhall.html',{"breadcrumbs":breadcrumbs})
+    return render(request, 'seminarhall.html',{"breadcrumbs":breadcrumbs,"form":form})
 
 def Library(request):
+    form = EmailSubscriptionForm()
     breadcrumbs = [
         {"name":"Home","url":"/"},
         {"name":"Infrastructure"},
         {"name":"library"},
     ]
-    return render(request, 'Library.html',{"breadcrumbs":breadcrumbs})
+    return render(request, 'Library.html',{"breadcrumbs":breadcrumbs,"form":form})
 
 def Fcri(request):
+    form = EmailSubscriptionForm()
     breadcrumbs = [
         {"name":"Home","url":"/"},
         {"name":"Services"},
         {"name":"FCRI Careers"},
     ]
-    return render(request, 'Fcri.html',{"breadcrumbs":breadcrumbs})
+    return render(request, 'Fcri.html',{"breadcrumbs":breadcrumbs,"form":form})
+def hostel(request):
+    form = EmailSubscriptionForm()
+    breadcrumbs = [
+        {"name":"Home","url":"/"},
+        {"name":"Infrastructure"},
+        {"name":"hostel"},
+
+    ]
+    return render(request, 'hostel.html',{"breadcrumbs":breadcrumbs,"form":form})
+def canteen(request):
+    form = EmailSubscriptionForm()
+    breadcrumbs = [
+        {"name":"Home","url":"/"},
+        {"name":"Infrastructure"},
+        {"name":"canteen"},
+
+    ]
+    return render(request,'canteen.html',{"breadcrumbs":breadcrumbs,"form":form})
 
 def Cfi2(request):
+    form = EmailSubscriptionForm()
     breadcrumbs = [
         {"name":"Home","url":"/"},
         {"name":"Services"},
         {"name":"CFI"},
     ]
 
-    return render(request, 'cf1.html',{"breadcrumbs":breadcrumbs})
+    return render(request, 'cf1.html',{"breadcrumbs":breadcrumbs,"form":form})
 
 def Nursery(request):
+    form = EmailSubscriptionForm()
     breadcrumbs = [
         {"name":"Home","url":"/"},
         {"name":"Services"},
         {"name":"Nursery"},
     ]
-    return render(request, 'nursery.html',{"breadcrumbs":breadcrumbs})
+    return render(request, 'nursery.html',{"breadcrumbs":breadcrumbs,"form":form})
 
 def Workshop(request):
     breadcrumbs = [

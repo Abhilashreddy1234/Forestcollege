@@ -1,121 +1,845 @@
 {% load static %}
 {% include 'base.html' %}
 {% include 'breadcrumbs.html' %}
-</div>
-    <div class="instrumentation-section">
-        <div class="instrument-gallery">
-          <img id="instrument-image" src="{% static 'images\services-images\CIF1IMAGE.jpg' %}" alt="Instrument Image" />
-        </div>
-        <div class="instrument-list">
-          <h2>Instrument Names</h2>
-          <ul>
-            <li onclick="showInstrumentDetails('hplc')">High-Performance Liquid Chromatography</li>
-            <li onclick="showInstrumentDetails('gc')">Gas Chromatograph</li>
-            <li onclick="showInstrumentDetails('rtpcr')">Real-Time PCR</li>
-            <li onclick="showInstrumentDetails('gds')">Gel Documentation System</li>
-            <li onclick="showInstrumentDetails('spectrofluorimeter')">Spectrofluorimeter</li>
-            <li onclick="showInstrumentDetails('thermalcycler')">Thermal Cycler</li>
-            <li onclick="showInstrumentDetails('uvvis')">UV-VIS Spectrophotometer</li>
-            <li onclick="showInstrumentDetails('flashevaporator')">Flash Evaporator</li>
-            <li onclick="showInstrumentDetails('freezedryer')">Freeze Dryer</li>
-            <li onclick="showInstrumentDetails('freezer')">-86°C Freezer</li>
-            <li onclick="showInstrumentDetails('sonicator')">Ultrasonic Cell Crusher (Probe Sonicator)</li>
-            <li onclick="showInstrumentDetails('soxtherm')">Soxtherm</li>
-          </ul>
-          <div class="instrument-details" id="instrument-details">
-            <h3>Select an instrument to view details</h3>
+
+<section class="infrastructure-caf1 infrastructure-bg">
+  <div class="container-xl container-xxl">
+    <div
+      class="row infrastructure-cif-row-mobile colm seclaboriesFCRI__row"
+    >
+      <div class="col-md seclaboriesFCRI__col1">
+        <div class="tab-content">
+          <div id="instrument1" class="tab-pane active">
+            <h3>HIGH-PERFORMANCE LIQUID CHROMATOGRAPHY</h3>
+            <div class="row">
+              <!-- Carousel -->
+              <div
+                id="sivilature-faculty"
+                class="carousel slide"
+                data-bs-ride="carousel"
+              >
+                <!-- The slideshow/carousel -->
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="row">
+                      <div class="faculty-content">
+                        <div class="col">
+                          <img
+                            src="{% static 'images/cif/CIF1.jpg' %}"
+                            class="d-block w-100"
+                            alt="cif"
+                          />
+
+                          <div class="tabledata table-responsive-sm">
+                            <table
+                              class="table table-striped table-bordered"
+                            >
+                              <thead class="bg-light">
+                                <tr>
+                                  <th>EQUIPMENT AVAILABLE</th>
+                                  <th>
+                                    CHARGES FOR GOVT UNIVERSITIES/INSTITUTES
+                                  </th>
+                                  <th>
+                                    CHARGES FOR PRIVATE INDUSTRY/INSTITUTES
+                                  </th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>
+                                    HPLC C18 COLUMN (PDA, FLUORESCENCE
+                                    DETECTORS) SHIMADZU
+                                  </td>
+                                  <td>1000/- per sample+ <br />GST 18%</td>
+                                  <td>1500/- per sample+ <br />GST 18%</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--row-->
+          </div>
+          <!--tab-pane-->
+          <div id="instrument2" class="tab-pane fade">
+            <h3>GAS CHROMATOGRAPH</h3>
+            <div class="row">
+              <div
+                id="naturalresource-faculty"
+                class="carousel slide"
+                data-bs-ride="carousel"
+              >
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="row">
+                      <div class="faculty-content">
+                        <div class="col">
+                          <img
+                            src="{% static 'images/services-images/CIF1IMAGE.jpg' %}"
+                            class="d-block w-100"
+                            alt="cif"
+                          />
+                          <div class="tabledata table-responsive-sm">
+                            <table
+                              class="table table-striped table-bordered"
+                            >
+                              <thead class="bg-light">
+                                <tr>
+                                  <th>EQUIPMENT AVAILABLE</th>
+                                  <th>
+                                    CHARGES FOR GOVT UNIVERSITIES/INSTITUTES
+                                  </th>
+                                  <th>
+                                    CHARGES FOR PRIVATE INDUSTRY/INSTITUTES
+                                  </th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>
+                                    GAS CHROMATOGRAPH WITH FLAME IONIZATION
+                                    DETECTOR (NEXIS 2030)
+                                  </td>
+                                  <td>
+                                    2000/- per sample+ <br />
+
+                                    GST 18%
+                                  </td>
+                                  <td>
+                                    3000/- per sample+ <br />
+
+                                    GST 18%
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--row-->
+          </div>
+          <div id="instrument3" class="tab-pane fade">
+            <h3>REAL-TIME PCR</h3>
+            <div class="row">
+              <div
+                id="wildlife-faculty"
+                class="carousel slide"
+                data-bs-ride="carousel"
+                data-bs-touch="false"
+                data-bs-interval="false"
+              >
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="row">
+                      <div class="faculty-content">
+                        <div class="col">
+                          <img
+                            src="{% static 'images/services-images/CIF2-GAS.jpg' %}"
+                            class="d-block w-100"
+                            alt="cif"
+                          />
+
+                          <div class="tabledata table-responsive-sm">
+                            <table
+                              class="table table-striped table-bordered"
+                            >
+                              <thead class="bg-light">
+                                <tr>
+                                  <th>EQUIPMENT AVAILABLE</th>
+                                  <th>
+                                    CHARGES FOR GOVT UNIVERSITIES/INSTITUTES
+                                  </th>
+                                  <th>
+                                    CHARGES FOR PRIVATE INDUSTRY/INSTITUTES
+                                  </th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>REAL-TIME PCR (BIORAD)</td>
+                                  <td>
+                                    1000/- per sample+ <br />
+
+                                    GST 18%
+                                  </td>
+                                  <td>
+                                    1500/- per sample+ <br />
+
+                                    GST 18%
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--row-->
+          </div>
+          <div id="instrument4" class="tab-pane fade">
+            <h3>GEL DOCUMENTATION SYSTEM</h3>
+            <div class="row">
+              <!-- Carousel -->
+              <div
+                id="socialsciences-faculty"
+                class="carousel slide"
+                data-bs-ride="carousel"
+              >
+                <!-- The slideshow/carousel -->
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="row">
+                      <div class="faculty-content">
+                        <div class="col">
+                          <img
+                            src="{% static 'images/services-images/cif2-image.jpg' %}"
+                            class="d-block w-100"
+                            alt="cif"
+                          />
+
+                          <div class="tabledata table-responsive-sm">
+                            <table
+                              class="table table-striped table-bordered"
+                            >
+                              <thead class="bg-light">
+                                <tr>
+                                  <th>EQUIPMENT AVAILABLE</th>
+                                  <th>
+                                    CHARGES FOR GOVT UNIVERSITIES/INSTITUTES
+                                  </th>
+                                  <th>
+                                    CHARGES FOR PRIVATE INDUSTRY/INSTITUTES
+                                  </th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>GEL DOCUMENTATION SYSTEM (VILBER)</td>
+                                  <td>
+                                    250/-per sample+ <br />
+
+                                    GST 18%
+                                  </td>
+                                  <td>
+                                    500/- per sample+ <br />
+
+                                    GST 18%
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--row-->
+          </div>
+          <div id="instrument5" class="tab-pane fade">
+            <h3>SPECTRO FLUOROPHOTOMETER</h3>
+            <div class="row">
+              <div
+                id="forestproducts-faculty"
+                class="carousel slide"
+                data-bs-ride="carousel"
+              >
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="row">
+                      <div class="faculty-content">
+                        <div class="col">
+                          <img
+                            src="../wp-content/uploads/2022/05/CIF5.jpg"
+                            class="d-block w-100"
+                            alt="cif"
+                          />
+
+                          <div class="tabledata table-responsive-sm">
+                            <table
+                              class="table table-striped table-bordered"
+                            >
+                              <thead class="bg-light">
+                                <tr>
+                                  <th>EQUIPMENT AVAILABLE</th>
+                                  <th>
+                                    CHARGES FOR GOVT UNIVERSITIES/INSTITUTES
+                                  </th>
+                                  <th>
+                                    CHARGES FOR PRIVATE INDUSTRY/INSTITUTES
+                                  </th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>
+                                    SPECTRO FLUOROPHOTOMETER (SHIMADZU)
+                                    RF-6000
+                                  </td>
+                                  <td>
+                                    250/-per sample+<br />
+
+                                    GST 18%
+                                  </td>
+                                  <td>
+                                    500/- per sample+ <br />
+
+                                    GST 18%
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--row-->
+          </div>
+          <div id="instrument6" class="tab-pane fade">
+            <h3>THERMAL CYCLER</h3>
+            <div class="row">
+              <div
+                id="treebreeding-faculty"
+                class="carousel slide"
+                data-bs-ride="carousel"
+              >
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="row">
+                      <div class="faculty-content">
+                        <div class="col">
+                          <img
+                            src="../wp-content/uploads/2022/05/CIF6.jpg"
+                            class="d-block w-100"
+                            alt="cif"
+                          />
+
+                          <div class="tabledata table-responsive-sm">
+                            <table
+                              class="table table-striped table-bordered"
+                            >
+                              <thead class="bg-light">
+                                <tr>
+                                  <th>EQUIPMENT AVAILABLE</th>
+                                  <th>
+                                    CHARGES FOR GOVT UNIVERSITIES/INSTITUTES
+                                  </th>
+                                  <th>
+                                    CHARGES FOR PRIVATE INDUSTRY/INSTITUTES
+                                  </th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>
+                                    THERMAL CYCLER MASTER CYCLER NEXUS
+                                    GRADIENT (EPPENDORF)
+                                  </td>
+                                  <td>
+                                    800/-per sample+ <br />
+
+                                    GST 18%
+                                  </td>
+                                  <td>
+                                    1000/- per sample+ <br />
+
+                                    GST 18%
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--row-->
+          </div>
+          <div id="instrument7" class="tab-pane fade">
+            <h3>UV-VIS SPECTROPHOTOMETER</h3>
+            <div class="row">
+              <div
+                id="climatescience-faculty"
+                class="carousel slide"
+                data-bs-ride="carousel"
+              >
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="row">
+                      <div class="faculty-content">
+                        <div class="col">
+                          <img
+                            src="../wp-content/uploads/2022/05/CIF7.jpg"
+                            class="d-block w-100"
+                            alt="cif"
+                          />
+
+                          <div class="tabledata table-responsive-sm">
+                            <table
+                              class="table table-striped table-bordered"
+                            >
+                              <thead class="bg-light">
+                                <tr>
+                                  <th>EQUIPMENT AVAILABLE</th>
+                                  <th>
+                                    CHARGES FOR GOVT UNIVERSITIES/INSTITUTES
+                                  </th>
+                                  <th>
+                                    CHARGES FOR PRIVATE INDUSTRY/INSTITUTES
+                                  </th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>UV-VIS SPECTROPHOTOMETER</td>
+                                  <td>
+                                    250/-per sample+ <br />
+
+                                    GST 18%
+                                  </td>
+                                  <td>
+                                    500/- per sample+ <br />
+
+                                    GST 18%
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--row-->
+          </div>
+          <div id="instrument8" class="tab-pane fade">
+            <h3>FLASH EVAPORATOR</h3>
+            <div class="row">
+              <div
+                id="library-faculty"
+                class="carousel slide"
+                data-bs-ride="carousel"
+                data-bs-touch="false"
+                data-bs-interval="false"
+              >
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="row">
+                      <div class="faculty-content">
+                        <div class="col">
+                          <img
+                            src="../wp-content/uploads/2022/05/CIF8.jpg"
+                            class="d-block w-100"
+                            alt="cif"
+                          />
+
+                          <div class="tabledata table-responsive-sm">
+                            <table
+                              class="table table-striped table-bordered"
+                            >
+                              <thead class="bg-light">
+                                <tr>
+                                  <th>EQUIPMENT AVAILABLE</th>
+                                  <th>
+                                    CHARGES FOR GOVT UNIVERSITIES/INSTITUTES
+                                  </th>
+                                  <th>
+                                    CHARGES FOR PRIVATE INDUSTRY/INSTITUTES
+                                  </th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>FLASH EVAPORATOR (VWR)</td>
+                                  <td>
+                                    450/-per sample+ <br />
+
+                                    GST 18%
+                                  </td>
+                                  <td>
+                                    800/- per sample+<br />
+
+                                    GST 18%
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--row-->
+          </div>
+          <div id="instrument9" class="tab-pane fade">
+            <h3>FREEZE DYER</h3>
+            <div class="row">
+              <div
+                id="library-faculty"
+                class="carousel slide"
+                data-bs-ride="carousel"
+                data-bs-touch="false"
+                data-bs-interval="false"
+              >
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="row">
+                      <div class="faculty-content">
+                        <div class="col">
+                          <img
+                            src="../wp-content/uploads/2022/05/CIF9.jpg"
+                            class="d-block w-100"
+                            alt="cif"
+                          />
+
+                          <div class="tabledata table-responsive-sm">
+                            <table
+                              class="table table-striped table-bordered"
+                            >
+                              <thead class="bg-light">
+                                <tr>
+                                  <th>EQUIPMENT AVAILABLE</th>
+                                  <th>
+                                    CHARGES FOR GOVT UNIVERSITIES/INSTITUTES
+                                  </th>
+                                  <th>
+                                    CHARGES FOR PRIVATE INDUSTRY/INSTITUTES
+                                  </th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>FREEZE DYER</td>
+                                  <td>
+                                    500/-per sample+ <br />
+
+                                    GST 18%
+                                  </td>
+                                  <td>
+                                    1000/- per sample+ <br />
+
+                                    GST 18%
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--row-->
+          </div>
+          <div id="instrument10" class="tab-pane fade">
+            <h3>-86°C FREEZER</h3>
+            <div class="row">
+              <div
+                id="library-faculty"
+                class="carousel slide"
+                data-bs-ride="carousel"
+                data-bs-touch="false"
+                data-bs-interval="false"
+              >
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="row">
+                      <div class="faculty-content">
+                        <div class="col">
+                          <img
+                            src="../wp-content/uploads/2022/05/CIF10.jpg"
+                            class="d-block w-100"
+                            alt="cif"
+                          />
+
+                          <div class="tabledata table-responsive-sm">
+                            <table
+                              class="table table-striped table-bordered"
+                            >
+                              <thead class="bg-light">
+                                <tr>
+                                  <th>EQUIPMENT AVAILABLE</th>
+                                  <th>
+                                    CHARGES FOR GOVT UNIVERSITIES/INSTITUTES
+                                  </th>
+                                  <th>
+                                    CHARGES FOR PRIVATE INDUSTRY/INSTITUTES
+                                  </th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>
+                                    -86<span>°</span>C FREEZER SERVO
+                                    CONTROLLER
+                                  </td>
+                                  <td>
+                                    1000/-per day+ <br />
+
+                                    GST 18%
+                                  </td>
+                                  <td>
+                                    2000/- per day+<br />
+
+                                    GST 18%
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--row-->
+          </div>
+          <div id="instrument11" class="tab-pane fade">
+            <h3>ULTRASONIC CELL CRUSHERPROBE SONICATOR</h3>
+            <div class="row">
+              <div
+                id="library-faculty"
+                class="carousel slide"
+                data-bs-ride="carousel"
+                data-bs-touch="false"
+                data-bs-interval="false"
+              >
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="row">
+                      <div class="faculty-content">
+                        <div class="col">
+                          <img
+                            src="../wp-content/uploads/2022/05/CIF11.jpg"
+                            class="d-block w-100"
+                            alt="cif"
+                          />
+
+                          <div class="tabledata table-responsive-sm">
+                            <table
+                              class="table table-striped table-bordered"
+                            >
+                              <thead class="bg-light">
+                                <tr>
+                                  <th>EQUIPMENT AVAILABLE</th>
+                                  <th>
+                                    CHARGES FOR GOVT UNIVERSITIES/INSTITUTES
+                                  </th>
+                                  <th>
+                                    CHARGES FOR PRIVATE INDUSTRY/INSTITUTES
+                                  </th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>
+                                    ULTRASONIC CELL CRUSHER PROBESONICATOR
+                                    (PRO-650)
+                                  </td>
+                                  <td>
+                                    500/-per hour+<br />
+
+                                    GST 18%
+                                  </td>
+                                  <td>
+                                    1000/- per hour+ <br />
+
+                                    GST 18%
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--row-->
+          </div>
+          <div id="instrument12" class="tab-pane fade">
+            <h3>SOXTHERM</h3>
+            <div class="row">
+              <div
+                id="physicaleducation-faculty"
+                class="carousel slide"
+                data-bs-ride="carousel"
+              >
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="row">
+                      <div class="faculty-content">
+                        <div class="col">
+                          <img
+                            src="../wp-content/uploads/2022/05/CIF12.jpg"
+                            class="d-block w-100"
+                            alt="cif"
+                          />
+
+                          <div class="tabledata table-responsive-sm">
+                            <table
+                              class="table table-striped table-bordered"
+                            >
+                              <thead class="bg-light">
+                                <tr>
+                                  <th>EQUIPMENT AVAILABLE</th>
+                                  <th>
+                                    CHARGES FOR GOVT UNIVERSITIES/INSTITUTES
+                                  </th>
+                                  <th>
+                                    CHARGES FOR PRIVATE INDUSTRY/INSTITUTES
+                                  </th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>SOXTHERM</td>
+                                  <td>
+                                    1000/-per sample+ <br />
+
+                                    GST 18%
+                                  </td>
+                                  <td>
+                                    1500/-per sample+ <br />
+
+                                    GST 18%
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--row-->
           </div>
         </div>
       </div>
-      
-      
-
-    <section class="contact-section">
-        <h1>
-            Emerging as a World Class Institution.
-        </h1>
-        <h2>Forestry Education, Research, Management, and Outreach.</h2>
-        <a href="{% url 'ContactUs' %}" class="contact-button">Contact Us</a>
-    </section>
-    <div class="vision-images">
-        <div class="vi">
-            <img src="{% static 'images\college-images\visionimage4.webp' %}">
-        </div>
-        <div class="vi">
-            <img src="{% static 'images\college-images\vision-image5.webp' %}">
-        </div>
-        <div class="vi">
-            <img src="{% static 'images\college-images\vision-image7.webp' %}">
-        </div>
-        <div class="vi">
-            <img src="{% static 'images\college-images\vision-image6.webp' %}">
-        </div>
+      <div class="col-md seclaboriesFCRI__col2 h-50">
+        <h6 class="text-dgreen">Instrument Names</h6>
+        <ul class="nav nav-pills flex-column" role="tablist">
+          <li class="nav-item">
+            <a
+              class="nav-link active"
+              data-bs-toggle="pill"
+              href="#instrument1"
+              >high-performance liquid chromatography
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="pill" href="#instrument2"
+              >gas chromatograph
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="pill" href="#instrument3"
+              >real-time PCR
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="pill" href="#instrument4"
+              >gel documentation system
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="pill" href="#instrument5"
+              >Spectrofluorimeter
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="pill" href="#instrument6"
+              >thermal cycler
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="pill" href="#instrument7"
+              >UV-VIS spectrophotometer
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="pill" href="#instrument8"
+              >flash evaporator
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="pill" href="#instrument9"
+              >freeze dyer
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="pill" href="#instrument10"
+              >-86<span>°</span>C freezer
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="pill" href="#instrument11"
+              >ultrasonic cell crusherprobe sonicator
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="pill" href="#instrument12"
+              >soxtherm
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
-    <footer class="footer">
-        <div class="footer-container">
-          <!-- Footer Top Section -->
-          <div class="footer-top">
-            <div class="footer-column">
-              <img src="{% static 'images/logo-images/forestlogo-01.webp' %}" class="footer-img" alt="Forest Logo">
-              <p><strong>Email us:</strong> <a href="mailto:tsfcri2021@gmail.com">tsfcri2021@gmail.com</a></p>
-              <p><strong>Call us:</strong> <a href="tel:+918454211930">+91 8454211930</a>, <a href="tel:+918454211939">+91 8454211939</a></p>
-            </div>
-            <div class="footer-column">
-              <h3>Subscribe</h3>
-              <form action="#" class="subscribe-form">
-                <input type="email" placeholder="Enter your email address" class="subscribe-input" required>
-                <button type="submit" class="subscribe-button">Subscribe</button>
-              </form>
-            </div>
-            <div class="footer-column">
-              <h3>About</h3>
-              <ul>
-                <li><a href="#">Vision and Mission</a></li>
-                <li><a href="#">Governing Board</a></li>
-                <li><a href="#">Academic Council</a></li>
-                <li><a href="#">Organogram</a></li>
-              </ul>
-            </div>
-            <div class="footer-column">
-              <h3>Admissions</h3>
-              <ul>
-                <li><a href="#">BSc Hons Forestry</a></li>
-                <li><a href="#">MSc Forestry</a></li>
-                <li><a href="#">PhD Forestry</a></li>
-                <li><a href="#">Admission Process - UG</a></li>
-                <li><a href="#">Admission Process - PG</a></li>
-                <li><a href="#">FAQ’s</a></li>
-              </ul>
-            </div>
-            <div class="footer-column">
-              <h3>Academics</h3>
-              <ul>
-                <li><a href="#">List of Departments</a></li>
-                <li><a href="#">Faculty</a></li>
-                <li><a href="#">Laboratories</a></li>
-                <li><a href="#">Rules & Regulation - UG</a></li>
-                <li><a href="#">Rules & Regulation - PG</a></li>
-              </ul>
-            </div>
-          </div>
-      
-          <!-- Footer Bottom Section -->
-          <div class="footer-bottom">
-            <p>© 2022 FCRI - All Rights Reserved.</p>
-      
-            <!-- Social Media Links at the Bottom -->
-            <div class="top-bar1">
-              <div class="social-media1">
-                <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
-      
-       
+    <!--row-->
+  </div>
+</section>
+<!-- <section class="research-section text-center">
+<div class="container-fluid">
+<div class="row">
+  <div class="col-md-12 research-quote">
+    <h1 class="playfair-family text-dgreen">Emerging as a World Class Institution for</h1>
+    <h2 class="text-green playfair-family">Forestry Education, Research, Management and Outreach.</h2>
+    <p class="text-dgreen pt-3 pb-3">To bring out the qualified forestry professionals for conservation and sustainable management
+    of forest resources.</p>
+     <button type="button" class="btn rounded-pill primary-green mx-auto">contact us</button>
+    <a href="https://fcriqa.fcrits.in/contact/"><button type="button" class="nav-link btn btn btn-success text-white rounded-pill">Contact Us</button></a>
+  </div>
+</div>
+</div>
+</section>
   <script src="{% static 'js/main.js' %}"></script>
 </body>

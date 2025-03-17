@@ -160,7 +160,7 @@
                                         <li>
                                             <a class="dropdown-item" href="{% url 'DepartmentHead' %}">Department Head</a>
                                         <li>
-                                            <a class="dropdown-item" href="#">Laboratories</a>
+                                            <a class="dropdown-item" href="{% url 'laboratories' %}">Laboratories</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -257,8 +257,8 @@
       <a class="dropdown-item" href="#">Courses Offered</a>
       <ul class="submenu dropdown-menu">
         <li><a class="dropdown-item" href="{% url 'admissions1' %}">BSC Hons Forestry</a></li>
-        <li><a class="dropdown-item" href="{% url 'admissions1'}">MSC Forestry</a></li>
-        <li><a class="dropdown-item" href="{% url 'admissions1' %}">PhD Forestry</a></li>
+        <li><a class="dropdown-item" href="{% url 'mscforestry' %}">MSC Forestry</a></li>
+        <li><a class="dropdown-item" href="{% url 'Phdforestry' %}">PhD Forestry</a></li>
       </ul>
     </li>
     <li class="has-submenu">
@@ -359,8 +359,8 @@
       <li><a class="dropdown-item" href="{% url 'Auditorium' %}">Auditorium</a></li>
       <li><a class="dropdown-item" href="{% url 'Seminarhall' %}">Seminar Hall</a></li>
       <li><a class="dropdown-item" href="{% url 'Library' %}">Library</a></li>
-      <li><a class="dropdown-item" href="#">Hostel</a></li>
-      <li><a class="dropdown-item" href="#">Mess/Canteen</a></li>
+      <li><a class="dropdown-item" href="{% url 'hostel' %}">Hostel</a></li>
+      <li><a class="dropdown-item" href="{% url 'canteen' %}">Mess/Canteen</a></li>
     </ul>
   </li>
   <li class="nav-item dropdown">

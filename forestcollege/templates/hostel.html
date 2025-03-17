@@ -1,0 +1,124 @@
+{% load static %}
+{% include 'base.html' %}
+<section class="inner-banner">
+  <h1 class="bold-text vertical-center">FCRI CARES</h1>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <i class="fa fa-home" aria-hidden="true"></i>&nbsp;
+        <a href="#">Home</a>
+      </li>
+      <li class="breadcrumb-item">Services</li>
+      <li class="breadcrumb-item" aria-current="page">FCRI CARES</li>
+    </ol>
+  </nav>
+</section>
+<section class="infrastructure-hostel infrastructure-bg">
+    <div class="container-xl container-xxl">
+      <div class="row infrastructure-row-mobile column_infra">
+        <div class="col-12 col-md">
+          <div
+            id="hostel-slider"
+            class="carousel slide"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="{% static 'images/college-images/Hostel_1.jpg' %}"
+                  class="d-block w-100"
+                  alt="hostel"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="{% static 'images/college-images/Hostel_2.jpg' %}"
+                  class="d-block w-100"
+                  alt="hostel"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="{% static 'images/college-images/Hostel_3.jpg' %}"
+                  class="d-block w-100"
+                  alt="hostel"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="{% static 'images/college-images/Hostel_4.jpg' %}"
+                  class="d-block w-100"
+                  alt="hostel"
+                />
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#hostel-slider"
+              data-bs-slide="prev"
+            >
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#hostel-slider"
+              data-bs-slide="next"
+            >
+              <span class="carousel-control-next-icon"></span>
+            </button>
+          </div>
+        </div>
+        <div class="col -12 col-md col-padding conn_infra">
+          <h3
+            class="text-green"
+            style="color: #2e9f5e; font-weight: 600; letter-spacing: 0"
+          >
+            Hostel - Boys & Girls
+          </h3>
+          <p style="text-align: justify">
+            FCRI is fully residential campus providing accommodation for both
+            boys and girls students. The hostels are meant for both boarding
+            and lodging. The students resident of the hostels shall have all
+            the facilities like 24 hour supply of water and electricity, gym
+            equipment, tv room, CCTV Surveillance facility, multiple
+            Newspapers availability and safe drinking water.
+          </p>
+          <p style="text-align: justify">
+            Both the hostels are supervised by warden and 2 caretakers to look
+            after the requirements of the students. The rooms of the hostels
+            are given a suitable study environment and space ensuring
+            development and interaction among the students with the management
+            of turning them independent and self reliable.
+          </p>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="contact-section">
+    <h1>
+        Emerging as a World Class Institution.
+    </h1>
+    <h2>Forestry Education, Research, Management, and Outreach.</h2>
+    <a href="{% url 'ContactUs' %}" class="contact-button">Contact Us</a>
+</section>
+<div class="vision-images">
+    <div class="vi">
+        <img src="{% static 'images\college-images\visionimage4.webp' %}">
+    </div>
+    <div class="vi">
+        <img src="{% static 'images\college-images\vision-image5.webp' %}">
+    </div>
+    <div class="vi">
+        <img src="{% static 'images\college-images\vision-image7.webp' %}">
+    </div>
+    <div class="vi">
+        <img src="{% static 'images\college-images\vision-image6.webp' %}">
+    </div>
+</div>
+  {% include 'footer1.html' %}
+       
+  <script src="{% static 'js/main.js' %}"></script>
+</body>

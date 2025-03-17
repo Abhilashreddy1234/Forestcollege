@@ -51,7 +51,8 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
   
-        
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
         
       
 
@@ -191,7 +192,7 @@
                                         <li>
                                             <a class="dropdown-item" href="{% url 'DepartmentHead' %}">Department Head</a>
                                         <li>
-                                            <a class="dropdown-item" href="#">Laboratories</a>
+                                            <a class="dropdown-item" href="{% url 'laboratories' %}">Laboratories</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -288,8 +289,8 @@
         <a class="dropdown-item" href="#">Courses Offered</a>
         <ul class="submenu dropdown-menu">
           <li><a class="dropdown-item" href="{% url 'admissions1' %}">BSC Hons Forestry</a></li>
-          <li><a class="dropdown-item" href="{% url 'admissions1'}">MSC Forestry</a></li>
-          <li><a class="dropdown-item" href="{% url 'admissions1' %}">PhD Forestry</a></li>
+          <li><a class="dropdown-item" href="{% url 'mscforestry'}">MSC Forestry</a></li>
+          <li><a class="dropdown-item" href="{% url 'Phdforestry' %}">PhD Forestry</a></li>
         </ul>
       </li>
       <li class="has-submenu">

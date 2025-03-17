@@ -2,120 +2,115 @@
 {% include 'base.html' %}
 {% include 'breadcrumbs.html' %}
 
-    <div class="forest-museum-section">
-        <div class="carousel-container">
-          <div class="carousel">
-            <img src="{% static 'images\college-images\Forest_Museum_2.jpg' %}" alt="Slide 1" class="carousel-image active">
-            <img src="{% static 'images\college-images\Forest_Museum_3.jpg' %}" alt="Slide 2" class="carousel-image">
-            <img src="{% static 'images\college-images\Forest_Museum_image1.jpg' %}" alt="Slide 3" class="carousel-image">
-            <button class="carousel-button left" onclick="prevSlide()">&#9664;</button>
-            <button class="carousel-button right" onclick="nextSlide()">&#9654;</button>
+<section class="infrastructure-museum infrastructure-bg">
+  <div class="container-xl container-xxl">
+    <div class="row infrastructure-row-mobile column_infra">
+      <div class="col-12 col-md">
+        <div
+          id="museum-slider"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="{% static 'images/college-images/Forest_Museum_3.jpg' %}"
+                class="d-block w-100"
+                alt="Forest_Museum"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="{% static 'images/college-images/Forest_Museum_3.jpg' %}"
+                class="d-block w-100"
+                alt="Forest_Museum"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="{% static 'images/college-images/Forest_Museum_2.jpg' %}"
+                class="d-block w-100"
+                alt="Forest_Museum"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="{% static 'images/college-images/Forest_Museum_2.jpg' %}"
+                class="d-block w-100"
+                alt="Forest_Museum"
+              />
+            </div>
           </div>
-        </div>
-        <div class="content-container">
-          <h2>Museum</h2>
-          <p>
-            Forest College and Research Institute (FCRI) is the first institute offering forestry education in 
-            entire Telangana state to bring out qualified professionals in forestry. It is necessary to establish 
-            a world-class museum covering all themes of forestry-related aspects. It will be beneficial for the 
-            general public, students, and farmers of Telangana State and the entire nation.
-          </p>
-          <p>
-            It is based on the forestry themes which exhibit the history and existence of forestry in India, forest 
-            types of India and Telangana State, State animal, State bird, State tree of Telangana, soil types, rocks, 
-            minerals, ecosystem services, different types of seeds, wood fossils, wood species of Telangana state, 
-            bamboo products, insect collections, etc.
-          </p>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#museum-slider"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#museum-slider"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon"></span>
+          </button>
         </div>
       </div>
-      
-
-    <section class="contact-section">
-        <h1>
-            Emerging as a World Class Institution.
-        </h1>
-        <h2>Forestry Education, Research, Management, and Outreach.</h2>
-        <a href="{% url 'ContactUs' %}" class="contact-button">Contact Us</a>
-    </section>
-    <div class="vision-images">
-        <div class="vi">
-            <img src="{% static 'images\college-images\visionimage4.webp' %}">
-        </div>
-        <div class="vi">
-            <img src="{% static 'images\college-images\vision-image5.webp' %}">
-        </div>
-        <div class="vi">
-            <img src="{% static 'images\college-images\vision-image7.webp' %}">
-        </div>
-        <div class="vi">
-            <img src="{% static 'images\college-images\vision-image6.webp' %}">
-        </div>
+      <div class="col-12 col-md col-padding conn_infra">
+        <h3
+          class="text-green"
+          style="color: #2e9f5e; font-weight: 600; letter-spacing: 0"
+        >
+          Museum
+        </h3>
+        <p style="text-align: justify">
+          Forest College and Research Institute (FCRI) is the first
+          institute offering forestry education in entire Telangana state to
+          bring out qualified professional in forestry. It is necessary to
+          establish a world class museum covering all themes of forestry
+          related aspects. It will be benefited for general public, students
+          and farmers of Telangana State and entire nation.
+        </p>
+        <p>
+          It is based on the forestry themes which exhibits history and
+          existence of forestry in India, forest type of India and Telangana
+          State, State animal, State bird, State tree of Telangana, soil
+          types, rocks, minerals, ecosystems services, different types seed,
+          wood fossils, wood species of Telangana state, bamboo products,
+          insect collection etc.
+        </p>
+        
+      </div>
     </div>
-    <footer class="footer">
-        <div class="footer-container">
-          <!-- Footer Top Section -->
-          <div class="footer-top">
-            <div class="footer-column">
-              <img src="{% static 'images/logo-images/forestlogo-01.webp' %}" class="footer-img" alt="Forest Logo">
-              <p><strong>Email us:</strong> <a href="mailto:tsfcri2021@gmail.com">tsfcri2021@gmail.com</a></p>
-              <p><strong>Call us:</strong> <a href="tel:+918454211930">+91 8454211930</a>, <a href="tel:+918454211939">+91 8454211939</a></p>
-            </div>
-            <div class="footer-column">
-              <h3>Subscribe</h3>
-              <form action="#" class="subscribe-form">
-                <input type="email" placeholder="Enter your email address" class="subscribe-input" required>
-                <button type="submit" class="subscribe-button">Subscribe</button>
-              </form>
-            </div>
-            <div class="footer-column">
-              <h3>About</h3>
-              <ul>
-                <li><a href="#">Vision and Mission</a></li>
-                <li><a href="#">Governing Board</a></li>
-                <li><a href="#">Academic Council</a></li>
-                <li><a href="#">Organogram</a></li>
-              </ul>
-            </div>
-            <div class="footer-column">
-              <h3>Admissions</h3>
-              <ul>
-                <li><a href="#">BSc Hons Forestry</a></li>
-                <li><a href="#">MSc Forestry</a></li>
-                <li><a href="#">PhD Forestry</a></li>
-                <li><a href="#">Admission Process - UG</a></li>
-                <li><a href="#">Admission Process - PG</a></li>
-                <li><a href="#">FAQ’s</a></li>
-              </ul>
-            </div>
-            <div class="footer-column">
-              <h3>Academics</h3>
-              <ul>
-                <li><a href="#">List of Departments</a></li>
-                <li><a href="#">Faculty</a></li>
-                <li><a href="#">Laboratories</a></li>
-                <li><a href="#">Rules & Regulation - UG</a></li>
-                <li><a href="#">Rules & Regulation - PG</a></li>
-              </ul>
-            </div>
-          </div>
-      
-          <!-- Footer Bottom Section -->
-          <div class="footer-bottom">
-            <p>© 2022 FCRI - All Rights Reserved.</p>
-      
-            <!-- Social Media Links at the Bottom -->
-            <div class="top-bar1">
-              <div class="social-media1">
-                <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
-      
+  </div>
+   
+<section class="contact-section">
+  <h1>
+      Emerging as a World Class Institution.
+  </h1>
+  <h2>Forestry Education, Research, Management, and Outreach.</h2>
+  <a href="{% url 'ContactUs' %}" class="contact-button">Contact Us</a>
+</section>
+</div>
+<div class="vision-images">
+<div class="vi">
+  <img src="{% static 'images\college-images\visionimage4.webp' %}">
+</div>
+<div class="vi">
+  <img src="{% static 'images\college-images\vision-image5.webp' %}">
+</div>
+<div class="vi">
+  <img src="{% static 'images\college-images\vision-image7.webp' %}">
+</div>
+<div class="vi">
+  <img src="{% static 'images\college-images\vision-image6.webp' %}">
+</div>
+</div>
+{% include 'footer1.html' %}   
        
   <script src="{% static 'js/main.js' %}"></script>
+  
 </body>
