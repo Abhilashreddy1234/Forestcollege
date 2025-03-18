@@ -1,21 +1,9 @@
 {% load static %}
 {% include 'base.html' %}
-<section class="inner-banner">
-  <h1 class="bold-text vertical-center">FCRI CARES</h1>
-  <nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item">
-        <i class="fa fa-home" aria-hidden="true"></i>&nbsp;
-        <a href="#">Home</a>
-      </li>
-      <li class="breadcrumb-item">Services</li>
-      <li class="breadcrumb-item" aria-current="page">FCRI CARES</li>
-    </ol>
-  </nav>
-</section>
+{% include 'breadcrumbs.html' %} 
 <section class="infrastructure-hostel infrastructure-bg">
     <div class="container-xl container-xxl">
-      <div class="row infrastructure-row-mobile column_infra">
+      <div class="row  column_infra">
         <div class="col-12 col-md">
           <div
             id="hostel-slider"

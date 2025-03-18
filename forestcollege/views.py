@@ -323,6 +323,14 @@ def Fcri(request):
         {"name":"FCRI Careers"},
     ]
     return render(request, 'Fcri.html',{"breadcrumbs":breadcrumbs,"form":form})
+def Fcricarers(request):
+    form = EmailSubscriptionForm()
+    breadcrumbs = [
+        {"name":"Home","url":"/"},
+        {"name":"Services"},
+        {"name":"FCRI Study Circle"},
+    ]
+    return render(request, 'fcricircle.html',{"breadcrumbs":breadcrumbs,"form":form})
 def hostel(request):
     form = EmailSubscriptionForm()
     breadcrumbs = [
@@ -350,7 +358,7 @@ def Cfi2(request):
         {"name":"CFI"},
     ]
 
-    return render(request, 'cf1.html',{"breadcrumbs":breadcrumbs,"form":form})
+    return render(request, 'cif2.html',{"breadcrumbs":breadcrumbs,"form":form})
 
 def Nursery(request):
     form = EmailSubscriptionForm()
@@ -362,12 +370,13 @@ def Nursery(request):
     return render(request, 'nursery.html',{"breadcrumbs":breadcrumbs,"form":form})
 
 def Workshop(request):
+    form = EmailSubscriptionForm()
     breadcrumbs = [
         {"name":"Home","url":"/"},
         {"name":"Services"},
         {"name":"Workshop"},
     ]
-    return render(request, 'Workshop.html',{"breadcrumbs":breadcrumbs})
+    return render(request, 'Workshop.html',{"breadcrumbs":breadcrumbs,"form":form})
  
 def ContactUs(request):
     return render(request, 'contactus.html')

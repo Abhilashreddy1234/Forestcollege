@@ -1,19 +1,66 @@
 {% load static %}
 {% include 'base.html' %}
 {% include 'breadcrumbs.html' %}
-</div>
-    <section class='board-section'>
-        <div class='Boardcontainer'>
-            <div class='board-image'>
-                <img src="{% static 'images\department-images\Seminar_Hall_1.jpg' %}">
+<section class="infrastructure-seminarhall infrastructure-bg">
+    <div class="container-xl contaier-xxl">
+      <div class="row  column_infra">
+        <div class="col-12 col-md">
+          <div
+            id="seminarhall-slider"
+            class="carousel slide"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="{% static 'images/department-images/Seminar_Hall_1.jpg' %}"
+                  class="d-block w-100"
+                  alt="infrastructure"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="{% static 'images/department-images/Seminar_Hall_1.jpg' %}"
+                  class="d-block w-100"
+                  alt="infrastructure"
+                />
+              </div>
             </div>
-            <div class='contentboard'>
-                <h2>Seminar Hall</h2>
-                <p>The FCRI has seminar halls equipped with the latest audiovisual facilities for guest lectures, seminars, presentations and other academic activities.</p> 
-            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#seminarhall-slider"
+              data-bs-slide="prev"
+            >
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#seminarhall-slider"
+              data-bs-slide="next"
+            >
+              <span class="carousel-control-next-icon"></span>
+            </button>
+          </div>
         </div>
-    </section>
-
+        <div class="col-12 col-md col-padding conn_infra">
+          <h3
+            class="text-green"
+            style="color: #2e9f5e; font-weight: 600; letter-spacing: 0"
+          >
+            Seminar Hall
+          </h3>
+          <p style="text-align: justify">
+            The FCRI has seminar halls equipped with the latest audiovisual
+            facilities for guest lectures, seminars, presentations and other
+            academic activities.
+          </p>
+          
+        </div>
+      </div>
+    </div>
+  </section>
       
 
     <section class="contact-section">

@@ -41,6 +41,7 @@ urlpatterns = [
     path('canteen/',views.canteen,name='canteen'),
     path('Library/',views.Library,name='Library'),
     path('fcri/',views.Fcri,name='Fcri'),
+    path('fcricarers/',views.Fcricarers,name='fcricarers'),
     path('Cfi2/',views.Cfi2,name='Cfi2'),
     path('Nursery/',views.Nursery,name='Nursery'),
     path('Workshop/',views.Workshop,name='Workshop'),

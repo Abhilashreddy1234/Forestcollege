@@ -364,13 +364,13 @@
     </ul>
   </li>
   <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">sERVICESS</a>
+    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">services</a>
     <ul class="dropdown-menu">
-        <li><a class="dropdoun-item" href="{% url 'Fcri' %}">FCRI Careews</a></li>
-        <li><a class="dropdoun-item" href="{% url 'Fcri' %}">FCRI Study circle</a></li>
-        <li><a class="dropdoun-item" href="{% url 'Cfi2' %}">CFI</a></li>
-        <li><a class="dropdoun-item" href="{% url 'Nursery' %}">Nursery</a></li>
-        <li><a calss="dropdoun-item" href="{% url 'Workshop' %}">Workshop</a></li>
+        <li><a class="dropdown-item" href="{% url 'Fcri' %}">FCRI Careews</a></li>
+        <li><a class="dropdown-item" href="{% url 'fcricarers' %}">FCRI Study circle</a></li>
+        <li><a class="dropdown-item" href="{% url 'Cfi2' %}">CFI</a></li>
+        <li><a class="dropdown-item" href="{% url 'Nursery' %}">Nursery</a></li>
+        <li><a class="dropdown-item" href="{% url 'Workshop' %}">Workshop</a></li>
     </ul>
   </li>
   <li class="nav-item dropdown">
@@ -602,7 +602,100 @@
       {% endblock content %}
       </section>
 
+      <div class="homeRegisterLinks wow fadeInUp" data-wow-delay="0.3s">
+        <div class="row align-items-center">
+          <div class="col-12 col-sm-12 mt-sm-3">
+            <ul class="list-inline homeRegisterLinksUL">
+              <!-- <li class="list-inline-item">
+                <a
+                  href="wp-content\uploads\2025\Application Form for Ph.D Forestry  -2024-25.pdf"
+                  >Ph.D. Forestry Application Form 2024</a
+                >
+              </li> -->
+              <li class="list-inline-item">
+                <a
+                  href="#"
+                  >Ph.D. Forestry Admission Schedule 2024</a
+                >
+              </li>
+             
+              <li class="list-inline-item">
+                <a
+                  href="#"
+                  target="_blank"
+                  >Ph.D. Forestry Admission Notification 2024</a
+                >
+              </li>
+              <li class="list-inline-item">
+                <a
+                  href="#"
+                  target="_blank"
+                  >Selection List Of Candidates For Admission Into Ph.D. Forestry-2024</a
+                >
+              </li>
+              <!-- <li class="list-inline-item blink">
+                          <a href="https://fcriqa.fcrits.in/wp-content/uploads/2023/07/Admission-Schedule-2023.pdf" target="_blank">B.Sc. (Hons.) Forestry Admission Schedule 2023-24 </a>
+                      </li> -->
+              <li class="list-inline-item">
+                <a
+                  href="#"
+                  >Auburn University MS Program: Candidate Selection Notification.</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- <p style="font-weight: 600;font-size: 16px;color: #bb1515;">NOTE: "Registration and Commencement of classes for B.Sc.(Hons.) Forestry for the academic year 2022-23 will begin on 01 December, 2022".</p> -->
+      <div
+        class="row g-0 homeNotifications wow fadeInUp"
+        data-wow-delay="0.3s"
+      >
+        <div class="col-auto">
+          <a href="#">
+            <div class="homeNotifications__left">
+              <i class="fa fa-bell" aria-hidden="true"></i>
+              <span> Latest Notifications</span>
+            </div>
+          </a>
+        </div>
+        <div class="col">
+          <div class="homeNotifications__right">
+            <marquee
+              direction="left"
+              loop=""
+              scrolldelay="100"
+              onmouseover="stop()"
+              onmouseout="start()"
+            >
+              <ul class="abc list-inline mb-0">
+               
 
+                <li class="list-inline-item">
+                  <i class="fa fa-star" aria-hidden="true"></i
+                  ><a
+                    target="_blank"
+                    href="wp-content\uploads\2025\SELECTION LIST OF CANDIDATES FOR ADMISSION INTO PH.D FORESTRY-2024.pdf"
+                  >
+                   Selection List Of Candidates For Admission Into Ph.D. Forestry-2024.</a
+                  >
+                </li>
+                <li class="list-inline-item">
+                  <i class="fa fa-star" aria-hidden="true"></i
+                  ><a
+                    target="_blank"
+                    href="wp-content\uploads\2025\NOTIFICATION- AUBURN UNIVERSITY.pdf"
+                  >
+                   Auburn University, USA MS Program: Candidate Selection Notification.</a
+                  >
+                </li>
+              </ul>
+            </marquee>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
 <section class="abtUniversitySec">
   <div class="container">
@@ -828,7 +921,161 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
 </div>
 </section>
 
-
+<section class="homeServicesSec">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-12 col-xl-10 mx-auto">
+        <h3 class="homeflipCardSec--Title">Services</h3>
+        <div class="slick-carousel homeSerCrsl">
+          <div class="homeSerCrsl-item">
+            <div class="card homeSerCrslCard">
+              <img
+                class="card-img-top"
+                src="{% static 'images/services-images/FCRIcares1.jpg' %}"
+                alt="Card image"
+              />
+              <div class="card-body">
+                <h4 class="card-title">FCRI Cares</h4>
+                <p class="card-text">
+                  Forest College and Research Institute - Centre for
+                  Agroforestry Research and Extension Services (FCRI-CARES)
+                  is a society established as an independent..
+                </p>
+                <div class="card-btn">
+                  <a
+                    href="#"
+                    class="btn btn-link"
+                    >Read More</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="homeSerCrsl-item">
+            <div class="card homeSerCrslCard">
+              <img
+                class="card-img-top"
+                src="{% static 'images/services-images/study_circle1.webp' %}"
+                alt="Card image"
+              />
+              <div class="card-body">
+                <h4 class="card-title">FCRI Study Circle</h4>
+                <p class="card-text">
+                  FCRI Study circle was established with an objective of
+                  guiding students of FCRI for future careers. Students are
+                  mentored for career development under..
+                </p>
+                <div class="card-btn">
+                  <a
+                    href="#"
+                    class="btn btn-link"
+                    >Read More</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="homeSerCrsl-item">
+            <div class="card homeSerCrslCard">
+              <img
+                class="card-img-top"
+                src="{% static 'images/services-images/cif2-image.jpg' %}"
+                alt="Card image"
+              />
+              <div class="card-body">
+                <h4 class="card-title">Central Instrumentation Facility</h4>
+                <p class="card-text">
+                  FCRI has established the Central Instrumentation Facility
+                  (CIF) to cater the needs of research in basic, applied and
+                  advanced sciences. The CIF, FCRI houses various..
+                </p>
+                <div class="card-btn">
+                  <a
+                    href="#"
+                    class="btn btn-link"
+                    >Read More</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="homeSerCrsl-item">
+            <div class="card homeSerCrslCard">
+              <img
+                class="card-img-top"
+                src="{% static 'images/services-images/nursary1.jpg' %}"
+                alt="Card image"
+              />
+              <div class="card-body">
+                <h4 class="card-title">Nursery</h4>
+                <p class="card-text">
+                  The nursery at FCRI hosts a collection of healthy stocks,
+                  mainly offset commercial tree species and few medicinal
+                  plants. The seedlings/saplings will be..
+                </p>
+                <div class="card-btn">
+                  <a
+                    href="#"
+                    class="btn btn-link"
+                    >Read More</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="homeSerCrsl-item">
+            <div class="card homeSerCrslCard">
+              <img
+                class="card-img-top"
+                src="{% static 'images/services-images/services_home5.webp' %}"
+                alt="Card image"
+              />
+              <div class="card-body">
+                <h4 class="card-title">Wood Workshop & Wood Products</h4>
+                <p class="card-text">
+                  FCRI has established a wood workshop, initially to cater
+                  to the needs of students practical classes and research
+                  programs. Now it has been upgraded as..
+                </p>
+                <div class="card-btn">
+                  <a
+                    href="{% static '' %}"
+                    class="btn btn-link"
+                    >Read More</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="homeSerCrsl-item">
+            <div class="card homeSerCrslCard">
+              <img
+                class="card-img-top"
+                src="{% static 'images/publications/FCRI_Publication1.jpg' %}"
+                alt="Card image"
+              />
+              <div class="card-body">
+                <h4 class="card-title">Wood Identification Tool Kit</h4>
+                <p class="card-text">
+                  FCRI has released professional wood Identification tool
+                  kit box along with a user manual. The kit consists of wood
+                  samples of 30 commercially important..
+                </p>
+                <div class="card-btn">
+                  <a
+                    href="{% static '' %}"
+                    class="btn btn-link"
+                    >Read More</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="homeDeanSec">
   <div class="container">

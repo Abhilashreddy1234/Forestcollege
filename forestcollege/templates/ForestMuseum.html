@@ -1,116 +1,75 @@
 {% load static %}
 {% include 'base.html' %}
 {% include 'breadcrumbs.html' %}
-
 <section class="infrastructure-museum infrastructure-bg">
   <div class="container-xl container-xxl">
-    <div class="row infrastructure-row-mobile column_infra">
-      <div class="col-12 col-md">
-        <div
-          id="museum-slider"
-          class="carousel slide"
-          data-bs-ride="carousel"
-        >
+    <div class="row  d-flex align-items-start"> <!-- Adjust vertical alignment here -->
+      
+      <!-- Carousel (Left Side) -->
+      <div class="col-12 col-md-6">
+        <div id="museum-slider" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img
-                src="{% static 'images/college-images/Forest_Museum_3.jpg' %}"
-                class="d-block w-100"
-                alt="Forest_Museum"
-              />
+              <img src="{% static 'images/college-images/Forest_Museum_3.jpg' %}" class="d-block w-100" alt="Forest_Museum"/>
             </div>
             <div class="carousel-item">
-              <img
-                src="{% static 'images/college-images/Forest_Museum_3.jpg' %}"
-                class="d-block w-100"
-                alt="Forest_Museum"
-              />
+              <img src="{% static 'images/college-images/Forest_Museum_3.jpg' %}" class="d-block w-100" alt="Forest_Museum"/>
             </div>
             <div class="carousel-item">
-              <img
-                src="{% static 'images/college-images/Forest_Museum_2.jpg' %}"
-                class="d-block w-100"
-                alt="Forest_Museum"
-              />
+              <img src="{% static 'images/college-images/Forest_Museum_2.jpg' %}" class="d-block w-100" alt="Forest_Museum"/>
             </div>
             <div class="carousel-item">
-              <img
-                src="{% static 'images/college-images/Forest_Museum_2.jpg' %}"
-                class="d-block w-100"
-                alt="Forest_Museum"
-              />
+              <img src="{% static 'images/college-images/Forest_Museum_2.jpg' %}" class="d-block w-100" alt="Forest_Museum"/>
             </div>
           </div>
-          <button
-            class="carousel-control-prev"
-            type="button"
-            data-bs-target="#museum-slider"
-            data-bs-slide="prev"
-          >
+          <button class="carousel-control-prev" type="button" data-bs-target="#museum-slider" data-bs-slide="prev">
             <span class="carousel-control-prev-icon"></span>
           </button>
-          <button
-            class="carousel-control-next"
-            type="button"
-            data-bs-target="#museum-slider"
-            data-bs-slide="next"
-          >
+          <button class="carousel-control-next" type="button" data-bs-target="#museum-slider" data-bs-slide="next">
             <span class="carousel-control-next-icon"></span>
           </button>
         </div>
       </div>
-      <div class="col-12 col-md col-padding conn_infra">
-        <h3
-          class="text-green"
-          style="color: #2e9f5e; font-weight: 600; letter-spacing: 0"
-        >
+
+      <!-- Content (Right Side) -->
+      <div class="col-12 col-md-6">
+        <h3 class="text-green" style="color: #2e9f5e; font-weight: 600; letter-spacing: 0;">
           Museum
         </h3>
         <p style="text-align: justify">
-          Forest College and Research Institute (FCRI) is the first
-          institute offering forestry education in entire Telangana state to
-          bring out qualified professional in forestry. It is necessary to
-          establish a world class museum covering all themes of forestry
-          related aspects. It will be benefited for general public, students
-          and farmers of Telangana State and entire nation.
+          Forest College and Research Institute (FCRI) is the first institute offering forestry education in entire Telangana state to bring out qualified professionals in forestry. It is necessary to establish a world-class museum covering all themes of forestry-related aspects. It will benefit the general public, students, and farmers of Telangana State and the entire nation.
         </p>
         <p>
-          It is based on the forestry themes which exhibits history and
-          existence of forestry in India, forest type of India and Telangana
-          State, State animal, State bird, State tree of Telangana, soil
-          types, rocks, minerals, ecosystems services, different types seed,
-          wood fossils, wood species of Telangana state, bamboo products,
-          insect collection etc.
+          It is based on forestry themes which exhibit the history and existence of forestry in India, forest types of India and Telangana State, State animal, State bird, State tree of Telangana, soil types, rocks, minerals, ecosystem services, different types of seeds, wood fossils, wood species of Telangana state, bamboo products, insect collection, etc.
         </p>
-        
       </div>
     </div>
   </div>
-   
+</section>
+
+
 <section class="contact-section">
-  <h1>
-      Emerging as a World Class Institution.
-  </h1>
+  <h1>Emerging as a World Class Institution.</h1>
   <h2>Forestry Education, Research, Management, and Outreach.</h2>
   <a href="{% url 'ContactUs' %}" class="contact-button">Contact Us</a>
 </section>
-</div>
+
 <div class="vision-images">
-<div class="vi">
-  <img src="{% static 'images\college-images\visionimage4.webp' %}">
+  <div class="vi">
+    <img src="{% static 'images/college-images/visionimage4.webp' %}">
+  </div>
+  <div class="vi">
+    <img src="{% static 'images/college-images/vision-image5.webp' %}">
+  </div>
+  <div class="vi">
+    <img src="{% static 'images/college-images/vision-image7.webp' %}">
+  </div>
+  <div class="vi">
+    <img src="{% static 'images/college-images/vision-image6.webp' %}">
+  </div>
 </div>
-<div class="vi">
-  <img src="{% static 'images\college-images\vision-image5.webp' %}">
-</div>
-<div class="vi">
-  <img src="{% static 'images\college-images\vision-image7.webp' %}">
-</div>
-<div class="vi">
-  <img src="{% static 'images\college-images\vision-image6.webp' %}">
-</div>
-</div>
-{% include 'footer1.html' %}   
-       
-  <script src="{% static 'js/main.js' %}"></script>
-  
+
+{% include 'footer1.html' %}
+
+<script src="{% static 'js/main.js' %}"></script>
 </body>
