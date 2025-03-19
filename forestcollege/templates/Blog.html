@@ -1,0 +1,100 @@
+ {% load static %}
+ {% include 'base.html' %}
+ {% include 'breadcrumbs.html' %}
+ <section class="blogs-page bg-image">
+    <div class="container">
+      <div class="row">
+        <!-- <h3 class="blogs_title">Latest Blogs</h3> -->
+        <!-- recent-casestudies-sidenav -->
+        <!-- <div class=" pb-4 col-xl-4 col-lg-6 col-md-6"> -->
+        <div class="col-xl-4 col-lg-6 col-md-6">
+          <div class="blogs-one__single shadow">
+            <a
+              class="borderadius"
+              href="explore-innovation-at-forest-college-and-research-institute-mulugu/index.htm"
+            >
+              <!-- <a href="#casesudies1" class="list-group-item list-group-item-action" > -->
+              <div class="blogs-one__img">
+                <img
+                  width="300"
+                  height="118"
+                  src="../wp-content/uploads/2024/02/FCRI_Mulugu-300x118.jpg"
+                  class="mr-3 img-fluid wp-post-image"
+                  alt=""
+                  decoding="async"
+                  srcset="
+                    ../wp-content/uploads/2024/02/FCRI_Mulugu-300x118.jpg   300w,
+                    ../wp-content/uploads/2024/02/FCRI_Mulugu-1024x404.jpg 1024w,
+                    ../wp-content/uploads/2024/02/FCRI_Mulugu-768x303.jpg   768w,
+                    ../wp-content/uploads/2024/02/FCRI_Mulugu.jpg          1076w
+                  "
+                  sizes="(max-width: 300px) 100vw, 300px"
+                  style="width: 100%; height: 39.5%; max-width: 1076px"
+                />
+              </div>
+            </a>
+            <div class="blogs-one__content-box">
+              <!-- <div class="blogs-one__date">
+                                  <a href="">
+                                      
+                                  </a>
+                              </div> -->
+              <div class="blogs-one__content-inner">
+                <div class="blogs-one__content">
+                  <a
+                    href="explore-innovation-at-forest-college-and-research-institute-mulugu/index.htm"
+                  >
+                    <h5></h5>
+                    <h3 class="blogs-one__title">
+                      Explore Innovation at Forest College ...
+                    </h3>
+                    <p class="news-mm-yy">
+                      <i class="fa fa-calendar"></i>February 15, 2024
+                    </p>
+
+                    <p class="brief-description">
+                      Discover the cutting-edge Central Instrumentation
+                      Facility (CIF) nestled within the serene campus of
+                      Forest...
+                    </p>
+                    <!-- <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, consequuntur.</p> -->
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- smacapp case study pagination -->
+        <div class="fcri_pagination row"></div>
+        <!-- smacapp case study pagination end -->
+      </div>
+      <!--div end-->
+    </div>
+    <!-- row -->
+  </section>
+
+  <section class="contact-section">
+    <h1>
+        Emerging as a World Class Institution.
+    </h1>
+    <h2>Forestry Education, Research, Management, and Outreach.</h2>
+    <a href="{% url 'ContactUs' %}" class="contact-button">Contact Us</a>
+</section>
+<div class="vision-images">
+    <div class="vi">
+        <img src="{% static 'images\college-images\visionimage4.webp' %}">
+    </div>
+    <div class="vi">
+        <img src="{% static 'images\college-images\vision-image5.webp' %}">
+    </div>
+    <div class="vi">
+        <img src="{% static 'images\college-images\vision-image7.webp' %}">
+    </div>
+    <div class="vi">
+        <img src="{% static 'images\college-images\vision-image6.webp' %}">
+    </div>
+</div>
+{% include 'footer1.html' %}
+<script src="{% static 'js/main.js' %}"></script>
+</body>

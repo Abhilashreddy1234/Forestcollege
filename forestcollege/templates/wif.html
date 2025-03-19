@@ -1,0 +1,100 @@
+{% load static %}
+{% include 'base.html' %}
+{% include 'breadcrumbs.html' %}
+<section class="infrastructure-museum infrastructure-bg">
+    <div class="container-xl container-xxl">
+      <div class="row  column_infra">
+        <div class="col-12 col-md">
+          <div
+            id="museum-slider"
+            class="carousel slide"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="{% static 'images/services-images/witk1.jpg' %}"
+                  class="d-block w-100"
+                  alt="services"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="{% static 'images/services-images/witk2.jpg' %}"
+                  class="d-block w-100"
+                  alt="services"
+                />
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#museum-slider"
+              data-bs-slide="prev"
+            >
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#museum-slider"
+              data-bs-slide="next"
+            >
+              <span class="carousel-control-next-icon"></span>
+            </button>
+          </div>
+        </div>
+        <div class="col-12 col-md col-padding conn_infra">
+          <h3
+            class="text-green"
+            style="color: #2e9f5e; font-weight: 600; letter-spacing: 0"
+          >
+            Wood Identification Tool Kit
+          </h3>
+          <p>
+            FCRI has released professional wood Identification tool kit box
+            along with a user manual. The kit consists of wood samples of 30
+            commercially important tree species of Telangana. The manual
+            describes various key identification features of wood for
+            effective use. This will be an useful guide to students, teachers,
+            scientists and all technical and non-technical professionals in
+            the field.
+          </p>
+          <p>
+            Wood Sample Identification Tool Kit has been developed by
+            Department of Forest Products and Utilization, Forest College and
+            Research Institute Hyderabad.
+          </p>
+          <p>
+            This tool kit box will be available for sale by placing orders
+            with FCRI and if any queries related to this, FCRI and its team of
+            scientists can be approached for further information.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="contact-section">
+    <h1>
+        Emerging as a World Class Institution.
+    </h1>
+    <h2>Forestry Education, Research, Management, and Outreach.</h2>
+    <a href="{% url 'ContactUs' %}" class="contact-button">Contact Us</a>
+  </section>
+  <div class="vision-images">
+    <div class="vi">
+        <img src="{% static 'images\college-images\visionimage4.webp' %}">
+    </div>
+    <div class="vi">
+        <img src="{% static 'images\college-images\vision-image5.webp' %}">
+    </div>
+    <div class="vi">
+        <img src="{% static 'images\college-images\vision-image7.webp' %}">
+    </div>
+    <div class="vi">
+        <img src="{% static 'images\college-images\vision-image6.webp' %}">
+    </div>
+  </div>
+  {% include 'footer1.html' %}
+    <script src="{% static 'js/main.js' %}"></script>
+  </body>

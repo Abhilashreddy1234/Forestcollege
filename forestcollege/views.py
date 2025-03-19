@@ -368,7 +368,14 @@ def Nursery(request):
         {"name":"Nursery"},
     ]
     return render(request, 'nursery.html',{"breadcrumbs":breadcrumbs,"form":form})
-
+def Wif(request):
+    form = EmailSubscriptionForm()
+    breadcrumbs = [
+        {"name":"Home","url":"/"},
+        {"name":"Services"},
+        {"name":"Wood Identificaftion Toolkit"},
+    ]
+    return render(request, 'wif.html',{"breadcrumbs":breadcrumbs,"form":form})
 def Workshop(request):
     form = EmailSubscriptionForm()
     breadcrumbs = [
@@ -382,33 +389,55 @@ def ContactUs(request):
     return render(request, 'contactus.html')
 
 def ResearchProjects(request):
+    form = EmailSubscriptionForm()
     breadcrumbs = [
         {"name":"Home","url":"/"},
         {"name":"Research"},
         {"name":"Research Projects"},
     ]
-    return render(request, 'ResearchProject.html',{"breadcrumbs":breadcrumbs})
+    return render(request, 'ResearchProject.html',{"breadcrumbs":breadcrumbs,"form":form})
 
 def Mou(request):
+    form = EmailSubscriptionForm()
     breadcrumbs = [
         {"name":"Home","url":"/"},
         {"name":"Research"},
         {"name":"Mou"},
     ]
-    return render(request, 'mou.html',{"breadcrumbs":breadcrumbs})
+    return render(request, 'mou.html',{"breadcrumbs":breadcrumbs,"form":form})
 
 def Publications(request):
+    form = EmailSubscriptionForm()
     breadcrumbs = [
         {"name":"Home","url":"/"},
         {"name":"Research"},
         {"name":"Publications"},
     ]
-    return render(request, 'publications.html',{"breadcrumbs":breadcrumbs})
+    return render(request, 'publications.html',{"breadcrumbs":breadcrumbs,"form":form})
 
 def Awards(request):
+    form = EmailSubscriptionForm()
     breadcrumbs = [
         {"name":"Home","url":"/"},
         {"name":"Research"},
         {"name":"Awards"},
     ]    
-    return render(request, 'awards.html',{"breadcrumbs":breadcrumbs})
+    return render(request, 'awards.html',{"breadcrumbs":breadcrumbs,"form":form})
+
+def Blog(request):
+    form = EmailSubscriptionForm()
+    breadcrumbs = [
+        {"name":"Home","url":"/"},
+        {"name":"Media"},
+        {"name":"Blog"},
+    ]    
+    return render(request, 'Blog.html',{"breadcrumbs":breadcrumbs,"form":form})
+
+def PhotoGallary(request):
+    form = EmailSubscriptionForm()
+    breadcrumbs = [
+        {"name":"Home","url":"/"},
+        {"name":"Media"},
+        {"name":"Photogallary"},
+    ]    
+    return render(request, 'Photogallary..html',{"breadcrumbs":breadcrumbs,"form":form})

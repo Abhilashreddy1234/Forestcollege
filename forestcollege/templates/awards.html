@@ -24,62 +24,349 @@
             <img src="{% static 'images\publications\Awards_at_FCRI2-image.jpg' %}" alt="Award Image 2" style="width: 200px; height: auto; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
             <img src="{% static 'images\publications\Awards_at_FCRI3.jpg' %}" alt="Award Image 3" style="width: 200px; height: auto; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
         </div>
-    
+  
         <!-- Tabular Section -->
-        <div style="overflow-x: auto;">
-            <table style="width: 100%; border-collapse: collapse; margin-bottom: 40px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-                <thead>
-                    <tr style="background-color: #006400; color: #fff; text-align: left;">
-                        <th style="padding: 10px; border: 1px solid #ddd;">S.No.</th>
-                        <th style="padding: 10px; border: 1px solid #ddd;">Faculty Name</th>
-                        <th style="padding: 10px; border: 1px solid #ddd;">Faculty Achievements/Recognitions/Awards</th>
-                    </tr>
-                </thead>
-                <tbody>
+        <div class="row">
+          <div class="col-md-12">
+            <h3 class="text-dgreen playfair-family">
+              Faculty Achievements/Recognitions/Awards
+            </h3>
+            <div
+              class="mt-4 p-3 p-sm-4 p-xl-5"
+              style="
+                background-color: #fbfaea;
+                border-radius: 15px;
+                box-shadow: 0 0 10px #c5c3ac;
+              "
+            >
+              <div class="table-responsive">
+                <table
+                  class="table table-color table-striped table-bordered"
+                >
+                  <thead
+                    class="bg-light bg-head"
+                    style="text-align: left"
+                  >
                     <tr>
-                        <td style="padding: 10px; border: 1px solid #ddd;">1</td>
-                        <td style="padding: 10px; border: 1px solid #ddd;">Dr. B. Sreedhar</td>
-                        <td style="padding: 10px; border: 1px solid #ddd;">Received ICMR-Biomedical sciences award-2019.</td>
+                      <th style="text-align: left">S.No.</th>
+                      <th style="text-align: left">Faculty Name</th>
+                      <th style="text-align: left">
+                        Faculty Achievements/Recognitions/Awards
+                      </th>
                     </tr>
+                  </thead>
+                  <tbody>
                     <tr>
-                        <td style="padding: 10px; border: 1px solid #ddd;">2</td>
-                        <td style="padding: 10px; border: 1px solid #ddd;">Mr. K. Srinivas</td>
-                        <td style="padding: 10px; border: 1px solid #ddd;">Received Certificate of appreciation for the meritorious services rendered, on the occasion of 73rd Independence Day on 15th August, 2019.</td>
-                    </tr>
-                    <tr>
-                        <td style="padding: 10px; border: 1px solid #ddd;">3</td>
-                        <td style="padding: 10px; border: 1px solid #ddd;">Dr. Chiranjeeva Reddy</td>
-                        <td style="padding: 10px; border: 1px solid #ddd;">Received Certificate of appreciation for the meritorious services rendered, on the occasion of 73rd Independence Day on 15th August, 2019.</td>
-                    </tr>
-                    <tr>
-                        <td style="padding: 10px; border: 1px solid #ddd;">4</td>
-                        <td style="padding: 10px; border: 1px solid #ddd;">Dr. Reeja, S</td>
-                        <td style="padding: 10px; border: 1px solid #ddd;">Received Certificate of appreciation for the meritorious services rendered, on the occasion of 73rd Independence Day on 15th August, 2019.</td>
-                    </tr>
-                    <tr>
-                        <td style="padding: 10px; border: 1px solid #ddd;">5</td>
-                        <td style="padding: 10px; border: 1px solid #ddd;">Mrs. Sailaja, V</td>
-                        <td style="padding: 10px; border: 1px solid #ddd;">Received Certificate of appreciation for the meritorious services rendered, on the occasion of 73rd Independence Day on 15th August, 2019.</td>
-                    </tr>
-                    <tr>
-                        <td style="padding: 10px; border: 1px solid #ddd;">6</td>
-                        <td style="padding: 10px; border: 1px solid #ddd;">Mrs. Sailaja, V</td>
-                        <td style="padding: 10px; border: 1px solid #ddd;">Invited as Resource speaker to deliver a lecture entitled “Integrated Pest Management on SoapUI Webbers” on 26 December, 2018 at Institute of Forest Biodiversity, Indian Council of Forestry Research and Education (ICFRE), Hyderabad.</td>
+                      <td class="td-first">1</td>
+                      <td>Dr. B. Sreedhar</td>
+                      <td>
+                        Received ICMR-Biomedical sciences award-2019.
+                      </td>
                     </tr>
                     <tr>
-                        <td style="padding: 10px; border: 1px solid #ddd;">7</td>
-                        <td style="padding: 10px; border: 1px solid #ddd;">Mrs. Sailaja, V</td>
-                        <td style="padding: 10px; border: 1px solid #ddd;">Invited as guest speaker to deliver a lecture entitled “Wood boring insects of quarantine significance and their identification” to officers of State Agriculture University and officers from Department of Agriculture on 01 May, 2019 at National Institute of Plant Health Management, Hyderabad.</td>
+                      <td class="td-first">2</td>
+                      <td>Mr. K. Srinivas</td>
+                      <td>
+                        Received Certificate of appreciation for the
+                        meritorious services rendered, on the occasion
+                        of 73rd Independence Day on 15th August, 2019.
+                      </td>
                     </tr>
                     <tr>
-                        <td style="padding: 10px; border: 1px solid #ddd;">8</td>
-                        <td style="padding: 10px; border: 1px solid #ddd;">Mrs. Sailaja, V</td>
-                        <td style="padding: 10px; border: 1px solid #ddd;">Recipient of Best Photo Winner Award in “National Symposium on Entomology 2018: Advances and Challenges” held during 10-12 December, 2018, Hyderabad.</td>
+                      <td class="td-first">3</td>
+                      <td>Dr. Chiranjeeva Reddy</td>
+                      <td>
+                        Received Certificate of appreciation for the
+                        meritorious services rendered, on the occasion
+                        of 73rd Independence Day on 15th August, 2019.
+                      </td>
                     </tr>
-                </tbody>
-            </table>
+                    <tr>
+                      <td class="td-first">4</td>
+                      <td>Dr. Reeja, S</td>
+                      <td>
+                        Received Certificate of appreciation for the
+                        meritorious services rendered, on the occasion
+                        of 73rd Independence Day on 15th August, 2019.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="td-first">5</td>
+                      <td>Mrs. Sailaja, V</td>
+                      <td>
+                        Received Certificate of appreciation for the
+                        meritorious services rendered, on the occasion
+                        of 73rd Independence Day on 15th August, 2019.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="td-first">6</td>
+                      <td>Mrs. Sailaja, V</td>
+                      <td>
+                        Invited as Resource speaker to deliver a lecture
+                        entitled “Integrated Pest Management on SoapUI
+                        Webbers” on 26 December, 2018 at Institute of
+                        Forest Biodiversity, Indian Council of Forestry
+                        Research and Education (ICFRE), Hyderabad.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="td-first">7</td>
+                      <td>Mrs. Sailaja, V</td>
+                      <td>
+                        Invited as guest speaker to deliver a lecture
+                        entitled “Wood boring insects of quarantine
+                        significance and their identification” to
+                        officers of State Agriculture University and
+                        officers from Department of Agriculture on 01
+                        May, 2019 at National Institute of Plant Health
+                        Management, Hyderabad.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="td-first">8</td>
+                      <td>Mrs. Sailaja, V</td>
+                      <td>
+                        Recipient of Best Photo Winner Award in
+                        “National Symposium on Entomology 2018: Advances
+                        and Challenges” held during 10-12 December,
+                        2018, Hyderabad.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="td-first">9</td>
+                      <td>Dr. Kapil Sihag</td>
+                      <td>
+                        Received Young Scientist award by Society for
+                        Scientific Development in Agriculture and
+                        Technology in 2018 at Jaipur.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="td-first">10</td>
+                      <td>Dr. Kapil Sihag and Ms. P. Nikitha</td>
+                      <td>
+                        Received Certificate of appreciation for the
+                        meritorious services rendered, on the occasion
+                        of 74rd Independence Day on 15th August, 2020.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="td-first">11</td>
+                      <td>Dr. B. Sreedhar and Mrs. N S Srinidhi</td>
+                      <td>
+                        Received Certificate of appreciation for the
+                        meritorious services rendered, on the occasion
+                        of 26th January 2021.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td rowspan="13" class="td-first">12</td>
+                      <td rowspan="13" class="">Mrs. N S Srinidhi</td>
+                      <td>
+                        <strong>On-going project</strong> on “Mapping of
+                        NTFP species of Telangana using Geospatial
+                        Technology” funded by
+                        <strong
+                          >BIOSOT as Principal Investigator.</strong
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <strong>On-going Consultancy Project</strong> on
+                        GHMC Quality Control Check.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <strong>Paper Presentation</strong> on
+                        “Evaluation of Air Pollution Tolerance Index in
+                        Avenue Tree Species of Jeedimetla Industrial
+                        Area, Hyderabad, Telangana in the International
+                        e-Conference on “Climate Resilience and Disaster
+                        Risk Management for Sustainable Development” on
+                        18th August 2020. Organized by Forest College
+                        and Research Institute, Nizam College and
+                        Council for Green Revolution.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <strong>Paper Presentation on</strong> “Water
+                        Quality Assessment of Ameenpur Lake, Hyderabad,
+                        Telangana, India” in the 7th Annual
+                        International Conference on Sustainability in
+                        Current Scenario: Challenges &amp; Solutions.
+                        Organized by Suresh Gyan Vihar University,
+                        Jaipur on 07th November 2020.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        As a Conference Convener: Conceptualized and
+                        Organized Two Day
+                        <strong>International e-Conference</strong> on
+                        “Climate Resilience and Disaster Management for
+                        Sustainable Development” to be held on 17th
+                        -18th August, 2020 in collaboration with Nizam
+                        College and Council for Green Revolution.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        As an Organizing Committee Member: Two Days
+                        National Conference on Climate Smart forestry
+                        through Adapative forest management organized on
+                        16th and 17th March 2020 in collaboration with
+                        Telangana State Council for Higher Education.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        As a Keynote Speaker for the Webinar on “Restore
+                        Our Earth”. Organized by Council for Green
+                        Revolution on 22nd April 2021 on the occasion of
+                        Earth Day. (<a
+                          href="https://www.youtube.com/watch?v=HPd6Up2gobk"
+                          >https://www.youtube.com/watch?v=HPd6Up2gobk</a
+                        >
+                        - 2:00:00 - 2:17:00).
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        As a Guest Speaker for “Forest Laws and Allied
+                        Matters” for the Junior Civil Judge from
+                        Telangana State Judicial Academy, Secunderabad
+                        on 29th October 2020.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        As a Keynote Speaker for the National Webinar on
+                        “Environmental Conservation: Your Social
+                        Responsibility during COVID 19. Organized by
+                        Acharya Nagarjuna University, AP on 30th June
+                        2020. (<a
+                          href="https://www.youtube.com/watch?v=tzBx6b2ly0M&t=2685s"
+                        >
+                          https://www.youtube.com/watch?v=tzBx6b2ly0M&amp;t=2685s </a
+                        >- 35:40 - 01:05:00).
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Invited as a Guest Speaker for the Webinar on
+                        Youth Learning’s from Corona 19 Understanding
+                        the crisis and remedies w.r.t SDGs organized by
+                        Council for Green Revolution on 14th April
+                        2020.(<a
+                          href="https://www.youtube.com/watch?v=EXaUV014veY"
+                          >https://www.youtube.com/watch?v=EXaUV014veY</a
+                        >
+                        - 13.30 - 17.00).
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Delivered a Lecture on Making of Seed Balls in
+                        the Programme "Interaction with Teachers and
+                        Young Earth Leaders on Making Seed Balls
+                        organized by Council for Green Revolution on
+                        18th May 2020 (<a
+                          href="https://www.youtube.com/watch?v=ioi1k_g-Szk&t=56s"
+                          >https://www.youtube.com/watch?v=ioi1k_g-Szk&amp;t=56s</a
+                        >
+                        – 16:57).
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        A Two Minutes Talk in All India Radio on the
+                        occasion of World Biodiversity Day 2020 i.e.,
+                        May 22nd 2020.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Panel Member in the Web Discussion on Role of
+                        Environmental Education to Create Earth
+                        Conscious Citizen to Achieve Sustainable
+                        Development on 01st July 2020 organized by
+                        Mahaveer Institute of Science and Technology,
+                        Hyderabad. (<a
+                          href="https://www.youtube.com/watch?v=DN_A5U0sHAY"
+                          >https://www.youtube.com/watch?v=DN_A5U0sHAY</a
+                        >- 35:02 – 42.45).
+                      </td>
+                    </tr>
+                    <tr>
+                      <td rowspan="3" class="td-first">13</td>
+                      <td rowspan="3">Dr. Shalini M</td>
+                      <td>
+                        Conducted a joint webinar on "HPTLC: Technique
+                        and Herbal Applications " in collaboration with
+                        Anchrom Enterprises (I) Pvt. Ltd. (09th
+                        September 2020).
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Coordinated a Technical session for
+                        International e-Conference on Climate Resilience
+                        and Disaster Risk Management for Sustainable
+                        Development- 17th and 18th August 2020.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Invited as Chief Guest and key note speaker for
+                        National Science Day at Telangana Social Welfare
+                        Residential Degree College (W), Mahendra hills
+                        (28th February 2020).
+                      </td>
+                    </tr>
+                    <tr>
+                      <td rowspan="3" class="td-first">14</td>
+                      <td rowspan="3">Ms. P. Nikitha</td>
+                      <td>
+                        Organized “National Level e-workshop on VanDhan
+                        Yojana strategy of SHG’s” – by FCRI &amp; TSGCC
+                        (VanDhan Project).
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Invited as a Guest speaker/Key note speaker to
+                        deliver a lecture on “Learning Styles of farmers
+                        and its relevance in Instructional technology”
+                        to PhD students of Agriculture at PJTSAU (30th
+                        January, 2019).
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Invited as Guest speaker to deliver a lecture on
+                        “Agroforestry, Social forestry &amp; Community
+                        forestry” to school students of Chaitanya
+                        Vidyalaya, Hyd at Telangana State Forest Academy
+                        (December, 2019).
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+
     
 
     <section class="contact-section">
@@ -103,71 +390,6 @@
             <img src="{% static 'images\college-images\vision-image6.webp' %}">
         </div>
     </div>
-    <footer class="footer">
-        <div class="footer-container">
-          <!-- Footer Top Section -->
-          <div class="footer-top">
-            <div class="footer-column">
-              <img src="{% static 'images/logo-images/forestlogo-01.webp' %}" class="footer-img" alt="Forest Logo">
-              <p><strong>Email us:</strong> <a href="mailto:tsfcri2021@gmail.com">tsfcri2021@gmail.com</a></p>
-              <p><strong>Call us:</strong> <a href="tel:+918454211930">+91 8454211930</a>, <a href="tel:+918454211939">+91 8454211939</a></p>
-            </div>
-            <div class="footer-column">
-              <h3>Subscribe</h3>
-              <form action="#" class="subscribe-form">
-                <input type="email" placeholder="Enter your email address" class="subscribe-input" required>
-                <button type="submit" class="subscribe-button">Subscribe</button>
-              </form>
-            </div>
-            <div class="footer-column">
-              <h3>About</h3>
-              <ul>
-                <li><a href="#">Vision and Mission</a></li>
-                <li><a href="#">Governing Board</a></li>
-                <li><a href="#">Academic Council</a></li>
-                <li><a href="#">Organogram</a></li>
-              </ul>
-            </div>
-            <div class="footer-column">
-              <h3>Admissions</h3>
-              <ul>
-                <li><a href="#">BSc Hons Forestry</a></li>
-                <li><a href="#">MSc Forestry</a></li>
-                <li><a href="#">PhD Forestry</a></li>
-                <li><a href="#">Admission Process - UG</a></li>
-                <li><a href="#">Admission Process - PG</a></li>
-                <li><a href="#">FAQ’s</a></li>
-              </ul>
-            </div>
-            <div class="footer-column">
-              <h3>Academics</h3>
-              <ul>
-                <li><a href="#">List of Departments</a></li>
-                <li><a href="#">Faculty</a></li>
-                <li><a href="#">Laboratories</a></li>
-                <li><a href="#">Rules & Regulation - UG</a></li>
-                <li><a href="#">Rules & Regulation - PG</a></li>
-              </ul>
-            </div>
-          </div>
-      
-          <!-- Footer Bottom Section -->
-          <div class="footer-bottom">
-            <p>© 2022 FCRI - All Rights Reserved.</p>
-      
-            <!-- Social Media Links at the Bottom -->
-            <div class="top-bar1">
-              <div class="social-media1">
-                <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
-      
-       
+   {% include 'footer1.html' %}
   <script src="{% static 'js/main.js' %}"></script>
 </body>
