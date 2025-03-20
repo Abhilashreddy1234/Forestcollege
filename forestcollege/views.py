@@ -440,4 +440,22 @@ def PhotoGallary(request):
         {"name":"Media"},
         {"name":"Photogallary"},
     ]    
-    return render(request, 'Photogallary..html',{"breadcrumbs":breadcrumbs,"form":form})
+    return render(request, 'Photogallary.html',{"breadcrumbs":breadcrumbs,"form":form})
+
+def PressRelease(request):
+    form = EmailSubscriptionForm()
+    breadcrumbs = [
+        {"name":"Home","url":"/"},
+        {"name":"Media"},
+        {"name":"Press Release"},
+    ]    
+    return render(request, 'Pressrelease.html',{"breadcrumbs":breadcrumbs,"form":form})
+
+def VideoGallary(request):
+    form = EmailSubscriptionForm()
+    breadcrumbs = [
+        {"name":"Home","url":"/"},
+        {"name":"Media"},
+        {"name":"video Gallary"},
+    ]    
+    return render(request, 'videogallary.html',{"breadcrumbs":breadcrumbs,"form":form})

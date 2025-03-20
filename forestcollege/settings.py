@@ -221,6 +221,7 @@ CMS_TEMPLATES = (
     ("Joint-Director.html","JointDirector"),
     ("Deputy-Director.html","DeputyDirector"),
     ("Organogram.html","Organogram"),
+    ("Pressrelease.html","pressrelease.html"),
     
     
 )
