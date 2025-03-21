@@ -44,6 +44,109 @@ body {
 }
 
 
+
+.contact-section {
+  position: relative;
+  padding: 50px 0;
+  background-image: url(""); /* Add your background image URL here */
+  background-position: bottom;
+  background-size: cover; 
+  background-color: #fff var(--lime-color); /* Change to your desired background color */
+  text-align: center;
+}
+
+.contact-section h1 {
+  color: var(--text-h-color); /* Color for heading */
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.contact-section h2 {
+  color: var(--theme-color); /* Color for subheading */
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.contact-section .contact-button {
+  background-color: #262f1c; /* Button background color */
+  text-transform: uppercase;
+  border-color: #262f1c; /* Button border color */
+  padding: 10px 20px;
+  color: #fff; /* Button text color */
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+.contact-section .contact-button:hover {
+  background-color: #2e9f5e; /* Button hover color */
+  border-color: #2e949f; /* Button hover border color */
+}
+
+@media (max-width: 1024px) {
+  .intro-section {
+      flex-wrap: wrap;
+  }
+
+  .vision-box, .mission-box {
+      flex: 1 1 48%;
+      margin: 15px 0;
+  }
+
+  .contact-section {
+      padding: 20px;
+  }
+
+  .contact-section h2 {
+      font-size: 1.6rem;
+  }
+}
+
+/* Large Devices (Desktops, 1025px and above) */
+@media (min-width: 1025px) {
+  .intro-section {
+      flex-wrap: nowrap;
+  }
+
+  .vision-box, .mission-box {
+      margin: 20px;
+  }
+}
+.vision-images {
+  display: flex;
+  flex-direction: row; /* Allow wrapping if items exceed the container width */
+  justify-content: center; /* Center the items horizontally */
+  gap: 15px; /* Add spacing between the images */
+  max-width: 100%; /* Ensure the container doesn't exceed the parent width */
+  padding: 0px; /* Optional: Add some padding around the container */
+}
+
+.vision-images img {
+  max-width: 100%; /* Images won't exceed their container width */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensures images fit nicely in their space */
+  border-radius: 5px; /* Optional: Add rounded corners for better aesthetics */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for visual depth */
+}
+ .vision-images {
+    display: flex;
+    flex-direction: row; /* Allow wrapping if items exceed the container width */
+    justify-content: center; /* Center the items horizontally */
+    gap: 15px; /* Add spacing between the images */
+    max-width: 100%; /* Ensure the container doesn't exceed the parent width */
+    padding: 0px; /* Optional: Add some padding around the container */
+  }
+  
+  .vision-images img {
+    max-width: 100%; /* Images won't exceed their container width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensures images fit nicely in their space */
+    border-radius: 5px; /* Optional: Add rounded corners for better aesthetics */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for visual depth */
+  }
 /* Main Section */
 .mainp {
   position: relative;
@@ -120,87 +223,6 @@ body {
   height: 250px; /* Adjust height for consistency */
 }
 
-/* Carousel styling */
-.carousel {
-  width: 100%;
-  height:100%;
-  min-height:150px;
-  position: relative;
-  overflow: hidden;
-}
-
-.carousel img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-  z-index: 1;
-}
-
-.carousel img.active {
-  opacity: 1;
-  z-index: 0;
-}
-.box img{
-  width:100%;
-  height:100%;
-}
-
-/* Vision and Mission and Departments boxes */
-.box h3 {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-.box a {
-  font-size: 14px;
-  color: green;
-  text-decoration: none;
-}
-
-.box a:hover {
-  text-decoration: underline;
-  color:black;
-}
-
-/* Count text */
-.count {
-  font-size:30px;
-  margin-bottom: 10px;
-}
-
-#studentCount {
-  font-weight: bold;
-  font-size: 30px;
-}
-
-/* Responsive design */
-/* Responsive design */
-@media (max-width: 468px) {
-  .container {
-    grid-template-columns: 1fr; /* Stack items vertically */
-  }
-
-  .box {
-    height: auto; /* Ensure boxes adapt their height based on content */
-    overflow: visible; /* Prevent content from being cut off */
-  }
-
-  .carousel {
-    width: 100%;
-    height: auto; /* Allow carousel height to adjust dynamically */
-  }
-
-  .carousel img {
-    object-fit: contain; 
-    width: 100%;
-    height: auto; 
-  }
-}
 
 .admission-wrapper {
   max-width: 1200px;
@@ -1162,4 +1184,80 @@ body {
   .footer-top {
     flex-direction: column;
   }
+}
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Infrastructure Section */
+.infrastructure-hostel {
+  background-color: #f5f5f5;
+  padding: 30px 0;
+}
+
+.infrastructure-bg {
+  background-color: #f0f0f0;
+}
+
+.infrastructure-row-mobile {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.column_infra {
+  padding: 20px;
+}
+
+.text-green {
+  color: #2e9f5e;
+  font-weight: 600;
+}
+
+
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #2e9f5e;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+}
+
+/* Contact Section */
+.contact-section {
+  text-align: center;
+  padding: 50px 0;
+  background-color: #ffffff;
+}
+
+.contact-button {
+  background-color: #2e9f5e;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.contact-button:hover {
+  background-color: #257a4b;
+}
+
+/* Vision Images Section */
+.vision-images {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  gap: 15px;
+}
+
+.vi img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
