@@ -5,6 +5,10 @@ import requests
 from django.conf import settings
 
 from django.contrib import messages
+
+def health_check(request):
+    return JsonResponse({'status': 'ok'})
+
 def home1(request):
     form = EmailSubscriptionForm()
     

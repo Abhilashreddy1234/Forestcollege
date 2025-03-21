@@ -55,6 +55,7 @@ urlpatterns = [
     path('PhotoGallary/',views.PhotoGallary,name='PhotoGallary'),
     path('pressrelease/',views.PressRelease,name="pressrelease"),
     path('videogallary/',views.VideoGallary,name='videogallary'),
+    path('health-check/', views.health_check, name='health_check'),
     path("", home1, name="home1"),
     path('', include('cms.urls')),
     path('', contact_view, name='contact1'),
