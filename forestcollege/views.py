@@ -113,7 +113,7 @@ def Joint_Director(request):
         {"name":"Administraation"},
         {"name":"Joint Director"},
     ]
-    return render(request, 'joint-Director.html',{"breadcrumbs": breadcrumbs,"form":form})
+    return render(request, 'Joint-Director.html',{"breadcrumbs": breadcrumbs,"form":form})
 
 def Deputy_Director(request):
     form = EmailSubscriptionForm()
