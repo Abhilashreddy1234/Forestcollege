@@ -3029,12 +3029,7 @@ tr {
 .vision p {
   color: #bbe87f;
 }
-.breadcrumb-item {
-  text-transform: uppercase;
-}
-.breadcrumb li {
-  color: #fff;
-}
+
 .elementor {
   position: relative;
   z-index: 1;

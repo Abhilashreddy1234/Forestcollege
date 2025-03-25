@@ -1,6 +1,5 @@
 {% load cms_tags menu_tags sekizai_tags %}
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -66,7 +65,22 @@
                     <div class="d-flex justify-content-lg-end fcriHeader__btngrp">
                         <button type="button" class="btn btn-sm btn-outline-light me-2">Student Corner</button>
                         <button type="button" class="btn btn-sm btn-outline-light me-2">Faculty Corner</button>
-                                               
+                        <button
+                        type="button"
+                        onclick="window.location.href='downloads/index.htm'"
+                        class="btn btn-sm btn-outline-light me-2"
+                        title="Downloads"
+                      >
+                        <i class="fa fa-download" aria-hidden="true"></i>
+                      </button>
+                      <button
+                        type="button"
+                        onclick="window.location.href='contact/index.htm'"
+                        class="btn btn-sm btn-outline-light"
+                        title="Contact Us"
+                      >
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                      </button>                      
                         
                         <div class="fcriHeader__social">
                             <a class="fhSocial--link" href="#" target="_blank"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
@@ -347,6 +361,38 @@
           </ul>
         </li>
       </ul>
+      <li class="has-submenu">
+        <a class="dropdown-item" href="#" target="_blank">
+          Admissions Schedule - 2024
+        </a>
+        <ul class="submenu dropdown-menu">
+          <li>
+            <a
+              class="dropdown-item"
+              href="wp-content/uploads/2025/Revised admission schedule of Ph.D Forestry - 2024.pdf"
+              target="_blank"
+            >
+              Ph.D
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="has-submenu">
+        <a class="dropdown-item" href="#" target="_blank">
+          Admission Notification - 2024
+        </a>
+        <ul class="submenu dropdown-menu">
+          <li>
+            <a
+              class="dropdown-item"
+              href="wp-content/uploads/2025/Notification of Ph.D Forestry  - 2024-25.pdf"
+              target="_blank"
+            >
+              Ph.D
+            </a>
+          </li>
+        </ul>
+      </li>
     </li>
   </ul>
 </li>
@@ -624,35 +670,27 @@
                 >
               </li> -->
               <li class="list-inline-item">
-                <a
-                  href="#"
-                  >Ph.D. Forestry Admission Schedule 2024</a
-                >
-              </li>
-             
-              <li class="list-inline-item">
-                <a
-                  href="#"
-                  target="_blank"
-                  >Ph.D. Forestry Admission Notification 2024</a
-                >
-              </li>
-              <li class="list-inline-item">
-                <a
-                  href="#"
-                  target="_blank"
-                  >Selection List Of Candidates For Admission Into Ph.D. Forestry-2024</a
-                >
-              </li>
+                <a href="{% static 'doc/auburan_university selection_list.pdf' %}">
+                  Selection List For Admission Into Ph.D. Forestry- 2024-25.
+                </a>
+            </li>
+            
+            <li class="list-inline-item">
+                <a href="{{ MEDIA_URL }}home/auburan_university_selection_list.pdf">
+                  Auburn University MS Program: Candidate Selection Notification.
+                </a>
+            </li>
+            
+            <li class="list-inline-item">
+                <a href="{% static 'doc/Regulations-PG-course.pdf' %}" target="_blank">
+                  Selection List-II For Admission Into Ph.D Forestry- 2024-25.
+                </a>
+            </li>
+            
               <!-- <li class="list-inline-item blink">
                           <a href="https://fcriqa.fcrits.in/wp-content/uploads/2023/07/Admission-Schedule-2023.pdf" target="_blank">B.Sc. (Hons.) Forestry Admission Schedule 2023-24 </a>
                       </li> -->
-              <li class="list-inline-item">
-                <a
-                  href="#"
-                  >Auburn University MS Program: Candidate Selection Notification.</a
-                >
-              </li>
+              
             </ul>
           </div>
         </div>
@@ -686,7 +724,7 @@
                   <i class="fa fa-star" aria-hidden="true"></i
                   ><a
                     target="_blank"
-                    href="wp-content\uploads\2025\SELECTION LIST OF CANDIDATES FOR ADMISSION INTO PH.D FORESTRY-2024.pdf"
+                    href="{% static '' %}"
                   >
                    Selection List Of Candidates For Admission Into Ph.D. Forestry-2024.</a
                   >
@@ -695,7 +733,7 @@
                   <i class="fa fa-star" aria-hidden="true"></i
                   ><a
                     target="_blank"
-                    href="wp-content\uploads\2025\NOTIFICATION- AUBURN UNIVERSITY.pdf"
+                    href="{% static '' %}"
                   >
                    Auburn University, USA MS Program: Candidate Selection Notification.</a
                   >

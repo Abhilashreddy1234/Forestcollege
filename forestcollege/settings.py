@@ -267,8 +267,6 @@ INTERNAL_IPS = [
 # Add project-wide static files directory
 # https://docs.djangoproject.com/en/5.1/ref/settings/#media-root
 
-MEDIA_URL = "media/"
-MEDIA_ROOT = str(BASE_DIR.parent / "media")
 # Force HTTPS for all connections  
 SECURE_SSL_REDIRECT = False
 
