@@ -23,11 +23,25 @@ body {
 }
 /* custom.css */
 /* custom.css */
+.breadcrumb {
+  background-color: black;
+  background-image: url('../images/college-images/governing_bg.webp');
+  border-radius: 0.25rem;
+  padding: 5rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 130px; /* Adjust top margin to create space from the navbar */
+  height: auto; /* Auto height to adjust based on content */
+  text-align: center; /* Aligns text content in the center */
+  position: relative; /* Necessary for absolute positioning of items */
+  flex-wrap: wrap; /* Allows the breadcrumb items to wrap if necessary */
+}
 
 .breadcrumb-item {
   color: white; /* Adjust text color for visibility */
   font-size: 18px; /* Adjust the font size as needed */
-  position: absolute;
+  padding: 5px 10px; /* Add padding to give space around each item */
   transition: all 0.3s ease; /* Smooth transition for hover effect */
 }
 
@@ -44,62 +58,23 @@ body {
   color: #ffcc00; /* Change link color on hover */
 }
 
-.breadcrumb-item:nth-child(1) {
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.breadcrumb-item:nth-child(2) {
-  left: 25%;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.breadcrumb-item:nth-child(3) {
-  left: 50%;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.breadcrumb-item:nth-child(4) {
-  left: 75%;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.breadcrumb-item:last-child {
-  left: 100%;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-/* Optional: Hover effect to shift the breadcrumb items */
-.breadcrumb-item:hover {
-  transform: scale(1.1) translateY(-50%); /* Slightly enlarge and shift items */
+/* Adjust layout to center items */
+.breadcrumb-item:not(:last-child) {
+  margin-right: 10px; /* Space between breadcrumb items */
 }
 
 /* Media Queries for smaller screens */
 @media (max-width: 768px) {
   .breadcrumb-item {
-    font-size: 14px;
+    font-size: 14px; /* Smaller font size for mobile */
   }
 
   .breadcrumb {
     height: auto; /* Adjust height for smaller screens */
-  }
-
-  .breadcrumb-item:nth-child(1),
-  .breadcrumb-item:nth-child(2),
-  .breadcrumb-item:nth-child(3),
-  .breadcrumb-item:nth-child(4),
-  .breadcrumb-item:last-child {
-    left: auto;
-    top: auto;
-    transform: none;
-    margin-top: 10px; /* Space between items on mobile */
+    margin-top: 80px; /* Reduce top margin for smaller screens */
   }
 }
+
 
 
 .contact-section {

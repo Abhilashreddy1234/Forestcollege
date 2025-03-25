@@ -123,7 +123,7 @@ def Deputy_Director(request):
         {"name":"Deputy Director"},
     ]
 
-    return render(request, 'Deputy_Director.html',{"breadcrumbs": breadcrumbs,"form":form})
+    return render(request, 'Deputy-Director.html',{"breadcrumbs": breadcrumbs,"form":form})
 
 def Organogram(request):
     form = EmailSubscriptionForm()

@@ -13,7 +13,7 @@
     </head>
     <body>
 <nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
+    <ul class="breadcrumb">
       {% for breadcrumb in breadcrumbs %}
         {% if forloop.last %}
           <li class="breadcrumb-item active" aria-current="page">{{ breadcrumb.name }}</li>
@@ -23,7 +23,7 @@
           </li>
         {% endif %}
       {% endfor %}
-    </ol>
+    </ul>
   </nav>
   </html>
 </body>  
