@@ -279,7 +279,3 @@ CSRF_COOKIE_HTTPONLY = True
 # added security key 
 RECAPTCHA_SITE_KEY = "6Lf5bOsqAAAAALmjOm3E1kELKe_jTApmlExi97rq"
 RECAPTCHA_SECRET_KEY = "6Lf5bOsqAAAAAE1L-0b8nCfXKyD1sl88v_r7j7RO"
-
-# settings.py
-CONTACT_EMAILS = ["sreenivasp2013@gmail.com", "info@example.com", "admin@example.com"]
-CONTACT_PHONES = ["+91 9440810176", "+91 9876543210", "+91 1234567890"]

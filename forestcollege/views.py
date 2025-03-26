@@ -142,7 +142,7 @@ def Departments(request):
         {"name":"Departments"},
         {"name":"List of Departments"},
     ]
-    return render(request, 'Departments.html',{"breadcrumbs":breadcrumbs,"form":form})
+    return render(request, 'departments.html',{"breadcrumbs":breadcrumbs,"form":form})
 def DepartmentHead(request):
     form = EmailSubscriptionForm()
     breadcrumbs = [
