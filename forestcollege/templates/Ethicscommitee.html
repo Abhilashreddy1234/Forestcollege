@@ -1,0 +1,89 @@
+{% load static %}
+{% include 'base.html' %}
+{% include 'breadcrumbs.html' %}
+<section
+class="governing-board-page infrastructure-bg"
+style="padding-bottom: 50px"
+>
+<div class="container-xl container-xxl">
+  <div class="row">
+    <div class="col-md-12">
+      <div
+        class="mt-4 p-3 p-sm-4 p-xl-5"
+        style="
+          background-color: #fbfaea;
+          border-radius: 15px;
+          box-shadow: 0 0 10px #c5c3ac;
+        "
+      >
+        <div class="table-responsive">
+          <table class="table table-color table-striped table-bordered">
+            <thead class="bg-light bg-head">
+              <tr>
+                <th>S.No.</th>
+                <th>Name of the Members</th>
+                <th>Designation</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Dr. B. Sreedhar</td>
+                <td>Associate Professor</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Dr. Priya Mhaiskar</td>
+                <td>Assistant Professor</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Smt. N. S. Srinidhi</td>
+                <td>Assistant Professor</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Dr. Chiranjeeva Reddy</td>
+                <td>Assistant Professor</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Mr. B. Jagadeesh</td>
+                <td>Assistant Professor</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<section class="contact-section">
+    <h1>
+        Emerging as a World Class Institution.
+    </h1>
+    <h2>Forestry Education, Research, Management, and Outreach.</h2>
+    <a href="{% url 'ContactUs' %}" class="contact-button">Contact Us</a>
+</section>  
+
+<div class="vision-images">
+    <div class="vi">
+      <img src="{% static 'images/college-images/visionimage4.webp' %}">
+    </div>
+    <div class="vi">
+      <img src="{% static 'images/college-images/vision-image5.webp' %}">
+    </div>
+    <div class="vi">
+      <img src="{% static 'images/college-images/vision-image7.webp' %}">
+    </div>
+    <div class="vi">
+      <img src="{% static 'images/college-images/vision-image6.webp' %}">
+    </div>
+  </div>
+  
+  {% include 'footer1.html' %}
+  
+  <script src="{% static 'js/main.js' %}"></script>
+  </body>
+  

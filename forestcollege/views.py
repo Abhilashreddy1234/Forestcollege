@@ -174,22 +174,24 @@ def laboratories(request):
     
     return render(request, 'laboratories.html',{"breadcrumbs":breadcrumbs,"form":form})
 def StudentAchievements(request):
+    form = EmailSubscriptionForm()
     breadcrumbs = [
         {"name":"Home","url":"/"},
         {"name":"StudentAchievements"},
         {"name":"year of 2016"},
         
     ]
-    return render(request, 'StudentAchievements.html',{"breadcrumbs":breadcrumbs})
+    return render(request, 'studentAchievements.html',{"breadcrumbs":breadcrumbs,"form":form})
 
 def StudentAchievements1(request):
+    form = EmailSubscriptionForm()
     breadcrumbs = [
         {"name":"Home","url":"/"},
         {"name":"StudentAchievements"},
         {"name":"year of 2017"},
         
     ]
-    return render(request, 'StudentAchievements1.html',{"breadcrumbs":breadcrumbs})
+    return render(request, 'StudentAchievements1.html',{"breadcrumbs":breadcrumbs,"form":form})
 
 def womenprotection(request):
     form = EmailSubscriptionForm()
@@ -211,6 +213,25 @@ def Antiragging(request):
     ]
     return render(request, 'womenprotection.html',{"breadcrumbs":breadcrumbs,"form":form})
 
+def Redressal(request):
+    form = EmailSubscriptionForm()
+    breadcrumbs = [
+        {"name":"Home","url":"/"},
+        {"name":"Academics"},
+        {"name":"Committes"},
+        {"name":"Redressal of Grievance "},
+    ]
+    return render(request, 'Redressal.html',{"breadcrumbs":breadcrumbs,"form":form})
+
+def EthicComitte(request):
+    form = EmailSubscriptionForm()
+    breadcrumbs = [
+        {"name":"Home","url":"/"},
+        {"name":"Academics"},
+        {"name":"Committes"},
+        {"name":"Institutional Ethic Comitte "},
+    ]
+    return render(request, 'Ethicscommitee.html',{"breadcrumbs":breadcrumbs,"form":form})
 def AdmissionComitte(request):
     form = EmailSubscriptionForm()    
     breadcrumbs = [
@@ -219,7 +240,7 @@ def AdmissionComitte(request):
         {"name":"Committes"},
         {"name":"AdmissionComitte"},
     ]
-    return render(request, 'womenprotection.html',{"breadcrumbs":breadcrumbs,"form":form})
+    return render(request, 'AdmissionComitte.html',{"breadcrumbs":breadcrumbs,"form":form})
 
 def DisciplinaryComitte(request):
     form = EmailSubscriptionForm() 
@@ -230,7 +251,7 @@ def DisciplinaryComitte(request):
         {"name":"DisciplinaryComitte"},
     ]
     
-    return render(request, 'womenprotection.html',{"breadcrumbs":breadcrumbs,"form":form})
+    return render(request, 'Disciplinary.html',{"breadcrumbs":breadcrumbs,"form":form})
 
 def Admissions1(request):
     form = EmailSubscriptionForm()
@@ -238,7 +259,7 @@ def Admissions1(request):
         {"name":"Home","url":'/'},
         {"name":"Admissions"},
         {"name":"Courses Offered"},
-         {"name":"M.sc Forestry"},
+         {"name":"B.sc Forestry"},
     ]
     return render(request, 'admissions1.html',{"breadcrumbs":breadcrumbs,"form":form})
 def Mscforestry(request):
