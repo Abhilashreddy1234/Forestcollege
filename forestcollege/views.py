@@ -347,7 +347,7 @@ def Fcri(request):
         {"name":"Services"},
         {"name":"FCRI Cares"},
     ]
-    return render(request, 'Fcri.html',{"breadcrumbs":breadcrumbs,"form":form})
+    return render(request, 'fcri.html',{"breadcrumbs":breadcrumbs,"form":form})
 def Fcricarers(request):
     form = EmailSubscriptionForm()
     breadcrumbs = [
