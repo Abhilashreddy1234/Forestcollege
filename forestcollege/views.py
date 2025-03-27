@@ -411,7 +411,12 @@ def Workshop(request):
     return render(request, 'Workshop.html',{"breadcrumbs":breadcrumbs,"form":form})
  
 def ContactUs(request):
-    return render(request, 'contactus.html')
+    form = EmailSubscriptionForm()
+    breadcrumbs = [
+        {"name":"Home","url":"/"},
+        {"name":"Contact Us"},
+    ]
+    return render(request, 'contactus.html',{"breadcrumbs":breadcrumbs,"form":form})
 
 def ResearchProjects(request):
     form = EmailSubscriptionForm()
@@ -484,3 +489,24 @@ def VideoGallary(request):
         {"name":"video Gallary"},
     ]    
     return render(request, 'videogallary.html',{"breadcrumbs":breadcrumbs,"form":form})
+from django import forms
+from django.core.exceptions import ValidationError
+import re
+
+class ContactForm(forms.Form):
+    name = forms.CharField(max_length=100)
+    email = forms.EmailField()
+    phone = forms.CharField(max_length=10)
+    message = forms.CharField(widget=forms.Textarea)
+
+    def clean_name(self):
+        name = self.cleaned_data.get('name')
+        if not re.match(r'^[A-Za-z\s]+$', name):
+            raise ValidationError('Name should only contain letters and spaces.')
+        return name
+
+    def clean_phone(self):
+        phone = self.cleaned_data.get('phone')
+        if not re.match(r'^\d{10}$', phone):
+            raise ValidationError('Phone number should be exactly 10 digits.')
+        return phone

@@ -24,7 +24,6 @@
          <link rel="stylesheet" href="{% static 'css/main1.css' %}">
          <link rel="stylesheet" href="{% static 'css/responsive-style.css' %}">
          <link rel="stylesheet" href="{% static 'css/chat.css' %}">
-         <link rel="stylesheet" href="{% static 'css/fontawsome.min.css1' %}">
          <script src="{% static 'js/jquery.js' %}"></script>
          <script src="{% static 'js/slick.min.js' %}"></script>
          <script src="{% static 'js/chat.js' %}"></script>
@@ -1449,7 +1448,7 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
 										
 											<div class="faculty-content row">
 												<div class="col-md-auto col-8 mx-auto text-center text-md-left faculty-content-col1">
-													<img decoding="async" src="#" class="img-fluid shadow rounded-circle"/>
+													<img decoding="async" src="{% static 'images/professor-images/Reeja.webp' %}" class="img-fluid shadow rounded-circle"/>
 												</div>
 												<div class="col-12 col-md text-md-left text-center faculty-content-col2">
 													<h5 class="text-green"><em>Dr. Reeja Sundaram</em></h5>
@@ -1466,7 +1465,7 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
 									
 											<div class="faculty-content row">
 												<div class="col-md-auto col-8 mx-auto text-center text-md-left faculty-content-col1">
-												  <img decoding="async" src="#" class="img-fluid shadow rounded-circle"/>
+												  <img decoding="async" src="{% static 'images/professor-images/Shalini_madulkar.webp' %}" class="img-fluid shadow rounded-circle"/>
 												</div>
 												<div class="col-12 col-md text-md-left text-center faculty-content-col2">
 													<h5 class="text-green"><em>Dr. Shalini Mudalkar</em></h5>
@@ -1483,7 +1482,7 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
 									
 											<div class="faculty-content row">
 												<div class="col-md-auto col-8 mx-auto text-center text-md-left faculty-content-col1">
-													<img decoding="async" src="#" class="img-fluid shadow rounded-circle"/>
+													<img decoding="async" src="{% static 'images/professor-images/ARJUN_tamachandran.webp' %}" class="img-fluid shadow rounded-circle"/>
 												</div>
 												<div class="col-12 col-md text-md-left text-center faculty-content-col2">
 													<h5 class="text-green"><em>Dr. Arjun Ramachandran</em></h5>
@@ -1517,7 +1516,7 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
 										
 											<div class="faculty-content row">
 												<div class="col-md-auto col-8 mx-auto text-center text-md-left faculty-content-col1">
-												  <img decoding="async" src="#" class="img-fluid shadow rounded-circle"/>
+												  <img decoding="async" src="{% static 'images/professor-images/Priya.webp' %}" class="img-fluid shadow rounded-circle"/>
 												</div>
 												<div class="col-12 col-md text-md-left text-center faculty-content-col2">
 													<h5 class="text-green"><em>Dr. Priya R M</em></h5>
@@ -1536,7 +1535,7 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
 										
 											<div class="faculty-content row">
 												<div class="col-md-auto col-8 mx-auto text-center text-md-left faculty-content-col1">
-													<img decoding="async" src="https://f" class="img-fluid shadow rounded-circle"/>
+													<img decoding="async" src="{% static 'images/professor-images/Srinidhi.webp' %}" class="img-fluid shadow rounded-circle"/>
 												</div>
 												<div class="col-12 col-md text-md-left text-center faculty-content-col2">
 													<h5 class="text-green"><em>Mrs. N. S. Srinidhi</em></h5>
@@ -1676,106 +1675,157 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
 </section>
 
 
-
 <section class="homeGoverningSec">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-6 homeGoverning__Col">
-                  <!--carousel Start-->
-                  <!-- Carousel -->
-                  <div id="homeGoverningCarouselID" class="carousel slide" data-bs-ride="carousel">
-                     <!-- Indicators/dots -->
-                     <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#homeGoverningCarouselID" data-bs-slide-to="0" class="active"></button>
-                        <button type="button" data-bs-target="#homeGoverningCarouselID" data-bs-slide-to="1"></button>
-                        <button type="button" data-bs-target="#homeGoverningCarouselID" data-bs-slide-to="2"></button>
-<button type="button" data-bs-target="#homeGoverningCarouselID" data-bs-slide-to="3"></button>
-<button type="button" data-bs-target="#homeGoverningCarouselID" data-bs-slide-to="4"></button>
-                     </div> 
-                     <!-- The slideshow/carousel -->
-                     <div class="carousel-inner">
-                        <div class="carousel-item active">
-                           <h3 class="homeGoverning--Title">Hon&#8217;ble Chief Minister of Telangana</h3>
-                           <div class="homeGoverning--Icon">
-                              <img decoding="async" src="{% static 'images/college-images/kcr.webp' %}" class="img-fluid">
-                           </div>
-                           <div class="homeGoverning--Text">
-                              <h5>Sri K. Chandrashekar Rao,​ </h5>
-                              <h6>Hon&#8217;ble Chief Minister</h6>
-                           </div>
-                           <div class="homeGoverning--Quote">
-                              <p>“It is our responsibility to protect our environment and forest wealth for generations to come on this planet. This is a great wealth for mankind, more than the inherited ancestral wealth. Professionals from FCRI should ensure this. ”</p>
-                           </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 homeGoverning__Col">
+        <!--carousel Start-->
+        <!-- Carousel -->
+        <div
+          id="homeGoverningCarouselID"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <!-- Indicators/dots -->
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#homeGoverningCarouselID"
+              data-bs-slide-to="0"
+              class="active"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#homeGoverningCarouselID"
+              data-bs-slide-to="1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#homeGoverningCarouselID"
+              data-bs-slide-to="2"
+            ></button>
+            <!-- <button type="button" data-bs-target="#homeGoverningCarouselID" data-bs-slide-to="3"></button>
+                    <button type="button" data-bs-target="#homeGoverningCarouselID" data-bs-slide-to="4"></button> -->
+          </div>
+          <!-- The slideshow/carousel -->
+          <div class="carousel-inner">
+            <!-- <div class="carousel-item ">
+                        <h3 class="homeGoverning-Title">Hon'ble Chief Minister of Telangana</h3>
+                        <div class="homeGoverning--Icon">
+                            <img src="https://fcriqa.fcrits.in/wp-content/themes/fcri/assets/images/cm.webp" class="img-fluid" alt="Sri K. Chandrashekar Rao">
                         </div>
-                        <div class="carousel-item"> 
-<h3 class="homeGoverning--Title">Dean FCRI &amp; T</h3>
-                           <div class="homeGoverning--Icon">
-                              <img decoding="async" src="{% static 'images/professor-images/fcri-Dean.png' %}" class="img-fluid">
-                           </div>
-                           <div class="homeGoverning--Text">
-                              <h5>Sri Allola Indra Karan Reddy, </h5>
-                              <h6>Hon’ble Minister, EFS &amp; T, Endowments and Law</h6>
-                           </div>
-                           <div class="homeGoverning--Quote">
-                              <p>“The development in the new state of Telangana is taken up with due regard to ecological balance and creation of forest wealth by launching Telanganaku Harithaharam one of the largest programs for greening planet. FCRI should come up with sustainable strategies for the benefit of mankind.”</p>
-                           </div>
+                        <div class="homeGoverning-Text">
+                            <h5>Sri K. Chandrashekar Rao,​ </h5>
+                            <h6>Hon'ble Chief Minister</h6>
                         </div>
-                        <div class="carousel-item">
-                           <h3 class="homeGoverning--Title">Chairman, Governing Board</h3>
-                           <div class="homeGoverning--Icon">
-                              <img decoding="async" src="{% static '' %}" class="img-fluid">
-                           </div>
-                           <div class="homeGoverning--Text">
-                              <h5>Smt. A Santhi Kumari IAS, </h5>
-                              <h6>Spl. Chief Secretary, EFS &amp; T, Govt. of Telangana</h6>
-                           </div>
-                           <div class="homeGoverning--Quote">
-                              <p>“It is in right direction as the demand for the Ecosystem services is increasing under the impact of climate change.”</p>
-                           </div>
+                        <div class="homeGoverning-Quote">
+                            <p>“It is our responsibility to protect our environment and forest wealth for
+                                generations to come on this planet. This is a great wealth for mankind, more than
+                                the inherited ancestral wealth. Professionals from FCRI should ensure this.”</p>
                         </div>
-
-<div class="carousel-item">
-                           <h3 class="homeGoverning--Title">Chairman, Academic Council</h3>
-                           <div class="homeGoverning--Icon">
-                              <img decoding="async" src="{% static '' %}" class="img-fluid">
-                           </div>
-                           <div class="homeGoverning--Text">
-                              <h5>Sri R M Dobriyal IFS, PCCF (HoFF)</h5> 
-                              <!-- <h6>Academic Council Chairman</h6> -->
-                           </div>
-                           <div class="homeGoverning--Quote">
-                              <p>“I am glad to see FCRI Hyderabad emerging as a World class institute for Forestry Education.”</p>
-                           </div>
+                    </div> -->
+            <!-- <div class="carousel-item">
+                        <h3 class="homeGoverning-Title">Hon’ble Minister For EFS &amp; T</h3>
+                        <div class="homeGoverning--Icon">
+                            <img src="" class="img-fluid" alt="Sri Allola Indra Karan Reddy">
                         </div>
-
-
-<div class="carousel-item">
-                           <h3 class="homeGoverning--Title">Dean, FCRI</h3>
-                           <div class="homeGoverning--Icon">
-                              <img decoding="async" src="{% static '' %}" class="img-fluid">
-                           </div>
-                           <div class="homeGoverning--Text">
-                              <h5>Smt Priyankaa Varghese, IFS </h5>
-                              <h6>OSD to Hon&#8217;ble CM, CCF, R&amp;D, <br>&amp; Dean, FCRI Hyderabad</h6>
-                           </div>
-                           <div class="homeGoverning--Quote">
-                              <p>“The Forest College and Research Institute (FCRI) extends you a warm welcome. The professional forestry education is introduced for the first time in Telangana State under the visionary guidance of Hon`ble Chief Minister, Telangana Sri. K. CHANDRASHEKAR RAO. The institution is also aimed at providing an outstanding learning environment, promoting Forest Research, Management and outreach to the farmers. ”</p>
-                           </div>
+                        <div class="homeGoverning-Text">
+                            <h5>Sri Allola Indra Karan Reddy, </h5>
+                            <h6>Hon’ble Minister, EFS &amp; T, Endowments and Law</h6>
                         </div>
-                     </div>
-                     <!-- Left and right controls/icons -->
-                     <!-- <button class="carousel-control-prev" type="button" data-bs-target="#homeGoverningCarouselID" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon"></span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#homeGoverningCarouselID" data-bs-slide="next">
-                        <span class="carousel-control-next-icon"></span>
-                        </button> -->
-                  </div>
-                  <!--carousel end-->
-               </div>
+                        <div class="homeGoverning-Quote">
+                            <p>“The development in the new state of Telangana is taken up with due regard to
+                                ecological balance and creation of forest wealth by launching Telanganaku
+                                Harithaharam one of the largest programs for greening planet. FCRI should come up
+                                with sustainable strategies for the benefit of mankind.”</p>
+                        </div>
+                    </div> -->
+            <div class="carousel-item active">
+              <h3 class="homeGoverning-Title">Chairman, Governing Board</h3>
+              <div class="homeGoverning-Icon">
+                <img
+                  src="{% static 'images/college-images/vani_prasad_IAS.png' %}"
+                  class="img-fluid"
+                  alt="Vani Prasad IAS"
+                />
+              </div>
+              <div class="homeGoverning-Text">
+                <!-- <h5>Smt. A Santhi Kumari IAS, </h5>
+                            <h6>Spl. Chief Secretary, EFS &amp; T, Govt. of Telangana</h6> -->
+                <h5>Smt. A. Vani Prasad, IAS,</h5>
+                <h6>
+                  Prl. Secretary (Environment, Forests, Science &
+                  Techonology)
+                </h6>
+              </div>
+              <div class="homeGoverning-Quote">
+                <p>
+                  “It is in right direction as the demand for the Ecosystem
+                  services is increasing under the impact of climate
+                  change.”
+                </p>
+              </div>
             </div>
-         </div>
-      </section>
+
+            <div class="carousel-item">
+              <h3 class="homeGoverning-Title">
+                Chairman, Academic Council
+              </h3>
+              <div class="homeGoverning--Icon">
+                <img
+                  src="{% static 'images/college-images/dobriyal.webp' %}"
+                  class="img-fluid"
+                  alt="Sri R M Dobriyal IFS"
+                />
+              </div>
+              <div class="homeGoverning-Text">
+                <h5>Sri R M Dobriyal IFS,</h5>
+                <h6>PCCF (HoFF)</h6>
+                <!-- <h6>Academic Council Chairman</h6> -->
+              </div>
+              <div class="homeGoverning-Quote">
+                <p>
+                  “I am glad to see FCRI Hyderabad emerging as a World class
+                  institute for Forestry Education.”
+                </p>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <h3 class="homeGoverning-Title">Dean, FCRI</h3>
+              <div class="homeGoverning-Icon">
+                <img
+                  src="{% static 'images/professor-images/fcri-Dean.png' %}"
+                  class="img-fluid"
+                  alt="Asha"
+                />
+              </div>
+              <div class="homeGoverning-Text">
+                <!-- <h5>Smt Priyankaa Varghese, IFS </h5>
+                            <h6>OSD to Hon'ble CM, CCF, R&amp;D.</h6> -->
+                <h5>Dr. S. J. Asha, IFS</h5>
+                <h6>Dean, FCRI Hyderabad</h6>
+              </div>
+              <div class="homeGoverning-Quote">
+                <p>
+                  “The Forest College and Research Institute (FCRI) extends
+                  you a warm welcome. The professional forestry education is
+                  introduced for the first time in Telangana State under the
+                  visionary guidance of Hon`ble Chief Minister, Telangana.
+                  The institution is also aimed at providing an outstanding
+                  learning environment, promoting Forest Research,
+                  Management and outreach to the farmers.”
+                </p>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <!--carousel end-->
+      </div>
+    </div>
+  </div>
+</section>
 
 
 
