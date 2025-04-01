@@ -56,6 +56,7 @@ urlpatterns = [
     path('Blog/',views.Blog,name="Blog"),
     path('PhotoGallary/',views.PhotoGallary,name='PhotoGallary'),
     path('pressrelease/',views.PressRelease,name="pressrelease"),
+    path('fcri_news',views.Fcri_news,name='fcri_news'),
     path('videogallary/',views.VideoGallary,name='videogallary'),
     path('health-check/', views.health_check, name='health_check'),
     path("", home1, name="home1"),

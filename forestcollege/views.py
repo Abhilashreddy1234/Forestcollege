@@ -481,6 +481,17 @@ def PressRelease(request):
     ]    
     return render(request, 'Pressrelease.html',{"breadcrumbs":breadcrumbs,"form":form})
 
+
+def Fcri_news(request):
+    form = EmailSubscriptionForm()
+    breadcrumbs = [
+        {"name":"Home","url":"/"},
+        {"name":"Media"},
+        {"name":"Fcri News"},
+    ]    
+    return render(request, 'fcri_news.html',{"breadcrumbs":breadcrumbs,"form":form})
+
+
 def VideoGallary(request):
     form = EmailSubscriptionForm()
     breadcrumbs = [

@@ -3,182 +3,166 @@
 {% include 'breadcrumbs.html' %}
 
 <section
-style="
-  margin-top: 20px;
-  padding-bottom: 20px;
-  background-image: linear-gradient(
-    to top,
-    #dbd9b6 0%,
-    #ffffff 100%
-  );
-"
+  style="
+    margin-top: 20px;
+    padding-bottom: 20px;
+    background-image: linear-gradient(
+      to top,
+      #dbd9b6 0%,
+      #ffffff 100%
+    );
+  "
 >
-<div class="container-xl container-xxl">
-  <div class="row">
-    <div class="col-md-12">
-      <style></style>
-      <div id="image_gallery_985" class="row all-images">
-        <div
-          class="single-image col-lg-4 col-md-6 col-sm-12 col-xs-6"
-        >
-          <figure>
-            <div class="video-gal-icon">
-              <img
-                decoding="async"
-                class="img-thumbnail vid-985"
-                src="{% static '' %}"
-                alt="Untitled"
-                data-video-id="y-262Z-ay2gkc"
-              />
+  <div class="container-xl container-xxl">
+    <div class="row">
+      <div class="col-md-12">
+        <div id="image_gallery_985" class="row all-images">
 
-              <i id="i-icon" class="video_icon_985">
-                <img
-                  decoding="async"
-                  src="{% static '' %}"
-                />
-              </i>
-            </div>
-            <div>
-              <div class="vg-title">Untitled</div>
-            </div>
-          </figure>
+          <!-- First Video -->
+          <div class="single-image col-lg-4 col-md-6 col-sm-12 col-xs-6">
+            <figure>
+              <div class="video-gal-icon">
+                <!-- Embed YouTube video using iframe -->
+                <iframe
+                  width="700"
+                  height="480"
+                  src="https://www.youtube.com/embed/ccQv_P-nj50"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div>
+                <div class="vg-title">Video 1: Video Title</div>
+              </div>
+            </figure>
+          </div>
+
+          <!-- Second Video -->
+          <div class="single-image col-lg-4 col-md-6 col-sm-12 col-xs-6">
+            <figure>
+              <div class="video-gal-icon">
+                <!-- Embed YouTube video using iframe -->
+                <iframe
+                  width="700"
+                  height="480"
+                  src="https://www.youtube.com/embed/ccQv_P-nj50"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div>
+                <div class="vg-title">Video 2: Another Video Title</div>
+              </div>
+            </figure>
+          </div>
+
+          <!-- Third Video -->
+          <div class="single-image col-lg-4 col-md-6 col-sm-12 col-xs-6">
+            <figure>
+              <div class="video-gal-icon">
+                <!-- Embed YouTube video using iframe -->
+                <iframe
+                  width="700"
+                  height="480"
+                  src="https://www.youtube.com/embed/ccQv_P-nj50"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div>
+                <div class="vg-title">Video 3: Another Video Title</div>
+              </div>
+            </figure>
+          </div>
+
         </div>
-        <div
-          class="single-image col-lg-4 col-md-6 col-sm-12 col-xs-6"
-        >
-          <figure>
-            <div class="video-gal-icon">
-              <img
-                decoding="async"
-                class="img-thumbnail vid-985"
-                src="{% static '' %}"
-                alt="Untitled"
-                data-video-id="y-ccQv_P-nj50"
-              />
 
-              <i id="i-icon" class="video_icon_985">
-                <img
-                  decoding="async"
-                  src="{% static '' %}"
-                />
-              </i>
-            </div>
-            <div>
-              <div class="vg-title">Untitled</div>
-            </div>
-          </figure>
-        </div>
-        <div
-          class="single-image col-lg-4 col-md-6 col-sm-12 col-xs-6"
-        >
-          <figure>
-            <div class="video-gal-icon">
-              <img
-                decoding="async"
-                class="img-thumbnail vid-985"
-                src="{% static '' %}"
-                alt="Untitled"
-                data-video-id="y-d5MFQZQS-EQ"
-              />
+        <style>
+          .single-image .vg-title {
+            font-size: 25px;
+            font-weight: bold;
+            text-align: center;
+            padding: 5px;
+          }
+          .single-image .vg-desc {
+            font-size: 15px;
+            padding: 5px;
+          }
 
-              <i id="i-icon" class="video_icon_985">
-                <img
-                  decoding="async"
-                  src="{% static '' %}"
-                />
-              </i>
-            </div>
-            <div>
-              <div class="vg-title">Untitled</div>
-            </div>
-          </figure>
-        </div>
-      </div>
-      <style>
-        .single-image .vg-title {
-          font-size: 25px;
-          font-weight: bold;
-          text-align: center;
-          padding: 5px;
-        }
-        .single-image .vg-desc {
-          font-size: 15px;
-          padding: 5px;
-        }
+          .single-image {
+            padding-top: 20px;
+          }
+          .vg-title {
+            display: none !important;
+          }
+          .img-thumbnail {
+            border: 0px solid #dee2e6 !important;
+            border-radius: 1.25rem !important;
+          }
+          .single-image {
+            text-align: center;
+          }
+        </style>
 
-        .single-image {
-          padding-top: 20px;
-        }
-        .vg-title {
-          display: none !important;
-        }
-        .img-thumbnail {
-          border: 0px solid #dee2e6 !important;
-          border-radius: 1.25rem !important;
-        }
-        .single-image {
-          text-align: center;
-        }
-      </style>
-      <script>
-        jQuery(document).ready(function () {
-          // isotope effect function
-          // Method 1 - Initialize Isotope, then trigger layout after each image loads.
-          var $grid = jQuery(".all-images").isotope({
-            // options...
-            itemSelector: ".single-image",
-          });
-          // layout Isotope after each image loads
-          $grid.imagesLoaded().progress(function () {
-            $grid.isotope("layout");
-          });
+        <script>
+          jQuery(document).ready(function () {
+            // isotope effect function
+            var $grid = jQuery(".all-images").isotope({
+              itemSelector: ".single-image",
+            });
+            $grid.imagesLoaded().progress(function () {
+              $grid.isotope("layout");
+            });
 
-          //video lighting js
-          videoLightning({
-            elements: [
-              {
-                ".vid-985": {
-                  width: "700",
-                  height: "480",
-                  autoplay: true,
-                  autoclose: true,
-                  zindex: "2100",
-                  autohide: 2,
+            // video lighting js
+            videoLightning({
+              elements: [
+                {
+                  ".vid-985": {
+                    width: "700",
+                    height: "480",
+                    autoplay: true,
+                    autoclose: true,
+                    zindex: "2100",
+                    autohide: 2,
+                  },
                 },
-              },
-            ],
+              ],
+            });
           });
-        });
-      </script>
+        </script>
+      </div>
     </div>
   </div>
-</div>
 </section>
 
 <section class="contact-section">
-    <h1>
-        Emerging as a World Class Institution.
-    </h1>
-    <h2>Forestry Education, Research, Management, and Outreach.</h2>
-    <a href="{% url 'ContactUs' %}" class="contact-button">Contact Us</a>
+  <h1>
+    Emerging as a World Class Institution.
+  </h1>
+  <h2>Forestry Education, Research, Management, and Outreach.</h2>
+  <a href="{% url 'ContactUs' %}" class="contact-button">Contact Us</a>
 </section>
-</div>
-<div class="vision-images">
-<div class="vi">
-    <img src="{% static 'images\college-images\visionimage4.webp' %}">
-</div>
-<div class="vi">
-    <img src="{% static 'images\college-images\vision-image5.webp' %}">
-</div>
-<div class="vi">
-    <img src="{% static 'images\college-images\vision-image7.webp' %}">
-</div>
-<div class="vi">
-    <img src="{% static 'images\college-images\vision-image6.webp' %}">
-</div>
-</div>
-{% include 'footer1.html' %}
 
+<div class="vision-images">
+  <div class="vi">
+    <img src="{% static 'images/college-images/visionimage4.webp' %}">
+  </div>
+  <div class="vi">
+    <img src="{% static 'images/college-images/vision-image5.webp' %}">
+  </div>
+  <div class="vi">
+    <img src="{% static 'images/college-images/vision-image7.webp' %}">
+  </div>
+  <div class="vi">
+    <img src="{% static 'images/college-images/vision-image6.webp' %}">
+  </div>
+</div>
+
+{% include 'footer1.html' %}
 
 <script src="{% static 'js/main.js' %}"></script>
 </body>

@@ -87,31 +87,31 @@
                   <div class="col-md-4 col-sm-6">
                       <h5>About</h5>
                       <ul class="list-unstyled">
-                          <li><a class="nav-link text-cursor" href="#">Vision and Mission</a></li>
-                          <li><a class="nav-link text-cursor" href="#">Governing Board</a></li>
-                          <li><a class="nav-link text-cursor" href="#">Academic Council</a></li>
-                          <li><a class="nav-link text-cursor" href="#">Organogram</a></li>
+                          <li><a class="nav-link text-cursor" href="{% url 'vision' %}">Vision and Mission</a></li>
+                          <li><a class="nav-link text-cursor" href="{% url 'Governing_Board' %}">Governing Board</a></li>
+                          <li><a class="nav-link text-cursor" href="{% url 'Governing_Board' %}">Academic Council</a></li>
+                          <li><a class="nav-link text-cursor" href="{% url 'Organogram' %}">Organogram</a></li>
                       </ul>
                   </div>
                   <div class="col-md-4 col-sm-6">
                       <h5>Admissions</h5>
                       <ul class="list-unstyled">
-                          <li><a class="nav-link text-cursor" href="#">BSC Hons Forestry</a></li>
-                          <li><a class="nav-link text-cursor" href="#">MSC Forestry</a></li>
-                          <li><a class="nav-link text-cursor" href="#">PhD Forestry</a></li>
-                          <li><a class="nav-link text-cursor" href="#" target="_blank">Admission Process - UG</a></li>
-                          <li><a class="nav-link text-cursor" href="#" target="_blank">Admission Process - PG</a></li>
-                          <li><a class="nav-link text-cursor" href="#">FAQ’s</a></li>
+                          <li><a class="nav-link text-cursor" href="{% url 'admissions1' %}">BSC Hons Forestry</a></li>
+                          <li><a class="nav-link text-cursor" href="{% url 'mscforestry' %}">MSC Forestry</a></li>
+                          <li><a class="nav-link text-cursor" href="{% url 'Phdforestry' %}">PhD Forestry</a></li>
+                          <li><a class="nav-link text-cursor" href="{% static 'doc\8.-UG-regulations-1.pdf' %}" >Admission Process - UG</a></li>
+                          <li><a class="nav-link text-cursor" href="{% static 'doc\8.-UG-regulations-1.pdf' %}" >Admission Process - PG</a></li>
+                          <li><a class="nav-link text-cursor" href="">FAQ’s</a></li>
                       </ul>
                   </div>
                   <div class="col-md-4 col-sm-6">
                       <h5>Academics</h5>
                       <ul class="list-unstyled">
-                          <li><a class="nav-link text-cursor" href="#">List of Departments</a></li>
-                          <li><a class="nav-link text-cursor" href="#">Faculty</a></li>
-                          <li><a class="nav-link text-cursor" href="#">Laboratories</a></li>
-                          <li><a class="nav-link text-cursor" href="#" target="_blank">Rules &amp; Regulation - UG</a></li>
-                          <li><a class="nav-link text-cursor" href="#" target="_blank">Rules &amp; Regulation - PG</a></li>
+                          <li><a class="nav-link text-cursor" href="{% url 'Departments' %}">List of Departments</a></li>
+                          <li><a class="nav-link text-cursor" href="{% url 'DepartmentHead' %}">Faculty</a></li>
+                          <li><a class="nav-link text-cursor" href="{% url 'laboratories' %}">Laboratories</a></li>
+                          <li><a class="nav-link text-cursor" href="{% static 'doc\8.-UG-regulations-1.pdf' %}">Rules &amp; Regulation - UG</a></li>
+                          <li><a class="nav-link text-cursor" href="{% static 'doc\8.-UG-regulations-1.pdf' %}">Rules &amp; Regulation - PG</a></li>
                       </ul>
                   </div>
               </div>
