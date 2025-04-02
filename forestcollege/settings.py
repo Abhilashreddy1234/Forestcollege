@@ -276,6 +276,14 @@ SECURE_HSTS_PRELOAD = True
 SESSION_COOKIE_SECURE = True  
 CSRF_COOKIE_SECURE = False
 CSRF_COOKIE_HTTPONLY = True
+
 # added security key 
-RECAPTCHA_SITE_KEY = "6Lf5bOsqAAAAALmjOm3E1kELKe_jTApmlExi97rq"
-RECAPTCHA_SECRET_KEY = "6Lf5bOsqAAAAAE1L-0b8nCfXKyD1sl88v_r7j7RO"
+RECAPTCHA_SITE_KEY = "6LflTwcrAAAAALP-o0w-J7QRNONYf5AHQy0dqFLa"
+RECAPTCHA_SECRET_KEY = "6LflTwcrAAAAABJd7nH65tTb2XtuiBOIir0R59PJ"
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'  # Gmail's SMTP server
+EMAIL_PORT = 587  # SMTP port for Gmail
+EMAIL_USE_TLS = True  
+EMAIL_HOST_USER = '20eg110119@anurag.edu.in'  # Your Gmail address
+EMAIL_HOST_PASSWORD = 'mcif ltah xsoy ntpi'  # Your Gmail password or app password (see next step)
+DEFAULT_FROM_EMAIL = '20eg110119@anurag.edu.in'  # Sender email (this can be the same as EMAIL_HOST_USER)

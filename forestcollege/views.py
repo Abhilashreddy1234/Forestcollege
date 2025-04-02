@@ -24,34 +24,52 @@ def home1(request):
             return JsonResponse({"error": "Invalid email address"}, status=400)
 
     return render(request, "home.html", {"form": form})
-
+# views.py
+# views.py
+from django.shortcuts import render, redirect
+from django.core.mail import send_mail
+from django.conf import settings
+from django.http import HttpResponse
+from .forms import ContactForm  # Correct import
 
 def contact_view(request):
-    if request.method == "POST":
-        recaptcha_response = request.POST.get("g-recaptcha-response")
-        data = {
-            "secret": settings.RECAPTCHA_SECRET_KEY,
-            "response": recaptcha_response,
-        }
-        r = requests.post("https://www.google.com/recaptcha/api/siteverify", data=data)
-        result = r.json()
+    if request.method == 'POST':
+        form = ContactForm(request.POST)  # Create form instance
+        if form.is_valid():
+            # Get form data
+            name = form.cleaned_data['name']
+            email = form.cleaned_data['email']
+            phone = form.cleaned_data['phone']
+            message = form.cleaned_data['message']
+            
+            # Sending email to admin
+            subject = f"New Contact Form Submission from {name}"
+            message_body = f"Name: {name}\nEmail: {email}\nPhone: {phone}\nMessage: {message}"
+            recipient_email = '20eg110119@anurag.edu.in'  # Change this to your email
 
-        if result["success"]:
-            # Process the form data and send email
-            name = request.POST.get("name")
-            email = request.POST.get("email")
-            phone = request.POST.get("phone")
-            message = request.POST.get("message")
+            try:
+                send_mail(subject, message_body, email, [recipient_email], fail_silently=False)
+                
+                # Send confirmation email to user
+                user_subject = "Thank you for contacting us!"
+                user_message = f"Hi {name},\n\nThank you for reaching out. We have received your message and will get back to you soon.\n\nBest regards,\nYour Team"
+                send_mail(user_subject, user_message, settings.DEFAULT_FROM_EMAIL, [email], fail_silently=False)
 
-            # Example: Save to database or send email
-            # Contact.objects.create(name=name, email=email, phone=phone, message=message)
-
-            messages.success(request, "Your message has been sent successfully!")
-            return redirect("contact")
+                return redirect('contact_success')  # Redirect after successful form submission
+            except Exception as e:
+                print(f"Error sending email: {e}")
+                return HttpResponse("An error occurred while sending the email. Please try again later.")
         else:
-            messages.error(request, "Invalid reCAPTCHA. Please try again.")
+            return render(request, 'contactus.html', {'form': form})  # Return form with errors if not valid
+    else:
+        form = ContactForm()  # Create empty form for GET request
+        return render(request, 'contactus.html', {'form': form})
 
-    return render(request, "contact1.html")
+
+from django.shortcuts import render
+
+def contact_success(request):
+    return render(request, 'contact_success.html')
 
 
 # Home page view with breadcrumb

@@ -115,18 +115,20 @@
         <!-- Right Section: Contact Form -->
         <div class="right-section">
             <h2>Contact Us</h2>
-            <form id="contactForm" action="{% url 'contact1' %}" method="POST">
-                {% csrf_token %}
-                <input type="text" id="name" name="name" placeholder="Name" required>
-                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
-                <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
-                <textarea id="message" name="message" placeholder="Message" required></textarea>
-                
-                <!-- Google reCAPTCHA -->
-                <div class="g-recaptcha" data-sitekey="6Lf5bOsqAAAAALmjOm3E1kELKe_jTApmlExi97rq"></div>
-                
-                <button type="submit">Submit</button>
-            </form>
+            <!-- contactus.html -->
+<form id="contactForm" action="{% url 'contact' %}" method="POST">
+    {% csrf_token %}
+    <input type="text" id="name" name="name" placeholder="Name" required>
+    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+    <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+    <textarea id="message" name="message" placeholder="Message" required></textarea>
+
+    <!-- Google reCAPTCHA -->
+    <div class="g-recaptcha" data-sitekey="6LflTwcrAAAAALP-o0w-J7QRNONYf5AHQy0dqFLa"></div>
+    
+    <button type="submit">Submit</button>
+</form>
+
         </div>
     </div>
 
