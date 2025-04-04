@@ -1,14 +1,13 @@
 {% load static %}
 {% include 'base.html' %}
 {% include 'breadcrumbs.html' %}
+
 <style>
-   
     .container {
         display: flex;
         max-width: 1200px;
         margin: 100px auto;
         padding: 20px;
-    
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         border-radius: 8px;
     }
@@ -62,7 +61,6 @@
         border-radius: 5px;
         font-size: 16px;
     }
-    
     form button {
         background-color: #007BFF;
         color: #fff;
@@ -82,9 +80,6 @@
         }
     }
 </style>
-
-
-
 
 <body>
     <div class="container">
@@ -115,20 +110,23 @@
         <!-- Right Section: Contact Form -->
         <div class="right-section">
             <h2>Contact Us</h2>
-            <!-- contactus.html -->
-<form id="contactForm" action="{% url 'contact' %}" method="POST">
-    {% csrf_token %}
-    <input type="text" id="name" name="name" placeholder="Name" required>
-    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
-    <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
-    <textarea id="message" name="message" placeholder="Message" required></textarea>
+            <!-- Contact Form -->
+            <form id="contactForm" action="{% url 'contact' %}" method="POST">
+                {% csrf_token %}
+                <input type="text" id="name" name="name" placeholder="Name" required>
+                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+                <textarea id="message" name="message" placeholder="Message" required></textarea>
 
-    <!-- Google reCAPTCHA -->
-    <div class="g-recaptcha" data-sitekey="6LflTwcrAAAAALP-o0w-J7QRNONYf5AHQy0dqFLa"></div>
-    
-    <button type="submit">Submit</button>
-</form>
+                <!-- Google reCAPTCHA v2 (Invisible) -->
+                <div class="g-recaptcha" 
+                     data-sitekey="6Lcu1AkrAAAAAB3G2Eo_1S0x-YDOIC56_A6sOlD3" 
+                     data-size="visible" 
+                     data-callback="onSubmit">
+                </div>
 
+                <button type="submit">Submit</button>
+            </form>
         </div>
     </div>
 
@@ -136,116 +134,73 @@
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
     <script>
+        // Callback function that executes on successful CAPTCHA validation
+        function onSubmit(token) {
+            // Submit the form after reCAPTCHA verification
+            document.getElementById("contactForm").submit();
+        }
+
         // Client-side Validation Script
         document.getElementById("contactForm").addEventListener("submit", function(event) {
-            let isValid = true;
+            event.preventDefault();  // Prevent form submission until reCAPTCHA is validated
+            
+            // Trigger the reCAPTCHA verification
+            grecaptcha.execute();
+        });
 
-            // Validate Name (Only letters and spaces)
-            const name = document.getElementById("name").value;
-            const nameRegex = /^[A-Za-z\s]+$/;
-            if (!nameRegex.test(name)) {
-                alert("Please enter a valid name (only letters and spaces).");
-                isValid = false;
-            }
+        // Function to reset the CAPTCHA after submission
+        function resetCaptcha() {
+            grecaptcha.reset();  // Reset the CAPTCHA widget to allow the user to verify it again
+        }
 
-            // Validate Email
-            const email = document.getElementById("email").value;
-            const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-            if (!emailRegex.test(email)) {
-                alert("Please enter a valid email address.");
-                isValid = false;
-            }
-
-            // Validate Phone (Numbers only, 10 digits)
-            const phone = document.getElementById("phone").value;
-            const phoneRegex = /^\d{10}$/;
-            if (!phoneRegex.test(phone)) {
-                alert("Please enter a valid 10-digit phone number.");
-                isValid = false;
-            }
-
-            // Validate Message (Check if it's empty)
-            const message = document.getElementById("message").value;
-            if (message.trim() === "") {
-                alert("Please enter a message.");
-                isValid = false;
-            }
-
-            if (!isValid) {
-                event.preventDefault();  // Prevent form submission if validation fails
-            }
+        // Reset the CAPTCHA after the form is submitted successfully
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            grecaptcha.reset();  // Reset the CAPTCHA widget after submission
         });
     </script>
-    <section
-    class="fcri-map"
-    style="
-      background-image: linear-gradient(to top, #dbd9b6 0%, #ffffff 90%);
-      margin-bottom: -5px;
-    "
-  >
-    <div class="container-xl container-xxl">
-      <div class="row">
-        <div class="col-md-12 p-0">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3800.5846568576535!2d78.62484951488099!3d17.71707038788185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcc7f89f821d7ed%3A0x92207a6f66c86375!2s(FCRI)%20Forest%20College%20and%20Research%20Institute%2C%20Hyderabad%20at%20Mulugu!5e0!3m2!1sen!2sin!4v1652097732417!5m2!1sen!2sin"
-            width="100%"
-            height="450"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
-      </div>
-    </div>
-  </section>
-  <script
-    data-cfasync="false"
-    src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
-  ></script>
-  <script src="../recaptcha/api.js" async="" defer=""></script>
-    <div class="vision-images">
-        <div class="vi">
-            <img src="{% static 'images/college-images/visionimage4.webp' %}">
-        </div>
-        <div class="vi">
-            <img src="{% static 'images/college-images/vision-image5.webp' %}">
-        </div>
-        <div class="vi">
-            <img src="{% static 'images/college-images/vision-image7.webp' %}">
-        </div>
-        <div class="vi">
-            <img src="{% static 'images/college-images/vision-image6.webp' %}">
-        </div>
-    </div>
-{% include 'footer1.html' %}
 
-<footer class="bottom-footer pt-2 pb-1">
-    <div class="container-xxl">
-        <div class="row">
-            <div class="col-md-6">
-                <p class="text-white pt-3 pb-1">&copy; 2022 FCRI - All Rights Reserved.</p>
-            </div>
-            <div class="col-md-6 social-links">
-                <ul class="nav justify-content-end">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" target="_blank"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" target="_blank"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" target="_blank"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" target="_blank"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
-                    </li>
-                </ul>
+    <!-- Map Section -->
+    <section class="fcri-map" style="background-image: linear-gradient(to top, #dbd9b6 0%, #ffffff 90%); margin-bottom: -5px;">
+        <div class="container-xl container-xxl">
+            <div class="row">
+                <div class="col-md-12 p-0">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3800.5846568576535!2d78.62484951488099!3d17.71707038788185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcc7f89f821d7ed%3A0x92207a6f66c86375!2s(FCRI)%20Forest%20College%20and%20Research%20Institute%2C%20Hyderabad%20at%20Mulugu!5e0!3m2!1sen!2sin!4v1652097732417!5m2!1sen!2sin"
+                            width="100%" height="450" style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
             </div>
         </div>
-    </div>
-</footer>
+    </section>
 
-<script src="{% static 'js/main.js' %}"></script>
+    <!-- Footer Section -->
+    {% include 'footer1.html' %}
+
+    <footer class="bottom-footer pt-2 pb-1">
+        <div class="container-xxl">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="text-white pt-3 pb-1">&copy; 2022 FCRI - All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6 social-links">
+                    <ul class="nav justify-content-end">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" target="_blank"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" target="_blank"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" target="_blank"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" target="_blank"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{% static 'js/main.js' %}"></script>
 </body>
 </html>

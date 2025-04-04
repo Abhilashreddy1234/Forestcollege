@@ -45,8 +45,8 @@ ALLOWED_HOSTS = ['forestcollege.onrender.com','127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin',
     'djangocms_admin_style',
-
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -86,6 +86,7 @@ INSTALLED_APPS = [
     'djangocms_frontend.contrib.navigation',
     'djangocms_frontend.contrib.tabs',
     'djangocms_frontend.contrib.utilities',
+    
 ]
 
 MIDDLEWARE = [
@@ -278,8 +279,8 @@ CSRF_COOKIE_SECURE = False
 CSRF_COOKIE_HTTPONLY = True
 
 # added security key 
-RECAPTCHA_SITE_KEY = "6LflTwcrAAAAALP-o0w-J7QRNONYf5AHQy0dqFLa"
-RECAPTCHA_SECRET_KEY = "6LflTwcrAAAAABJd7nH65tTb2XtuiBOIir0R59PJ"
+RECAPTCHA_SITE_KEY = "6Lcu1AkrAAAAAB3G2Eo_1S0x-YDOIC56_A6sOlD3"
+RECAPTCHA_SECRET_KEY = "6Lcu1AkrAAAAAAMcFkjTAKMqM3UegcCnv_HNWZyV"
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'  # Gmail's SMTP server
 EMAIL_PORT = 587  # SMTP port for Gmail
@@ -287,3 +288,17 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = '20eg110119@anurag.edu.in'  # Your Gmail address
 EMAIL_HOST_PASSWORD = 'mcif ltah xsoy ntpi'  # Your Gmail password or app password (see next step)
 DEFAULT_FROM_EMAIL = '20eg110119@anurag.edu.in'  # Sender email (this can be the same as EMAIL_HOST_USER)
+
+
+
+JAZZMIN_SETTINGS = {
+    "site_title": "My Admin",
+    "site_header": "My Admin Panel",
+    "welcome_sign": "Welcome to My Django Admin",
+    "copyright": "My Company",
+    "search_model": "auth.User",
+    "user_avatar": None,
+    "navigation_expanded": True,
+    "show_sidebar": True,
+    "theme": "darkly",  # Change to themes like 'cyborg', 'superhero', etc.
+}
