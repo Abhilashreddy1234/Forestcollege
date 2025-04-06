@@ -3,9 +3,14 @@ from django.http import JsonResponse
 from .forms import EmailSubscriptionForm
 import requests
 from django.conf import settings
-
-from django.contrib import messages
-
+from django.core.mail import send_mail
+from django.conf import settings
+from django.http import HttpResponse
+from .forms import ContactForm  # Correct import
+from django import forms
+from django.core.exceptions import ValidationError
+import re
+ 
 def health_check(request):
     return JsonResponse({'status': 'ok'})
 
@@ -26,11 +31,6 @@ def home1(request):
     return render(request, "home.html", {"form": form})
 # views.py
 # views.py
-from django.shortcuts import render, redirect
-from django.core.mail import send_mail
-from django.conf import settings
-from django.http import HttpResponse
-from .forms import ContactForm  # Correct import
 
 def contact_view(request):
     if request.method == 'POST':
@@ -66,7 +66,6 @@ def contact_view(request):
         return render(request, 'contactus.html', {'form': form})
 
 
-from django.shortcuts import render
 
 def contact_success(request):
     return render(request, 'contact_success.html')
@@ -518,9 +517,7 @@ def VideoGallary(request):
         {"name":"video Gallary"},
     ]    
     return render(request, 'videogallary.html',{"breadcrumbs":breadcrumbs,"form":form})
-from django import forms
-from django.core.exceptions import ValidationError
-import re
+
 
 class ContactForm(forms.Form):
     name = forms.CharField(max_length=100)

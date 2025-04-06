@@ -117,47 +117,24 @@
                 <input type="email" id="email" name="email" placeholder="Enter your email address" required>
                 <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
                 <textarea id="message" name="message" placeholder="Message" required></textarea>
-
-                <!-- Google reCAPTCHA v2 (Invisible) -->
-                <div class="g-recaptcha" 
-                     data-sitekey="6Lcu1AkrAAAAAB3G2Eo_1S0x-YDOIC56_A6sOlD3" 
-                     data-size="visible" 
-                     data-callback="onSubmit">
+            
+                <!-- Custom CAPTCHA -->
+                <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                    <input type="text" id="captcha" disabled style="width: 100px; text-align: center; font-weight: bold; margin-right: 10px; background: #eee;">
+                    <button type="button" onclick="generateCaptcha()" style="padding: 6px 12px; font-size: 12px;">Reload</button>
                 </div>
-
+                <input type="text" id="captchaInput" placeholder="Enter the captcha above" required>
+            
+                <p id="captchaError" style="color: red; display: none;">Invalid CAPTCHA. Please try again.</p>
+            
                 <button type="submit">Submit</button>
             </form>
+            
         </div>
     </div>
 
     <!-- Load Google reCAPTCHA Script -->
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
-    <script>
-        // Callback function that executes on successful CAPTCHA validation
-        function onSubmit(token) {
-            // Submit the form after reCAPTCHA verification
-            document.getElementById("contactForm").submit();
-        }
-
-        // Client-side Validation Script
-        document.getElementById("contactForm").addEventListener("submit", function(event) {
-            event.preventDefault();  // Prevent form submission until reCAPTCHA is validated
-            
-            // Trigger the reCAPTCHA verification
-            grecaptcha.execute();
-        });
-
-        // Function to reset the CAPTCHA after submission
-        function resetCaptcha() {
-            grecaptcha.reset();  // Reset the CAPTCHA widget to allow the user to verify it again
-        }
-
-        // Reset the CAPTCHA after the form is submitted successfully
-        document.getElementById("contactForm").addEventListener("submit", function(event) {
-            grecaptcha.reset();  // Reset the CAPTCHA widget after submission
-        });
-    </script>
+  
 
     <!-- Map Section -->
     <section class="fcri-map" style="background-image: linear-gradient(to top, #dbd9b6 0%, #ffffff 90%); margin-bottom: -5px;">
@@ -202,5 +179,35 @@
     </footer>
 
     <script src="{% static 'js/main.js' %}"></script>
+    <script>
+        let generatedCaptcha = "";
+    
+        function generateCaptcha() {
+            const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            let captcha = '';
+            for (let i = 0; i < 6; i++) {
+                captcha += chars.charAt(Math.floor(Math.random() * chars.length));
+            }
+            generatedCaptcha = captcha;
+            document.getElementById("captcha").value = captcha;
+        }
+    
+        // Run CAPTCHA generation on page load
+        window.onload = generateCaptcha;
+    
+        document.getElementById("contactForm").addEventListener("submit", function (e) {
+            const input = document.getElementById("captchaInput").value;
+            const errorText = document.getElementById("captchaError");
+    
+            if (input !== generatedCaptcha) {
+                e.preventDefault();
+                errorText.style.display = "block";
+                generateCaptcha();  // Refresh captcha after error
+            } else {
+                errorText.style.display = "none";
+            }
+        });
+    </script>
+    
 </body>
 </html>

@@ -45,6 +45,7 @@ ALLOWED_HOSTS = ['forestcollege.onrender.com','127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
+    'captcha',
     'jazzmin',
     'djangocms_admin_style',
     'django.contrib.admin',
@@ -254,6 +255,11 @@ DJANGOCMS_VERSIONING_ALLOW_DELETING_VERSIONS = True
 
 # Add project-wide static files directory
 # https://docs.djangoproject.com/en/5.1/ref/settings/#staticfiles-dirs
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
+
+STATIC_URL = '/static/'
+
 
 STATIC_ROOT = BASE_DIR / "staticfiles" 
 STATICFILES_DIRS = [
