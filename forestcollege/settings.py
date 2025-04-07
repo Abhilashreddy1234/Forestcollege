@@ -45,7 +45,6 @@ ALLOWED_HOSTS = ['forestcollege.onrender.com','127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
-    'captcha',
     'jazzmin',
     'djangocms_admin_style',
     'django.contrib.admin',

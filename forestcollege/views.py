@@ -6,7 +6,7 @@ from django.conf import settings
 from django.core.mail import send_mail
 from django.conf import settings
 from django.http import HttpResponse
-from .forms import ContactForm  # Correct import
+  # Correct import
 from django import forms
 from django.core.exceptions import ValidationError
 import re
