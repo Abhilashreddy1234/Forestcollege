@@ -21,61 +21,76 @@ body {
   z-index: 999;
   border-radius: 10px;
 }
-/* custom.css */
-/* custom.css */
-.breadcrumb {
+.breadcrumb-section {
   background-color: black;
   background-image: url('../images/college-images/governing_bg.webp');
+  padding: 4rem 1rem;
+  margin-top: 130px;
+  text-align: center;
+  color: white;
   border-radius: 0.25rem;
-  padding: 5rem 1rem;
-  display: flex;
+}
+
+.breadcrumb-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.breadcrumb-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.breadcrumb-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin-top: 130px; /* Adjust top margin to create space from the navbar */
-  height: auto; /* Auto height to adjust based on content */
-  text-align: center; /* Aligns text content in the center */
-  position: relative; /* Necessary for absolute positioning of items */
-  flex-wrap: wrap; /* Allows the breadcrumb items to wrap if necessary */
 }
 
 .breadcrumb-item {
-  color: white; /* Adjust text color for visibility */
-  font-size: 18px; /* Adjust the font size as needed */
-  padding: 5px 10px; /* Add padding to give space around each item */
-  transition: all 0.3s ease; /* Smooth transition for hover effect */
+  font-size: 18px;
+  color: white;
 }
 
 .breadcrumb-item a {
-  color: white; /* Links color */
+  color: white;
   text-decoration: none;
-}
-
-.breadcrumb-item:hover {
-  color: #ffcc00; /* Change color on hover */
+  transition: color 0.3s;
 }
 
 .breadcrumb-item a:hover {
-  color: #ffcc00; /* Change link color on hover */
+  color: #ffcc00;
 }
 
-/* Adjust layout to center items */
-.breadcrumb-item:not(:last-child) {
-  margin-right: 10px; /* Space between breadcrumb items */
+.separator {
+  margin: 0 8px;
+  color: white;
 }
 
-/* Media Queries for smaller screens */
+.current {
+  color: #ffcc00;
+  font-weight: bold;
+}
+
 @media (max-width: 768px) {
-  .breadcrumb-item {
-    font-size: 14px; /* Smaller font size for mobile */
+  .breadcrumb-title {
+    font-size: 24px;
   }
 
-  .breadcrumb {
-    height: auto; /* Adjust height for smaller screens */
-    margin-top: 80px; /* Reduce top margin for smaller screens */
+  .breadcrumb-item {
+    font-size: 14px;
+  }
+
+  .separator {
+    margin: 0 5px;
   }
 }
-
-
 
 .contact-section {
   position: relative;

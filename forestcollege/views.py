@@ -96,7 +96,6 @@ def vision(request):
     ]
     return render(request, "vision.html", {"breadcrumbs": breadcrumbs,"form":form})
 
-# Other views
 def Governing_Board(request):
     form = EmailSubscriptionForm()
     breadcrumbs = [
@@ -517,7 +516,13 @@ def VideoGallary(request):
         {"name":"video Gallary"},
     ]    
     return render(request, 'videogallary.html',{"breadcrumbs":breadcrumbs,"form":form})
-
+def Faq(request):
+    form = EmailSubscriptionForm()
+    breadcrumbs = [
+        {"name":"Home","url":"/"},
+        {"name":"FAQ's"},
+    ]    
+    return render(request,'faq.html',{"breadcrumbs":breadcrumbs,"form":form})
 
 class ContactForm(forms.Form):
     name = forms.CharField(max_length=100)

@@ -61,6 +61,7 @@ urlpatterns = [
     path('videogallary/',views.VideoGallary,name='videogallary'),
     path('contact/', views.contact_view, name='contact'),
     path('contact-success/', views.contact_success, name='contact_success'),
+    path('faq',views.Faq,name='faq'),
     path('health-check/', views.health_check, name='health_check'),
     path("", home1, name="home1"),
     path('', include('cms.urls')),
