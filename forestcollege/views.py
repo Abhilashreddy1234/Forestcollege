@@ -523,6 +523,13 @@ def Faq(request):
         {"name":"FAQ's"},
     ]    
     return render(request,'faq.html',{"breadcrumbs":breadcrumbs,"form":form})
+def Dounload(request):
+    form = EmailSubscriptionForm()
+    breadcrumbs = [
+        {"name":"Home","url":"/"},
+        {"name":"Downloads"},
+    ]    
+    return render(request,'dounload.html',{"breadcrumbs":breadcrumbs,"form":form})
 
 class ContactForm(forms.Form):
     name = forms.CharField(max_length=100)
