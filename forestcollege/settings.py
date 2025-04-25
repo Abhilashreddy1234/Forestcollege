@@ -37,7 +37,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY =  'rSKaK3KMIiHK-nL9yOzSAsZaQPnfIyqjWV_kwOY_nE96Dsg6qF-LD8y_ljoz3yXlV1s'
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['forestcollege.onrender.com','127.0.0.1']
 
@@ -282,6 +282,7 @@ SECURE_HSTS_PRELOAD = True
 SESSION_COOKIE_SECURE = True  
 CSRF_COOKIE_SECURE = False
 CSRF_COOKIE_HTTPONLY = True
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # added security key 
 RECAPTCHA_SITE_KEY = "6Lcu1AkrAAAAAB3G2Eo_1S0x-YDOIC56_A6sOlD3"
