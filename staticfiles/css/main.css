@@ -21,29 +21,76 @@ body {
   z-index: 999;
   border-radius: 10px;
 }
-/* custom.css */
-.breadcrumb {
+.breadcrumb-section {
   background-color: black;
   background-image: url('../images/college-images/governing_bg.webp');
-  border-radius: 0.25rem;
-  padding: 0.75rem 1rem;
-  display: flex; 
-  justify-content: center; 
-  align-items: center; 
+  padding: 4rem 1rem;
   margin-top: 130px;
-  height: 32vh; /* Adjust height if needed to fully center within the viewport or parent container */
-  margin: -30 1; /* Ensures it's centered within a parent container */
-  text-align: center; /* Aligns text content in the center */
+  text-align: center;
+  color: white;
+  border-radius: 0.25rem;
 }
+
+.breadcrumb-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.breadcrumb-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.breadcrumb-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.breadcrumb-item {
+  font-size: 18px;
+  color: white;
+}
+
 .breadcrumb-item a {
   color: white;
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
-.breadcrumb-item.active {
+.breadcrumb-item a:hover {
+  color: #ffcc00;
+}
+
+.separator {
+  margin: 0 8px;
   color: white;
 }
 
+.current {
+  color: #ffcc00;
+  font-weight: bold;
+}
 
+@media (max-width: 768px) {
+  .breadcrumb-title {
+    font-size: 24px;
+  }
+
+  .breadcrumb-item {
+    font-size: 14px;
+  }
+
+  .separator {
+    margin: 0 5px;
+  }
+}
 
 .contact-section {
   position: relative;

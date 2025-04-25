@@ -675,7 +675,7 @@ a.conlink {
   background-image: url(../images/college-images/vision-image6.webp);
 }
 .homeThreeSplitCard02 .carousel-inner > .carousel-item:nth-child(2):before {
-  background-image: url(../images/college-imagesForest_Museum_image1.jpg);
+  background-image: url(../images/home_carousal/fcri-udaan2.webp);
 }
 .homeThreeSplitCard02 .carousel-inner > .carousel-item:nth-child(3):before {
   background-image: url(../images/college-images/vision2-image.jpg);
@@ -690,28 +690,28 @@ a.conlink {
   background-image: url(../images/department-images/Seminar_Hall_1.jpg);
 }
 .homeThreeSplitCard02 .carousel-inner>.carousel-item:nth-child(7):before {
-  background-image: url(../);
+  background-image: url(../images/home_carousal/dean_fcri1.webp);
 }
 .homeThreeSplitCard02 .carousel-inner>.carousel-item:nth-child(8):before {
-  background-image: url(../);
+  background-image: url(../images/home_carousal/dean_fcri5.webp);
 }
 .homeThreeSplitCard02 .carousel-inner>.carousel-item:nth-child(9):before {
-  background-image: url(../);
+  background-image: url(../images/home_carousal/fcri_college1.webp);
 }
 
 
 .homeThreeSplitCard04 .carousel-inner>.carousel-item:nth-child(1):before {
-  background-image: url(..);
+  background-image: url(../images/home_carousal/fcri_college3.webp);
 }
 .homeThreeSplitCard04 .carousel-inner>.carousel-item:nth-child(2):before {
-  background-image: url(..);
+  background-image: url(../images/home_carousal/fcri_college4.webp);
 }
 .homeThreeSplitCard04 .carousel-inner>.carousel-item:nth-child(3):before {
-  background-image: url(../);
+  background-image: url(../images/home_carousal/fcri_new_image1.webp);
 }
 
 .homeThreeSplitCard04 .carousel-inner>.carousel-item:nth-child(4):before {
-  background-image: url(..);
+  background-image: url(../images/home_carousal/fcri_college1.webp);
 }
 
 .homeThreeSplitCard04 .carousel-inner>.carousel-item:nth-child(5):before {
@@ -1399,7 +1399,7 @@ a.flip-box-abs-link {
 /*-------------------------------------secStaffFCRI  Start--------------------------*/
 .secStaffFCRI {
   padding: 00px 0;
-  background-image: url("../images/faculty-background.webp");
+  background-image: url(../images/faculty-background.webp);
   background-position: center;
   background-size: cover;
   /* background-color: #f0f1ed; */
@@ -1420,7 +1420,7 @@ a.flip-box-abs-link {
   left: 0;
   right: 0;
   top: 50%;
-  /* background-image: url(../images/leaf.webp); */
+  
   width: 100%;
   height: 100%;
   background-repeat: no-repeat;
@@ -2104,7 +2104,7 @@ a.flip-box-abs-link {
   background-image: url("../images/background-images/info_card2.webp");
 }
 .courseInfographicSec__contentCol.cpContentCrsl-02 {
-  background-image: url();
+  background-image: url("../images/background-images/info_card2.webp");
 }
 .courseInfographicSec__contentCol.cpContentCrsl-03 {
   background-image: url("../images/background-images/info_card2.webp");
@@ -3029,12 +3029,7 @@ tr {
 .vision p {
   color: #bbe87f;
 }
-.breadcrumb-item {
-  text-transform: uppercase;
-}
-.breadcrumb li {
-  color: #fff;
-}
+
 .elementor {
   position: relative;
   z-index: 1;
