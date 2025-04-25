@@ -142,6 +142,32 @@
             </form>
         </div>
     </div>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function (event) {
+            const emailInput = document.getElementById('email');
+            const email = emailInput.value.trim();
+            const emailError = document.getElementById('emailError');
+        
+            // Regular Expression for validating email
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        
+            if (!emailRegex.test(email)) {
+                event.preventDefault(); // Stop form from submitting
+                if (!emailError) {
+                    const errorMsg = document.createElement('p');
+                    errorMsg.id = 'emailError';
+                    errorMsg.style.color = 'red';
+                    errorMsg.textContent = 'Please enter a valid email address.';
+                    emailInput.insertAdjacentElement('afterend', errorMsg);
+                } else {
+                    emailError.style.display = 'block';
+                }
+            } else if (emailError) {
+                emailError.style.display = 'none'; // Hide error if email is valid
+            }
+        });
+        </script>
+        
 
     <!-- JS -->
     <script>
