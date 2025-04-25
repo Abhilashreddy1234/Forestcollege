@@ -29,40 +29,39 @@ def home1(request):
             return JsonResponse({"error": "Invalid email address"}, status=400)
 
     return render(request, "home.html", {"form": form})
-# views.py
-# views.py
+
 
 def contact_view(request):
     if request.method == 'POST':
-        form = ContactForm(request.POST)  # Create form instance
+        form = ContactForm(request.POST)  
         if form.is_valid():
-            # Get form data
+            
             name = form.cleaned_data['name']
             email = form.cleaned_data['email']
             phone = form.cleaned_data['phone']
             message = form.cleaned_data['message']
             
-            # Sending email to admin
+            
             subject = f"New Contact Form Submission from {name}"
             message_body = f"Name: {name}\nEmail: {email}\nPhone: {phone}\nMessage: {message}"
-            recipient_email = '20eg110119@anurag.edu.in'  # Change this to your email
+            recipient_email = '20eg110119@anurag.edu.in'  
 
             try:
                 send_mail(subject, message_body, email, [recipient_email], fail_silently=False)
                 
-                # Send confirmation email to user
+                
                 user_subject = "Thank you for contacting us!"
                 user_message = f"Hi {name},\n\nThank you for reaching out. We have received your message and will get back to you soon.\n\nBest regards,\nYour Team"
                 send_mail(user_subject, user_message, settings.DEFAULT_FROM_EMAIL, [email], fail_silently=False)
 
-                return redirect('contact_success')  # Redirect after successful form submission
+                return redirect('contact_success')  
             except Exception as e:
                 print(f"Error sending email: {e}")
                 return HttpResponse("An error occurred while sending the email. Please try again later.")
         else:
-            return render(request, 'contactus.html', {'form': form})  # Return form with errors if not valid
+            return render(request, 'contactus.html', {'form': form}) 
     else:
-        form = ContactForm()  # Create empty form for GET request
+        form = ContactForm()  
         return render(request, 'contactus.html', {'form': form})
 
 

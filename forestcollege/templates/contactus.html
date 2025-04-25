@@ -98,7 +98,7 @@
         <div class="left-section">
             <h2>Get In Touch</h2>
             <p>Feel free to drop us a line below!</p>
-
+    
             <div class="contact-info">
                 <i class="icon fas fa-map-marker-alt"></i>
                 <p>Forest College and Research Institute, Hyderabad @ Mulugu, Siddipet District, Telangana 502 279.</p>
@@ -116,7 +116,7 @@
                 <p>08454-211938</p>
             </div>
         </div>
-
+    
         <!-- Right Section: Contact Form -->
         <div class="right-section">
             <h2>Contact Us</h2>
@@ -126,10 +126,9 @@
                 <input type="email" id="email" name="email" placeholder="Enter your email address" required>
                 <input type="tel" id="phone" name="phone" placeholder="Phone Number" required pattern="\d{10}" maxlength="10" title="Please enter exactly 10 digits">
                 <textarea id="message" name="message" placeholder="Message" required maxlength="3000" oninput="validateMessageLength()"></textarea>
-                
-
+    
                 <p class="error-message" id="messageError">Message should be between 1 and 500 words.</p>
-            
+    
                 <!-- CAPTCHA -->
                 <div style="display: flex; align-items: center; margin-bottom: 15px;">
                     <input type="text" id="captcha" disabled style="width: 100px; text-align: center; font-weight: bold; margin-right: 10px; background: #eee;">
@@ -137,42 +136,62 @@
                 </div>
                 <input type="text" id="captchaInput" name="captcha_input" placeholder="Enter the captcha above" required>
                 <p id="captchaError" style="color: red; display: none;">Invalid CAPTCHA. Please try again.</p>
-
+    
                 <button type="submit" id="submitButton">Submit</button>
             </form>
         </div>
     </div>
+    
     <script>
-        document.getElementById('contactForm').addEventListener('submit', function (event) {
-            const emailInput = document.getElementById('email');
-            const email = emailInput.value.trim();
-            const emailError = document.getElementById('emailError');
         
-            // Regular Expression for validating email
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        function escapeHTML(str) {
+            return str.replace(/[&<>"'/]/g, function (char) {
+                return {
+                    '&': '&amp;',
+                    '<': '&lt;',
+                    '>': '&gt;',
+                    '"': '&quot;',
+                    "'": '&#039;',
+                    '/': '&#047;'
+                }[char];
+            });
+        }
+    
         
-            if (!emailRegex.test(email)) {
-                event.preventDefault(); // Stop form from submitting
-                if (!emailError) {
-                    const errorMsg = document.createElement('p');
-                    errorMsg.id = 'emailError';
-                    errorMsg.style.color = 'red';
-                    errorMsg.textContent = 'Please enter a valid email address.';
-                    emailInput.insertAdjacentElement('afterend', errorMsg);
-                } else {
-                    emailError.style.display = 'block';
-                }
-            } else if (emailError) {
-                emailError.style.display = 'none'; // Hide error if email is valid
+        document.getElementById("contactForm").addEventListener("submit", function (e) {
+            const inputCaptcha = document.getElementById("captchaInput").value;
+            const errorText = document.getElementById("captchaError");
+            const message = document.getElementById("message").value;
+            const messageErrorText = document.getElementById("messageError");
+    
+        
+            if (inputCaptcha !== generatedCaptcha) {
+                e.preventDefault();
+                errorText.style.display = "block";
+                generateCaptcha();
+            } else {
+                errorText.style.display = "none";
             }
+    
+            
+            const messageWords = message.trim().split(/\s+/).length;
+            if (messageWords > 500) {
+                e.preventDefault();
+                messageErrorText.style.display = "block";
+            } else {
+                messageErrorText.style.display = "none";
+            }
+    
+            
+            document.getElementById("name").value = escapeHTML(document.getElementById("name").value);
+            document.getElementById("email").value = escapeHTML(document.getElementById("email").value);
+            document.getElementById("phone").value = escapeHTML(document.getElementById("phone").value);
+            document.getElementById("message").value = escapeHTML(document.getElementById("message").value);
         });
-        </script>
-        
-
-    <!-- JS -->
-    <script>
+    
+        // CAPTCHA generation function
         let generatedCaptcha = "";
-
+    
         function generateCaptcha() {
             const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
             let captcha = '';
@@ -182,34 +201,9 @@
             generatedCaptcha = captcha;
             document.getElementById("captcha").value = captcha;
         }
-
+    
         window.onload = generateCaptcha;
-
-        document.getElementById("contactForm").addEventListener("submit", function (e) {
-            const inputCaptcha = document.getElementById("captchaInput").value;
-            const errorText = document.getElementById("captchaError");
-            const message = document.getElementById("message").value;
-            const messageErrorText = document.getElementById("messageError");
-
-            // CAPTCHA validation
-            if (inputCaptcha !== generatedCaptcha) {
-                e.preventDefault();
-                errorText.style.display = "block";
-                generateCaptcha();
-            } else {
-                errorText.style.display = "none";
-            }
-
-            // Word count validation
-            const messageWords = message.trim().split(/\s+/).length;
-            if (messageWords > 500) {
-                e.preventDefault();
-                messageErrorText.style.display = "block";
-            } else {
-                messageErrorText.style.display = "none";
-            }
-        });
-
+    
         function validateMessageLength() {
             const message = document.getElementById("message").value.trim();
             const wordCount = message.split(/\s+/).filter(Boolean).length;
@@ -217,6 +211,7 @@
             document.getElementById("messageError").style.display = wordCount > 500 ? "block" : "none";
         }
     </script>
+    
     <section
     class="fcri-map"
     style="
