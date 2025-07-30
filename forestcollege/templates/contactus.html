@@ -10,44 +10,32 @@
         padding: 20px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         border-radius: 8px;
-        background-color: #f8f8e4;
+        background: linear-gradient(to top, #dbd9b6 0%, #ffffff 90%);
     }
     .left-section {
         flex: 1;
         padding: 20px;
         border-right: 2px solid #eaeaea;
+        background-color: #f8f8e4;
     }
     .right-section {
         flex: 1;
         padding: 20px;
+        background-color: #f1f1de;
     }
-    .left-section h2 {
-        color: #333;
-        margin-bottom: 10px;
+    .left-section h2, .right-section h2, form input, form textarea, form button {
+        font-size: 18px; /* increased font size */
     }
-    .left-section p {
-        color: #555;
-        line-height: 1.6;
-        margin: 5px 0;
-    }
-    .left-section a {
-        color: #007BFF;
-        text-decoration: none;
-    }
-    .left-section a:hover {
-        text-decoration: underline;
+    .left-section p, .left-section a {
+        font-size: 16px; /* increased font size */
     }
     .left-section .icon {
-        font-size: 24px;
+        font-size: 26px;
         margin-right: 15px;
     }
     .left-section .contact-info {
         display: flex;
         align-items: center;
-        margin-bottom: 20px;
-    }
-    .right-section h2 {
-        color: #333;
         margin-bottom: 20px;
     }
     form {
@@ -57,7 +45,7 @@
     form input, form textarea {
         width: 100%;
         margin-bottom: 15px;
-        padding: 10px;
+        padding: 12px;
         border: 1px solid #ddd;
         border-radius: 5px;
         font-size: 16px;
@@ -65,7 +53,7 @@
     form button {
         background-color: #007BFF;
         color: #fff;
-        padding: 10px;
+        padding: 12px;
         border: none;
         border-radius: 5px;
         cursor: pointer;
@@ -82,13 +70,11 @@
             border-bottom: 2px solid #eaeaea;
         }
     }
-    .word-count {
-        font-size: 14px;
-        color: #888;
-    }
+    
     .error-message {
         color: red;
         display: none;
+        font-size: 14px;
     }
 </style>
 
@@ -96,16 +82,14 @@
     <div class="container">
         <!-- Left Section: Contact Details -->
         <div class="left-section">
-            <h2>Get In Touch</h2>
-            <p>Feel free to drop us a line below!</p>
-    
+            <img src="{% static 'images/logo-images/FCRITS_Contact_logo (1).webp' %}" alt="FCRITS Logo" style="max-width:100%; height:auto;"> <!-- Corrected img tag -->
             <div class="contact-info">
                 <i class="icon fas fa-map-marker-alt"></i>
                 <p>Forest College and Research Institute, Hyderabad @ Mulugu, Siddipet District, Telangana 502 279.</p>
             </div>
             <div class="contact-info">
                 <i class="icon fas fa-envelope"></i>
-                <p><a href="mailto:tsfcri2021[at]gmail[dot]com">tsfcri2021[at]gmail[dot]com</a></p>
+                <p><a href="mailto:tsfcri2021@gmail.com">tsfcri2021@gmail.com</a></p> <!-- also corrected email format -->
             </div>
             <div class="contact-info">
                 <i class="icon fas fa-phone"></i>
@@ -116,36 +100,50 @@
                 <p>08454-211938</p>
             </div>
         </div>
-    
+
         <!-- Right Section: Contact Form -->
         <div class="right-section">
             <h2>Contact Us</h2>
-            <form id="contactForm" action="{% url 'contact' %}" method="POST">
+            <form id="contactForm" action="{% url 'contact' %}" method="POST" onsubmit="return validateForm();">
                 {% csrf_token %}
-                <input type="text" id="name" name="name" placeholder="Name" required>
+                <input type="text" id="name" name="name" placeholder="Name" required pattern="^[A-Za-z\s]+$" title="Only alphabets allowed.">
                 <input type="email" id="email" name="email" placeholder="Enter your email address" required>
-                <input type="tel" id="phone" name="phone" placeholder="Phone Number" required pattern="\d{10}" maxlength="10" title="Please enter exactly 10 digits">
+                <input type="tel" id="phone" name="phone" placeholder="Phone Number" required maxlength="10" title="Enter exactly 10 digits" pattern="\d{10}" onkeypress="return isNumber(event)">
                 <textarea id="message" name="message" placeholder="Message" required maxlength="3000" oninput="validateMessageLength()"></textarea>
-    
+                
+                <div id="wordCount" class="word-count"></div>
                 <p class="error-message" id="messageError">Message should be between 1 and 500 words.</p>
-    
+
                 <!-- CAPTCHA -->
                 <div style="display: flex; align-items: center; margin-bottom: 15px;">
                     <input type="text" id="captcha" disabled style="width: 100px; text-align: center; font-weight: bold; margin-right: 10px; background: #eee;">
-                    <button type="button" onclick="generateCaptcha()" style="padding: 6px 12px; font-size: 12px;">Reload</button>
+                    <button type="button" onclick="generateCaptcha()" style="padding: 6px 12px; font-size: 14px;">Reload</button>
                 </div>
                 <input type="text" id="captchaInput" name="captcha_input" placeholder="Enter the captcha above" required>
                 <p id="captchaError" style="color: red; display: none;">Invalid CAPTCHA. Please try again.</p>
-    
+
                 <button type="submit" id="submitButton">Submit</button>
             </form>
         </div>
     </div>
-    
+
     <script>
-        
+        let generatedCaptcha = "";
+
+        function generateCaptcha() {
+            const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            let captcha = '';
+            for (let i = 0; i < 6; i++) {
+                captcha += chars.charAt(Math.floor(Math.random() * chars.length));
+            }
+            generatedCaptcha = captcha;
+            document.getElementById("captcha").value = captcha;
+        }
+
+        window.onload = generateCaptcha;
+
         function escapeHTML(str) {
-            return str.replace(/[&<>"'/]/g, function (char) {
+            return str.replace(/[&<>"'\/]/g, function (char) {
                 return {
                     '&': '&amp;',
                     '<': '&lt;',
@@ -156,61 +154,50 @@
                 }[char];
             });
         }
-    
-        
-        document.getElementById("contactForm").addEventListener("submit", function (e) {
-            const inputCaptcha = document.getElementById("captchaInput").value;
-            const errorText = document.getElementById("captchaError");
-            const message = document.getElementById("message").value;
-            const messageErrorText = document.getElementById("messageError");
-    
-        
-            if (inputCaptcha !== generatedCaptcha) {
-                e.preventDefault();
-                errorText.style.display = "block";
-                generateCaptcha();
-            } else {
-                errorText.style.display = "none";
+
+        function isNumber(evt) {
+            var charCode = evt.which ? evt.which : evt.keyCode;
+            if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+                evt.preventDefault();
+                return false;
             }
-    
-            
-            const messageWords = message.trim().split(/\s+/).length;
-            if (messageWords > 500) {
-                e.preventDefault();
-                messageErrorText.style.display = "block";
-            } else {
-                messageErrorText.style.display = "none";
-            }
-    
-            
-            document.getElementById("name").value = escapeHTML(document.getElementById("name").value);
-            document.getElementById("email").value = escapeHTML(document.getElementById("email").value);
-            document.getElementById("phone").value = escapeHTML(document.getElementById("phone").value);
-            document.getElementById("message").value = escapeHTML(document.getElementById("message").value);
-        });
-    
-        // CAPTCHA generation function
-        let generatedCaptcha = "";
-    
-        function generateCaptcha() {
-            const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-            let captcha = '';
-            for (let i = 0; i < 6; i++) {
-                captcha += chars.charAt(Math.floor(Math.random() * chars.length));
-            }
-            generatedCaptcha = captcha;
-            document.getElementById("captcha").value = captcha;
+            return true;
         }
-    
-        window.onload = generateCaptcha;
-    
+
         function validateMessageLength() {
             const message = document.getElementById("message").value.trim();
             const wordCount = message.split(/\s+/).filter(Boolean).length;
             document.getElementById("wordCount").textContent = `Word count: ${wordCount}/500`;
             document.getElementById("messageError").style.display = wordCount > 500 ? "block" : "none";
         }
+
+        function validateForm() {
+            const inputCaptcha = document.getElementById("captchaInput").value;
+            const errorText = document.getElementById("captchaError");
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const phone = document.getElementById("phone").value;
+            const message = document.getElementById("message").value;
+
+            if (inputCaptcha !== generatedCaptcha) {
+                errorText.style.display = "block";
+                generateCaptcha();
+                return false;
+            } else {
+                errorText.style.display = "none";
+            }
+
+            // Escape inputs to prevent XSS
+            document.getElementById("name").value = escapeHTML(name);
+            document.getElementById("email").value = escapeHTML(email);
+            document.getElementById("phone").value = escapeHTML(phone);
+            document.getElementById("message").value = escapeHTML(message);
+
+            return true;
+        }
     </script>
+
+
     
     <section
     class="fcri-map"

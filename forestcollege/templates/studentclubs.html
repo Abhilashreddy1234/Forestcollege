@@ -1,0 +1,133 @@
+{% load static %}
+{% include 'base.html' %}
+{% include 'breadcrumbs.html' %}
+
+<section class="stdClub stdClubSection" style="padding-bottom: 50px">
+    <div class="container-xl container-xxl">
+      <div class="row">
+        <div class="col-md-12">
+          <p>
+            The main motto of these clubs is to encourage the students in all
+            activities which helps them to improve their skills and also in
+            enriching the quality of taking responsibilities and standing of
+            them. College life is the time during which students stay away
+            from the home most of the time. So clubs promotes a sense of
+            connection and togetherness of people having common interests.
+          </p>
+          <h5><strong>Importance: </strong></h5>
+
+          <ol type="1">
+            <li>The importance of clubs is that students can acquire</li>
+
+            <ul style="list-style-type: disc">
+              <li>Leadership qualities</li>
+              <li>Self confidence to handle real life situations</li>
+              <li>Skills</li>
+              <li>Experience as well</li>
+              <li>Exploration</li>
+              <li>Promotes compilation; sense of unity</li>
+            </ul>
+
+            <li>Also helps the students in</li>
+
+            <ul style="list-style-type: disc">
+              <li>Show case their talents</li>
+              <li>
+                Promoting awareness to the students as well as to others
+              </li>
+            </ul>
+          </ol>
+
+          <p><strong>LIST OF DIFFERENT CLUBS, FCRI</strong></p>
+          <div
+            class="mt-4 p-3 p-sm-4 p-xl-5"
+            style="
+              background-color: #fbfaea;
+              border-radius: 15px;
+              box-shadow: 0 0 10px #c5c3ac;
+            "
+          >
+            <div class="table-responsive">
+              <table class="table table-color table-striped table-bordered">
+                <thead class="bg-light bg-head">
+                  <td>S.No.</td>
+                  <td>Student Club’s</td>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1.</td>
+                    <td>Cultural & Dramatic Club</td>
+                  </tr>
+                  <tr>
+                    <td>2.</td>
+                    <td>Sports Club</td>
+                  </tr>
+                  <tr>
+                    <td>3.</td>
+                    <td>Mess Club</td>
+                  </tr>
+                  <tr>
+                    <td>4.</td>
+                    <td>Debate & Quiz Club</td>
+                  </tr>
+                  <tr>
+                    <td>5.</td>
+                    <td>Nature / Trekking Club</td>
+                  </tr>
+                  <tr>
+                    <td>6.</td>
+                    <td>Fine Arts Club</td>
+                  </tr>
+                  <tr>
+                    <td>7.</td>
+                    <td>Hostel Club</td>
+                  </tr>
+                  <tr>
+                    <td>8.</td>
+                    <td>Telugu / Literature Club</td>
+                  </tr>
+                  <tr>
+                    <td>9.</td>
+                    <td>Health & Hygiene Club</td>
+                  </tr>
+                  <tr>
+                    <td>10.</td>
+                    <td>ICT & Photography Club</td>
+                  </tr>
+                  <tr>
+                    <td>11.</td>
+                    <td>Sylvaz Club</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="contact-section">
+    <h1>
+        Emerging as a World Class Institution.
+    </h1>
+    <h2>Forestry Education, Research, Management, and Outreach.</h2>
+    <a href="{% url 'ContactUs' %}" class="contact-button">Contact Us</a>
+</section>
+<div class="vision-images">
+    <div class="vi">
+        <img src="{% static 'images\college-images\visionimage4.webp' %}">
+    </div>
+    <div class="vi">
+        <img src="{% static 'images\college-images\vision-image5.webp' %}">
+    </div>
+    <div class="vi">
+        <img src="{% static 'images\college-images\vision-image7.webp' %}">
+    </div>
+    <div class="vi">
+        <img src="{% static 'images\college-images\vision-image6.webp' %}">
+    </div>
+</div>
+{% include 'footer1.html' %}
+{% include 'bootom_footer.html' %}
+<script src="{% static 'js/main.js' %}"></script>
+</body>

@@ -311,13 +311,7 @@
         <li><a class="dropdown-item" href="{% static 'doc\8.-UG-regulations-1.pdf' %}" target="_blank">PhD</a></li>
       </ul>
     </li>
-    <li class="has-submenu">
-      <a class="dropdown-item" href="#">Fee Payment</a>
-      <ul class="submenu dropdown-menu">
-        <li><a class="dropdown-item" href="#" target="_blank">Admission Fee Payment</a></li>
-        <li><a class="dropdown-item" href="#" target="_blank">Semester Fee Payment</a></li>
-      </ul>
-    </li>
+    
     <li class="has-submenu">
       <a class="dropdown-item" href="#">Admissions Schedule - 2023</a>
       <ul class="submenu dropdown-menu">
@@ -671,19 +665,19 @@
                 >
               </li> -->
               <li class="list-inline-item">
-                <a href="{% static 'doc/selection list1.pdf' %}">
+                <a href="{% static 'doc/doc4/SELECTION LIST OF CANDIDATES FOR ADMISSION INTO PH.D FORESTRY-2024.pdf' %}">
                   Selection List For Admission Into Ph.D. Forestry- 2024-25.
                 </a>
             </li>
             
             <li class="list-inline-item">
-                <a href="{% static 'doc/auburan_university selection_list.pdf' %}">
+                <a href="{% static 'doc/doc4/NOTIFICATION- AUBURN UNIVERSITY.pdf' %}">
                   Auburn University MS Program: Candidate Selection Notification.
                 </a>
             </li>
             
             <li class="list-inline-item">
-                <a href="{% static 'doc/selected list2.pdf' %}" target="_blank">
+                <a href="{% static 'doc/doc4/Selection list-II For admission into  Ph.D Forestry.pdf' %}" target="_blank">
                   Selection List-II For Admission Into Ph.D Forestry- 2024-25.
                 </a>
             </li>
@@ -702,7 +696,7 @@
         data-wow-delay="0.3s"
       >
         <div class="col-auto">
-          <a href="{% static 'doc/selection list1.pdf' %}">
+          <a href="{% url 'Dounload' %}">
             <div class="homeNotifications__left">
               <i class="fa fa-bell" aria-hidden="true"></i>
               <span> Latest Notifications</span>
@@ -725,18 +719,27 @@
                   <i class="fa fa-star" aria-hidden="true"></i
                   ><a
                     target="_blank"
-                    href="{% static 'doc/selected list2.pdf' %}"
+                    href="{% static 'doc/doc4/SELECTION LIST OF CANDIDATES FOR ADMISSION INTO PH.D FORESTRY-2024.pdf' %}"
                   >
-                   Selection List Of Candidates For Admission Into Ph.D. Forestry-2024.</a
+                   Selection List Of Candidates For Admission Into Ph.D. Forestry-2025.</a
                   >
                 </li>
                 <li class="list-inline-item">
                   <i class="fa fa-star" aria-hidden="true"></i
                   ><a
                     target="_blank"
-                    href="{% static 'doc/auburan_university selection_list.pdf' %}"
+                    href="{% static 'doc/doc4/NOTIFICATION- AUBURN UNIVERSITY.pdf' %}"
                   >
                    Auburn University, USA MS Program: Candidate Selection Notification.</a
+                  >
+                </li>
+                <li class="list-inline-item">
+                  <i class="fa fa-star" aria-hidden="true"></i
+                  ><a
+                    target="_blank"
+                    href="{% static 'doc/doc4/Selection list-II For admission into  Ph.D Forestry.pdf' %}"
+                  >
+                  Selection List-II For Admission Into Ph.D Forestry- 2024-25. .</a
                   >
                 </li>
               </ul>
@@ -804,76 +807,76 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
         <h3 class="homeflipCardSec--Title">Courses Offered</h3>
         <div class="row homeflip-card-row">
          
+          <!-- B.Sc. Flip Card -->
           <div class="col-md col-6 homeflip-col-6 wow fadeInUp" data-wow-delay="0.3s">
             <div class="box-item">
               <div class="flip-box">
-			  			  <a href="{% url 'admissions1' %}" class="flip-box-abs-link"></a>
-                <div class="flip-box-front text-center" style="background-image: url('/static/images/department-images/naturalResource-image.jpg');">
+                <a href="{% url 'admissions1' %}" class="flip-box-abs-link"></a>
+                <div class="flip-box-front text-center" style="background-image: url('/static/images/department-images/BSc_card-1.webp');">
                   <div class="inner color-white">
                     <h3 class="flip-box-header">B.Sc.</h3>
                     <p class="flip-box-label">(Hons.) Forestry</p>
                   </div>
                 </div>
-
-                <div class="flip-box-back text-center" style="background-image: url('/static/images/department-images/PHd_card.webp');">
+                <div class="flip-box-back text-center" style="background-image: url('/static/images/department-images/BSc_card-1.webp');">
                   <div class="inner color-white">
-				        <a href="{% url 'admissions1' %}" class="flip-box-abs-link"></a>
                     <h3 class="flip-box-header">B.Sc.</h3>
                     <p class="flip-box-label">(Hons.) Forestry</p>
-                    <p style="color: #fff;">B.Sc. (Hons.) Forestry curriculum contains an integrated forestry syllabus in accordance with ICAR guidelines, the 1st &amp; 2nd  semesters comprises of basic and fundamental courses.</p>
-                    <button class="flip-box-button" type="button"> <a href="" class="coureseFilpBox-button">Know More</a></button>
+                    <p style="color: #fff;">B.Sc. (Hons.) Forestry curriculum contains an integrated forestry syllabus in accordance with ICAR guidelines.</p>
+                    <button class="flip-box-button" type="button">
+                      <a href="{% url 'admissions1' %}" class="coureseFilpBox-button">Know More</a>
+                    </button>
                   </div>
-
                 </div>
               </div>
             </div>
           </div>
-         
+
+          <!-- M.Sc. Flip Card -->
           <div class="col-md col-6 homeflip-col-6 wow fadeInUp" data-wow-delay="0.2s">
             <div class="box-item">
               <div class="flip-box">
-			  			  <a href="{% url 'admissions1' %}" class="flip-box-abs-link"></a>
-                <div class="flip-box-front text-center" style="background-image: url('/static/images/department-images/PHd_card.webp');">
+                <a href="{% url 'mscforestry' %}" class="flip-box-abs-link"></a>
+                <div class="flip-box-front text-center" style="background-image: url('/static/images/department-images/MSc_card.webp');">
                   <div class="inner color-white">
                     <h3 class="flip-box-header">M.Sc.</h3>
                     <p class="flip-box-label">Forestry</p>
                   </div>
                 </div>
-
-                <div class="flip-box-back text-center" style="background-image: url('/static/images/department-images/PHd_card.webp');">
+                <div class="flip-box-back text-center" style="background-image: url('/static/images/department-images/MSc_card.webp');">
                   <div class="inner color-white">
-				  <a href="{% url 'admissions1' %}" class="flip-box-abs-link"></a>
                     <h3 class="flip-box-header">M.Sc.</h3>
                     <p class="flip-box-label">Forestry</p>
-                    <p style="color: #fff;">Forest College and Research Institute, Hyderabad is established in 2016 with the objective of providing professional forestry education for the first time in the state of Telangana.</p>
-                    <button class="flip-box-button" type="button"> <a href="{% url 'admissions1' %}" class="coureseFilpBox-button">Know More</a></button>
+                    <p style="color: #fff;">Forest College and Research Institute, Hyderabad provides professional forestry education for the first time in Telangana.</p>
+                    <button class="flip-box-button" type="button">
+                      <a href="{% url 'mscforestry' %}" class="coureseFilpBox-button">Know More</a>
+                    </button>
                   </div>
-
                 </div>
               </div>
             </div>
           </div>
-         
+
+          <!-- Ph.D. Flip Card -->
           <div class="col-md col-6 homeflip-col-6 wow fadeInUp" data-wow-delay="0.1s">
             <div class="box-item">
               <div class="flip-box">
-			  <a href="{% url 'admissions1' %}" class="flip-box-abs-link"></a>
+                <a href="{% url 'Phdforestry' %}" class="flip-box-abs-link"></a>
                 <div class="flip-box-front text-center" style="background-image: url('/static/images/department-images/PHd_card.webp');">
                   <div class="inner color-white">
                     <h3 class="flip-box-header">Ph.D.</h3>
                     <p class="flip-box-label">Forestry</p>
                   </div>
                 </div>
-
                 <div class="flip-box-back text-center" style="background-image: url('/static/images/department-images/PHd_card.webp');">
                   <div class="inner color-white">
-				   <a href="{% url 'admissions1' %}" class="flip-box-abs-link"></a>
                     <h3 class="flip-box-header">Ph.D.</h3>
                     <p class="flip-box-label">Forestry</p>
-                    <p style="color: #fff;">The course will commence from year 2023.</p>
-                    <button class="flip-box-button" type="button"> <a href="{% url 'admissions1' %}" class="coureseFilpBox-button">Know More</a></button>
+                    <p style="color: #fff;">The Ph.D. Forestry program will commence from the year 2023.</p>
+                    <button class="flip-box-button" type="button">
+                      <a href="{% url 'Phdforestry' %}" class="coureseFilpBox-button">Know More</a>
+                    </button>
                   </div>
-
                 </div>
               </div>
             </div>
@@ -885,91 +888,100 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
   </div>
 </section>
 
-
-
 <section class="homeStudentlifeSec">
-<div class="container">
-  <div class="row">
-    <div class="col-md-6 homeStudentlife__Carousel">
-      <h3 class="homeStudentlifeSec--Title">Student LIfe @ FCRI</h3>
-      <!--carousel Start-->
-      <!-- Carousel -->
-<div id="homeStudentlifeCarslID" class="carousel slide" data-bs-ride="carousel">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 homeStudentlife__Carousel">
+        <h3 class="homeStudentlifeSec--Title">Student Life @ FCRI</h3>
 
-  <!-- Indicators/dots -->
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#homeStudentlifeCarslID" data-bs-slide-to="0" class="active"></button>
-    <button type="button" data-bs-target="#homeStudentlifeCarslID" data-bs-slide-to="1"></button>
-    <button type="button" data-bs-target="#homeStudentlifeCarslID" data-bs-slide-to="2"></button>
-	<button type="button" data-bs-target="#homeStudentlifeCarslID" data-bs-slide-to="3"></button>
+        <div id="homeStudentlifeCarslID" class="carousel slide" data-bs-ride="carousel">
+
+          <!-- Indicators -->
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#homeStudentlifeCarslID" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#homeStudentlifeCarslID" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#homeStudentlifeCarslID" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#homeStudentlifeCarslID" data-bs-slide-to="3"></button>
+          </div>
+
+          <!-- Carousel Items -->
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="homeStudentlife--Icon">
+                <img decoding="async" src="{% static 'images/icon-images/student_clubs.webp' %}" class="img-fluid">
+              </div>
+              <div class="homeStudentlife--Text">
+                <h5>Student Clubs</h5>
+                <p>The main motto of these clubs is to encourage the students in all activities which helps them to improve their skills and also in enriching the quality of taking responsibilities.</p>
+                <a href="{% url 'clubs' %}" class="">Read More</a>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="homeStudentlife--Icon">
+                <img decoding="async" src="{% static 'images/icon-images/student_life3-image2.webp' %}" class="img-fluid">
+              </div>
+              <div class="homeStudentlife--Text">
+                <h5>Sports at FCRI</h5>
+                <p>The department of Physical Education & sports is established in FCRI right from the beginning of the institution 2016. It is consisting adequate facilities for Games and Sports in 15.00 acres of land in the campus.</p>
+                <a href="{% url 'sports' %}" class="">Read More</a>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="homeStudentlife--Icon">
+                <img decoding="async" src="{% static 'images/icon-images/student_life4-image3.webp' %}" class="img-fluid">
+              </div>
+              <div class="homeStudentlife--Text">
+                <h5>Learning Resource Centre</h5>
+                <p>The primary objective of our learning resource centre is to provide information and knowledge to its students and staff through its document collection.</p>
+                <a href="{% url 'learning' %}" class="">Read More</a>
+              </div>
+            </div>
+            
+            <div class="carousel-item">
+              <div class="homeStudentlife--Icon">
+                <!-- If no image, you can remove img or add a correct one -->
+                <!-- <img decoding="async" src="{% static 'your_image_here.webp' %}" class="img-fluid"> -->
+              </div>
+              <div class="homeStudentlife--Text">
+                <h5>Study Tours</h5>
+                <p>The practical classes are to be generally conducted in field and exposure to various forest operations requires exploration of different areas.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="homeStudentlife--Icon">
+                <!-- If no image, you can remove img or add a correct one -->
+                <!-- <img decoding="async" src="{% static 'your_image_here.webp' %}" class="img-fluid"> -->
+              </div>
+              <div class="homeStudentlife--Text">
+                <h5>Student ready Program</h5>
+                <p>The term READY refers to “Rural Entrepreneurship Awareness Development Yojana”. To reorient graduates of Forestry for ensuring and assuring employability.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Prev/Next Buttons -->
+          <!-- Using text arrows -->
+<!-- Prev/Next Buttons with arrows -->
+<button class="carousel-control-prev" type="button" data-bs-target="#homeStudentlifeCarslID" data-bs-slide="prev">
+  <span style="font-size: 2rem; color: black;">‹</span>
+  <span class="visually-hidden">Previous</span>
+</button>
+<button class="carousel-control-next" type="button" data-bs-target="#homeStudentlifeCarslID" data-bs-slide="next">
+  <span style="font-size: 2rem; color: black;">›</span>
+  <span class="visually-hidden">Next</span>
+</button>
+
+
+
+        </div>
+
+      </div>
+    </div>
   </div>
-  
-  <!-- The slideshow/carousel -->
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <div class="homeStudentlife--Icon">
-        <img decoding="async" src="{% static 'images/icon-images/student_life2-image1.webp' %}" class="img-fluid">
-      </div>
-      <div class="homeStudentlife--Text">
-        <h5>Learning Resource Centre</h5>
-        <p>The primary objective of our learning resource centre is to provide information and knowledge to its students and staff through its document collection.</p>
-       <!-- <a href="#" class="">Learn More</a> -->
-      </div>
-    </div>
-    <div class="carousel-item">
-      <div class="homeStudentlife--Icon">
-        <img decoding="async" src="{% static 'images/icon-images/student_life3-image2.webp' %}" class="img-fluid">
-      </div>
-      <div class="homeStudentlife--Text">
-        <h5>Study Tours</h5>
-        <p>The practical classes are to be generally  conducted in field and exposure to various forest operations requires exploration of  different areas.</p>
-        <!-- <a href="#" class="">Learn More</a> -->
-      </div>
-    </div>
-    <div class="carousel-item">
-      <div class="homeStudentlife--Icon">
-	  
-        <img decoding="async" src="{% static 'images/icon-images/student_life4-image3.webp' %}" class="img-fluid">
-      </div>
-      <div class="homeStudentlife--Text">
-        <h5>Student Ready Program</h5>
-        <p>The term READY refers to “Rural Entrepreneurship Awareness Development Yojana”. To  reorient graduates of Forestry for ensuring and assuring employability.</p>
-        <!-- <a href="#" class="">Learn More</a> -->
-      </div>
-    </div>
-	<div class="carousel-item">
-      <div class="homeStudentlife--Icon">
-	  
-        <img decoding="async" src="{% static '' %}" class="img-fluid">
-      </div>
-      <div class="homeStudentlife--Text">
-        <h5>Field Visits</h5>
-        <p>As forestry course is field oriented and field knowledge is very much needed in the curriculum students of FCRI are taken to various Field Visits according to course.</p>
-        <!-- <a href="#" class="">Learn More</a> -->
-      </div>
-    </div>
-  </div>
-  
-  <!-- Left and right controls/icons -->
-  <!-- <button class="carousel-control-prev" type="button" data-bs-target="#homeStudentlifeCarslID" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#homeStudentlifeCarslID" data-bs-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </button> -->
-</div>
-
-
-      <!--carousel end-->
-
-
-
-     
-      
-    </div>
-  </div>
-</div>
 </section>
+
 
 <section class="homeServicesSec">
   <div class="container">
@@ -993,7 +1005,7 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
                 </p>
                 <div class="card-btn">
                   <a
-                    href="#"
+                    href="{% url 'Fcri' %}"
                     class="btn btn-link"
                     >Read More</a
                   >
@@ -1017,7 +1029,7 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
                 </p>
                 <div class="card-btn">
                   <a
-                    href="#"
+                    href="{% url 'fcricarers' %}"
                     class="btn btn-link"
                     >Read More</a
                   >
@@ -1041,7 +1053,7 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
                 </p>
                 <div class="card-btn">
                   <a
-                    href="#"
+                    href="{% url 'Cfi2' %}"
                     class="btn btn-link"
                     >Read More</a
                   >
@@ -1065,7 +1077,7 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
                 </p>
                 <div class="card-btn">
                   <a
-                    href="#"
+                    href="{% url 'Nursery' %}"
                     class="btn btn-link"
                     >Read More</a
                   >
@@ -1089,7 +1101,7 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
                 </p>
                 <div class="card-btn">
                   <a
-                    href="{% static '' %}"
+                    href="{% url 'Workshop' %}"
                     class="btn btn-link"
                     >Read More</a
                   >
@@ -1113,7 +1125,7 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
                 </p>
                 <div class="card-btn">
                   <a
-                    href="{% static '' %}"
+                    href="{% url 'Wif' %}"
                     class="btn btn-link"
                     >Read More</a
                   >
@@ -1150,15 +1162,194 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
   </div>
 </section>
 
-
+<section class="home-latest-events">
+  <div class="container-fluid container-xxl">
+    <div class="row">
+      <h3 class="events_title">Latest Events</h3>
+      <div class="col-lg-6">
+        <div
+          class="homeEventSideNavSingle pb-4 list-group list-group-flush"
+        >
+          <a
+            href="{% url 'event' %}"
+            class="list-group-item list-group-item-action"
+          >
+            <!-- <a href="#casesudies1" class="list-group-item list-group-item-action" > -->
+            <div class="media">
+              <img
+                width="1076"
+                height="425"
+                src="{% static 'images/events/latest_image1.webp' %}" class="mr-3 img-fluid wp-post-image"
+                alt=""
+                decoding="async"
+                fetchpriority="high"
+                
+                sizes="(max-width: 1076px) 100vw, 1076px"
+                style="width: 100%; height: 39.5%; max-width: 1076px"
+              />
+              <div class="media-body">
+                <h5>
+                  Receives prestigious award from Children’s Tumor
+                  Foundation
+                </h5>
+                <p class="d-none">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Nulla, consequuntur.
+                </p>
+                <p class="news-mm-yy">
+                  <i class="fa fa-calendar"></i>February 13, 2024
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <!-- recent-casestudies-sidenav -->
+      <div class="col-lg-6">
+        <div class="homeEventSideNav pb-4 list-group list-group-flush">
+          <a
+            href="{% url 'event' %}"
+            class="list-group-item list-group-item-action"
+          >
+            <!-- <a href="#casesudies1" class="list-group-item list-group-item-action" > -->
+            <div class="media">
+              <img
+                width="1076"
+                height="425"
+                src="{% static 'images/events/latest_image2.webp' %}"
+                class="mr-3 img-fluid wp-post-image"
+                alt=""
+                decoding="async"
+                
+                sizes="(max-width: 1076px) 100vw, 1076px"
+                style="width: 100%; height: 39.5%; max-width: 1076px"
+              />
+              <div class="media-body">
+                <h5>
+                  Receives prestigious award from Children’s Tumor
+                  Foundation
+                </h5>
+                <p class="brief-description">
+                  Tech careers are constantly shifting as new innovations
+                  move...
+                </p>
+                <!-- <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, consequuntur.</p> -->
+                <p class="news-mm-yy">
+                  <i class="fa fa-calendar"></i>February 13, 2024
+                </p>
+              </div>
+            </div>
+          </a>
+          <a
+            href="{% url 'event' %}"
+            class="list-group-item list-group-item-action"
+          >
+            <!-- <a href="#casesudies1" class="list-group-item list-group-item-action" > -->
+            <div class="media">
+              <img
+                width="1076"
+                height="425"
+                src="{% static 'images/events/latest_image2.webp' %}"
+                class="mr-3 img-fluid wp-post-image"
+                alt=""
+                decoding="async"
+                
+                sizes="(max-width: 1076px) 100vw, 1076px"
+                style="width: 100%; height: 39.5%; max-width: 1076px"
+              />
+              <div class="media-body">
+                <h5>
+                  Grads sharpen leadership skills with Lake Forest Graduate
+                  School of Management
+                </h5>
+                <p class="brief-description">
+                  Tech careers are constantly shifting as new innovations
+                  move...
+                </p>
+                <!-- <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, consequuntur.</p> -->
+                <p class="news-mm-yy">
+                  <i class="fa fa-calendar"></i>February 13, 2024
+                </p>
+              </div>
+            </div>
+          </a>
+          <a
+            href="{% url 'event' %}"
+            class="list-group-item list-group-item-action"
+          >
+            <!-- <a href="#casesudies1" class="list-group-item list-group-item-action" > -->
+            <div class="media">
+              <img
+                width="1076"
+                height="425"
+                src="{% static 'images/events/latest_image2.webp' %}"
+                class="mr-3 img-fluid wp-post-image"
+                alt=""
+                decoding="async"
+                
+                sizes="(max-width: 1076px) 100vw, 1076px"
+                style="width: 100%; height: 39.5%; max-width: 1076px"
+              />
+              <div class="media-body">
+                <h5>Students bags top ranks in ICAR</h5>
+                <p class="brief-description">
+                  Tech careers are constantly shifting as new innovations
+                  move...
+                </p>
+                <!-- <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, consequuntur.</p> -->
+                <p class="news-mm-yy">
+                  <i class="fa fa-calendar"></i>February 13, 2024
+                </p>
+              </div>
+            </div>
+          </a>
+          <a
+            href="{% url 'event' %}"
+            class="list-group-item list-group-item-action"
+          >
+            <!-- <a href="#casesudies1" class="list-group-item list-group-item-action" > -->
+            <div class="media">
+              <img
+                width="1076"
+                height="425"
+                src="{% static 'images/events/latest_image2.webp' %}"
+                class="mr-3 img-fluid wp-post-image"
+                alt=""
+                decoding="async"
+                
+                sizes="(max-width: 1076px) 100vw, 1076px"
+                style="width: 100%; height: 39.5%; max-width: 1076px"
+              />
+              <div class="media-body">
+                <h5>
+                  Students securing seats for Masters Program at National
+                </h5>
+                <p class="brief-description">
+                  Tech careers are constantly shifting as new innovations
+                  move...
+                </p>
+                <!-- <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, consequuntur.</p> -->
+                <p class="news-mm-yy">
+                  <i class="fa fa-calendar"></i>February 13, 2024
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <!-- recent-casestudies-sidenav -->
+      </div>
+    </div>
+    <!-- side-nav -->
+  </div>
+</section>
 
 <section class="fcri-staff secStaffFCRI">
 	<div class="container-fluid  container-xxl">
 		<div class="row  ">
 			<div class="secStaffFCRI__col1 col-md-7   col-xl-9 	  ">
 				<div class="tab-content">
-					<h2 class="text-center playfair-family" style="margin-bottom: 10px !important;">FCRI Faculty</h2>
-					<div id="department1" class="tab-pane active"><h5 class="text-center playfair-family" style="padding-bottom: 20px;">SILVICULTURE AND AGROFORESTRY</h5>
+					<h2 class="text-center playfair-family" style="margin-bottom: 10px !important;"></h2>
+					<div id="department1" class="tab-pane active"><h5 class="text-center playfair-family" style="padding-bottom: 20px;">DEPARTMENT OF SILVICULTURE AND AGROFORESTRY</h5>
 						<div class="row">
 							<!-- Carousel -->
 							<div id="sivilature-faculty" class="carousel slide" data-bs-ride="carousel">
@@ -1167,7 +1358,8 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
 								<div class="carousel-item active">
 									
 									<div class="faculty-content  row">
-										<div class="col-md-auto col-8 mx-auto text-center text-md-left faculty-content-col1  ">										<img decoding="async" src="{% static 'images/professor-images/a_narasimha_reddy-Deputy-Director3.jpg' %}" class="img-fluid shadow rounded-circle"/>									</div>
+										<div class="col-md-auto col-8 mx-auto text-center text-md-left faculty-content-col1  ">										
+                      <img decoding="async" src="{% static 'images/professor-images/milkuri_ch_reddy.webp' %}" class="img-fluid shadow rounded-circle"/>									</div>
 										<div class="col-12 col-md text-md-left text-center faculty-content-col2">
                       
 											<h5 class="text-green"><em>Dr. Milkuri Chiranjeeva Reddy</em></h5>
@@ -1183,13 +1375,12 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
 									
 									<div class="faculty-content row">
 										<div class="col-md-auto col-8 mx-auto text-center text-md-left faculty-content-col1">
-											<img decoding="async" src="{% static 'images/professor-images/Director-image.jpg' %}" class="img-fluid shadow rounded-circle"/>
+											<img decoding="async" src="{% static 'images/professor-images/malik.webp' %}" class="img-fluid shadow rounded-circle"/>
 										</div>
 										<div class="col-12 col-md text-md-left text-center faculty-content-col2">
-											<h5 class="text-green"><em>Dr.Shivaputra Bammanahalli</em></h5>
-												<p><strong>Dr. Shivaputra Bammanahalli</strong> is an Assistant Professor of Agroforestry in the Department of Silviculture and Agroforestry. He completed Master of Science in Forestry from University of Agricultural Science Dharwad, 
-												Karnataka and Doctoral Degree in Agroforestry form Dr. Y.S Parmar University of Horticulture and Forestry Nauni, Solan, Himachal Pradesh
-												<br><br>He received merit scholarship from UAS, Dharwad during Master’s. He was also recipient of INSPIRE fellowship from Government of India for a period of four years. .<br><br>
+											<h5 class="text-green"><em>Dr. Malek Soufil S</em></h5>
+												<p><strong>Dr. Malek Soufil S</strong>  is an assistant professor of Silviculture in the Department of Silviculture and Agroforestry.<br>
+                           He completed is Masters of Science in Forestry with specialization in Agroforestry at ASPEE college of Horticulture and Forestry, NAU, Navsari, Gujarat. Got one year research biologist experience in “all India tiger estimation exercise” at wildlife institute of India, Dehradun.<br><br>
 												<a href="{% url 'DepartmentHead' %}" class="text-green">READ MORE</a>
 												</p>
 										</div>
@@ -1200,7 +1391,7 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
 									
 									<div class="faculty-content row">
 										<div class="col-md-auto col-8 mx-auto text-center text-md-left faculty-content-col1">
-											<img decoding="async" src="{% static 'images/professor-images/joint-director-pic.jpeg' %}" class="img-fluid shadow rounded-circle"/>
+											<img decoding="async" src="{% static 'images/professor-images/harish.webp' %}" class="img-fluid shadow rounded-circle"/>
 										</div>
 										<div class="col-12 col-md text-md-left text-center faculty-content-col2">
 											<h5 class="text-green"><em>Dr. B. Harish Babu</em></h5>
@@ -1217,7 +1408,27 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
 										</div>
 									
 								</div>
+
 							  </div>
+                <div class="carousel-item">
+									
+									<div class="faculty-content row">
+										<div class="col-md-auto col-8 mx-auto text-center text-md-left faculty-content-col1">
+											<img decoding="async" src="{% static 'images/professor-images/Bhargavi.webp' %}" class="img-fluid shadow rounded-circle"/>
+										</div>
+										<div class="col-12 col-md text-md-left text-center faculty-content-col2">
+											<h5 class="text-green"><em>Ch. Bhargavi</em></h5>
+												<p><strong>Ch. Bhargavi</strong> got her master’s degree in forestry from Indira Gandhi Krishi Vishwavidyalaya, Raipur. She was also qualified ICAR NET for agroforestry in 2023 and SET (State eligibility test) conducted by Telangana state in 2023. she has 06 Research articles, 2 review articles, 2 books and few popular articles to her credit.
+
+                          She has participated in various National and International Conferences. She is also an annual member in Journal of Indian botanical society.. <br></br>
+												
+												<a href="{% url 'DepartmentHead' %}" class="text-green">READ MORE</a>
+												</p>
+											</p>
+										</div>
+										</div>
+									
+								</div>
 							  <!-- Left and right controls/icons -->
 							  <button class="carousel-control-prev" type="button" data-bs-target="#sivilature-faculty" data-bs-slide="prev">
 								<span class="carousel-control-prev-icon"></span>
@@ -1236,7 +1447,7 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
 										
 										<div class="faculty-content row">
 											<div class="col-md-auto col-8 mx-auto text-center text-md-left faculty-content-col1">
-												<img decoding="async" src="{% static 'images/professor-images/fcri-Dean.png' %}" class="img-fluid shadow rounded-circle"/>
+												<img decoding="async" src="{% static 'images/professor-images/Image9.webp' %}" class="img-fluid shadow rounded-circle"/>
 											</div>
 											<div class="col-12 col-md text-md-left text-center faculty-content-col2">
 												<h5 class="text-green"><em>Smt. Sailaja.V</em></h5>
@@ -1261,6 +1472,23 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
 												University of Agricultural Sciences, Dharwad, Karnataka where he worked on “Management of block rot of Cabbage caused by <em>Xanthomonas campestris pv. campestris”</em>. 
 												
 												<br><br>For his Doctoral degree, Jagadeesh joined in Gobind Ballabh Pant University of Agriculture and Technology where he worked on “Epidemiology and Management of downy mildew caused on Vegetable Pea caused by <em>Peronospora viciae f. sp. pisi”</em>.<br><br>
+												<a href="{% url 'DepartmentHead' %}" class="text-green">READ MORE</a>
+												</p>
+											</div>
+											</div>
+										
+									</div>
+                  <div class="carousel-item">
+										
+										<div class="faculty-content row">
+											<div class="col-md-auto col-8 mx-auto text-center text-md-left faculty-content-col1">
+											   <img decoding="async" src="{% static 'images/professor-images/waseem.webp' %}" class="img-fluid shadow rounded-circle"/>
+											</div>
+											<div class="col-12 col-md text-md-left text-center faculty-content-col2">
+												<h5 class="text-green"><em>Dr. Mohammed Abdul Waseem</em></h5>
+												<p><strong>Dr. Mohammed Abdul Waseem </strong> Waseem completed his Master of Science in Agricultural Entomology from College of Agriculture, Allahabad Agricultural University, with his M.Sc. research focused on Impact of different intercrops for the management of gram pod borer (Helicoverpa armigera) in chickpea.
+
+                          He obtained his Doctorate in Entomology specializing in Apiculture, from Dr Y. S Parmar university of Horticulture and Forestry, where he worked on “Effect of fipronil and lambda cyhalothrin on colony performance of Apis mellifera under field and semi-field conditions”.</em>.<br><br>
 												<a href="{% url 'DepartmentHead' %}" class="text-green">READ MORE</a>
 												</p>
 											</div>
@@ -1327,7 +1555,7 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
 												She worked as a Lecturer in Botany in Dr. B.R. Ambedkar College, Hyderabad. <br><br>
 												<a href="{% url 'DepartmentHead' %}" class="text-green">READ MORE</a>
 												</p>
-												</p>
+												
 											</div>
 										</div>
 									
@@ -1381,6 +1609,40 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
 										</div>
 								
 								</div> 
+                
+                <div class="carousel-item">
+									
+									<div class="faculty-content row">
+										<div class="col-md-auto col-8 mx-auto text-center text-md-left faculty-content-col1">
+											<img decoding="async" src="{% static 'images/professor-images/pawan.webp' %}" class="img-fluid shadow rounded-circle"/>
+										</div>
+										<div class="col-12 col-md text-md-left text-center faculty-content-col2">
+											<h5 class="text-green"><em>Dr. Pawan Kumar</em></h5>
+											<p><strong>Dr. Pawan Kumar</strong> an expert in the field of statistics. Dr. Pawan Kumar holds a Ph.D. in Statistics, is awarded a Gold medal, reflecting his dedication to advancing knowledge of specialization in sample survey and Design of experiments.
+											
+                        With his profound understanding of statistical methodologies, data analysis techniques, machine learning and mathematical modelling. Holding the graduation root in the field of Forestry and Master’s degree in Statistics from Dr. YSPUHF <br></br>
+											<a href="#" class="text-green">READ MORE</a>
+											</p>
+										</div>
+										</div>
+								
+								</div> 
+                <div class="carousel-item">
+									
+									<div class="faculty-content row">
+										<div class="col-md-auto col-8 mx-auto text-center text-md-left faculty-content-col1">
+											<img decoding="async" src="{% static 'images/professor-images/syopat.webp' %}" class="img-fluid shadow rounded-circle"/>
+										</div>
+										<div class="col-12 col-md text-md-left text-center faculty-content-col2">
+											<h5 class="text-green"><em>Dr. Syopat</em></h5>
+											<p><strong>Dr. Syopat</strong> .<br></br>
+                        is an assistant professor of English in the department of Basic and Social Sciences at Forest College and Research Institute, Siddipet, Telangana, where he works on enhancing communication skills and developing overall personality of the students. His higher educational credentials include B.A. (Hons.) English, M.A. in Linguistics, and PhD in Linguistics from The English and Foreign Languages University, Hyderabad.  <br></br>
+											<a href="#" class="text-green">READ MORE</a>
+											</p>
+										</div>
+										</div>
+								
+								</div> 
 							  </div>
 							  <!-- Left and right controls/icons -->
 							  <button class="carousel-control-prev" type="button" data-bs-target="#socialsciences-faculty" data-bs-slide="prev">
@@ -1404,8 +1666,8 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
 											</div>
 											<div class="col-12 col-md text-md-left text-center faculty-content-col2">
 												<h5 class="text-green"><em>Dr. Kapil Sihag</em></h5>
-												<p><strong>Dr. Kapil</strong> is an Assistant Professor of Wood Science and Technology with more than 3 years of research and teaching experience in various universities/research institutes in India. 
-												<br><br>He possesses meritorious academic record in field of Wood Science and Technology.Prior to joining forest college and research institute, he worked as Assistant Professor in college of agricultural sciences, Uttaranchal University, Dehradun.<br><br>
+												<p><strong>Dr. Kapil</strong> has more than six years of research and teaching experience in various universities/research institutes in India. He possesses meritorious academic record in field of Wood Science and Technology. Prior to joining forest college and research institute, he worked as Assistant Professor in college of agricultural sciences, Uttaranchal University, Dehradun.
+												<br><br>He has taught Wood Anatomy, Wood Products and Utilization, Wood Science and Technology (wood preservation, wood seasoning, wood sawing and finishing), Non-Timber Forest Products courses for B.Sc. Forestry students.<br><br>
 												<a href="#" class="text-green">READ MORE</a>
 												</p>
 											</div>
@@ -1416,14 +1678,15 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
 									
 											<div class="faculty-content row">
 												<div class="col-md-auto col-8 mx-auto text-center text-md-left faculty-content-col1">
-													<img decoding="async" src="{% static 'images/professor-images/Venkateshwarlu-Deputy-director.jpg' %}" class="img-fluid shadow rounded-circle"/>
+													<img decoding="async" src="{% static 'images/professor-images/Sumit.webp' %}" class="img-fluid shadow rounded-circle"/>
 												</div>
 												<div class="col-12 col-md text-md-left text-center faculty-content-col2">
 													<h5 class="text-green"><em>Dr. Sumit Manohar Yadav</em></h5>
 													<p><strong>Dr. Sumit  </strong> 
-													is an Assistant professor of Wood Science and Technology with more than 3 years of research and teaching experience in various universities in India and abroad. 
-													<br><br>He received his Bachelor of Science (Forestry) from College of Forestry, Dapoli, Maharashtra and Master of Science (Wood Science and Technology) from Forest Research Institute, Dehradun
-													He received his Ph.D. from University Malaysia Pahang, Malaysia. <br><br>
+                            has more than five years of research and teaching experience in various universities in India and abroad. He received his Bachelor of Science (Forestry) from College of Forestry, Dapoli, Maharashtra and Master of Science (Wood Science and Technology) from Forest Research Institute, Dehradun. He received his Ph.D. from University Malaysia Pahang, Malaysia.
+													<br><br>
+                          His doctoral research focused on the modification of nanoclay using transition metal ion and its effect on mechanical, physical, and thermal properties of Wood-plastic composites.
+                          . <br><br>
 													<a href="#" class="text-green">READ MORE</a>
 													</p>
 												</div>
@@ -1498,6 +1761,23 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
 											</div>
 									
 									</div>
+                  <div class="carousel-item">
+									
+                    <div class="faculty-content row">
+                      <div class="col-md-auto col-8 mx-auto text-center text-md-left faculty-content-col1">
+                        <img decoding="async" src="{% static 'images/professor-images/Lalitha (1).webp' %}" class="img-fluid shadow rounded-circle"/>
+                      </div>
+                      <div class="col-12 col-md text-md-left text-center faculty-content-col2">
+                        <h5 class="text-green"><em>T. V. B. S. Lalitha</em></h5>
+                        <p><strong>Ms. T. V. B. S. Lalitha </strong> 
+                          is currently working as an Assistant Professor in the Department of Tree Breeding and Improvement, Forest College and Research Institute (FCRI), Hyderabad at Mulugu. She has completed her B.Sc. (Hons.) Forestry and M.Sc. Forestry in the department of Forest Biology and Tree Improvement in FCRI, Mulugu.
+                        <br><br>She awarded PCCF’s (HOFF) Gold Medal for securing the first position in B.Sc.(Hons.) Forestry and secured top rank in her masters. She has qualified in National eligibility test (NET) and SET (state eligibility test) conducted by UGC and Telangana state respectively<br><br>
+                        <a href="#" class="text-green">READ MORE</a>
+                        </p>
+                      </div>
+                    </div>
+                
+                </div>
 									
 								</div>
 							  
@@ -1550,6 +1830,23 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
 											</div>	
 										
 									</div>
+                  <div class="carousel-item">
+										
+                    <div class="faculty-content row">
+                      <div class="col-md-auto col-8 mx-auto text-center text-md-left faculty-content-col1">
+                        <img decoding="async" src="{% static 'images/professor-images/anish (1).webp' %}" class="img-fluid shadow rounded-circle"/>
+                      </div>
+                      <div class="col-12 col-md text-md-left text-center faculty-content-col2">
+                        <h5 class="text-green"><em>Mr. Anish Katikala</em></h5>
+                        <p><strong>Mr. Anish Katikala </strong> 
+                          pursued his B.Sc. (Hons.) Forestry degree in Forest College and Research Institute (FCRI), Hyderabad @ Mulugu, Siddipet, Telangana, affiliated to Osmania University(OU), Masters in Forestry, at Forest College and Research Institute (FCRI), Hyderabad @ Mulugu, Siddipet, Telangana affiliated to Sri Konda Laxman Telangana State Horticultural University(SKLTSHU).
+
+                        <a href="#" class="text-green">READ MORE</a>
+                        </p>
+                      </div>
+                    </div>	
+                  
+                </div>
 								</div>
 							  
 							  <button class="carousel-control-prev" type="button" data-bs-target="#climatescience-faculty" data-bs-slide="prev">
@@ -1561,82 +1858,7 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
 							</div>
 						</div><!--row-->
 					</div>
-					<div id="department8" class="tab-pane fade"><h5 class="text-center playfair-family" style="padding-bottom: 20px;">LIBRARY &#038; INFORMATION SCIENCE</h5>
-					  <div class="row">
-							<div id="library-faculty" class="carousel slide" data-bs-ride="carousel" data-bs-touch="false" data-bs-interval="false">
-								<div class="carousel-inner">
-									<div class="carousel-item active">
-									
-											<div class="faculty-content row">
-												<div class="col-md-auto col-8 mx-auto text-center text-md-left faculty-content-col1">
-													<img decoding="async" src="#" class="img-fluid shadow rounded-circle"/>
-												</div>
-												<div class="col-12 col-md text-md-left text-center faculty-content-col2">
-													<h5 class="text-green"><em>Mr. Sampath Kumar</em></h5>
-													<p><strong>Mr. Sampath Kumar </strong> is working as a Librarian at Forest College and Research Institute, Mulugu. He has more than 3 years of experience as an Information Assistant. 
-													He had earlier worked as Information assistant at IIT Madras, Chennai and R.V.M. Medical College, Mulugu, Telangana State.
-													<br><br>He received his Masters of Library and Information Science from Kakatiya University and Postgraduate Diploma in Library Automation and Networking (P.G.D.L.A.N) from University of Hyderabad.  <br><br>
-													<a href="#" class="text-green">READ MORE</a>
-													</p>
-												</div>
-											</div>
-											
-										
-									</div>
-									
-								</div>
-							</div>
-						</div><!--row-->
-					</div>
-					<div id="department9" class="tab-pane fade"><h5 class="text-center playfair-family" style="padding-bottom: 20px;">PHYSICAL EDUCATION</h5>
-					  <div class="row">
-							<div id="physicaleducation-faculty" class="carousel slide" data-bs-ride="carousel">
-								<div class="carousel-inner">
-									<div class="carousel-item active">
-									
-											<div class="faculty-content row">
-												<div class="col-md-auto col-8 mx-auto text-center text-md-left faculty-content-col1">
-													<img decoding="async" src="#" class="img-fluid shadow rounded-circle"/>
-												</div>
-												<div class="col-12 col-md text-md-left text-center faculty-content-col2">
-													<h5 class="text-green"><em>Dr. K. Prabhu</em></h5>
-													<p><strong>Dr.K. Prabhu </strong> working as a Physical Director / Sports Officer FCRI, Hyderabad @ Mulugu. 
-													He has 12 years in Schools, 24 years in Junior/ Degree &#038; PG Colleges experience. Organising Secretary – SGFI-19 period (2008-2009). <br></br>
-													Manager- SGFI A.P. and O U teams Member – Panel Inspection team for TSWRS &#038; TWRS schools and Colleges – 2019-20.  <br><br>
-													<a href="#" class="text-green">READ MORE</a>
-													</p>
-												</div>
-											</div>
-									
-									</div>
-									<div class="carousel-item">
-										
-											<div class="faculty-content row">
-												<div class="col-md-auto col-8 mx-auto text-center text-md-left faculty-content-col1">
-													<img decoding="async" src="https://fcrihyd.in/wp-content/uploads/2022/05/Naresh_anma.png" class="img-fluid shadow rounded-circle"/>
-												</div>
-												<div class="col-12 col-md text-md-left text-center faculty-content-col2">
-													<h5 class="text-green"><em>Mr. Anma Naresh</em></h5>
-													<p><strong>Mr. Anma Naresh </strong> 
-													 working as a Physical Education Teacher Forest College and Research Institute, Hyderabad @ Mulugu. He has 2 years of Physical Education Teacher experience at Sri Venkateshwara B.P. ED College, Dubbak. 
-													<br><br>He is well Trained at Ball badminton 64th – TS State level Championship Boys or Girls for Coach level at Warangal 2018. <br><br>
-													<a href="#" class="text-green">READ MORE</a>
-													</p>
-												</div>
-											</div>	
-									
-									</div>
-								</div>
-							  
-							  <button class="carousel-control-prev" type="button" data-bs-target="#physicaleducation-faculty" data-bs-slide="prev">
-								<span class="carousel-control-prev-icon"></span>
-							  </button>
-							  <button class="carousel-control-next" type="button" data-bs-target="#physicaleducation-faculty" data-bs-slide="next">
-								<span class="carousel-control-next-icon"></span>
-							  </button>
-							</div>
-						</div><!--row-->
-					</div>
+	
 				</div>
 			</div>
 			<div class="col-md-5 col-xl-3 secStaffFCRI__col2">
@@ -1663,12 +1885,7 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
 					<li class="nav-item">
 					  <a class="nav-link" data-bs-toggle="pill" href="#department7">forest ecology &amp; climate science</a>
 					</li>
-					<li class="nav-item">
-					  <a class="nav-link" data-bs-toggle="pill" href="#department8">library &amp; information science</a>
-					</li>
-					<li class="nav-item">
-					  <a class="nav-link" data-bs-toggle="pill" href="#department9">Physical Education</a>
-					</li>
+					
 				</ul>
 			</div>
 		</div><!--row-->
@@ -1832,44 +2049,100 @@ Sri. K Chandrashekar Rao, is established in the year 2016.</p>
 
 
 <section class="homeStdRviewsThreeColSec">
-	<div class="container">
-		<h3 class="homeStdRviewsThreeColSec--Title">What our students say about FCRI</h3>
-		<div class="row">
-			<div class="col-12 col-md-12 col-xl-9 mx-auto">
-				<div class="row">
-					<div class="col-12 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-						<figure class="homeStdRviewsCard"><img decoding="async" src="{% static 'images/student-images/student-image5.jpg' %}" alt="student_1">
-							<figcaption>
-							  <h3 class="title1">FCRI provides you a curriculum that not just bounds to four walls, but makes you much more aware of real-time situations in a practical approach.</h3>
-							  <h3 class="title2">Chutturi Mahesh</h3>
-							</figcaption><a href="#"></a>
-						  </figure>
-					</div>
-					<div class="col-12 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.2s">
-						<figure class="homeStdRviewsCard"><img decoding="async" src="{% static 'images/student-images/student-image1.webp' %}" alt="student_2">
-							<figcaption>
-							  <h3 class="title1">It gave me a wider platform to become who I am now. This college has moulded me into a different version of myself and has given me a strong foundation in both curriculum and extracurricular activities.</h3>
-							  <h3 class="title2">Munagala Pavithra</h3>
-							</figcaption><a href="#"></a>
-						  </figure>
-					</div>
-					<div class="col-12 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-						<figure class="homeStdRviewsCard"><img decoding="async" src="{% static 'images/student-images/fcri-image2.webp' %}" alt="student_3">
-							<figcaption>
-							  <h3 class="title1">The primary objective of our learning resource centre is to provide information and knowledge to its students and staff.</h3>
-							  <h3 class="title2">Sravan Surya</h3>
-							</figcaption><a href="#"></a>
-						  </figure>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+  <div class="container">
+    <h3 class="homeStdRviewsThreeColSec--Title">
+      What our students say about FCRI
+    </h3>
+    <div class="row">
+      <div class="col-12 col-md-12 col-xl-9 mx-auto">
+        <div class="row">
+          <div
+            class="col-12 col-md-4 col-sm-6 wow fadeInUp"
+            data-wow-delay="0.1s"
+          >
+            <figure class="homeStdRviewsCard">
+              <div class="homeStdRviewsCard__front">
+                <img
+                  src="{% static 'images/student-images/Chutturi_Mahesh.webp' %}"
+                  alt="student_1"
+                />
+                <figcaption>
+                  <!-- <h3 class="title1">FCRI provides you a curriculum that not just bounds to four walls,
+                                but makes you much more aware of real-time situations in a practical approach.</h3> -->
+                  <h3 class="title2">Chutturi Mahesh</h3>
+                </figcaption>
+              </div>
+              <div class="homeStdRviewsCard__back">
+                <h3 class="title2">Chutturi Mahesh</h3>
+                <h3 class="title1">
+                  FCRI provides you a curriculum that not just bounds to
+                  four walls, but makes you much more aware of real-time
+                  situations in a practical approach.
+                </h3>
+              </div>
+              <a href="javascript:void(0);"></a>
+            </figure>
+          </div>
+          <div
+            class="col-12 col-md-4 col-sm-6 wow fadeInUp"
+            data-wow-delay="0.2s"
+          >
+            <figure class="homeStdRviewsCard">
+              <div class="homeStdRviewsCard__front">
+                <img
+                  src="{% static 'images/student-images/student-image1.webp' %}"
+                  alt="student_2"
+                />
+                <figcaption>
+                  
+                  <h3 class="title2">Munagala Pavithra</h3>
+                </figcaption>
+              </div>
+              <div class="homeStdRviewsCard__back">
+                <h3 class="title2">Munagala Pavithra</h3>
+                <h3 class="title1">
+                  It gave me a wider platform to become who I am now. This
+                  college has moulded me into a different version of myself
+                  and has given me a strong foundation in both curriculum
+                  and extracurricular activities.
+                </h3>
+              </div>
+              <a href="javascript:void(0);"></a>
+            </figure>
+          </div>
+          <div
+            class="col-12 col-md-4 col-sm-6 wow fadeInUp"
+            data-wow-delay="0.3s"
+          >
+            <figure class="homeStdRviewsCard">
+              <div class="homeStdRviewsCard__front">
+                <img
+                  src="{% static 'images/student-images/kchaitra.webp' %}"
+                  alt="student_3"
+                />
+               
+                <figcaption>
+                  
+                  <h3 class="title2">Chaitra Kanala</h3>
+                </figcaption>
+              </div>
+              <div class="homeStdRviewsCard__back">
+                <h3 class="title2">Chaitra Kanala</h3>
+                <!-- <h3 class="title2">Sravan Surya</h3> -->
+                <h3 class="title1">
+                  Our college is a heaven of learning, practical competence
+                  and hands on skills. It has a peaceful environment to work
+                  on ourselves.
+                </h3>
+              </div>
+              <a href="javascript:void(0);"></a>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
-	</div><!-- .entry-content -->
-
-	</article><!-- #post-2015 -->
-
 <section class="contact-section">
   <h1>
       Emerging as a World Class Institution.

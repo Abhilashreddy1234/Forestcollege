@@ -1269,8 +1269,8 @@ a.flip-box-abs-link {
 .homeStudentlifeSec .carousel-control-prev {
   width: 30px;
   top: unset;
-  background-color: var(--theme-color);
-  bottom: -30px;
+  background-color: #2e9f5e;
+  bottom: 0px;
   opacity: 0.8;
 }
 .homeStudentlifeSec .carousel-control-next:hover,
@@ -1426,9 +1426,11 @@ a.flip-box-abs-link {
   background-repeat: no-repeat;
 }
 .secStaffFCRI__col1 h5.text-center.playfair-family {
-  text-align: left !important;
+  text-align: center;
   font-size: 20px;
   font-weight: 600;
+  background-color: black;
+  color: lightcyan;
 }
 .secStaffFCRI__col2 {
   background-color: #f0f1ed;
@@ -2063,7 +2065,7 @@ a.flip-box-abs-link {
   left: 0;
   right: calc(50% + 15px);
   bottom: 0;
-  background-image: url("../images/student-images/mscimage - Copy.jpeg");
+  background-image: url("../images/student-images/student_fcri.webp");
   background-size: cover;
   background-position: center;
 }
@@ -2169,11 +2171,11 @@ a.flip-box-abs-link {
 }
 
 .courseInfographicSec .carousel-control-prev {
-  left: -15%;
+  left: 10%;
 }
 
 .courseInfographicSec .carousel-control-next {
-  right: -15%;
+  right: 10%;
 }
 /*--------------------courseInfographicSec end------------------------------------------------------*/
 /*====================================================================================
@@ -2460,6 +2462,7 @@ a.flip-box-abs-link {
   width: 15px;
   height: 15px;
   border-radius: 50%;
+  background-color: #82b474;
 }
 .governing-board .carousel-indicators {
   justify-content: start;

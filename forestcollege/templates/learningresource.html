@@ -1,0 +1,193 @@
+{% load static %}
+{% include 'base.html' %}
+{% include 'breadcrumbs.html' %}
+
+<section class="stdClub" style="padding-bottom: 30px">
+    <div class="container-xl container-xxl">
+      <div class="row">
+        <h3 class="text-dgreen Titillium Web" style="padding-bottom: 8px">
+          ABOUT LIBRARY
+        </h3>
+        <h4 class="text-dgreen Titillium Web">Learning Resource Centre:</h4>
+        <p style="line-height: 30px">
+          The primary objective of our learning resource centre is to provide
+          information and knowledge to its students and staff through its
+          document collection. Our library has been acquiring different types
+          of forestry and other related documents and organizing them for the
+          efficient usage. It also has a vast collection of reference books;
+          Journals, handbooks, dictionaries and encyclopedia on the subjects
+          to cater to the need and the requirements of the faculty members,
+          researchers and students.
+        </p>
+        <p style="line-height: 30px">
+          The reading room is well furnished where 300 students accommodate at
+          a time and provides conducive environment for study. Exclusive
+          reference section is available in the library. All educational &
+          research postures and clipping of major events have been displayed.
+          A visitor’s book is maintained for students and staff. New arrivals
+          of books and journals are displayed on separate racks and website.
+        </p>
+        <a
+          href="{% static 'doc/ABOUT-FCRI-LIBRARY-2022.pdf' %}"
+          class="conlink"
+          target="_blank"
+          rel="noopener"
+          ><button
+            type=""
+            class="btn px-md-4"
+            style="color: #fff; background-color: #000"
+          >
+            Click for more information
+          </button></a
+        >
+        <div
+          class="mt-4 p-3 p-sm-4 p-xl-5"
+          style="
+            background-color: #fbfaea;
+            border-radius: 15px;
+            box-shadow: 0 0 10px #c5c3ac;
+          "
+        >
+          <div class="table-responsive">
+            <table class="table table-color table-striped table-bordered">
+              <thead class="bg-light bg-head">
+                <tr>
+                  <th>S.No.</th>
+                  <th>Particulars</th>
+                  <th>No.’s</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1.</td>
+                  <td>Total No. of Books</td>
+                  <td>4610</td>
+                </tr>
+                <tr>
+                  <td>2.</td>
+                  <td>Journals & Magazines (Subscribed)</td>
+                  <td>24</td>
+                </tr>
+                <tr>
+                  <td>3.</td>
+                  <td>News Papers (Subscribed)</td>
+                  <td>6</td>
+                </tr>
+                <tr>
+                  <td>4.</td>
+                  <td>E-Journal (Indian Forester)</td>
+                  <td>1</td>
+                </tr>
+                <tr>
+                  <td>5.</td>
+                  <td>J-Gate Database</td>
+                  <td>1</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-dgreen Titillium Web" style="padding-top: 20px">
+            Working Hours:
+          </h4>
+          <p style="line-height: 30px">
+            The library functions from Monday to Saturday throughout the year
+            except a few Holidays of national and social importance.
+          </p>
+          <ul>
+            <li>
+              9:30 am --- 5:00 pm on working days, Reading Room Timings 8.00
+              am to 10 pm.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <style>
+    .plublications {
+      background-image: linear-gradient(to top, #dbd9b6 0%, #ffffff 100%);
+      padding: 20px 0;
+    }
+
+    .ul-padding li {
+      padding-bottom: 10px;
+    }
+
+    .accordion-item {
+      border-radius: 8px;
+      padding: 2px;
+      background-color: #8d7b57;
+      border: 1px solid #fbfaead9;
+      margin-bottom: 10px;
+    }
+
+    .accordion-button {
+      background-color: #8d7b57;
+    }
+
+    .text-white {
+      color: #fff;
+    }
+
+    .accordion-body {
+      color: #f8f3da;
+    }
+
+    .accordion-button:focus {
+      border-color: #8d7b57 !important;
+      box-shadow: 0 0 0 0.25rem rgb(135 115 95) !important;
+    }
+
+    .accordion-button {
+      background-color: #8d7b57;
+    }
+
+    .accordion-button:not(.collapsed) {
+      box-shadow: inset 0 -1px 0 rgb(0 0 0 / 13%) !important;
+      background-color: #8d7b57 !important;
+    }
+
+    .accordion-button::after {
+      content: "";
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e") !important;
+    }
+
+    .accordion-button {
+      border-top-left-radius: calc(0.25rem - 1px);
+      border-top-right-radius: calc(0.25rem - 1px);
+      border-bottom-left-radius: calc(0.25rem - 1px);
+      border-bottom-right-radius: calc(0.25rem - 1px);
+    }
+  </style>
+   <section class="contact-section">
+    <h1>
+        Emerging as a World Class Institution.
+    </h1>
+    <h2>Forestry Education, Research, Management, and Outreach.</h2>
+    <a href="{% url 'ContactUs' %}" class="contact-button">Contact Us</a>
+</section>   
+
+<section class="fcri-footer-gallery">
+<div class="d-flex align-items-center">
+    <div class="flex-fill">
+        <a href="#"> <img src="{% static 'images/college-images/vision-1image.jpg' %}" class="img-fluid" alt="footer-img"></a>
+    </div>
+    <div class="flex-fill">
+        <a href="#"> <img src="{% static 'images/college-images/vision-image5.webp' %}" class="img-fluid" alt="footer-img"></a>
+    </div>
+    <div class="flex-fill">
+        <a href="#"> <img src="{% static 'images/college-images/vision-image7.webp' %}" class="img-fluid" alt="footer-img"></a>
+    </div>
+    <div class="flex-fill">
+        <a href="#"> <img src="{% static 'images/college-images/vision-image6.webp' %}" class="img-fluid" alt="footer-img"></a>
+    </div>
+</div>
+</section>
+
+{% include 'footer1.html' %}
+{% include 'bootom_footer.html' %}
+
+
+<script src="{% static 'js/main.js' %}"></script>

@@ -89,9 +89,9 @@ def about(request):
 def vision(request):
     form = EmailSubscriptionForm()
     breadcrumbs = [
-        {"name": "Home", "url": "/"},
-        {"name": "About", "url": "/about/"},
-        {"name": "Vision", "url": "/vision/"},
+       
+        
+        {"name": "Vision"},
     ]
     return render(request, "vision.html", {"breadcrumbs": breadcrumbs,"form":form})
 
@@ -371,6 +371,14 @@ def Fcricarers(request):
         {"name":"FCRI Study Circle"},
     ]
     return render(request, 'fcricircle.html',{"breadcrumbs":breadcrumbs,"form":form})
+def Fcricares(request):
+    form = EmailSubscriptionForm()
+    breadcrumbs = [
+        {"name":"Home","url":"/"},
+        {"name":"Services"},
+        {"name":"FCRI  Cares"},
+    ]
+    return render(request, 'fcri_cares.html',{"breadcrumbs":breadcrumbs,"form":form})
 def hostel(request):
     form = EmailSubscriptionForm()
     breadcrumbs = [
@@ -529,7 +537,36 @@ def Dounload(request):
         {"name":"Downloads"},
     ]    
     return render(request,'dounload.html',{"breadcrumbs":breadcrumbs,"form":form})
+def Event(request):
+    form = EmailSubscriptionForm()
+    breadcrumbs = [
+        {"name":"Home","url":"/"},
+        {"name":"Events"},
+    ]    
+    return render(request,'event.html',{"breadcrumbs":breadcrumbs,"form":form})
+def Sports(request):
+    form=EmailSubscriptionForm()
+    breadcrumbs = [
+        {"name":"Home","url":'/'},
+        {"name":"Sports"},
+    ]
+    return render(request,'sportslifeatfcri.html',{"breadcrumbs":breadcrumbs,"form":form})
+def Clubs(request):
+    form = EmailSubscriptionForm()
+    breadcrumbs = [
+        {"name":"Home","url":"/"},
+        {"name":"Clubs"},
 
+    ]
+    return render(request,'studentclubs.html',{"breadcrumbs":breadcrumbs,"form":form})
+def Learning(request):
+    form = EmailSubscriptionForm()
+    breadcrumbs = [
+        {"name":"Home","url":"/"},
+        {"name":"Library"},
+
+    ]
+    return render(request,'learningresource.html',{"breadcrumbs":breadcrumbs,"form":form})
 class ContactForm(forms.Form):
     name = forms.CharField(max_length=100)
     email = forms.EmailField()
